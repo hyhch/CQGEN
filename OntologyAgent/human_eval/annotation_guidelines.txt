@@ -1,0 +1,53 @@
+================================================================================
+         ANNOTATION GUIDELINES — CQGen-MAS Human Evaluation
+================================================================================
+
+TASK
+----
+You will evaluate a set of automatically generated Competency Questions (CQs)
+for ontologies. Each row contains a CQ and the ontology it was generated for.
+
+For each CQ, judge THREE dimensions by marking Y (Yes) or N (No):
+
+1. FLUENCY
+   Is the CQ a grammatically correct, understandable natural language question?
+   - Y: The question reads naturally and is easy to understand.
+   - N: The question has grammatical errors, is incoherent, or is not a question.
+
+2. RELEVANCE
+   Is the CQ thematically related to the ontology's conceptual domain?
+   - Y: The question asks about concepts, entities, or relationships that fall
+        within the ontology's scope (refer to the "Ontology Concepts" column).
+   - N: The question asks about topics outside the ontology's domain.
+
+3. ANSWERABILITY
+   Could this CQ, in principle, be answered by querying the ontology's schema
+   (classes, properties, and their relationships)?
+   - Y: The question can be answered using the ontology's structure
+        (even if no instance data is loaded).
+   - N: The question requires external knowledge, instance data not derivable
+        from the schema, or asks about concepts not present in the ontology.
+
+IMPORTANT NOTES
+---------------
+- Judge each CQ independently. Do not compare CQs with each other.
+- Use the "Ontology Concepts" column as reference for what the ontology covers.
+- If you are unsure, lean toward Y (benefit of the doubt).
+- Do NOT discuss your annotations with other annotators.
+
+EXAMPLES
+--------
+Ontology: Video Game Ontology (VGO)
+Concepts: Player, Achievement, Game, Character, Session, ...
+
+  CQ: "Which achievements do players who own a specific character commonly have?"
+  -> Fluency: Y | Relevance: Y | Answerability: Y
+
+  CQ: "What percentage of players prefer action games?"
+  -> Fluency: Y | Relevance: Y | Answerability: N
+     (Statistical/distributional question cannot be answered from schema alone)
+
+  CQ: "What is the weather forecast for tomorrow?"
+  -> Fluency: Y | Relevance: N | Answerability: N
+
+================================================================================

@@ -1,0 +1,234 @@
+[
+    {
+        "question": "What is an IoT device?",
+        "label": "Simple"
+    },
+    {
+        "question": "What is a partnership?",
+        "label": "Simple"
+    },
+    {
+        "question": "What attributes has a partnership?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which are the relationships a partnership is involved in ?",
+        "label": "Complex"
+    },
+    {
+        "question": "How many organizations can have a partnership?",
+        "label": "Complex"
+    },
+    {
+        "question": "What is the relation between organization and devices?",
+        "label": "Complex"
+    },
+    {
+        "question": "What is an IoT infrastructre?",
+        "label": "Simple"
+    },
+    {
+        "question": "Who is the owner of a given device?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which attributes can have a device?",
+        "label": "Simple"
+    },
+    {
+        "question": "What is a device profile?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which are the social relationships a device can be involved in?",
+        "label": "Complex"
+    },
+    {
+        "question": "Which roles are involved in a ownership relationship?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which roles are involved in a partnership relationship?",
+        "label": "Simple"
+    },
+    {
+        "question": "What is a user?",
+        "label": "Simple"
+    },
+    {
+        "question": "Who is a service provider?",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the parameters that has a service?",
+        "label": "Simple"
+    },
+    {
+        "question": "What is a service logical name?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which devices are there?",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the devices of a given agent or organization?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which devices can I see?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which services can I see?",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the devices of a specific partner?",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the services of a specific partner?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which is the profile of a given device?",
+        "label": "Simple"
+    },
+    {
+        "question": "What is a building?",
+        "label": "Simple"
+    },
+    {
+        "question": "Where is something located?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which devices measure temperature?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which devices measure CO2?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which devices measure noise?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which devices measure humidity?",
+        "label": "Simple"
+    },
+    {
+        "question": "What is a thing description?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which devices are located at a CERTH lab?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which properties does a people counting observe?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which properties does a humidity sensor observe?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which properties does a light switch observe?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which properties does a motion sensor observe?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which properties does a thermometer observe?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which properties does a CO2 sensor observe?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which properties does a HVAC sensor observe?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which devices are located at a Oslo SciencePark?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which devices are located at UNIKL?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which properties does an e;bike charger observe?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which properties does a light bulb observe?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which properties does a door sensor observe?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which properties does a window sensor observe?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which properties does a thermostat observe?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which devices are located at a CERTH lab?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which properties does a weight scale observe?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which properties does a weight scale affect?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which properties from a weight scale are observed in events?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which properties does a blood pressure monitor observe?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which properties does a blood pressure monitor affect?",
+        "label": "Complex"
+    },
+    {
+        "question": "Which properties from a blood pressure monitor are observed in events?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which properties does an activity tracker observe?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which properties does an activity tracker affect?",
+        "label": "Complex"
+    },
+    {
+        "question": "Which properties from an activity trackerare observed in events?",
+        "label": "Complex"
+    },
+    {
+        "question": "Which properties from a panic button observed in events?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which properties does a motion sensor observe?",
+        "label": "Simple"
+    }
+]

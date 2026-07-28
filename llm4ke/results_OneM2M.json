@@ -1,0 +1,29 @@
+[
+    {
+        "onto": "OneM2M",
+        "llm": "qwenmax",
+        "mode": "classes_and_properties",
+        "examples": "5",
+        "precision": 0.9,
+        "recall": 0.1206896551724138,
+        "f1_score": 0.21283783783783786
+    },
+    {
+        "onto": "OneM2M",
+        "llm": "llama40",
+        "mode": "classes_and_properties",
+        "examples": "5",
+        "precision": 0.7142857142857143,
+        "recall": 0.20689655172413793,
+        "f1_score": 0.3208556149732621
+    },
+    {
+        "onto": "OneM2M",
+        "llm": "gpt40",
+        "mode": "classes_and_properties",
+        "examples": "5",
+        "precision": 0.7619047619047619,
+        "recall": 0.13793103448275862,
+        "f1_score": 0.23357664233576642
+    }
+]

@@ -1,0 +1,33 @@
+# Only track the four code directories and top-level files.
+/*
+!.gitignore
+!README.md
+!OntologyAgent/
+!experiment_platform/
+!llm4ke/
+!RETROFIT-CQs/
+
+# --- Python junk (beneath tracked dirs) ---
+__pycache__/
+*.pyc
+*.pyo
+*.log
+.ipynb_checkpoints/
+
+# --- Regenerable outputs ---
+logs/
+results/
+Results/
+out/
+data_out/
+metagpt/
+workspace/
+
+# --- Environments / secrets ---
+.env
+.venv/
+venv/
+ENV/
+
+# --- OS ---
+.DS_Store

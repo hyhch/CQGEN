@@ -1,0 +1,430 @@
+[
+    {
+        "question": "What are the protocol parts?",
+        "label": "Simple"
+    },
+    {
+        "question": "What types of data are collected during medical and clinical consultation?",
+        "label": "Complex"
+    },
+    {
+        "question": "What types of demographic data are collected?",
+        "label": "Simple"
+    },
+    {
+        "question": "What is the gender information?",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the main types of education level?",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the main types of laterality?",
+        "label": "Simple"
+    },
+    {
+        "question": "What types of clinical data are collected?",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the types of diagnosis?",
+        "label": "Simple"
+    },
+    {
+        "question": "What types of cognitive abilities assessment data are collected?",
+        "label": "Simple"
+    },
+    {
+        "question": "What data are collected for MMSE",
+        "label": "Simple"
+    },
+    {
+        "question": "What data are collected for FAB",
+        "label": "Simple"
+    },
+    {
+        "question": "What data are collected for the trail making test?",
+        "label": "Simple"
+    },
+    {
+        "question": "What data are collected for the short cognitive battery test?",
+        "label": "Simple"
+    },
+    {
+        "question": "What data are collected for the free and cued selective reminding test?",
+        "label": "Simple"
+    },
+    {
+        "question": "What types of neuropsychiatric/mood assessment data are collected?",
+        "label": "Simple"
+    },
+    {
+        "question": "What data are collected for NPI?",
+        "label": "Simple"
+    },
+    {
+        "question": "What data are collected for DSM-IV criteria?",
+        "label": "Complex"
+    },
+    {
+        "question": "What data are collected for AI and diagnostic criteria for apathy?",
+        "label": "Complex"
+    },
+    {
+        "question": "What types of motricity abilities assessment data are collected?",
+        "label": "Simple"
+    },
+    {
+        "question": "What data are collected for UPDRS?",
+        "label": "Simple"
+    },
+    {
+        "question": "What types of autonomy assessment data are collected?",
+        "label": "Simple"
+    },
+    {
+        "question": "What types of steps does ecological assessment consist of?",
+        "label": "Complex"
+    },
+    {
+        "question": "What are the types of directed tasks?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which are the physical directed tasks?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which are the vocal directed tasks?",
+        "label": "Simple"
+    },
+    {
+        "question": "What is the nature of a directed task?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which directed tasks are mono tasks?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which directed tasks are dual tasks?",
+        "label": "Complex"
+    },
+    {
+        "question": "Which are the tasks of the semi-directed step?",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the types of tasks in the discussion with clinician step?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which are the directed discussion tasks?",
+        "label": "Simple"
+    },
+    {
+        "question": "Which are the free discussion tasks?",
+        "label": "Simple"
+    },
+    {
+        "question": "What is assessed in the walking task?",
+        "label": "Simple"
+    },
+    {
+        "question": "What is assessed in the counting backwards task?",
+        "label": "Simple"
+    },
+    {
+        "question": "What is assessed in the walking and counting backwards task?",
+        "label": "Simple"
+    },
+    {
+        "question": "What is assessed in the sentence repeating task?",
+        "label": "Simple"
+    },
+    {
+        "question": "What is assessed in the articulation control task?",
+        "label": "Simple"
+    },
+    {
+        "question": "What is assessed in the tasks of the semi-directed protocol step?",
+        "label": "Simple"
+    },
+    {
+        "question": "What is assessed in the tasks of the discussion with clinician step?",
+        "label": "Complex"
+    },
+    {
+        "question": "What data are measured for gait assessment?",
+        "label": "Simple"
+    },
+    {
+        "question": "What data are measured for dynamic balance?",
+        "label": "Simple"
+    },
+    {
+        "question": "What data are measured for step length?",
+        "label": "Simple"
+    },
+    {
+        "question": "What data are measured for walking speed?",
+        "label": "Simple"
+    },
+    {
+        "question": "What data are measured for walking speed instantaneous?",
+        "label": "Simple"
+    },
+    {
+        "question": "What data are measured for stopping displacement?",
+        "label": "Simple"
+    },
+    {
+        "question": "What data are measured for latency?",
+        "label": "Simple"
+    },
+    {
+        "question": "What data are measured for stress?",
+        "label": "Simple"
+    },
+    {
+        "question": "What data are measured for cognitive and neuromuscular assessment?",
+        "label": "Complex"
+    },
+    {
+        "question": "What data are measured for affective state assessment?",
+        "label": "Simple"
+    },
+    {
+        "question": "What data are measured for interaction assessment?",
+        "label": "Complex"
+    },
+    {
+        "question": "What data are measured for neuromuscular impairment in speech production mechanism?",
+        "label": "Complex"
+    },
+    {
+        "question": "What data are measured for cognitive abilities assessment?",
+        "label": "Simple"
+    },
+    {
+        "question": "What data are measured for organizational efficiency assessment?",
+        "label": "Complex"
+    },
+    {
+        "question": "What data are measured for functional abilities assessment?",
+        "label": "Simple"
+    },
+    {
+        "question": "What functional areas are of clinical relevance for the home and nursing home environments?",
+        "label": "Complex"
+    },
+    {
+        "question": "How are the statistics and identified problematic situations about the monitored functional areas reported to the clinician?",
+        "label": "Complex"
+    },
+    {
+        "question": "What types of questionnaires are administered for self-assessment?",
+        "label": "Simple"
+    },
+    {
+        "question": "What activities (situations) are of clinical interest with respect to sleep?",
+        "label": "Complex"
+    },
+    {
+        "question": "What information is of clinical interest regarding night sleep?",
+        "label": "Complex"
+    },
+    {
+        "question": "What information is of clinical interest regarding a nap?",
+        "label": "Complex"
+    },
+    {
+        "question": "What information is of clinical interest regarding an awakening?",
+        "label": "Complex"
+    },
+    {
+        "question": "What information is of clinical interest regarding a bed exit?",
+        "label": "Complex"
+    },
+    {
+        "question": "What information if of clinical interest regarding a night bathroom visit?",
+        "label": "Complex"
+    },
+    {
+        "question": "What information is clinically relevant for sleep assessment?",
+        "label": "Complex"
+    },
+    {
+        "question": "What sleep-related situations indicate a problem or possibly problematic behaviour that needs to be highlighted to the clinician?",
+        "label": "Complex"
+    },
+    {
+        "question": "What activities (situations) are of clinical interest with respect to ADLs?",
+        "label": "Complex"
+    },
+    {
+        "question": "What information is of clinical interest regarding food and drink preparation?",
+        "label": "Complex"
+    },
+    {
+        "question": "What information is of clinical interest regarding food and drink consumption?",
+        "label": "Complex"
+    },
+    {
+        "question": "What information is of clinical interest regarding housekeeping?",
+        "label": "Complex"
+    },
+    {
+        "question": "What information is of clinical interest regarding personal hygiene?",
+        "label": "Complex"
+    },
+    {
+        "question": "What food and drink preparation-related situations indicate a problem or possibly problematic behaviour that needs to be highlighted to the clinician?",
+        "label": "Complex"
+    },
+    {
+        "question": "What food and drink consumption-related situations indicate a problem or possibly problematic behaviour that needs to be highlighted to the clinician?",
+        "label": "Complex"
+    },
+    {
+        "question": "What housekeeping-related situations indicate a problem or possibly problematic behaviour that needs to be highlighted to the clinician? ",
+        "label": "Complex"
+    },
+    {
+        "question": "What personal hygiene-related situations indicate a problem or possibly problematic behaviour that needs to be highlighted to the clinician?",
+        "label": "Complex"
+    },
+    {
+        "question": "What activities (situations) are of clinical interest with respect to social interaction?",
+        "label": "Complex"
+    },
+    {
+        "question": "What information is clinically relevant for social interaction assessment?",
+        "label": "Complex"
+    },
+    {
+        "question": "What social interaction related situations indicate a problem or possibly problematic behaviour that needs to be highlighted to the clinician?",
+        "label": "Complex"
+    },
+    {
+        "question": "What activities (situations) are of clinical interest with respect to physical activity?",
+        "label": "Complex"
+    },
+    {
+        "question": "What information is clinically relevant for walking?",
+        "label": "Complex"
+    },
+    {
+        "question": "What information is clinically relevant for dedicated physical activities (i.e. exercises)?",
+        "label": "Complex"
+    },
+    {
+        "question": "What information is clinically relevant for physical activity assessment?",
+        "label": "Complex"
+    },
+    {
+        "question": "What physical activity related situations indicate a problem or possibly problematic behaviour that needs to be highlighted to the clinician?",
+        "label": "Complex"
+    },
+    {
+        "question": "What are the main types of entities?",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the main categories a person may belong to?",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the main types of objects?",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the main categories of places?",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the types of indoor place?",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the main types of events?",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the main types of information describing an event?",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the main categories of events?",
+        "label": "Simple"
+    },
+    {
+        "question": "What activities are detected?",
+        "label": "Simple"
+    },
+    {
+        "question": "What states are detected?",
+        "label": "Simple"
+    },
+    {
+        "question": "What object related events are detected?",
+        "label": "Complex"
+    },
+    {
+        "question": "What ambient measurements are detected?",
+        "label": "Simple"
+    },
+    {
+        "question": "What physiological measurements are detected?",
+        "label": "Simple"
+    },
+    {
+        "question": "What activities are inferred?",
+        "label": "Complex"
+    },
+    {
+        "question": " What are the main types of data considered?",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the main types of data an observation may refer to?",
+        "label": "Simple"
+    },
+    {
+        "question": "What types of descriptive information are relevant to an observation? ",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the main types of data a report may refer to?",
+        "label": "Simple"
+    },
+    {
+        "question": "What types of descriptive information are relevant to a report? ",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the main types of data an interpretation result may refer to? ",
+        "label": "Simple"
+    },
+    {
+        "question": "What types of descriptive information are relevant to a result? ",
+        "label": "Complex"
+    },
+    {
+        "question": "What are the main types of sensors? ",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the possible types of wearable sensors? ",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the possible types of fixed sensors?",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the possible types processing components?",
+        "label": "Simple"
+    }
+]

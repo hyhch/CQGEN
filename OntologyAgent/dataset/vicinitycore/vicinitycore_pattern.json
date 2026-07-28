@@ -1,0 +1,234 @@
+[
+    {
+        "question": "What is an IoT device?",
+        "pattern": "LSP-CD-EN"
+    },
+    {
+        "question": "What is a partnership?",
+        "pattern": "LSP-CD-EN"
+    },
+    {
+        "question": "What attributes has a partnership?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which are the relationships a partnership is involved in ?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "How many organizations can have a partnership?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "What is the relation between organization and devices?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What is an IoT infrastructre?",
+        "pattern": "LSP-CD-EN"
+    },
+    {
+        "question": "Who is the owner of a given device?",
+        "pattern": "LSP-OP-A-EN"
+    },
+    {
+        "question": "Which attributes can have a device?",
+        "pattern": "LSP-DP-EN"
+    },
+    {
+        "question": "What is a device profile?",
+        "pattern": "LSP-CD-EN"
+    },
+    {
+        "question": "Which are the social relationships a device can be involved in?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Which roles are involved in a ownership relationship?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Which roles are involved in a partnership relationship?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What is a user?",
+        "pattern": "LSP-CD-EN"
+    },
+    {
+        "question": "Who is a service provider?",
+        "pattern": "LSP-OP-A-EN"
+    },
+    {
+        "question": "What are the parameters that has a service?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "What is a service logical name?",
+        "pattern": "LSP-CD-EN"
+    },
+    {
+        "question": "Which devices are there?",
+        "pattern": "LSP-CD-EN"
+    },
+    {
+        "question": "What are the devices of a given agent or organization?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Which devices can I see?",
+        "pattern": "LSP-CD-EN"
+    },
+    {
+        "question": "Which services can I see?",
+        "pattern": "LSP-CD-EN"
+    },
+    {
+        "question": "What are the devices of a specific partner?",
+        "pattern": "LSP-OP-DP-EN"
+    },
+    {
+        "question": "What are the services of a specific partner?",
+        "pattern": "LSP-OP-DP-EN"
+    },
+    {
+        "question": "Which is the profile of a given device?",
+        "pattern": "LSP-OP-DP-EN"
+    },
+    {
+        "question": "What is a building?",
+        "pattern": "LSP-CD-EN"
+    },
+    {
+        "question": "Where is something located?",
+        "pattern": "LSP-LO-EN"
+    },
+    {
+        "question": "Which devices measure temperature?",
+        "pattern": "LSP-CD-EN"
+    },
+    {
+        "question": "Which devices measure CO2?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Which devices measure noise?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Which devices measure humidity?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What is a thing description?",
+        "pattern": "LSP-CD-EN"
+    },
+    {
+        "question": "Which devices are located at a CERTH lab?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Which properties does a people counting observe?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which properties does a humidity sensor observe?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which properties does a light switch observe?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which properties does a motion sensor observe?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which properties does a thermometer observe?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which properties does a CO2 sensor observe?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which properties does a HVAC sensor observe?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which devices are located at a Oslo SciencePark?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Which devices are located at UNIKL?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Which properties does an e;bike charger observe?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which properties does a light bulb observe?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which properties does a door sensor observe?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which properties does a window sensor observe?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which properties does a thermostat observe?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which devices are located at a CERTH lab?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Which properties does a weight scale observe?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which properties does a weight scale affect?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which properties from a weight scale are observed in events?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which properties does a blood pressure monitor observe?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which properties does a blood pressure monitor affect?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which properties from a blood pressure monitor are observed in events?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which properties does an activity tracker observe?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which properties does an activity tracker affect?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which properties from an activity trackerare observed in events?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which properties from a panic button observed in events?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "Which properties does a motion sensor observe?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    }
+]

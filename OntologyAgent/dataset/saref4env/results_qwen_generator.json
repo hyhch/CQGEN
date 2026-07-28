@@ -1,0 +1,3251 @@
+{
+    "file_name": "saref4env.ttl",
+    "description": "The intention of SAREF4ENVI includes: to be the basis for enabling the use of SAREF in the environment domain; to exemplify how to enable interoperability between environmental devices in cooperation.",
+    "competency_questions": [
+        "What is a TESS?",
+        "Which type of sensor is a TESS?",
+        "What is a photometer?",
+        "What is the main component of TESS?",
+        "Which are the communication interfaces available in TESS?",
+        "Which components of TESS are sensors?",
+        "Which properties can be measured by a photometer?",
+        "Each reading in a TESS has a timestamp",
+        "Which are the properties observed by a TESS?",
+        "Physical objects can contain devices",
+        "A sensor could be a person",
+        "Devices might have different versions and revision numbers",
+        "Which type(s) of RS232 is supported by TESS?",
+        "Which type(s) of Bluetooth is supported by TESS?",
+        "Which type(s) of WiFi is supported by TESS?",
+        "Which are the components of TESS?",
+        "Which hardware elements is a TESS connected to?",
+        "Which is the communication protocol used by TESS?",
+        "What is the transmission period of the TESS?",
+        "A device is located in a given geographical point defined by a latitude and a longitude",
+        "A device position is defined using the azimuth and altitude horizontal coordinates",
+        "A sensing device takes measures following a frequency",
+        "A device can be actionable or not",
+        "A device is part of a system",
+        "An actuator is a type of device",
+        "A device has energy consumption",
+        "A lamppost uses a given light generation method",
+        "A lamppost has energy consumption",
+        "A lamppost might have a light shield",
+        "What is a lamppost?",
+        "A light has a geometry",
+        "A light is projected in a given direction",
+        "A light is projected in a given angle",
+        "A light is projected from a given height",
+        "A light has a colour",
+        "A light can have flash",
+        "What can be considered as physical objects?",
+        "A digital representation of an object has a name",
+        "A digital representation of an object has a description",
+        "A physical object has a description",
+        "A digital representation of an object has a unique identifier",
+        "A digital representation of an object can have zero or more tags",
+        "A digital representation of an object has exactly one creation date",
+        "A digital representation of an object includes the date in which some characteristic of object was last modified (e.g., its geolocation)",
+        "A sensing device produces a log of property observations",
+        "A log indicates which is its last value",
+        "Values in a log are related to the time in which they were observed",
+        "A physical representation of an object includes an observation log for each property to be observed",
+        "An observation value is measured in a given unit",
+        "What is a service?",
+        "Physical objects can have digital representations that are accessible through services",
+        "A service can expose either none or multiple digital representations of an object",
+        "A digital representation of an object is exposed at maximum by one service",
+        "A digital representation of an object performs actions",
+        "An action manages an actuator",
+        "An action of a digital representation of an object can keep an action log",
+        "A property of a digital representation of an object can keep an observation log",
+        "A digital representation of an object encapsulates a system"
+    ],
+    "namespaces": [
+        {
+            "prefix": "brick",
+            "url": "https://brickschema.org/schema/Brick#"
+        },
+        {
+            "prefix": "csvw",
+            "url": "http://www.w3.org/ns/csvw#"
+        },
+        {
+            "prefix": "dc",
+            "url": "http://purl.org/dc/elements/1.1/"
+        },
+        {
+            "prefix": "dcat",
+            "url": "http://www.w3.org/ns/dcat#"
+        },
+        {
+            "prefix": "dcmitype",
+            "url": "http://purl.org/dc/dcmitype/"
+        },
+        {
+            "prefix": "dcterms",
+            "url": "http://purl.org/dc/terms/"
+        },
+        {
+            "prefix": "dcam",
+            "url": "http://purl.org/dc/dcam/"
+        },
+        {
+            "prefix": "doap",
+            "url": "http://usefulinc.com/ns/doap#"
+        },
+        {
+            "prefix": "foaf",
+            "url": "http://xmlns.com/foaf/0.1/"
+        },
+        {
+            "prefix": "geo",
+            "url": "http://www.opengis.net/ont/geosparql#"
+        },
+        {
+            "prefix": "odrl",
+            "url": "http://www.w3.org/ns/odrl/2/"
+        },
+        {
+            "prefix": "org",
+            "url": "http://www.w3.org/ns/org#"
+        },
+        {
+            "prefix": "prof",
+            "url": "http://www.w3.org/ns/dx/prof/"
+        },
+        {
+            "prefix": "prov",
+            "url": "http://www.w3.org/ns/prov#"
+        },
+        {
+            "prefix": "qb",
+            "url": "http://purl.org/linked-data/cube#"
+        },
+        {
+            "prefix": "schema",
+            "url": "https://schema.org/"
+        },
+        {
+            "prefix": "sh",
+            "url": "http://www.w3.org/ns/shacl#"
+        },
+        {
+            "prefix": "skos",
+            "url": "http://www.w3.org/2004/02/skos/core#"
+        },
+        {
+            "prefix": "sosa",
+            "url": "http://www.w3.org/ns/sosa/"
+        },
+        {
+            "prefix": "ssn",
+            "url": "http://www.w3.org/ns/ssn/"
+        },
+        {
+            "prefix": "time",
+            "url": "http://www.w3.org/2006/time#"
+        },
+        {
+            "prefix": "vann",
+            "url": "http://purl.org/vocab/vann/"
+        },
+        {
+            "prefix": "void",
+            "url": "http://rdfs.org/ns/void#"
+        },
+        {
+            "prefix": "wgs",
+            "url": "https://www.w3.org/2003/01/geo/wgs84_pos#"
+        },
+        {
+            "prefix": "owl",
+            "url": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+            "prefix": "rdf",
+            "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+            "prefix": "rdfs",
+            "url": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+            "prefix": "xsd",
+            "url": "http://www.w3.org/2001/XMLSchema#"
+        },
+        {
+            "prefix": "xml",
+            "url": "http://www.w3.org/XML/1998/namespace"
+        },
+        {
+            "prefix": "wgs84",
+            "url": "http://www.w3.org/2003/01/geo/wgs84_pos#"
+        },
+        {
+            "prefix": "s4envi",
+            "url": "https://saref.etsi.org/saref4envi/"
+        },
+        {
+            "prefix": "saref",
+            "url": "https://saref.etsi.org/core/"
+        }
+    ],
+    "triples": [
+        [
+            "saref:Property",
+            "owl:disjointWith",
+            "s4envi:CommunicationProtocol"
+        ],
+        [
+            "s4envi:Frequency",
+            "rdf:type",
+            "saref:Property"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour>",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "dcterms:creator",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            "s4envi:CompassDirection",
+            "owl:disjointWith",
+            "s4envi:Geometry"
+        ],
+        [
+            "saref:relatesToProperty",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "wgs84:Point",
+            "rdfs:isDefinedBy",
+            "<http://www.w3.org/2003/01/geo/wgs84_pos#>"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time>",
+            "rdf:type",
+            "s4envi:FrequencyUnit"
+        ],
+        [
+            "s4envi:Phosphorescence",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "s4envi:hasRevisionNumber",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            "s4envi:hasProjectionAngle",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "<https://saref.etsi.org/saref4envi/>",
+            "dcterms:creator",
+            "<http://purl.org/net/mpoveda>"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/hertz>",
+            "rdf:type",
+            "s4envi:FrequencyUnit"
+        ],
+        [
+            "<https://saref.etsi.org/saref4envi/>",
+            "owl:versionIRI",
+            "<https://saref.etsi.org/saref4envi/v1.1.2/>"
+        ],
+        [
+            "saref:hasManufacturer",
+            "rdfs:isDefinedBy",
+            "<https://saref.etsi.org/core/>"
+        ],
+        [
+            "s4envi:Device",
+            "rdfs:subClassOf",
+            "s4envi:System"
+        ],
+        [
+            "s4envi:isProjectedInDirection",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "wgs84:SpatialThing",
+            "owl:disjointWith",
+            "s4envi:DigitalRepresentation"
+        ],
+        [
+            "wgs84:SpatialThing",
+            "rdfs:isDefinedBy",
+            "<http://www.w3.org/2003/01/geo/wgs84_pos#>"
+        ],
+        [
+            "saref:Measurement",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/decimetre>",
+            "rdf:type",
+            "s4envi:LengthUnit"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/millimetre>",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "<https://saref.etsi.org/saref4envi/>",
+            "owl:imports",
+            "<https://saref.etsi.org/core/v3.2.1/>"
+        ],
+        [
+            "saref:UnitOfMeasure",
+            "owl:disjointWith",
+            "s4envi:Color"
+        ],
+        [
+            "s4envi:isConnectedTo",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "wgs84:location",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "s4envi:CompassDirection",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "s4envi:Geometry",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "s4envi:hasTag",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            "saref:hasTimestamp",
+            "rdf:type",
+            "owl:FunctionalProperty"
+        ],
+        [
+            "s4envi:DigitalRepresentation",
+            "owl:disjointWith",
+            "s4envi:Light"
+        ],
+        [
+            "dcterms:publisher",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            "s4envi:PeriodMeasurement",
+            "rdfs:subClassOf",
+            "saref:Measurement"
+        ],
+        [
+            "saref:Service",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "s4envi:hasIdentifier",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            "wgs84:SpatialThing",
+            "owl:disjointWith",
+            "s4envi:CommunicationProtocol"
+        ],
+        [
+            "s4envi:FrequencyUnit",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "s4envi:CommunicationProtocol",
+            "owl:disjointWith",
+            "s4envi:Light"
+        ],
+        [
+            "s4envi:LightAbsorption",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "s4envi:DigitalRepresentation",
+            "owl:disjointWith",
+            "s4envi:Geometry"
+        ],
+        [
+            "saref:Measurement",
+            "owl:disjointWith",
+            "saref:Property"
+        ],
+        [
+            "s4envi:System",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "s4envi:FrequencyUnit",
+            "rdfs:subClassOf",
+            "saref:UnitOfMeasure"
+        ],
+        [
+            "s4envi:hasShield",
+            "rdfs:range",
+            "xsd:boolean"
+        ],
+        [
+            "s4envi:ReflectionOfLight",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "s4envi:CommunicationProtocol",
+            "owl:disjointWith",
+            "s4envi:Geometry"
+        ],
+        [
+            "s4envi:Luminiscence",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "s4envi:Luminiscence",
+            "rdf:type",
+            "s4envi:LightProperty"
+        ],
+        [
+            "s4envi:hasFlash",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "s4envi:hasFlash",
+            "rdf:type",
+            "owl:FunctionalProperty"
+        ],
+        [
+            "saref:Measurement",
+            "owl:disjointWith",
+            "s4envi:CommunicationInterface"
+        ],
+        [
+            "s4envi:hasDigitalRepresentation",
+            "rdf:type",
+            "owl:InverseFunctionalProperty"
+        ],
+        [
+            "saref:Measurement",
+            "owl:disjointWith",
+            "s4envi:Light"
+        ],
+        [
+            "dcterms:modified",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            "wgs84:SpatialThing",
+            "owl:disjointWith",
+            "s4envi:Color"
+        ],
+        [
+            "saref:Measurement",
+            "owl:disjointWith",
+            "saref:UnitOfMeasure"
+        ],
+        [
+            "saref:Service",
+            "owl:disjointWith",
+            "saref:UnitOfMeasure"
+        ],
+        [
+            "saref:Property",
+            "owl:disjointWith",
+            "s4envi:Geometry"
+        ],
+        [
+            "s4envi:ScatteringOfLight",
+            "rdf:type",
+            "s4envi:LightProperty"
+        ],
+        [
+            "s4envi:usesCommunicationProtocol",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/centimetre>",
+            "rdf:type",
+            "s4envi:LengthUnit"
+        ],
+        [
+            "saref:UnitOfMeasure",
+            "owl:disjointWith",
+            "s4envi:DigitalRepresentation"
+        ],
+        [
+            "saref:UnitOfMeasure",
+            "owl:disjointWith",
+            "s4envi:CompassDirection"
+        ],
+        [
+            "s4envi:Light",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "saref:Property",
+            "owl:disjointWith",
+            "s4envi:CompassDirection"
+        ],
+        [
+            "s4envi:isComponentOf",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "s4envi:Geometry",
+            "owl:disjointWith",
+            "s4envi:Light"
+        ],
+        [
+            "s4envi:Fluorescence",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "s4envi:DigitalRepresentation",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "saref:Sensor",
+            "rdfs:isDefinedBy",
+            "<https://saref.etsi.org/core/>"
+        ],
+        [
+            "s4envi:LightProperty",
+            "rdfs:subClassOf",
+            "saref:Property"
+        ],
+        [
+            "dcterms:license",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            "wgs84:SpatialThing",
+            "owl:disjointWith",
+            "saref:Service"
+        ],
+        [
+            "s4envi:Color",
+            "owl:disjointWith",
+            "s4envi:DigitalRepresentation"
+        ],
+        [
+            "saref:hasDescription",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "saref:hasValue",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "s4envi:isAccesibleThrough",
+            "rdf:type",
+            "owl:FunctionalProperty"
+        ],
+        [
+            "time:TemporalUnit",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "s4envi:CommunicationProtocol",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "s4envi:Height",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "saref:UnitOfMeasure",
+            "owl:disjointWith",
+            "s4envi:CommunicationProtocol"
+        ],
+        [
+            "s4envi:HeightMeasurement",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "s4envi:Irradiance",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "saref:measuresProperty",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "s4envi:Illuminance",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "wgs84:SpatialThing",
+            "owl:disjointWith",
+            "s4envi:Geometry"
+        ],
+        [
+            "s4envi:Phosphorescence",
+            "rdf:type",
+            "s4envi:LightProperty"
+        ],
+        [
+            "s4envi:hasVersion",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            "s4envi:hasTransmissionPeriod",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "s4envi:PhysicalObject",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "<https://saref.etsi.org/saref4envi/>",
+            "dcterms:contributor",
+            "<http://maxime-lefrancois.info/me#>"
+        ],
+        [
+            "s4envi:Color",
+            "owl:disjointWith",
+            "s4envi:CommunicationProtocol"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_day>",
+            "rdf:type",
+            "s4envi:FrequencyUnit"
+        ],
+        [
+            "s4envi:Period",
+            "rdf:type",
+            "saref:Property"
+        ],
+        [
+            "s4envi:contains",
+            "owl:inverseOf",
+            "s4envi:isContainedIn"
+        ],
+        [
+            "wgs84:SpatialThing",
+            "owl:disjointWith",
+            "s4envi:CompassDirection"
+        ],
+        [
+            "s4envi:hasFrequencyMeasurement",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/hectometre>",
+            "rdf:type",
+            "s4envi:LengthUnit"
+        ],
+        [
+            "s4envi:hasLightPoint",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "time:TemporalUnit",
+            "rdfs:subClassOf",
+            "saref:UnitOfMeasure"
+        ],
+        [
+            "saref:Service",
+            "owl:disjointWith",
+            "s4envi:CommunicationProtocol"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/decimetre>",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/hectometre>",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "s4envi:CommunicationInterface",
+            "owl:disjointWith",
+            "s4envi:CommunicationProtocol"
+        ],
+        [
+            "wgs84:SpatialThing",
+            "owl:disjointWith",
+            "saref:Measurement"
+        ],
+        [
+            "s4envi:encapsulates",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "s4envi:FrequencyMeasurement",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "saref:hasTimestamp",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/decametre>",
+            "rdf:type",
+            "s4envi:LengthUnit"
+        ],
+        [
+            "saref:UnitOfMeasure",
+            "rdfs:isDefinedBy",
+            "<https://saref.etsi.org/core/>"
+        ],
+        [
+            "dcterms:issued",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            "<https://saref.etsi.org/saref4envi/>",
+            "dcterms:creator",
+            "<http://www.garcia-castro.com/foaf.rdf#me>"
+        ],
+        [
+            "s4envi:LightAbsorption",
+            "rdf:type",
+            "s4envi:LightProperty"
+        ],
+        [
+            "s4envi:affectsProperty",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "saref:Property",
+            "owl:disjointWith",
+            "saref:Service"
+        ],
+        [
+            "s4envi:Lamppost",
+            "rdfs:subClassOf",
+            "s4envi:Device"
+        ],
+        [
+            "<https://saref.etsi.org/saref4envi/>",
+            "dcterms:license",
+            "<https://forge.etsi.org/etsi-software-license>"
+        ],
+        [
+            "s4envi:isConnectedTo",
+            "rdf:type",
+            "owl:SymmetricProperty"
+        ],
+        [
+            "s4envi:hasComponent",
+            "owl:inverseOf",
+            "s4envi:isComponentOf"
+        ],
+        [
+            "saref:Service",
+            "owl:disjointWith",
+            "s4envi:Color"
+        ],
+        [
+            "s4envi:LengthUnit",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "s4envi:ReflectionOfLight",
+            "rdf:type",
+            "s4envi:LightProperty"
+        ],
+        [
+            "saref:Service",
+            "rdfs:isDefinedBy",
+            "<https://saref.etsi.org/core/>"
+        ],
+        [
+            "s4envi:LightMagnitude",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "saref:isMeasuredIn",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "s4envi:encapsulates",
+            "owl:inverseOf",
+            "s4envi:hasDigitalRepresentation"
+        ],
+        [
+            "s4envi:isProjectedFromHeight",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "saref:UnitOfMeasure",
+            "owl:disjointWith",
+            "s4envi:Light"
+        ],
+        [
+            "saref:Property",
+            "owl:disjointWith",
+            "s4envi:Light"
+        ],
+        [
+            "s4envi:Frequency",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "s4envi:contains",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "s4envi:TESS",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "s4envi:isComponentOf",
+            "rdf:type",
+            "owl:TransitiveProperty"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/metre>",
+            "rdf:type",
+            "s4envi:LengthUnit"
+        ],
+        [
+            "s4envi:hasColor",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "saref:UnitOfMeasure",
+            "owl:disjointWith",
+            "s4envi:Geometry"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/metre>",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "s4envi:projectsLight",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "s4envi:hasShield",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "s4envi:hasShield",
+            "rdf:type",
+            "owl:FunctionalProperty"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/centimetre>",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "saref:hasTimestamp",
+            "rdfs:range",
+            "xsd:dateTime"
+        ],
+        [
+            "s4envi:Fluorescence",
+            "rdf:type",
+            "s4envi:LightProperty"
+        ],
+        [
+            "s4envi:Color",
+            "owl:disjointWith",
+            "s4envi:Geometry"
+        ],
+        [
+            "saref:hasManufacturer",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "s4envi:Photometer",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "s4envi:Color",
+            "owl:disjointWith",
+            "s4envi:CompassDirection"
+        ],
+        [
+            "dcterms:title",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            "s4envi:LightProperty",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "saref:Property",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year>",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "saref:Service",
+            "owl:disjointWith",
+            "s4envi:Geometry"
+        ],
+        [
+            "wgs84:SpatialThing",
+            "owl:disjointWith",
+            "s4envi:CommunicationInterface"
+        ],
+        [
+            "saref:Device",
+            "rdfs:isDefinedBy",
+            "<https://saref.etsi.org/core/>"
+        ],
+        [
+            "s4envi:CommunicationInterface",
+            "owl:disjointWith",
+            "s4envi:Geometry"
+        ],
+        [
+            "<https://saref.etsi.org/saref4envi/>",
+            "dcterms:publisher",
+            "<https://www.etsi.org/>"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour>",
+            "rdf:type",
+            "s4envi:FrequencyUnit"
+        ],
+        [
+            "saref:Measurement",
+            "owl:disjointWith",
+            "s4envi:DigitalRepresentation"
+        ],
+        [
+            "saref:Service",
+            "owl:disjointWith",
+            "s4envi:CompassDirection"
+        ],
+        [
+            "s4envi:Irradiance",
+            "rdf:type",
+            "s4envi:LightProperty"
+        ],
+        [
+            "s4envi:PeriodMeasurement",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "s4envi:CommunicationInterface",
+            "owl:disjointWith",
+            "s4envi:DigitalRepresentation"
+        ],
+        [
+            "s4envi:CommunicationInterface",
+            "owl:disjointWith",
+            "s4envi:CompassDirection"
+        ],
+        [
+            "s4envi:LengthUnit",
+            "rdfs:subClassOf",
+            "saref:UnitOfMeasure"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/kilometre>",
+            "rdf:type",
+            "s4envi:LengthUnit"
+        ],
+        [
+            "time:TemporalUnit",
+            "rdfs:isDefinedBy",
+            "<http://www.w3.org/2006/time#>"
+        ],
+        [
+            "s4envi:Illuminance",
+            "rdf:type",
+            "s4envi:LightProperty"
+        ],
+        [
+            "saref:makesMeasurement",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "s4envi:Actuator",
+            "rdfs:subClassOf",
+            "s4envi:Device"
+        ],
+        [
+            "s4envi:LightPoint",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "s4envi:Lamppost",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "saref:UnitOfMeasure",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "saref:hasValue",
+            "rdfs:isDefinedBy",
+            "<https://saref.etsi.org/core/>"
+        ],
+        [
+            "s4envi:hasProjectionAngle",
+            "rdfs:range",
+            "xsd:float"
+        ],
+        [
+            "s4envi:hasGeometry",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "saref:Measurement",
+            "owl:disjointWith",
+            "s4envi:CommunicationProtocol"
+        ],
+        [
+            "dcterms:contributor",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            "s4envi:hasComponent",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "s4envi:hasCreationDate",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "s4envi:hasCreationDate",
+            "rdf:type",
+            "owl:FunctionalProperty"
+        ],
+        [
+            "s4envi:Device",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "s4envi:hasProjectionAngle",
+            "rdf:type",
+            "owl:FunctionalProperty"
+        ],
+        [
+            "s4envi:CompassDirection",
+            "owl:disjointWith",
+            "s4envi:DigitalRepresentation"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time>",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "dcterms:source",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/millimetre>",
+            "rdf:type",
+            "s4envi:LengthUnit"
+        ],
+        [
+            "s4envi:CommunicationInterface",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/hertz>",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/decametre>",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_day>",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "dcterms:description",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            "s4envi:encapsulates",
+            "rdf:type",
+            "owl:FunctionalProperty"
+        ],
+        [
+            "s4envi:hasDigitalRepresentation",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "s4envi:Color",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "s4envi:hasFlash",
+            "rdfs:range",
+            "xsd:boolean"
+        ],
+        [
+            "s4envi:Height",
+            "rdf:type",
+            "saref:Property"
+        ],
+        [
+            "saref:UnitOfMeasure",
+            "owl:disjointWith",
+            "s4envi:CommunicationInterface"
+        ],
+        [
+            "s4envi:HeightMeasurement",
+            "rdfs:subClassOf",
+            "saref:Measurement"
+        ],
+        [
+            "saref:Property",
+            "owl:disjointWith",
+            "s4envi:CommunicationInterface"
+        ],
+        [
+            "s4envi:LightMagnitude",
+            "rdf:type",
+            "s4envi:LightProperty"
+        ],
+        [
+            "wgs84:SpatialThing",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "saref:hasDescription",
+            "rdfs:isDefinedBy",
+            "<https://saref.etsi.org/core/>"
+        ],
+        [
+            "s4envi:hasTag",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "saref:Property",
+            "owl:disjointWith",
+            "saref:UnitOfMeasure"
+        ],
+        [
+            "s4envi:Photometer",
+            "rdfs:subClassOf",
+            "saref:Sensor"
+        ],
+        [
+            "s4envi:hasRevisionNumber",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "saref:Sensor",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "s4envi:hasVersion",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "s4envi:hasVersion",
+            "rdf:type",
+            "owl:FunctionalProperty"
+        ],
+        [
+            "s4envi:PhysicalObject",
+            "rdfs:subClassOf",
+            "wgs84:SpatialThing"
+        ],
+        [
+            "wgs84:Point",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "vann:preferredNamespaceUri",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            "saref:Measurement",
+            "owl:disjointWith",
+            "saref:Service"
+        ],
+        [
+            "s4envi:System",
+            "rdfs:subClassOf",
+            "s4envi:PhysicalObject"
+        ],
+        [
+            "s4envi:Color",
+            "owl:disjointWith",
+            "s4envi:CommunicationInterface"
+        ],
+        [
+            "s4envi:Period",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "s4envi:Color",
+            "owl:disjointWith",
+            "s4envi:Light"
+        ],
+        [
+            "s4envi:Device",
+            "rdfs:subClassOf",
+            "saref:Device"
+        ],
+        [
+            "s4envi:hasCreationDate",
+            "rdfs:range",
+            "xsd:dateTime"
+        ],
+        [
+            "saref:Device",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "s4envi:CommunicationProtocol",
+            "owl:disjointWith",
+            "s4envi:DigitalRepresentation"
+        ],
+        [
+            "<https://saref.etsi.org/saref4envi/>",
+            "rdf:type",
+            "owl:Ontology"
+        ],
+        [
+            "s4envi:CommunicationProtocol",
+            "owl:disjointWith",
+            "s4envi:CompassDirection"
+        ],
+        [
+            "s4envi:TESS",
+            "rdfs:subClassOf",
+            "s4envi:Photometer"
+        ],
+        [
+            "s4envi:isContainedIn",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "saref:Service",
+            "owl:disjointWith",
+            "s4envi:Light"
+        ],
+        [
+            "s4envi:CommunicationInterface",
+            "owl:disjointWith",
+            "s4envi:Light"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year>",
+            "rdf:type",
+            "s4envi:FrequencyUnit"
+        ],
+        [
+            "s4envi:ScatteringOfLight",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "s4envi:hasIdentifier",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "vann:preferredNamespacePrefix",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            "saref:Measurement",
+            "owl:disjointWith",
+            "s4envi:Geometry"
+        ],
+        [
+            "s4envi:isAccesibleThrough",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "<https://saref.etsi.org/saref4envi/>",
+            "dcterms:source",
+            "<https://saref.etsi.org/sources/saref4envi/>"
+        ],
+        [
+            "s4envi:usesCommunicationInterface",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "s4envi:Actuator",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "saref:Measurement",
+            "owl:disjointWith",
+            "s4envi:CompassDirection"
+        ],
+        [
+            "s4envi:FrequencyMeasurement",
+            "rdfs:subClassOf",
+            "saref:Measurement"
+        ],
+        [
+            "s4envi:LightPoint",
+            "rdfs:subClassOf",
+            "wgs84:Point"
+        ],
+        [
+            "<https://saref.etsi.org/saref4envi/>",
+            "rdfs:seeAlso",
+            "<https://www.etsi.org/deliver/etsi_ts/103400_103499/10341002/02.01.01_60/ts_10341002v020101p.pdf>"
+        ],
+        [
+            "<http://www.wurvoc.org/vocabularies/om-1.8/kilometre>",
+            "rdf:type",
+            "owl:NamedIndividual"
+        ],
+        [
+            "s4envi:hasComponent",
+            "rdf:type",
+            "owl:TransitiveProperty"
+        ],
+        [
+            "saref:Sensor",
+            "rdfs:subClassOf",
+            "saref:Device"
+        ],
+        [
+            "s4envi:CompassDirection",
+            "owl:disjointWith",
+            "s4envi:Light"
+        ],
+        [
+            "wgs84:location",
+            "rdfs:isDefinedBy",
+            "<http://www.w3.org/2003/01/geo/wgs84_pos#>"
+        ]
+    ],
+    "retrofitted_competency_questions": [
+        "[Simple] What are the different types of light properties mentioned in the ontology?",
+        "[Simple] Is frequency considered a property in this ontology?",
+        "[Simple] Can you list all the named individuals related to light properties?",
+        "[Simple] Is phosphorescence a type of light property?",
+        "[Simple] What is the relationship between LightProperty and Property?",
+        "[Simple] Is height considered a property in this ontology?",
+        "[Simple] Is irradiance a type of light property?",
+        "[Simple] Are there any properties that are not related to communication protocols?",
+        "[Simple] Is reflection of light a named individual in this ontology?",
+        "[Simple] Is luminiscence a type of light property?",
+        "[Intermediate] Which properties are specifically related to light and not to communication protocols or geometry?",
+        "[Intermediate] Can you identify which light properties are also named individuals?",
+        "[Intermediate] How many light properties are there, and what are they?",
+        "[Intermediate] Which properties are disjoint with communication interfaces?",
+        "[Intermediate] Are there any properties that are both a NamedIndividual and a Property?",
+        "[Complex] If a device measures frequency, what other properties can it measure, given the constraints in the ontology?",
+        "[Complex] How do the different types of light properties (e.g., phosphorescence, fluorescence) relate to each other, and what are their specific characteristics?",
+        "[Complex] Given the disjoint relationships, how would you classify a new property that is neither a communication protocol, geometry, nor a service, but is related to light?",
+        "[Simple] What are the different frequency units available in the ontology?",
+        "[Simple] Can you list all the length units defined in the ontology?",
+        "[Simple] Is hertz a recognized frequency unit in this ontology?",
+        "[Simple] Is kilometre a valid length unit in the ontology?",
+        "[Simple] How many frequency units are there in the ontology?",
+        "[Simple] Are decimetre and centimetre both classified as length units in the ontology?",
+        "[Simple] Is reciprocal hour considered a frequency unit in the ontology?",
+        "[Intermediate] Which units of measure are subclasses of saref:UnitOfMeasure?",
+        "[Intermediate] Can you provide a list of all the named individuals that are also classified as frequency units?",
+        "[Intermediate] How many length units are also classified as owl:NamedIndividuals in the ontology?",
+        "[Intermediate] Are there any units that are both frequency and length units in the ontology?",
+        "[Complex] If a device measures frequency, what units could it use based on the ontology?",
+        "[Complex] Given a set of measurements, how can we determine if they are all using units from the same category (e.g., all frequency or all length)?",
+        "[Simple] What is a compass direction?",
+        "[Simple] What is a geometry?",
+        "[Simple] What is a unit of measure?",
+        "[Simple] What is a measurement?",
+        "[Simple] What is a digital representation?",
+        "[Simple] What is a communication protocol?",
+        "[Simple] What is a light?",
+        "[Simple] What is a color?",
+        "[Simple] What is a temporal unit?",
+        "[Simple] What is a communication interface?",
+        "[Simple] What is a height measurement?",
+        "[Simple] What is a period measurement?",
+        "[Simple] What is a frequency measurement?",
+        "[Simple] What is a light point?",
+        "[Intermediate] Which measurements are related to time?",
+        "[Intermediate] What types of units of measure are defined in the ontology?",
+        "[Intermediate] How are compass directions and geometries different?",
+        "[Intermediate] What are the differences between digital representations and lights?",
+        "[Intermediate] How do communication protocols differ from geometries?",
+        "[Intermediate] What are the relationships between colors and other classes in the ontology?",
+        "[Intermediate] How does a light point relate to a geographical point?",
+        "[Complex] If a device measures both height and frequency, what units of measure could it use?",
+        "[Complex] How would you classify a device that can measure multiple properties, such as light, temperature, and humidity, and what units of measure would be applicable for each property?",
+        "[Complex] If a sensor uses a specific communication protocol, which other components or devices must also support this protocol to ensure interoperability?",
+        "[Simple] What is the definition of a manufacturer in the context of devices?",
+        "[Simple] Can you provide a description of a service in this ontology?",
+        "[Simple] What types of devices are included in the system class?",
+        "[Simple] What is the definition of a spatial thing in this ontology?",
+        "[Simple] What is the definition of a sensor in this ontology?",
+        "[Simple] Can a device be a physical object?",
+        "[Simple] What is the definition of a photometer in this ontology?",
+        "[Simple] Can a photometer be classified as a sensor?",
+        "[Simple] What is the definition of a lamppost in this ontology?",
+        "[Simple] Can an actuator be considered a type of device?",
+        "[Simple] What is the definition of a TESS in this ontology?",
+        "[Simple] Can a TESS be classified as a photometer?",
+        "[Simple] What is the value that a device can have?",
+        "[Intermediate] Which manufacturers are associated with the photometers in the system?",
+        "[Intermediate] What services are provided by the devices in the system?",
+        "[Intermediate] Are there any devices that are both sensors and actuators?",
+        "[Intermediate] Which devices in the system have a specific value assigned to them?",
+        "[Intermediate] What are the different types of systems that exist in the ontology?",
+        "[Intermediate] Are there any devices that are not classified as either sensors or actuators?",
+        "[Complex] If a photometer has a specific value, what services can it provide in the system?",
+        "[Complex] How many devices in the system are both sensors and have a specific value?",
+        "[Complex] What is the relationship between the devices and the services they provide, and how does this affect the overall system?",
+        "[Simple] Who are the creators of the SAREF4ENVI ontology?",
+        "[Simple] What is the version IRI of the SAREF4ENVI ontology?",
+        "[Simple] Which ontology does SAREF4ENVI import?",
+        "[Simple] Who are the contributors to the SAREF4ENVI ontology?",
+        "[Simple] What is the license under which the SAREF4ENVI ontology is published?",
+        "[Simple] Who is the publisher of the SAREF4ENVI ontology?",
+        "[Simple] What is the source URL for the SAREF4ENVI ontology?",
+        "[Simple] Where can I find additional information about the SAREF4ENVI ontology?",
+        "[Intermediate] Can you list all the creators and contributors of the SAREF4ENVI ontology?",
+        "[Intermediate] Which creators of the SAREF4ENVI ontology are also listed as contributors?",
+        "[Complex] How many different roles (e.g., creator, contributor, publisher) are associated with the individuals involved in the SAREF4ENVI ontology, and who holds each role?",
+        "[Simple] What is the revision number of a device?",
+        "[Simple] Does a device have a shield?",
+        "[Simple] What is the projection angle of a device?",
+        "[Simple] Can you tell me the tag of a device?",
+        "[Simple] What is the identifier of a device?",
+        "[Simple] When was a device created?",
+        "[Simple] What is the version of a device?",
+        "[Simple] Does a device have a flash?",
+        "[Intermediate] Which devices were created after a specific date?",
+        "[Intermediate] What are the identifiers of all devices that have a specific tag?",
+        "[Intermediate] Which devices have both a shield and a flash?",
+        "[Intermediate] What are the projection angles of devices that have a specific identifier?",
+        "[Intermediate] Which devices have a transmission period with another device?",
+        "[Complex] How many devices were created in a specific year and have a certain tag?",
+        "[Complex] Which devices have a projection angle greater than 45 degrees and were created before a specific date?",
+        "[Complex] Can you list all devices that have a specific revision number, a shield, and a flash?",
+        "[Complex] What are the identifiers of devices that have a specific version and were created within a certain time frame?",
+        "[Simple] Who is the creator of a specific document?",
+        "[Simple] What is the title of a particular document?",
+        "[Simple] When was a document last modified?",
+        "[Simple] What is the license associated with a given document?",
+        "[Simple] When was a document first issued?",
+        "[Simple] Who are the contributors to a specific document?",
+        "[Simple] What is the source of a particular document?",
+        "[Simple] Can you provide a description of a specific document?",
+        "[Simple] What is the preferred namespace URI for a given document?",
+        "[Simple] What is the preferred namespace prefix for a given document?",
+        "[Intermediate] Which documents were created by the same author and published in the same year?",
+        "[Intermediate] Can you list all the documents that have been modified within the last month?",
+        "[Intermediate] What are the titles of all documents that have a specific contributor?",
+        "[Intermediate] Which documents have the same publisher and were issued in the same year?",
+        "[Intermediate] Can you find all documents that have a description containing a specific keyword?",
+        "[Complex] For a given set of documents, can you group them by their creators and show the number of documents each creator has contributed to?",
+        "[Complex] Can you list all documents that were modified after a specific date and have a certain contributor, and also include their titles and descriptions?",
+        "[Simple] What is the direction in which a light is projected?",
+        "[Simple] What does it mean for one device to be connected to another?",
+        "[Simple] What is the timestamp of a specific event or observation?",
+        "[Simple] Which communication protocol is used by a device?",
+        "[Simple] What is the digital representation of a physical object?",
+        "[Simple] What color does a particular light have?",
+        "[Simple] What is contained within a given physical object?",
+        "[Simple] What does it mean for a device to encapsulate another?",
+        "[Simple] If a device contains another, what is the inverse relationship called?",
+        "[Simple] What is the inverse relationship of encapsulation?",
+        "[Intermediate] Which devices are connected to a specific device and what are their timestamps?",
+        "[Intermediate] What are the communication protocols used by all the devices that contain a specific component?",
+        "[Intermediate] Which physical objects contain a specific device and what are their digital representations?",
+        "[Intermediate] What are the colors of the lights that are projected in a specific direction?",
+        "[Intermediate] Which devices use a particular communication protocol and what are their connections?",
+        "[Complex] How many devices with a specific color are connected to other devices that use a particular communication protocol?",
+        "[Complex] For a set of devices that are connected to each other, what are the different communication protocols they use, and what are the timestamps of their connections?",
+        "[Complex] If a device encapsulates multiple components, what are the digital representations of those components, and how are they connected to other devices?",
+        "[Complex] For a given set of devices, what are the different directions in which their lights are projected, and what are the colors of those lights?",
+        "[Complex] How do the timestamps of events relate to the devices that are connected to each other, and what are the communication protocols they use?",
+        "[Simple] What is the definition of a Point in the WGS84 coordinate system?",
+        "[Simple] What does the property \"location\" represent?",
+        "[Simple] Can you explain what \"isComponentOf\" means in this context?",
+        "[Simple] What is the purpose of the \"measuresProperty\" in the ontology?",
+        "[Simple] What does \"hasFrequencyMeasurement\" refer to?",
+        "[Simple] What is the meaning of \"affectsProperty\"?",
+        "[Simple] How is \"hasComponent\" related to \"isComponentOf\"?",
+        "[Simple] What does \"isMeasuredIn\" indicate?",
+        "[Simple] What is the role of \"isProjectedFromHeight\"?",
+        "[Simple] What does \"projectsLight\" signify?",
+        "[Simple] What is the function of \"makesMeasurement\"?",
+        "[Simple] What does \"hasGeometry\" represent?",
+        "[Simple] What is the purpose of \"usesCommunicationInterface\"?",
+        "[Intermediate] Which components are part of a specific device?",
+        "[Intermediate] What properties can be measured by a sensor that uses a particular communication interface?",
+        "[Intermediate] Which devices have a specific location defined by WGS84 coordinates?",
+        "[Intermediate] What are the components that affect a given property?",
+        "[Intermediate] Which devices project light from a certain height?",
+        "[Complex] If a device has a specific geometry and is located at a given point, how does it affect the properties it measures?",
+        "[Complex] How do the components of a device, their measurements, and the communication interfaces they use, collectively influence the overall functionality of the device?"
+    ],
+    "subgraph_chunks": [
+        {
+            "subgraph_id": 1,
+            "namespaces": [
+                {
+                    "prefix": "saref",
+                    "url": "https://saref.etsi.org/core/"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "s4envi",
+                    "url": "https://saref.etsi.org/saref4envi/"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                }
+            ],
+            "triples": [
+                [
+                    "saref:Property",
+                    "owl:disjointWith",
+                    "s4envi:CommunicationProtocol"
+                ],
+                [
+                    "s4envi:Frequency",
+                    "rdf:type",
+                    "saref:Property"
+                ],
+                [
+                    "s4envi:Phosphorescence",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "s4envi:LightAbsorption",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "s4envi:ReflectionOfLight",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "s4envi:Luminiscence",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "s4envi:Luminiscence",
+                    "rdf:type",
+                    "s4envi:LightProperty"
+                ],
+                [
+                    "saref:Property",
+                    "owl:disjointWith",
+                    "s4envi:Geometry"
+                ],
+                [
+                    "s4envi:ScatteringOfLight",
+                    "rdf:type",
+                    "s4envi:LightProperty"
+                ],
+                [
+                    "saref:Property",
+                    "owl:disjointWith",
+                    "s4envi:CompassDirection"
+                ],
+                [
+                    "s4envi:Fluorescence",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "s4envi:LightProperty",
+                    "rdfs:subClassOf",
+                    "saref:Property"
+                ],
+                [
+                    "s4envi:Height",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "s4envi:Irradiance",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "s4envi:Illuminance",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "s4envi:Phosphorescence",
+                    "rdf:type",
+                    "s4envi:LightProperty"
+                ],
+                [
+                    "s4envi:Period",
+                    "rdf:type",
+                    "saref:Property"
+                ],
+                [
+                    "s4envi:LightAbsorption",
+                    "rdf:type",
+                    "s4envi:LightProperty"
+                ],
+                [
+                    "saref:Property",
+                    "owl:disjointWith",
+                    "saref:Service"
+                ],
+                [
+                    "s4envi:ReflectionOfLight",
+                    "rdf:type",
+                    "s4envi:LightProperty"
+                ],
+                [
+                    "s4envi:LightMagnitude",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "saref:Property",
+                    "owl:disjointWith",
+                    "s4envi:Light"
+                ],
+                [
+                    "s4envi:Frequency",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "s4envi:Fluorescence",
+                    "rdf:type",
+                    "s4envi:LightProperty"
+                ],
+                [
+                    "s4envi:LightProperty",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "saref:Property",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "s4envi:Irradiance",
+                    "rdf:type",
+                    "s4envi:LightProperty"
+                ],
+                [
+                    "s4envi:Illuminance",
+                    "rdf:type",
+                    "s4envi:LightProperty"
+                ],
+                [
+                    "s4envi:Height",
+                    "rdf:type",
+                    "saref:Property"
+                ],
+                [
+                    "saref:Property",
+                    "owl:disjointWith",
+                    "s4envi:CommunicationInterface"
+                ],
+                [
+                    "s4envi:LightMagnitude",
+                    "rdf:type",
+                    "s4envi:LightProperty"
+                ],
+                [
+                    "saref:Property",
+                    "owl:disjointWith",
+                    "saref:UnitOfMeasure"
+                ],
+                [
+                    "s4envi:Period",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "s4envi:ScatteringOfLight",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What are the different types of light properties mentioned in the ontology?",
+                "[Simple] Is frequency considered a property in this ontology?",
+                "[Simple] Can you list all the named individuals related to light properties?",
+                "[Simple] Is phosphorescence a type of light property?",
+                "[Simple] What is the relationship between LightProperty and Property?",
+                "[Simple] Is height considered a property in this ontology?",
+                "[Simple] Is irradiance a type of light property?",
+                "[Simple] Are there any properties that are not related to communication protocols?",
+                "[Simple] Is reflection of light a named individual in this ontology?",
+                "[Simple] Is luminiscence a type of light property?",
+                "[Intermediate] Which properties are specifically related to light and not to communication protocols or geometry?",
+                "[Intermediate] Can you identify which light properties are also named individuals?",
+                "[Intermediate] How many light properties are there, and what are they?",
+                "[Intermediate] Which properties are disjoint with communication interfaces?",
+                "[Intermediate] Are there any properties that are both a NamedIndividual and a Property?",
+                "[Complex] If a device measures frequency, what other properties can it measure, given the constraints in the ontology?",
+                "[Complex] How do the different types of light properties (e.g., phosphorescence, fluorescence) relate to each other, and what are their specific characteristics?",
+                "[Complex] Given the disjoint relationships, how would you classify a new property that is neither a communication protocol, geometry, nor a service, but is related to light?"
+            ]
+        },
+        {
+            "subgraph_id": 2,
+            "namespaces": [
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "s4envi",
+                    "url": "https://saref.etsi.org/saref4envi/"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "saref",
+                    "url": "https://saref.etsi.org/core/"
+                }
+            ],
+            "triples": [
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour>",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time>",
+                    "rdf:type",
+                    "s4envi:FrequencyUnit"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/hertz>",
+                    "rdf:type",
+                    "s4envi:FrequencyUnit"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/decimetre>",
+                    "rdf:type",
+                    "s4envi:LengthUnit"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/millimetre>",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "s4envi:FrequencyUnit",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "s4envi:FrequencyUnit",
+                    "rdfs:subClassOf",
+                    "saref:UnitOfMeasure"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/centimetre>",
+                    "rdf:type",
+                    "s4envi:LengthUnit"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_day>",
+                    "rdf:type",
+                    "s4envi:FrequencyUnit"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/hectometre>",
+                    "rdf:type",
+                    "s4envi:LengthUnit"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/decimetre>",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/hectometre>",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/decametre>",
+                    "rdf:type",
+                    "s4envi:LengthUnit"
+                ],
+                [
+                    "s4envi:LengthUnit",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/metre>",
+                    "rdf:type",
+                    "s4envi:LengthUnit"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/metre>",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/centimetre>",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year>",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_hour>",
+                    "rdf:type",
+                    "s4envi:FrequencyUnit"
+                ],
+                [
+                    "s4envi:LengthUnit",
+                    "rdfs:subClassOf",
+                    "saref:UnitOfMeasure"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/kilometre>",
+                    "rdf:type",
+                    "s4envi:LengthUnit"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_second-time>",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/millimetre>",
+                    "rdf:type",
+                    "s4envi:LengthUnit"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/hertz>",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/decametre>",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_day>",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/reciprocal_year>",
+                    "rdf:type",
+                    "s4envi:FrequencyUnit"
+                ],
+                [
+                    "<http://www.wurvoc.org/vocabularies/om-1.8/kilometre>",
+                    "rdf:type",
+                    "owl:NamedIndividual"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What are the different frequency units available in the ontology?",
+                "[Simple] Can you list all the length units defined in the ontology?",
+                "[Simple] Is hertz a recognized frequency unit in this ontology?",
+                "[Simple] Is kilometre a valid length unit in the ontology?",
+                "[Simple] How many frequency units are there in the ontology?",
+                "[Simple] Are decimetre and centimetre both classified as length units in the ontology?",
+                "[Simple] Is reciprocal hour considered a frequency unit in the ontology?",
+                "[Intermediate] Which units of measure are subclasses of saref:UnitOfMeasure?",
+                "[Intermediate] Can you provide a list of all the named individuals that are also classified as frequency units?",
+                "[Intermediate] How many length units are also classified as owl:NamedIndividuals in the ontology?",
+                "[Intermediate] Are there any units that are both frequency and length units in the ontology?",
+                "[Complex] If a device measures frequency, what units could it use based on the ontology?",
+                "[Complex] Given a set of measurements, how can we determine if they are all using units from the same category (e.g., all frequency or all length)?"
+            ]
+        },
+        {
+            "subgraph_id": 3,
+            "namespaces": [
+                {
+                    "prefix": "s4envi",
+                    "url": "https://saref.etsi.org/saref4envi/"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "saref",
+                    "url": "https://saref.etsi.org/core/"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "time",
+                    "url": "http://www.w3.org/2006/time#"
+                },
+                {
+                    "prefix": "wgs84",
+                    "url": "http://www.w3.org/2003/01/geo/wgs84_pos#"
+                }
+            ],
+            "triples": [
+                [
+                    "s4envi:CompassDirection",
+                    "owl:disjointWith",
+                    "s4envi:Geometry"
+                ],
+                [
+                    "saref:Measurement",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "saref:UnitOfMeasure",
+                    "owl:disjointWith",
+                    "s4envi:Color"
+                ],
+                [
+                    "s4envi:CompassDirection",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "s4envi:Geometry",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "s4envi:DigitalRepresentation",
+                    "owl:disjointWith",
+                    "s4envi:Light"
+                ],
+                [
+                    "s4envi:PeriodMeasurement",
+                    "rdfs:subClassOf",
+                    "saref:Measurement"
+                ],
+                [
+                    "s4envi:CommunicationProtocol",
+                    "owl:disjointWith",
+                    "s4envi:Light"
+                ],
+                [
+                    "s4envi:DigitalRepresentation",
+                    "owl:disjointWith",
+                    "s4envi:Geometry"
+                ],
+                [
+                    "saref:Measurement",
+                    "owl:disjointWith",
+                    "saref:Property"
+                ],
+                [
+                    "s4envi:CommunicationProtocol",
+                    "owl:disjointWith",
+                    "s4envi:Geometry"
+                ],
+                [
+                    "saref:Measurement",
+                    "owl:disjointWith",
+                    "s4envi:CommunicationInterface"
+                ],
+                [
+                    "saref:Measurement",
+                    "owl:disjointWith",
+                    "s4envi:Light"
+                ],
+                [
+                    "saref:Measurement",
+                    "owl:disjointWith",
+                    "saref:UnitOfMeasure"
+                ],
+                [
+                    "saref:UnitOfMeasure",
+                    "owl:disjointWith",
+                    "s4envi:DigitalRepresentation"
+                ],
+                [
+                    "saref:UnitOfMeasure",
+                    "owl:disjointWith",
+                    "s4envi:CompassDirection"
+                ],
+                [
+                    "s4envi:Light",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "s4envi:Geometry",
+                    "owl:disjointWith",
+                    "s4envi:Light"
+                ],
+                [
+                    "s4envi:DigitalRepresentation",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "s4envi:Color",
+                    "owl:disjointWith",
+                    "s4envi:DigitalRepresentation"
+                ],
+                [
+                    "time:TemporalUnit",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "s4envi:CommunicationProtocol",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "saref:UnitOfMeasure",
+                    "owl:disjointWith",
+                    "s4envi:CommunicationProtocol"
+                ],
+                [
+                    "s4envi:HeightMeasurement",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "s4envi:Color",
+                    "owl:disjointWith",
+                    "s4envi:CommunicationProtocol"
+                ],
+                [
+                    "time:TemporalUnit",
+                    "rdfs:subClassOf",
+                    "saref:UnitOfMeasure"
+                ],
+                [
+                    "s4envi:CommunicationInterface",
+                    "owl:disjointWith",
+                    "s4envi:CommunicationProtocol"
+                ],
+                [
+                    "s4envi:FrequencyMeasurement",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "saref:UnitOfMeasure",
+                    "rdfs:isDefinedBy",
+                    "<https://saref.etsi.org/core/>"
+                ],
+                [
+                    "saref:UnitOfMeasure",
+                    "owl:disjointWith",
+                    "s4envi:Light"
+                ],
+                [
+                    "saref:UnitOfMeasure",
+                    "owl:disjointWith",
+                    "s4envi:Geometry"
+                ],
+                [
+                    "s4envi:Color",
+                    "owl:disjointWith",
+                    "s4envi:Geometry"
+                ],
+                [
+                    "s4envi:Color",
+                    "owl:disjointWith",
+                    "s4envi:CompassDirection"
+                ],
+                [
+                    "s4envi:CommunicationInterface",
+                    "owl:disjointWith",
+                    "s4envi:Geometry"
+                ],
+                [
+                    "saref:Measurement",
+                    "owl:disjointWith",
+                    "s4envi:DigitalRepresentation"
+                ],
+                [
+                    "s4envi:PeriodMeasurement",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "s4envi:CommunicationInterface",
+                    "owl:disjointWith",
+                    "s4envi:DigitalRepresentation"
+                ],
+                [
+                    "s4envi:CommunicationInterface",
+                    "owl:disjointWith",
+                    "s4envi:CompassDirection"
+                ],
+                [
+                    "time:TemporalUnit",
+                    "rdfs:isDefinedBy",
+                    "<http://www.w3.org/2006/time#>"
+                ],
+                [
+                    "s4envi:LightPoint",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "saref:UnitOfMeasure",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "saref:Measurement",
+                    "owl:disjointWith",
+                    "s4envi:CommunicationProtocol"
+                ],
+                [
+                    "s4envi:CompassDirection",
+                    "owl:disjointWith",
+                    "s4envi:DigitalRepresentation"
+                ],
+                [
+                    "s4envi:CommunicationInterface",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "s4envi:Color",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "saref:UnitOfMeasure",
+                    "owl:disjointWith",
+                    "s4envi:CommunicationInterface"
+                ],
+                [
+                    "s4envi:HeightMeasurement",
+                    "rdfs:subClassOf",
+                    "saref:Measurement"
+                ],
+                [
+                    "saref:Measurement",
+                    "owl:disjointWith",
+                    "saref:Service"
+                ],
+                [
+                    "s4envi:Color",
+                    "owl:disjointWith",
+                    "s4envi:CommunicationInterface"
+                ],
+                [
+                    "s4envi:Color",
+                    "owl:disjointWith",
+                    "s4envi:Light"
+                ],
+                [
+                    "s4envi:CommunicationProtocol",
+                    "owl:disjointWith",
+                    "s4envi:DigitalRepresentation"
+                ],
+                [
+                    "s4envi:CommunicationProtocol",
+                    "owl:disjointWith",
+                    "s4envi:CompassDirection"
+                ],
+                [
+                    "s4envi:CommunicationInterface",
+                    "owl:disjointWith",
+                    "s4envi:Light"
+                ],
+                [
+                    "saref:Measurement",
+                    "owl:disjointWith",
+                    "s4envi:Geometry"
+                ],
+                [
+                    "saref:Measurement",
+                    "owl:disjointWith",
+                    "s4envi:CompassDirection"
+                ],
+                [
+                    "s4envi:FrequencyMeasurement",
+                    "rdfs:subClassOf",
+                    "saref:Measurement"
+                ],
+                [
+                    "s4envi:LightPoint",
+                    "rdfs:subClassOf",
+                    "wgs84:Point"
+                ],
+                [
+                    "s4envi:CompassDirection",
+                    "owl:disjointWith",
+                    "s4envi:Light"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is a compass direction?",
+                "[Simple] What is a geometry?",
+                "[Simple] What is a unit of measure?",
+                "[Simple] What is a measurement?",
+                "[Simple] What is a digital representation?",
+                "[Simple] What is a communication protocol?",
+                "[Simple] What is a light?",
+                "[Simple] What is a color?",
+                "[Simple] What is a temporal unit?",
+                "[Simple] What is a communication interface?",
+                "[Simple] What is a height measurement?",
+                "[Simple] What is a period measurement?",
+                "[Simple] What is a frequency measurement?",
+                "[Simple] What is a light point?",
+                "[Intermediate] Which measurements are related to time?",
+                "[Intermediate] What types of units of measure are defined in the ontology?",
+                "[Intermediate] How are compass directions and geometries different?",
+                "[Intermediate] What are the differences between digital representations and lights?",
+                "[Intermediate] How do communication protocols differ from geometries?",
+                "[Intermediate] What are the relationships between colors and other classes in the ontology?",
+                "[Intermediate] How does a light point relate to a geographical point?",
+                "[Complex] If a device measures both height and frequency, what units of measure could it use?",
+                "[Complex] How would you classify a device that can measure multiple properties, such as light, temperature, and humidity, and what units of measure would be applicable for each property?",
+                "[Complex] If a sensor uses a specific communication protocol, which other components or devices must also support this protocol to ensure interoperability?"
+            ]
+        },
+        {
+            "subgraph_id": 4,
+            "namespaces": [
+                {
+                    "prefix": "saref",
+                    "url": "https://saref.etsi.org/core/"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "s4envi",
+                    "url": "https://saref.etsi.org/saref4envi/"
+                },
+                {
+                    "prefix": "wgs84",
+                    "url": "http://www.w3.org/2003/01/geo/wgs84_pos#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                }
+            ],
+            "triples": [
+                [
+                    "saref:hasManufacturer",
+                    "rdfs:isDefinedBy",
+                    "<https://saref.etsi.org/core/>"
+                ],
+                [
+                    "s4envi:Device",
+                    "rdfs:subClassOf",
+                    "s4envi:System"
+                ],
+                [
+                    "wgs84:SpatialThing",
+                    "owl:disjointWith",
+                    "s4envi:DigitalRepresentation"
+                ],
+                [
+                    "wgs84:SpatialThing",
+                    "rdfs:isDefinedBy",
+                    "<http://www.w3.org/2003/01/geo/wgs84_pos#>"
+                ],
+                [
+                    "saref:Service",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "wgs84:SpatialThing",
+                    "owl:disjointWith",
+                    "s4envi:CommunicationProtocol"
+                ],
+                [
+                    "s4envi:System",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "wgs84:SpatialThing",
+                    "owl:disjointWith",
+                    "s4envi:Color"
+                ],
+                [
+                    "saref:Service",
+                    "owl:disjointWith",
+                    "saref:UnitOfMeasure"
+                ],
+                [
+                    "saref:Sensor",
+                    "rdfs:isDefinedBy",
+                    "<https://saref.etsi.org/core/>"
+                ],
+                [
+                    "wgs84:SpatialThing",
+                    "owl:disjointWith",
+                    "saref:Service"
+                ],
+                [
+                    "saref:hasDescription",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "saref:hasValue",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "wgs84:SpatialThing",
+                    "owl:disjointWith",
+                    "s4envi:Geometry"
+                ],
+                [
+                    "s4envi:PhysicalObject",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "wgs84:SpatialThing",
+                    "owl:disjointWith",
+                    "s4envi:CompassDirection"
+                ],
+                [
+                    "saref:Service",
+                    "owl:disjointWith",
+                    "s4envi:CommunicationProtocol"
+                ],
+                [
+                    "wgs84:SpatialThing",
+                    "owl:disjointWith",
+                    "saref:Measurement"
+                ],
+                [
+                    "s4envi:Lamppost",
+                    "rdfs:subClassOf",
+                    "s4envi:Device"
+                ],
+                [
+                    "saref:Service",
+                    "owl:disjointWith",
+                    "s4envi:Color"
+                ],
+                [
+                    "saref:Service",
+                    "rdfs:isDefinedBy",
+                    "<https://saref.etsi.org/core/>"
+                ],
+                [
+                    "s4envi:TESS",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "saref:hasManufacturer",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "s4envi:Photometer",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "saref:Service",
+                    "owl:disjointWith",
+                    "s4envi:Geometry"
+                ],
+                [
+                    "wgs84:SpatialThing",
+                    "owl:disjointWith",
+                    "s4envi:CommunicationInterface"
+                ],
+                [
+                    "saref:Device",
+                    "rdfs:isDefinedBy",
+                    "<https://saref.etsi.org/core/>"
+                ],
+                [
+                    "saref:Service",
+                    "owl:disjointWith",
+                    "s4envi:CompassDirection"
+                ],
+                [
+                    "s4envi:Actuator",
+                    "rdfs:subClassOf",
+                    "s4envi:Device"
+                ],
+                [
+                    "s4envi:Lamppost",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "saref:hasValue",
+                    "rdfs:isDefinedBy",
+                    "<https://saref.etsi.org/core/>"
+                ],
+                [
+                    "s4envi:Device",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "wgs84:SpatialThing",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "saref:hasDescription",
+                    "rdfs:isDefinedBy",
+                    "<https://saref.etsi.org/core/>"
+                ],
+                [
+                    "s4envi:Photometer",
+                    "rdfs:subClassOf",
+                    "saref:Sensor"
+                ],
+                [
+                    "saref:Sensor",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "s4envi:PhysicalObject",
+                    "rdfs:subClassOf",
+                    "wgs84:SpatialThing"
+                ],
+                [
+                    "s4envi:System",
+                    "rdfs:subClassOf",
+                    "s4envi:PhysicalObject"
+                ],
+                [
+                    "s4envi:Device",
+                    "rdfs:subClassOf",
+                    "saref:Device"
+                ],
+                [
+                    "saref:Device",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "s4envi:TESS",
+                    "rdfs:subClassOf",
+                    "s4envi:Photometer"
+                ],
+                [
+                    "saref:Service",
+                    "owl:disjointWith",
+                    "s4envi:Light"
+                ],
+                [
+                    "s4envi:Actuator",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "saref:Sensor",
+                    "rdfs:subClassOf",
+                    "saref:Device"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is the definition of a manufacturer in the context of devices?",
+                "[Simple] Can you provide a description of a service in this ontology?",
+                "[Simple] What types of devices are included in the system class?",
+                "[Simple] What is the definition of a spatial thing in this ontology?",
+                "[Simple] What is the definition of a sensor in this ontology?",
+                "[Simple] Can a device be a physical object?",
+                "[Simple] What is the definition of a photometer in this ontology?",
+                "[Simple] Can a photometer be classified as a sensor?",
+                "[Simple] What is the definition of a lamppost in this ontology?",
+                "[Simple] Can an actuator be considered a type of device?",
+                "[Simple] What is the definition of a TESS in this ontology?",
+                "[Simple] Can a TESS be classified as a photometer?",
+                "[Simple] What is the value that a device can have?",
+                "[Intermediate] Which manufacturers are associated with the photometers in the system?",
+                "[Intermediate] What services are provided by the devices in the system?",
+                "[Intermediate] Are there any devices that are both sensors and actuators?",
+                "[Intermediate] Which devices in the system have a specific value assigned to them?",
+                "[Intermediate] What are the different types of systems that exist in the ontology?",
+                "[Intermediate] Are there any devices that are not classified as either sensors or actuators?",
+                "[Complex] If a photometer has a specific value, what services can it provide in the system?",
+                "[Complex] How many devices in the system are both sensors and have a specific value?",
+                "[Complex] What is the relationship between the devices and the services they provide, and how does this affect the overall system?"
+            ]
+        },
+        {
+            "subgraph_id": 5,
+            "namespaces": [
+                {
+                    "prefix": "dcterms",
+                    "url": "http://purl.org/dc/terms/"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                }
+            ],
+            "triples": [
+                [
+                    "<https://saref.etsi.org/saref4envi/>",
+                    "dcterms:creator",
+                    "<http://purl.org/net/mpoveda>"
+                ],
+                [
+                    "<https://saref.etsi.org/saref4envi/>",
+                    "owl:versionIRI",
+                    "<https://saref.etsi.org/saref4envi/v1.1.2/>"
+                ],
+                [
+                    "<https://saref.etsi.org/saref4envi/>",
+                    "owl:imports",
+                    "<https://saref.etsi.org/core/v3.2.1/>"
+                ],
+                [
+                    "<https://saref.etsi.org/saref4envi/>",
+                    "dcterms:contributor",
+                    "<http://maxime-lefrancois.info/me#>"
+                ],
+                [
+                    "<https://saref.etsi.org/saref4envi/>",
+                    "dcterms:creator",
+                    "<http://www.garcia-castro.com/foaf.rdf#me>"
+                ],
+                [
+                    "<https://saref.etsi.org/saref4envi/>",
+                    "dcterms:license",
+                    "<https://forge.etsi.org/etsi-software-license>"
+                ],
+                [
+                    "<https://saref.etsi.org/saref4envi/>",
+                    "dcterms:publisher",
+                    "<https://www.etsi.org/>"
+                ],
+                [
+                    "<https://saref.etsi.org/saref4envi/>",
+                    "rdf:type",
+                    "owl:Ontology"
+                ],
+                [
+                    "<https://saref.etsi.org/saref4envi/>",
+                    "dcterms:source",
+                    "<https://saref.etsi.org/sources/saref4envi/>"
+                ],
+                [
+                    "<https://saref.etsi.org/saref4envi/>",
+                    "rdfs:seeAlso",
+                    "<https://www.etsi.org/deliver/etsi_ts/103400_103499/10341002/02.01.01_60/ts_10341002v020101p.pdf>"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] Who are the creators of the SAREF4ENVI ontology?",
+                "[Simple] What is the version IRI of the SAREF4ENVI ontology?",
+                "[Simple] Which ontology does SAREF4ENVI import?",
+                "[Simple] Who are the contributors to the SAREF4ENVI ontology?",
+                "[Simple] What is the license under which the SAREF4ENVI ontology is published?",
+                "[Simple] Who is the publisher of the SAREF4ENVI ontology?",
+                "[Simple] What is the source URL for the SAREF4ENVI ontology?",
+                "[Simple] Where can I find additional information about the SAREF4ENVI ontology?",
+                "[Intermediate] Can you list all the creators and contributors of the SAREF4ENVI ontology?",
+                "[Intermediate] Which creators of the SAREF4ENVI ontology are also listed as contributors?",
+                "[Complex] How many different roles (e.g., creator, contributor, publisher) are associated with the individuals involved in the SAREF4ENVI ontology, and who holds each role?"
+            ]
+        },
+        {
+            "subgraph_id": 6,
+            "namespaces": [
+                {
+                    "prefix": "saref",
+                    "url": "https://saref.etsi.org/core/"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "s4envi",
+                    "url": "https://saref.etsi.org/saref4envi/"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "xsd",
+                    "url": "http://www.w3.org/2001/XMLSchema#"
+                }
+            ],
+            "triples": [
+                [
+                    "saref:relatesToProperty",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "s4envi:hasRevisionNumber",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    "s4envi:hasProjectionAngle",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "s4envi:hasTag",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    "s4envi:hasIdentifier",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    "s4envi:hasShield",
+                    "rdfs:range",
+                    "xsd:boolean"
+                ],
+                [
+                    "s4envi:hasFlash",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "s4envi:hasFlash",
+                    "rdf:type",
+                    "owl:FunctionalProperty"
+                ],
+                [
+                    "s4envi:isAccesibleThrough",
+                    "rdf:type",
+                    "owl:FunctionalProperty"
+                ],
+                [
+                    "s4envi:hasVersion",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    "s4envi:hasTransmissionPeriod",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "s4envi:hasShield",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "s4envi:hasShield",
+                    "rdf:type",
+                    "owl:FunctionalProperty"
+                ],
+                [
+                    "s4envi:hasProjectionAngle",
+                    "rdfs:range",
+                    "xsd:float"
+                ],
+                [
+                    "s4envi:hasCreationDate",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "s4envi:hasCreationDate",
+                    "rdf:type",
+                    "owl:FunctionalProperty"
+                ],
+                [
+                    "s4envi:hasProjectionAngle",
+                    "rdf:type",
+                    "owl:FunctionalProperty"
+                ],
+                [
+                    "s4envi:hasFlash",
+                    "rdfs:range",
+                    "xsd:boolean"
+                ],
+                [
+                    "s4envi:hasTag",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "s4envi:hasRevisionNumber",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "s4envi:hasVersion",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "s4envi:hasVersion",
+                    "rdf:type",
+                    "owl:FunctionalProperty"
+                ],
+                [
+                    "s4envi:hasCreationDate",
+                    "rdfs:range",
+                    "xsd:dateTime"
+                ],
+                [
+                    "s4envi:hasIdentifier",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "s4envi:isAccesibleThrough",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is the revision number of a device?",
+                "[Simple] Does a device have a shield?",
+                "[Simple] What is the projection angle of a device?",
+                "[Simple] Can you tell me the tag of a device?",
+                "[Simple] What is the identifier of a device?",
+                "[Simple] When was a device created?",
+                "[Simple] What is the version of a device?",
+                "[Simple] Does a device have a flash?",
+                "[Intermediate] Which devices were created after a specific date?",
+                "[Intermediate] What are the identifiers of all devices that have a specific tag?",
+                "[Intermediate] Which devices have both a shield and a flash?",
+                "[Intermediate] What are the projection angles of devices that have a specific identifier?",
+                "[Intermediate] Which devices have a transmission period with another device?",
+                "[Complex] How many devices were created in a specific year and have a certain tag?",
+                "[Complex] Which devices have a projection angle greater than 45 degrees and were created before a specific date?",
+                "[Complex] Can you list all devices that have a specific revision number, a shield, and a flash?",
+                "[Complex] What are the identifiers of devices that have a specific version and were created within a certain time frame?"
+            ]
+        },
+        {
+            "subgraph_id": 7,
+            "namespaces": [
+                {
+                    "prefix": "dcterms",
+                    "url": "http://purl.org/dc/terms/"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "vann",
+                    "url": "http://purl.org/vocab/vann/"
+                }
+            ],
+            "triples": [
+                [
+                    "dcterms:creator",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ],
+                [
+                    "dcterms:publisher",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ],
+                [
+                    "dcterms:modified",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ],
+                [
+                    "dcterms:license",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ],
+                [
+                    "dcterms:issued",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ],
+                [
+                    "dcterms:title",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ],
+                [
+                    "dcterms:contributor",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ],
+                [
+                    "dcterms:source",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ],
+                [
+                    "dcterms:description",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ],
+                [
+                    "vann:preferredNamespaceUri",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ],
+                [
+                    "vann:preferredNamespacePrefix",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] Who is the creator of a specific document?",
+                "[Simple] What is the title of a particular document?",
+                "[Simple] When was a document last modified?",
+                "[Simple] What is the license associated with a given document?",
+                "[Simple] When was a document first issued?",
+                "[Simple] Who are the contributors to a specific document?",
+                "[Simple] What is the source of a particular document?",
+                "[Simple] Can you provide a description of a specific document?",
+                "[Simple] What is the preferred namespace URI for a given document?",
+                "[Simple] What is the preferred namespace prefix for a given document?",
+                "[Intermediate] Which documents were created by the same author and published in the same year?",
+                "[Intermediate] Can you list all the documents that have been modified within the last month?",
+                "[Intermediate] What are the titles of all documents that have a specific contributor?",
+                "[Intermediate] Which documents have the same publisher and were issued in the same year?",
+                "[Intermediate] Can you find all documents that have a description containing a specific keyword?",
+                "[Complex] For a given set of documents, can you group them by their creators and show the number of documents each creator has contributed to?",
+                "[Complex] Can you list all documents that were modified after a specific date and have a certain contributor, and also include their titles and descriptions?"
+            ]
+        },
+        {
+            "subgraph_id": 8,
+            "namespaces": [
+                {
+                    "prefix": "s4envi",
+                    "url": "https://saref.etsi.org/saref4envi/"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "saref",
+                    "url": "https://saref.etsi.org/core/"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "xsd",
+                    "url": "http://www.w3.org/2001/XMLSchema#"
+                }
+            ],
+            "triples": [
+                [
+                    "s4envi:isProjectedInDirection",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "s4envi:isConnectedTo",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "saref:hasTimestamp",
+                    "rdf:type",
+                    "owl:FunctionalProperty"
+                ],
+                [
+                    "s4envi:hasDigitalRepresentation",
+                    "rdf:type",
+                    "owl:InverseFunctionalProperty"
+                ],
+                [
+                    "s4envi:usesCommunicationProtocol",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "s4envi:contains",
+                    "owl:inverseOf",
+                    "s4envi:isContainedIn"
+                ],
+                [
+                    "s4envi:hasLightPoint",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "s4envi:encapsulates",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "saref:hasTimestamp",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "s4envi:isConnectedTo",
+                    "rdf:type",
+                    "owl:SymmetricProperty"
+                ],
+                [
+                    "s4envi:encapsulates",
+                    "owl:inverseOf",
+                    "s4envi:hasDigitalRepresentation"
+                ],
+                [
+                    "s4envi:contains",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "s4envi:hasColor",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "saref:hasTimestamp",
+                    "rdfs:range",
+                    "xsd:dateTime"
+                ],
+                [
+                    "s4envi:encapsulates",
+                    "rdf:type",
+                    "owl:FunctionalProperty"
+                ],
+                [
+                    "s4envi:hasDigitalRepresentation",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "s4envi:isContainedIn",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is the direction in which a light is projected?",
+                "[Simple] What does it mean for one device to be connected to another?",
+                "[Simple] What is the timestamp of a specific event or observation?",
+                "[Simple] Which communication protocol is used by a device?",
+                "[Simple] What is the digital representation of a physical object?",
+                "[Simple] What color does a particular light have?",
+                "[Simple] What is contained within a given physical object?",
+                "[Simple] What does it mean for a device to encapsulate another?",
+                "[Simple] If a device contains another, what is the inverse relationship called?",
+                "[Simple] What is the inverse relationship of encapsulation?",
+                "[Intermediate] Which devices are connected to a specific device and what are their timestamps?",
+                "[Intermediate] What are the communication protocols used by all the devices that contain a specific component?",
+                "[Intermediate] Which physical objects contain a specific device and what are their digital representations?",
+                "[Intermediate] What are the colors of the lights that are projected in a specific direction?",
+                "[Intermediate] Which devices use a particular communication protocol and what are their connections?",
+                "[Complex] How many devices with a specific color are connected to other devices that use a particular communication protocol?",
+                "[Complex] For a set of devices that are connected to each other, what are the different communication protocols they use, and what are the timestamps of their connections?",
+                "[Complex] If a device encapsulates multiple components, what are the digital representations of those components, and how are they connected to other devices?",
+                "[Complex] For a given set of devices, what are the different directions in which their lights are projected, and what are the colors of those lights?",
+                "[Complex] How do the timestamps of events relate to the devices that are connected to each other, and what are the communication protocols they use?"
+            ]
+        },
+        {
+            "subgraph_id": 9,
+            "namespaces": [
+                {
+                    "prefix": "wgs84",
+                    "url": "http://www.w3.org/2003/01/geo/wgs84_pos#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "s4envi",
+                    "url": "https://saref.etsi.org/saref4envi/"
+                },
+                {
+                    "prefix": "saref",
+                    "url": "https://saref.etsi.org/core/"
+                }
+            ],
+            "triples": [
+                [
+                    "wgs84:Point",
+                    "rdfs:isDefinedBy",
+                    "<http://www.w3.org/2003/01/geo/wgs84_pos#>"
+                ],
+                [
+                    "wgs84:location",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "s4envi:isComponentOf",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "saref:measuresProperty",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "s4envi:hasFrequencyMeasurement",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "s4envi:affectsProperty",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "s4envi:hasComponent",
+                    "owl:inverseOf",
+                    "s4envi:isComponentOf"
+                ],
+                [
+                    "saref:isMeasuredIn",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "s4envi:isProjectedFromHeight",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "s4envi:isComponentOf",
+                    "rdf:type",
+                    "owl:TransitiveProperty"
+                ],
+                [
+                    "s4envi:projectsLight",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "saref:makesMeasurement",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "s4envi:hasGeometry",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "s4envi:hasComponent",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "wgs84:Point",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "s4envi:usesCommunicationInterface",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "s4envi:hasComponent",
+                    "rdf:type",
+                    "owl:TransitiveProperty"
+                ],
+                [
+                    "wgs84:location",
+                    "rdfs:isDefinedBy",
+                    "<http://www.w3.org/2003/01/geo/wgs84_pos#>"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is the definition of a Point in the WGS84 coordinate system?",
+                "[Simple] What does the property \"location\" represent?",
+                "[Simple] Can you explain what \"isComponentOf\" means in this context?",
+                "[Simple] What is the purpose of the \"measuresProperty\" in the ontology?",
+                "[Simple] What does \"hasFrequencyMeasurement\" refer to?",
+                "[Simple] What is the meaning of \"affectsProperty\"?",
+                "[Simple] How is \"hasComponent\" related to \"isComponentOf\"?",
+                "[Simple] What does \"isMeasuredIn\" indicate?",
+                "[Simple] What is the role of \"isProjectedFromHeight\"?",
+                "[Simple] What does \"projectsLight\" signify?",
+                "[Simple] What is the function of \"makesMeasurement\"?",
+                "[Simple] What does \"hasGeometry\" represent?",
+                "[Simple] What is the purpose of \"usesCommunicationInterface\"?",
+                "[Intermediate] Which components are part of a specific device?",
+                "[Intermediate] What properties can be measured by a sensor that uses a particular communication interface?",
+                "[Intermediate] Which devices have a specific location defined by WGS84 coordinates?",
+                "[Intermediate] What are the components that affect a given property?",
+                "[Intermediate] Which devices project light from a certain height?",
+                "[Complex] If a device has a specific geometry and is located at a given point, how does it affect the properties it measures?",
+                "[Complex] How do the components of a device, their measurements, and the communication interfaces they use, collectively influence the overall functionality of the device?"
+            ]
+        }
+    ]
+}

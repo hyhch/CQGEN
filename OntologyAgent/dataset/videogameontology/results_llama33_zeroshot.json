@@ -1,0 +1,2709 @@
+{
+    "file_name": "videogameontology.owl",
+    "description": "The Video Game Ontology is aimed at modelling video game related information. The main goal is to capture knowledge about events that happen in video games and information about players.",
+    "competency_questions": [
+        "What is the username of the player?",
+        "Who are the friends of the player?",
+        "Who are the friends that play other games as well with this player?",
+        "Who are the most active players in the game?",
+        "What are the achievements of my friends?",
+        "Who does the player play with?",
+        "What are the achievements your friend has received?",
+        "What achievements does a game have?",
+        "How many hours has this game been played in total?",
+        "What are the types of achievements in this game?",
+        "What are the types of achievements a game can have?",
+        "What is the genre of the game?",
+        "What items exist in a game?",
+        "Who is the creator of the game?",
+        "What is the release date of the game?",
+        "What are the games similar to this one?",
+        "List all games of a certain Genre?",
+        "What type is the item of?",
+        "What abilities does an item have?",
+        "What is the fastest car in the game?",
+        "How much damage does a weapon deal?",
+        "Who has the best kill count in the game?",
+        "Who are the top 3 players in the game?",
+        "What games has the player played?",
+        "What items does the player have?",
+        "What achievements of a certain type does the player have?",
+        "What kind of games are owned by players that have certain achievement? ",
+        "What is the last game a player has played?",
+        "How big percentage of players have a certain item in the game?",
+        "What are the most common genres played by players with a certain character class in a game?",
+        "What is the preferred weapon of players with a certain character class?",
+        "What type of weapon are players using who win mostly in the game?",
+        "When was the last time a certain player played this game?",
+        "In how many games does the player have all the achievements?",
+        "What is the favorite map of the player in the game?",
+        "What is the most played map in a game?",
+        "What is the difficulty level the player uses in certain game genres?",
+        "How many times have I killed someone in a game?",
+        "How many goals did I score in FIFA 15?",
+        "What is the most common level in the game where players stop playing?",
+        "How big percentage of players have made a certain decision in the game?",
+        "How big percentage of players skip the cutscenes?",
+        "How many players mute the game music?",
+        "After gaining an item in the game, how many players use it?",
+        "How many times players have died in a level?",
+        "How big percentage of players use the item in question in other linked games?",
+        "How many players have moved from game to another when they have seen a linked_x000D_commercial?",
+        "What is the first action done by the player after an event? ",
+        "What is the location in map where the players die the most?",
+        "What equipment does a player have in a game?",
+        "What consumable items does a player have in game?",
+        "What is the most used item in the game?",
+        " What are the games where a player can use this item?",
+        "How many players have made in-app purchases?",
+        "How many players who have already spent money in this game, spend money again?",
+        "What is the likelihood that a player who has purchased in-app purchase in one game, do so in the other one?",
+        "If a player is given free item in the game, how likely are they to make an in-app purchase?",
+        "What type of items are the most traded ones in the game's marketplace?",
+        "How much money an average player spends in in-app purchases?",
+        "What time are most of the in-app purchases done?",
+        "Where do the most paying customers live in?",
+        "How long does an average player spend in the game before making first in-app purchase?",
+        "Where do the players live who have not made any in-app purchases?",
+        "Where do the players who have done the most in-app purchases live?",
+        "How many players clicked an ingame advertisement?",
+        "How many players start the other game after seeing an advertisement?"
+    ],
+    "namespaces": [
+        {
+            "prefix": "brick",
+            "url": "https://brickschema.org/schema/Brick#"
+        },
+        {
+            "prefix": "csvw",
+            "url": "http://www.w3.org/ns/csvw#"
+        },
+        {
+            "prefix": "dc",
+            "url": "http://purl.org/dc/elements/1.1/"
+        },
+        {
+            "prefix": "dcat",
+            "url": "http://www.w3.org/ns/dcat#"
+        },
+        {
+            "prefix": "dcmitype",
+            "url": "http://purl.org/dc/dcmitype/"
+        },
+        {
+            "prefix": "dcterms",
+            "url": "http://purl.org/dc/terms/"
+        },
+        {
+            "prefix": "dcam",
+            "url": "http://purl.org/dc/dcam/"
+        },
+        {
+            "prefix": "doap",
+            "url": "http://usefulinc.com/ns/doap#"
+        },
+        {
+            "prefix": "foaf",
+            "url": "http://xmlns.com/foaf/0.1/"
+        },
+        {
+            "prefix": "geo",
+            "url": "http://www.opengis.net/ont/geosparql#"
+        },
+        {
+            "prefix": "odrl",
+            "url": "http://www.w3.org/ns/odrl/2/"
+        },
+        {
+            "prefix": "org",
+            "url": "http://www.w3.org/ns/org#"
+        },
+        {
+            "prefix": "prof",
+            "url": "http://www.w3.org/ns/dx/prof/"
+        },
+        {
+            "prefix": "prov",
+            "url": "http://www.w3.org/ns/prov#"
+        },
+        {
+            "prefix": "qb",
+            "url": "http://purl.org/linked-data/cube#"
+        },
+        {
+            "prefix": "schema",
+            "url": "https://schema.org/"
+        },
+        {
+            "prefix": "sh",
+            "url": "http://www.w3.org/ns/shacl#"
+        },
+        {
+            "prefix": "skos",
+            "url": "http://www.w3.org/2004/02/skos/core#"
+        },
+        {
+            "prefix": "sosa",
+            "url": "http://www.w3.org/ns/sosa/"
+        },
+        {
+            "prefix": "ssn",
+            "url": "http://www.w3.org/ns/ssn/"
+        },
+        {
+            "prefix": "time",
+            "url": "http://www.w3.org/2006/time#"
+        },
+        {
+            "prefix": "vann",
+            "url": "http://purl.org/vocab/vann/"
+        },
+        {
+            "prefix": "void",
+            "url": "http://rdfs.org/ns/void#"
+        },
+        {
+            "prefix": "wgs",
+            "url": "https://www.w3.org/2003/01/geo/wgs84_pos#"
+        },
+        {
+            "prefix": "owl",
+            "url": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+            "prefix": "rdf",
+            "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+            "prefix": "rdfs",
+            "url": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+            "prefix": "xsd",
+            "url": "http://www.w3.org/2001/XMLSchema#"
+        },
+        {
+            "prefix": "xml",
+            "url": "http://www.w3.org/XML/1998/namespace"
+        },
+        {
+            "prefix": "",
+            "url": "http://purl.org/net/GameOntology#"
+        },
+        {
+            "prefix": "v1",
+            "url": "http://purl.org/goodrelations/v1#"
+        },
+        {
+            "prefix": "resource",
+            "url": "http://dbpedia.org/resource/"
+        },
+        {
+            "prefix": "net",
+            "url": "http://purl.org/net/"
+        },
+        {
+            "prefix": "ontology",
+            "url": "http://dbpedia.org/ontology/"
+        },
+        {
+            "prefix": "schema1",
+            "url": "http://schema.org/"
+        },
+        {
+            "prefix": "owl2xml",
+            "url": "http://www.w3.org/2006/12/owl2-xml#"
+        },
+        {
+            "prefix": "VideoGameOntology",
+            "url": "http://purl.org/net/VideoGameOntology#"
+        }
+    ],
+    "triples": [
+        [
+            "VideoGameOntology:Multiplayer",
+            "rdfs:subClassOf",
+            "VideoGameOntology:Achievement"
+        ],
+        [
+            "VideoGameOntology:PlayerEvent",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:isSessionInGame",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:isAchievedInSession",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:startTime",
+            "rdfs:domain",
+            "VideoGameOntology:Session"
+        ],
+        [
+            "VideoGameOntology:Feature",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:hasGameGenre",
+            "rdfs:range",
+            "VideoGameOntology:Genre"
+        ],
+        [
+            "VideoGameOntology:involvesPlayer",
+            "rdfs:domain",
+            "VideoGameOntology:Session"
+        ],
+        [
+            "VideoGameOntology:isCharacterInSession",
+            "owl:inverseOf",
+            "VideoGameOntology:involvesCharacter"
+        ],
+        [
+            "VideoGameOntology:Luck",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:hasLeaderboard",
+            "owl:inverseOf",
+            "VideoGameOntology:isLeaderboardInGame"
+        ],
+        [
+            "VideoGameOntology:InAppPurchaseEvent",
+            "rdfs:subClassOf",
+            "VideoGameOntology:InstantaneousEvent"
+        ],
+        [
+            "VideoGameOntology:Virtuosity",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:isPlayerInSession",
+            "rdfs:domain",
+            "VideoGameOntology:Player"
+        ],
+        [
+            "VideoGameOntology:releaseDate",
+            "rdfs:domain",
+            "VideoGameOntology:Game"
+        ],
+        [
+            "VideoGameOntology:Luck",
+            "rdfs:subClassOf",
+            "VideoGameOntology:Achievement"
+        ],
+        [
+            "VideoGameOntology:Minigame",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:username",
+            "rdfs:domain",
+            "VideoGameOntology:Player"
+        ],
+        [
+            "VideoGameOntology:Virtuosity",
+            "rdfs:subClassOf",
+            "VideoGameOntology:Achievement"
+        ],
+        [
+            "VideoGameOntology:hasPlayingArea",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:isEventInGame",
+            "rdfs:range",
+            "VideoGameOntology:Game"
+        ],
+        [
+            "VideoGameOntology:hasGameGenre",
+            "rdfs:domain",
+            "VideoGameOntology:Game"
+        ],
+        [
+            "VideoGameOntology:Minigame",
+            "rdfs:subClassOf",
+            "VideoGameOntology:Achievement"
+        ],
+        [
+            "VideoGameOntology:isEventInGame",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:isEventAssociatedToPlayer",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:username",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "VideoGameOntology:Player",
+            "rdfs:subClassOf",
+            "foaf:Agent"
+        ],
+        [
+            "VideoGameOntology:isCharacterInGame",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:isEventInSession",
+            "rdfs:domain",
+            "VideoGameOntology:InstantaneousEvent"
+        ],
+        [
+            "VideoGameOntology:ownsCharacter",
+            "rdfs:domain",
+            "VideoGameOntology:Player"
+        ],
+        [
+            "foaf:Agent",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:involvesAchievement",
+            "rdfs:domain",
+            "VideoGameOntology:Session"
+        ],
+        [
+            "VideoGameOntology:endTime",
+            "rdfs:domain",
+            "VideoGameOntology:Session"
+        ],
+        [
+            "VideoGameOntology:releaseDate",
+            "rdfs:range",
+            "xsd:dateTime"
+        ],
+        [
+            "VideoGameOntology:isItemInGame",
+            "rdfs:range",
+            "VideoGameOntology:Game"
+        ],
+        [
+            "VideoGameOntology:isCharacterInSession",
+            "rdfs:range",
+            "VideoGameOntology:Session"
+        ],
+        [
+            "VideoGameOntology:isEventInSession",
+            "rdfs:range",
+            "VideoGameOntology:Session"
+        ],
+        [
+            "VideoGameOntology:ownsItem",
+            "rdfs:domain",
+            "VideoGameOntology:Character"
+        ],
+        [
+            "VideoGameOntology:MenuEvent",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:hasItem",
+            "rdfs:range",
+            "VideoGameOntology:Item"
+        ],
+        [
+            "VideoGameOntology:SpecialPlayStyle",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:isEventTriggeredByCharacter",
+            "rdfs:domain",
+            "VideoGameOntology:InstantaneousEvent"
+        ],
+        [
+            "owl:Thing",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:isCharacterInGame",
+            "owl:inverseOf",
+            "VideoGameOntology:hasCharacter"
+        ],
+        [
+            "VideoGameOntology:SpecialPlayStyle",
+            "rdfs:subClassOf",
+            "VideoGameOntology:Achievement"
+        ],
+        [
+            "VideoGameOntology:Veteran",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:purchasesGameOffering",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:hasCharacter",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:hasLeaderboard",
+            "rdfs:range",
+            "VideoGameOntology:Leaderboard"
+        ],
+        [
+            "VideoGameOntology:isLeaderboardInGame",
+            "rdfs:range",
+            "VideoGameOntology:Game"
+        ],
+        [
+            "VideoGameOntology:Veteran",
+            "rdfs:subClassOf",
+            "VideoGameOntology:Achievement"
+        ],
+        [
+            "VideoGameOntology:isAchievedInSession",
+            "owl:inverseOf",
+            "VideoGameOntology:involvesAchievement"
+        ],
+        [
+            "VideoGameOntology:isPlayerInSession",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:isPlayerInSession",
+            "owl:inverseOf",
+            "VideoGameOntology:involvesPlayer"
+        ],
+        [
+            "VideoGameOntology:Collection",
+            "rdfs:subClassOf",
+            "VideoGameOntology:Achievement"
+        ],
+        [
+            "VideoGameOntology:Loyalty",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:involvesPlayer",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:isCharacterInGame",
+            "rdfs:domain",
+            "VideoGameOntology:Character"
+        ],
+        [
+            "foaf:knows",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:involvesCharacter",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:Loyalty",
+            "rdfs:subClassOf",
+            "VideoGameOntology:Achievement"
+        ],
+        [
+            "VideoGameOntology:ownsCharacter",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:hasLeaderboard",
+            "rdfs:domain",
+            "VideoGameOntology:Game"
+        ],
+        [
+            "VideoGameOntology:Genre",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:Fandom",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:Fandom",
+            "rdfs:subClassOf",
+            "VideoGameOntology:Achievement"
+        ],
+        [
+            "VideoGameOntology:Achievement",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:hasAchievement",
+            "rdfs:domain",
+            "VideoGameOntology:Game"
+        ],
+        [
+            "VideoGameOntology:isEventAssociatedToPlayer",
+            "rdfs:domain",
+            "VideoGameOntology:InstantaneousEvent"
+        ],
+        [
+            "VideoGameOntology:unlocksAchievement",
+            "rdfs:domain",
+            "VideoGameOntology:InstantaneousEvent"
+        ],
+        [
+            "VideoGameOntology:playsGame",
+            "rdfs:range",
+            "VideoGameOntology:Game"
+        ],
+        [
+            "VideoGameOntology:isLeaderboardInGame",
+            "rdfs:domain",
+            "VideoGameOntology:Leaderboard"
+        ],
+        [
+            "VideoGameOntology:hasAchievement",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:involvesAchievement",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "schema1:Product",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:eventName",
+            "rdfs:domain",
+            "VideoGameOntology:InstantaneousEvent"
+        ],
+        [
+            "VideoGameOntology:isEventRelatedToItem",
+            "rdfs:domain",
+            "VideoGameOntology:InstantaneousEvent"
+        ],
+        [
+            "VideoGameOntology:isCharacterInSession",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:startTime",
+            "rdfs:range",
+            "xsd:dateTime"
+        ],
+        [
+            "VideoGameOntology:isEventInSession",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:isSessionInGame",
+            "rdfs:domain",
+            "VideoGameOntology:Session"
+        ],
+        [
+            "VideoGameOntology:Player",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:eventTime",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "VideoGameOntology:InAppPurchaseEvent",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:hasPlayingArea",
+            "rdfs:domain",
+            "VideoGameOntology:Game"
+        ],
+        [
+            "VideoGameOntology:hasLeaderboard",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "net:VideoGameOntology",
+            "rdf:type",
+            "owl:Ontology"
+        ],
+        [
+            "VideoGameOntology:Character",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:eventTime",
+            "rdfs:range",
+            "xsd:dateTime"
+        ],
+        [
+            "VideoGameOntology:releaseDate",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "VideoGameOntology:involvesPlayer",
+            "rdfs:range",
+            "VideoGameOntology:Player"
+        ],
+        [
+            "VideoGameOntology:endTime",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "VideoGameOntology:GameProduct",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:isEventTriggeredByCharacter",
+            "rdfs:range",
+            "VideoGameOntology:Character"
+        ],
+        [
+            "VideoGameOntology:isSessionInGame",
+            "rdfs:range",
+            "VideoGameOntology:Game"
+        ],
+        [
+            "VideoGameOntology:ownsAchievement",
+            "rdfs:domain",
+            "VideoGameOntology:Player"
+        ],
+        [
+            "dcterms:creator",
+            "rdfs:range",
+            "foaf:Agent"
+        ],
+        [
+            "VideoGameOntology:startTime",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "VideoGameOntology:isFriendWithPlayer",
+            "rdfs:subPropertyOf",
+            "foaf:knows"
+        ],
+        [
+            "VideoGameOntology:isAchievementInGame",
+            "rdfs:domain",
+            "VideoGameOntology:Achievement"
+        ],
+        [
+            "VideoGameOntology:hasFeature",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:endTime",
+            "rdfs:range",
+            "xsd:dateTime"
+        ],
+        [
+            "VideoGameOntology:Leaderboard",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:GainEvent",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "dcterms:creator",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:livesIn",
+            "rdfs:range",
+            "ontology:PopulatedPlace"
+        ],
+        [
+            "VideoGameOntology:hasItem",
+            "rdfs:domain",
+            "VideoGameOntology:Game"
+        ],
+        [
+            "VideoGameOntology:isAchievementInGame",
+            "rdfs:range",
+            "VideoGameOntology:Game"
+        ],
+        [
+            "VideoGameOntology:involvesCharacter",
+            "rdfs:domain",
+            "VideoGameOntology:Session"
+        ],
+        [
+            "VideoGameOntology:isAchievementInGame",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:hasFeature",
+            "rdfs:domain",
+            "VideoGameOntology:Item"
+        ],
+        [
+            "VideoGameOntology:isCharacterInGame",
+            "rdfs:range",
+            "VideoGameOntology:Game"
+        ],
+        [
+            "VideoGameOntology:playsGame",
+            "rdfs:domain",
+            "VideoGameOntology:Player"
+        ],
+        [
+            "VideoGameOntology:GameProduct",
+            "rdfs:subClassOf",
+            "v1:ProductOrService"
+        ],
+        [
+            "VideoGameOntology:PlayingArea",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:GameEvent",
+            "rdfs:subClassOf",
+            "VideoGameOntology:InstantaneousEvent"
+        ],
+        [
+            "v1:ProductOrService",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:isLeaderboardInGame",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:isEventInGame",
+            "rdfs:domain",
+            "VideoGameOntology:InstantaneousEvent"
+        ],
+        [
+            "VideoGameOntology:hasCharacter",
+            "rdfs:range",
+            "VideoGameOntology:Character"
+        ],
+        [
+            "VideoGameOntology:PlayerEvent",
+            "rdfs:subClassOf",
+            "VideoGameOntology:InstantaneousEvent"
+        ],
+        [
+            "VideoGameOntology:Tutorial",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:hasGameGenre",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:livesIn",
+            "rdfs:domain",
+            "VideoGameOntology:Player"
+        ],
+        [
+            "VideoGameOntology:GainEvent",
+            "rdfs:subClassOf",
+            "VideoGameOntology:GameEvent"
+        ],
+        [
+            "VideoGameOntology:unlocksAchievement",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:ownsItem",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:Tutorial",
+            "rdfs:subClassOf",
+            "VideoGameOntology:Achievement"
+        ],
+        [
+            "VideoGameOntology:ownsAchievement",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:isAchievementInGame",
+            "owl:inverseOf",
+            "VideoGameOntology:hasAchievement"
+        ],
+        [
+            "VideoGameOntology:hasAchievement",
+            "rdfs:range",
+            "VideoGameOntology:Achievement"
+        ],
+        [
+            "VideoGameOntology:involvesAchievement",
+            "rdfs:range",
+            "VideoGameOntology:Achievement"
+        ],
+        [
+            "dc:creator",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            "VideoGameOntology:eventName",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            "VideoGameOntology:isEventRelatedToItem",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:isItemInGame",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:Item",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:LoseEvent",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:hasFeature",
+            "rdfs:range",
+            "VideoGameOntology:Feature"
+        ],
+        [
+            "VideoGameOntology:purchasesGameOffering",
+            "rdfs:domain",
+            "VideoGameOntology:InAppPurchaseEvent"
+        ],
+        [
+            "VideoGameOntology:isItemInGame",
+            "rdfs:domain",
+            "VideoGameOntology:Item"
+        ],
+        [
+            "VideoGameOntology:playsGame",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:isItemInGame",
+            "owl:inverseOf",
+            "VideoGameOntology:hasItem"
+        ],
+        [
+            "VideoGameOntology:isFriendWithPlayer",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:isPlayerInSession",
+            "rdfs:range",
+            "VideoGameOntology:Session"
+        ],
+        [
+            "VideoGameOntology:purchasesGameOffering",
+            "rdfs:range",
+            "VideoGameOntology:GameProduct"
+        ],
+        [
+            "VideoGameOntology:Session",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:MenuEvent",
+            "rdfs:subClassOf",
+            "VideoGameOntology:InstantaneousEvent"
+        ],
+        [
+            "VideoGameOntology:unlocksAchievement",
+            "rdfs:range",
+            "VideoGameOntology:Achievement"
+        ],
+        [
+            "VideoGameOntology:isAchievedInSession",
+            "rdfs:range",
+            "VideoGameOntology:Session"
+        ],
+        [
+            "VideoGameOntology:ownsAchievement",
+            "rdfs:range",
+            "VideoGameOntology:Achievement"
+        ],
+        [
+            "VideoGameOntology:Game",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "ontology:PopulatedPlace",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:isAchievedInSession",
+            "rdfs:domain",
+            "VideoGameOntology:Achievement"
+        ],
+        [
+            "VideoGameOntology:livesIn",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:Paragon",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:ownsCharacter",
+            "rdfs:range",
+            "VideoGameOntology:Character"
+        ],
+        [
+            "VideoGameOntology:InstantaneousEvent",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:Paragon",
+            "rdfs:subClassOf",
+            "VideoGameOntology:Achievement"
+        ],
+        [
+            "VideoGameOntology:HardMode",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:LoseEvent",
+            "rdfs:subClassOf",
+            "VideoGameOntology:GameEvent"
+        ],
+        [
+            "VideoGameOntology:involvesCharacter",
+            "rdfs:range",
+            "VideoGameOntology:Character"
+        ],
+        [
+            "VideoGameOntology:isEventTriggeredByCharacter",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:Leaderboard",
+            "rdfs:subClassOf",
+            "owl:Thing"
+        ],
+        [
+            "VideoGameOntology:HardMode",
+            "rdfs:subClassOf",
+            "VideoGameOntology:Achievement"
+        ],
+        [
+            "VideoGameOntology:Collection",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:hasPlayingArea",
+            "rdfs:range",
+            "VideoGameOntology:PlayingArea"
+        ],
+        [
+            "VideoGameOntology:ownsItem",
+            "rdfs:range",
+            "VideoGameOntology:Item"
+        ],
+        [
+            "VideoGameOntology:GameProduct",
+            "rdfs:subClassOf",
+            "schema1:Product"
+        ],
+        [
+            "VideoGameOntology:Session",
+            "rdfs:subClassOf",
+            "owl:Thing"
+        ],
+        [
+            "VideoGameOntology:username",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            "dcterms:creator",
+            "rdfs:domain",
+            "VideoGameOntology:Game"
+        ],
+        [
+            "VideoGameOntology:eventName",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "VideoGameOntology:Curiosity",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:isCharacterInSession",
+            "rdfs:domain",
+            "VideoGameOntology:Character"
+        ],
+        [
+            "VideoGameOntology:eventTime",
+            "rdfs:domain",
+            "VideoGameOntology:InstantaneousEvent"
+        ],
+        [
+            "VideoGameOntology:isFriendWithPlayer",
+            "rdf:type",
+            "owl:SymmetricProperty"
+        ],
+        [
+            "VideoGameOntology:Curiosity",
+            "rdfs:subClassOf",
+            "VideoGameOntology:Achievement"
+        ],
+        [
+            "VideoGameOntology:hasCharacter",
+            "rdfs:domain",
+            "VideoGameOntology:Game"
+        ],
+        [
+            "VideoGameOntology:hasItem",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "VideoGameOntology:Completion",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:isFriendWithPlayer",
+            "rdfs:range",
+            "VideoGameOntology:Player"
+        ],
+        [
+            "VideoGameOntology:isFriendWithPlayer",
+            "rdfs:domain",
+            "VideoGameOntology:Player"
+        ],
+        [
+            "VideoGameOntology:Completion",
+            "rdfs:subClassOf",
+            "VideoGameOntology:Achievement"
+        ],
+        [
+            "dc:contributor",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            "VideoGameOntology:Multiplayer",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:isEventAssociatedToPlayer",
+            "rdfs:range",
+            "VideoGameOntology:Player"
+        ],
+        [
+            "VideoGameOntology:GameEvent",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "VideoGameOntology:isEventRelatedToItem",
+            "rdfs:range",
+            "VideoGameOntology:Item"
+        ]
+    ],
+    "retrofitted_competency_questions": [
+        "[Simple] What is a video game?",
+        "[Simple] What types of events occur in a video game?",
+        "[Simple] What is the difference between a character and a player?",
+        "[Simple] What is a game product?",
+        "[Simple] Can a session be in multiple games?",
+        "[Simple] What items can a character own?",
+        "[Simple] What is a gain event?",
+        "[Simple] What is a lose event?",
+        "[Intermediate] Which game products are available for purchase in a specific game?",
+        "[Intermediate] How do characters acquire items in a game?",
+        "[Intermediate] What types of events can occur during a game session?",
+        "[Intermediate] Can a character own multiple items at the same time?",
+        "[Complex] If a character experiences a gain event, what are the possible outcomes for their item ownership?",
+        "[Complex] How do lose events affect a character's progress in a game?",
+        "[Complex] What is the relationship between game events and a character's overall experience?",
+        "[Simple] What is an instantaneous event?",
+        "[Simple] Can a game have multiple sessions?",
+        "[Intermediate] Which characters have purchased game products in a specific game?",
+        "[Intermediate] How do game events impact a character's abilities?",
+        "[Complex] If a player experiences a series of gain and lose events, what are the potential consequences for their character's development?",
+        "[Simple] What is the role of a session in a video game?",
+        "[Simple] Can a game product be purchased multiple times?",
+        "[Intermediate] Which game products are most popular among players?",
+        "[Intermediate] How do characters interact with each other in a game?",
+        "[Complex] If a game has a complex storyline, how do game events contribute to the narrative?",
+        "[Simple] What is the purpose of a video game ontology?",
+        "[Simple] Can a character's item ownership change over time?",
+        "[Simple] What is an achievement in a video game?",
+        "[Simple] What types of achievements are there in video games?",
+        "[Simple] What is a multiplayer achievement?",
+        "[Simple] What is virtuosity in the context of video games?",
+        "[Simple] Is minigame an achievement type?",
+        "[Simple] What does special play style mean in video games?",
+        "[Simple] Can someone be considered a veteran in a video game?",
+        "[Simple] What is loyalty in the context of video games?",
+        "[Simple] What is fandom in video games?",
+        "[Simple] Is there a tutorial achievement in video games?",
+        "[Simple] What does paragon mean in video games?",
+        "[Simple] Is hard mode an achievement type?",
+        "[Simple] What is curiosity in the context of video games?",
+        "[Simple] Can you get an achievement for completing something in a video game?",
+        "[Simple] Are there achievements related to collections in video games?",
+        "[Intermediate] Which achievements are related to playing with others?",
+        "[Intermediate] What types of achievements can be found in single-player games?",
+        "[Intermediate] How do you achieve virtuosity in a video game?",
+        "[Intermediate] Can you get multiple achievements for playing minigames?",
+        "[Intermediate] Are there any achievements that require special play styles and multiplayer?",
+        "[Complex] If a player has achieved veteran status, what other achievements are they likely to have?",
+        "[Complex] How do achievements like loyalty and fandom relate to each other in the context of video games?",
+        "[Complex] Can you identify players who have completed all achievements related to hard mode and multiplayer?",
+        "[Simple] What is the definition of an achievement in video games?",
+        "[Intermediate] Are there any achievements that are common across different types of video games?",
+        "[Simple] How do you achieve completion in a video game?",
+        "[Simple] Is there an achievement for playing in hard mode?",
+        "[Intermediate] Which achievements require both single-player and multiplayer gameplay?",
+        "[Complex] If a player has all the achievements related to collections, what can be inferred about their gaming habits?",
+        "[Simple] What does it mean to have a paragon achievement in a video game?",
+        "[Simple] What is the role of a creator in a publication?",
+        "[Simple] Who can be considered a contributor to a research paper?",
+        "[Simple] What type of property is used to describe a creator?",
+        "[Simple] Can a person be both a creator and a contributor?",
+        "[Simple] What is the difference between a creator and a contributor?",
+        "[Simple] How do you annotate the creator of a document?",
+        "[Simple] What information can be provided about a contributor?",
+        "[Simple] Is the creator always the main author?",
+        "[Simple] Can there be multiple creators for a single publication?",
+        "[Simple] What is the purpose of annotating contributors?",
+        "[Intermediate] How do creators and contributors collaborate on a project?",
+        "[Intermediate] What are the different types of contributions that can be made to a research paper?",
+        "[Intermediate] Can you list all the publications where a specific person is either a creator or a contributor?",
+        "[Intermediate] How do you distinguish between the roles of creators and contributors in a publication?",
+        "[Complex] If a creator is also a contributor to another publication, what are the implications for their reputation as an expert in the field?",
+        "[Complex] How would you analyze the network of collaborations between creators and contributors across multiple publications?",
+        "[Complex] What are the potential conflicts of interest when a creator is also a contributor to a publication that critiques their own work?",
+        "[Simple] What are the benefits of acknowledging contributors in a publication?",
+        "[Simple] How does the role of a creator differ from that of an author?",
+        "[Intermediate] Can you identify all the publications where a specific institution is represented by either a creator or a contributor?",
+        "[Simple] What genre is a specific video game?",
+        "[Simple] Who are the characters in a particular game?",
+        "[Simple] What is the playing area of a certain game?",
+        "[Simple] Which games have leaderboards?",
+        "[Simple] What achievements can be unlocked in a game?",
+        "[Simple] Who plays a specific game?",
+        "[Simple] What items are in a particular game?",
+        "[Simple] What type of leaderboard does a game have?",
+        "[Simple] Is a certain character in a specific game?",
+        "[Simple] Does a game have a multiplayer playing area?",
+        "[Simple] How many achievements are in a game?",
+        "[Simple] Can a player play multiple games?",
+        "[Simple] What genre does a game belong to?",
+        "[Simple] Is an item available in a specific game?",
+        "[Simple] Does a game have a single-player playing area?",
+        "[Intermediate] Which games have both action and adventure genres?",
+        "[Intermediate] Who are the players that play games with a specific character?",
+        "[Intermediate] What are the achievements that can be unlocked by playing a certain type of game?",
+        "[Intermediate] Are there any games that have multiple leaderboards?",
+        "[Intermediate] Can a player unlock an achievement in multiple games?",
+        "[Intermediate] Which games have items that can be used in multiplayer mode?",
+        "[Intermediate] Do players who play a specific game also play other games with the same genre?",
+        "[Complex] If a player has unlocked all achievements in a game, what other games might they be interested in playing?",
+        "[Complex] How do the leaderboards of different games compare in terms of player engagement?",
+        "[Complex] Can we recommend games to players based on their playing history and the genres they prefer?",
+        "[Simple] What is the name of a game with a specific character?",
+        "[Simple] Does a game have a leaderboard for a specific achievement?",
+        "[Intermediate] Which characters are in games that belong to the action genre?",
+        "[Complex] If a player plays multiple games with different genres, what type of games might they be interested in playing next?",
+        "[Simple] Is there a game that has both a single-player and multiplayer playing area?",
+        "[Simple] What is a player event in a video game?",
+        "[Simple] What features can an item have in a game?",
+        "[Simple] What types of events occur in a video game session?",
+        "[Simple] How do characters interact with each other in a game?",
+        "[Simple] Can a character be in multiple sessions at once?",
+        "[Simple] What achievements can be unlocked by completing certain events?",
+        "[Simple] Are there different types of instantaneous events in video games?",
+        "[Simple] How do menu events relate to the overall gameplay experience?",
+        "[Simple] Can an item have multiple features?",
+        "[Simple] Is it possible for a character to trigger multiple events at once?",
+        "[Simple] What is the relationship between a game and its sessions?",
+        "[Simple] Are there any specific rules governing how characters interact with items?",
+        "[Simple] How do achievements fit into the overall structure of a video game?",
+        "[Simple] Can an event be related to multiple items simultaneously?",
+        "[Intermediate] Which games feature characters that can trigger events in multiple sessions?",
+        "[Intermediate] What types of features are commonly found in items across different games?",
+        "[Intermediate] How do the different types of instantaneous events contribute to the gameplay experience?",
+        "[Intermediate] Are there any games where characters can unlock achievements by completing specific tasks?",
+        "[Intermediate] Can a single item be used in multiple sessions or games?",
+        "[Intermediate] How do menu events impact the progression of a game's storyline?",
+        "[Complex] If a character triggers an event that unlocks an achievement, how does this affect their overall progress in the game?",
+        "[Complex] What happens when a character is involved in multiple sessions simultaneously, and how does this impact the gameplay experience?",
+        "[Complex] How do the relationships between characters, items, and events influence the overall narrative of a video game?",
+        "[Complex] Can the features of an item be used to unlock specific achievements or trigger certain events in a game?",
+        "[Simple] What is the definition of an instantaneous event in a video game?",
+        "[Simple] How do games use sessions to organize gameplay?",
+        "[Intermediate] Which characters are most commonly involved in triggering events across different games?",
+        "[Intermediate] Are there any items that have features which allow them to be used in creative ways to solve puzzles or overcome challenges?",
+        "[Complex] If a game features multiple characters, each with their own set of abilities and items, how do these interactions impact the overall gameplay experience and storyline?",
+        "[Simple] What games does a player play?",
+        "[Simple] Who is the creator of a game?",
+        "[Simple] What characters does a player own?",
+        "[Simple] Where does a player live?",
+        "[Simple] What achievements can a player own?",
+        "[Simple] Is a player friends with another player?",
+        "[Simple] What sessions is a player involved in?",
+        "[Simple] Who are the players in a session?",
+        "[Simple] What events are associated with a player?",
+        "[Simple] What type of agent is a player?",
+        "[Intermediate] Which games have players that live in the same city?",
+        "[Intermediate] What achievements do friends of a player own?",
+        "[Intermediate] In which sessions do two specific players play together?",
+        "[Intermediate] Who are the creators of games played by a specific player?",
+        "[Intermediate] What characters do players who live in a certain city own?",
+        "[Complex] If a player owns a certain achievement, what other achievements are they likely to own?",
+        "[Complex] How many players live in cities where a specific game was created?",
+        "[Complex] What is the relationship between the number of friends a player has and the number of achievements they own?",
+        "[Simple] What is the name of a game?",
+        "[Simple] Who is a player's friend?",
+        "[Intermediate] Which players have completed all achievements in a game?",
+        "[Intermediate] In which city do most players of a certain game live?",
+        "[Complex] If two players are friends, what is the probability that they play in the same session?",
+        "[Simple] What type of property is \"isFriendWithPlayer\"?",
+        "[Simple] What is the domain of the property \"ownsCharacter\"?",
+        "[Intermediate] Which games have the most players who live in a certain city?",
+        "[Intermediate] What characters do players own who have completed a certain achievement?",
+        "[Complex] How does the number of friends a player has affect their progress in a game?",
+        "[Simple] Who created a specific game?",
+        "[Simple] What sessions is a player not involved in?",
+        "[Simple] What is the release date of a game?",
+        "[Simple] What achievements can be achieved in a session?",
+        "[Simple] What is the username of a player?",
+        "[Simple] What is the start time of a session?",
+        "[Simple] What is the end time of a session?",
+        "[Simple] What are the different types of achievements?",
+        "[Simple] What games involve luck as an achievement?",
+        "[Simple] Who achieved an achievement in a particular session?",
+        "[Simple] What events occur during a game session?",
+        "[Simple] What is the name of an event that occurred during a game?",
+        "[Simple] At what time did an event occur during a game?",
+        "[Simple] How many sessions has a player played?",
+        "[Simple] What are the achievements that can be achieved by playing a particular game?",
+        "[Simple] In which session was an achievement achieved?",
+        "[Simple] What is the duration of a game session?",
+        "[Intermediate] Which games have achievements that involve luck and were released after 2010?",
+        "[Intermediate] What players have achieved all the achievements in a particular game?",
+        "[Intermediate] How many achievements can be achieved by playing games released before 2015?",
+        "[Intermediate] In which sessions did a player achieve multiple achievements?",
+        "[Intermediate] What are the most common events that occur during game sessions?",
+        "[Complex] If a player has achieved all the achievements in a particular game, what other games might they be interested in playing?",
+        "[Complex] How do the achievements earned by a player in one session affect their progress in another session?",
+        "[Complex] What are the most challenging achievements to achieve in a game, based on player data?",
+        "[Simple] Can a player achieve multiple achievements in a single session?",
+        "[Simple] Are there any games that do not have achievements?",
+        "[Intermediate] Do players who achieve luck-based achievements tend to play more sessions than those who do not?",
+        "[Complex] If a new achievement is added to a game, how will it affect the overall difficulty of achieving all achievements in the game?",
+        "[Simple] What types of events can occur during an instantaneous event?",
+        "[Intermediate] Are there any correlations between the time of day and the type of achievements earned by players?",
+        "[Complex] Can we predict which achievements a player is likely to achieve based on their past gaming behavior?"
+    ],
+    "subgraph_chunks": [
+        {
+            "subgraph_id": 1,
+            "namespaces": [
+                {
+                    "prefix": "VideoGameOntology",
+                    "url": "http://purl.org/net/VideoGameOntology#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "schema1",
+                    "url": "http://schema.org/"
+                },
+                {
+                    "prefix": "net",
+                    "url": "http://purl.org/net/"
+                },
+                {
+                    "prefix": "v1",
+                    "url": "http://purl.org/goodrelations/v1#"
+                }
+            ],
+            "triples": [
+                [
+                    "VideoGameOntology:isSessionInGame",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:InAppPurchaseEvent",
+                    "rdfs:subClassOf",
+                    "VideoGameOntology:InstantaneousEvent"
+                ],
+                [
+                    "VideoGameOntology:ownsItem",
+                    "rdfs:domain",
+                    "VideoGameOntology:Character"
+                ],
+                [
+                    "VideoGameOntology:purchasesGameOffering",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "schema1:Product",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:isSessionInGame",
+                    "rdfs:domain",
+                    "VideoGameOntology:Session"
+                ],
+                [
+                    "VideoGameOntology:InAppPurchaseEvent",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "net:VideoGameOntology",
+                    "rdf:type",
+                    "owl:Ontology"
+                ],
+                [
+                    "VideoGameOntology:Character",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:GameProduct",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:isSessionInGame",
+                    "rdfs:range",
+                    "VideoGameOntology:Game"
+                ],
+                [
+                    "VideoGameOntology:GainEvent",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:GameProduct",
+                    "rdfs:subClassOf",
+                    "v1:ProductOrService"
+                ],
+                [
+                    "VideoGameOntology:GameEvent",
+                    "rdfs:subClassOf",
+                    "VideoGameOntology:InstantaneousEvent"
+                ],
+                [
+                    "v1:ProductOrService",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:GainEvent",
+                    "rdfs:subClassOf",
+                    "VideoGameOntology:GameEvent"
+                ],
+                [
+                    "VideoGameOntology:ownsItem",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:LoseEvent",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:purchasesGameOffering",
+                    "rdfs:domain",
+                    "VideoGameOntology:InAppPurchaseEvent"
+                ],
+                [
+                    "VideoGameOntology:purchasesGameOffering",
+                    "rdfs:range",
+                    "VideoGameOntology:GameProduct"
+                ],
+                [
+                    "VideoGameOntology:LoseEvent",
+                    "rdfs:subClassOf",
+                    "VideoGameOntology:GameEvent"
+                ],
+                [
+                    "VideoGameOntology:ownsItem",
+                    "rdfs:range",
+                    "VideoGameOntology:Item"
+                ],
+                [
+                    "VideoGameOntology:GameProduct",
+                    "rdfs:subClassOf",
+                    "schema1:Product"
+                ],
+                [
+                    "VideoGameOntology:GameEvent",
+                    "rdf:type",
+                    "owl:Class"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is a video game?",
+                "[Simple] What types of events occur in a video game?",
+                "[Simple] What is the difference between a character and a player?",
+                "[Simple] What is a game product?",
+                "[Simple] Can a session be in multiple games?",
+                "[Simple] What items can a character own?",
+                "[Simple] What is a gain event?",
+                "[Simple] What is a lose event?",
+                "[Intermediate] Which game products are available for purchase in a specific game?",
+                "[Intermediate] How do characters acquire items in a game?",
+                "[Intermediate] What types of events can occur during a game session?",
+                "[Intermediate] Can a character own multiple items at the same time?",
+                "[Complex] If a character experiences a gain event, what are the possible outcomes for their item ownership?",
+                "[Complex] How do lose events affect a character's progress in a game?",
+                "[Complex] What is the relationship between game events and a character's overall experience?",
+                "[Simple] What is an instantaneous event?",
+                "[Simple] Can a game have multiple sessions?",
+                "[Intermediate] Which characters have purchased game products in a specific game?",
+                "[Intermediate] How do game events impact a character's abilities?",
+                "[Complex] If a player experiences a series of gain and lose events, what are the potential consequences for their character's development?",
+                "[Simple] What is the role of a session in a video game?",
+                "[Simple] Can a game product be purchased multiple times?",
+                "[Intermediate] Which game products are most popular among players?",
+                "[Intermediate] How do characters interact with each other in a game?",
+                "[Complex] If a game has a complex storyline, how do game events contribute to the narrative?",
+                "[Simple] What is the purpose of a video game ontology?",
+                "[Simple] Can a character's item ownership change over time?"
+            ]
+        },
+        {
+            "subgraph_id": 2,
+            "namespaces": [
+                {
+                    "prefix": "VideoGameOntology",
+                    "url": "http://purl.org/net/VideoGameOntology#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                }
+            ],
+            "triples": [
+                [
+                    "VideoGameOntology:Multiplayer",
+                    "rdfs:subClassOf",
+                    "VideoGameOntology:Achievement"
+                ],
+                [
+                    "VideoGameOntology:Virtuosity",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:Minigame",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:Virtuosity",
+                    "rdfs:subClassOf",
+                    "VideoGameOntology:Achievement"
+                ],
+                [
+                    "VideoGameOntology:Minigame",
+                    "rdfs:subClassOf",
+                    "VideoGameOntology:Achievement"
+                ],
+                [
+                    "VideoGameOntology:SpecialPlayStyle",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:SpecialPlayStyle",
+                    "rdfs:subClassOf",
+                    "VideoGameOntology:Achievement"
+                ],
+                [
+                    "VideoGameOntology:Veteran",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:Veteran",
+                    "rdfs:subClassOf",
+                    "VideoGameOntology:Achievement"
+                ],
+                [
+                    "VideoGameOntology:Collection",
+                    "rdfs:subClassOf",
+                    "VideoGameOntology:Achievement"
+                ],
+                [
+                    "VideoGameOntology:Loyalty",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:Loyalty",
+                    "rdfs:subClassOf",
+                    "VideoGameOntology:Achievement"
+                ],
+                [
+                    "VideoGameOntology:Fandom",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:Fandom",
+                    "rdfs:subClassOf",
+                    "VideoGameOntology:Achievement"
+                ],
+                [
+                    "VideoGameOntology:Tutorial",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:Tutorial",
+                    "rdfs:subClassOf",
+                    "VideoGameOntology:Achievement"
+                ],
+                [
+                    "VideoGameOntology:Paragon",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:Paragon",
+                    "rdfs:subClassOf",
+                    "VideoGameOntology:Achievement"
+                ],
+                [
+                    "VideoGameOntology:HardMode",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:HardMode",
+                    "rdfs:subClassOf",
+                    "VideoGameOntology:Achievement"
+                ],
+                [
+                    "VideoGameOntology:Collection",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:Curiosity",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:Curiosity",
+                    "rdfs:subClassOf",
+                    "VideoGameOntology:Achievement"
+                ],
+                [
+                    "VideoGameOntology:Completion",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:Completion",
+                    "rdfs:subClassOf",
+                    "VideoGameOntology:Achievement"
+                ],
+                [
+                    "VideoGameOntology:Multiplayer",
+                    "rdf:type",
+                    "owl:Class"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is an achievement in a video game?",
+                "[Simple] What types of achievements are there in video games?",
+                "[Simple] What is a multiplayer achievement?",
+                "[Simple] What is virtuosity in the context of video games?",
+                "[Simple] Is minigame an achievement type?",
+                "[Simple] What does special play style mean in video games?",
+                "[Simple] Can someone be considered a veteran in a video game?",
+                "[Simple] What is loyalty in the context of video games?",
+                "[Simple] What is fandom in video games?",
+                "[Simple] Is there a tutorial achievement in video games?",
+                "[Simple] What does paragon mean in video games?",
+                "[Simple] Is hard mode an achievement type?",
+                "[Simple] What is curiosity in the context of video games?",
+                "[Simple] Can you get an achievement for completing something in a video game?",
+                "[Simple] Are there achievements related to collections in video games?",
+                "[Intermediate] Which achievements are related to playing with others?",
+                "[Intermediate] What types of achievements can be found in single-player games?",
+                "[Intermediate] How do you achieve virtuosity in a video game?",
+                "[Intermediate] Can you get multiple achievements for playing minigames?",
+                "[Intermediate] Are there any achievements that require special play styles and multiplayer?",
+                "[Complex] If a player has achieved veteran status, what other achievements are they likely to have?",
+                "[Complex] How do achievements like loyalty and fandom relate to each other in the context of video games?",
+                "[Complex] Can you identify players who have completed all achievements related to hard mode and multiplayer?",
+                "[Simple] What is the definition of an achievement in video games?",
+                "[Intermediate] Are there any achievements that are common across different types of video games?",
+                "[Simple] How do you achieve completion in a video game?",
+                "[Simple] Is there an achievement for playing in hard mode?",
+                "[Intermediate] Which achievements require both single-player and multiplayer gameplay?",
+                "[Complex] If a player has all the achievements related to collections, what can be inferred about their gaming habits?",
+                "[Simple] What does it mean to have a paragon achievement in a video game?"
+            ]
+        },
+        {
+            "subgraph_id": 3,
+            "namespaces": [
+                {
+                    "prefix": "dc",
+                    "url": "http://purl.org/dc/elements/1.1/"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                }
+            ],
+            "triples": [
+                [
+                    "dc:creator",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ],
+                [
+                    "dc:contributor",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is the role of a creator in a publication?",
+                "[Simple] Who can be considered a contributor to a research paper?",
+                "[Simple] What type of property is used to describe a creator?",
+                "[Simple] Can a person be both a creator and a contributor?",
+                "[Simple] What is the difference between a creator and a contributor?",
+                "[Simple] How do you annotate the creator of a document?",
+                "[Simple] What information can be provided about a contributor?",
+                "[Simple] Is the creator always the main author?",
+                "[Simple] Can there be multiple creators for a single publication?",
+                "[Simple] What is the purpose of annotating contributors?",
+                "[Intermediate] How do creators and contributors collaborate on a project?",
+                "[Intermediate] What are the different types of contributions that can be made to a research paper?",
+                "[Intermediate] Can you list all the publications where a specific person is either a creator or a contributor?",
+                "[Intermediate] How do you distinguish between the roles of creators and contributors in a publication?",
+                "[Complex] If a creator is also a contributor to another publication, what are the implications for their reputation as an expert in the field?",
+                "[Complex] How would you analyze the network of collaborations between creators and contributors across multiple publications?",
+                "[Complex] What are the potential conflicts of interest when a creator is also a contributor to a publication that critiques their own work?",
+                "[Simple] What are the benefits of acknowledging contributors in a publication?",
+                "[Simple] How does the role of a creator differ from that of an author?",
+                "[Intermediate] Can you identify all the publications where a specific institution is represented by either a creator or a contributor?"
+            ]
+        },
+        {
+            "subgraph_id": 4,
+            "namespaces": [
+                {
+                    "prefix": "VideoGameOntology",
+                    "url": "http://purl.org/net/VideoGameOntology#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                }
+            ],
+            "triples": [
+                [
+                    "VideoGameOntology:hasGameGenre",
+                    "rdfs:range",
+                    "VideoGameOntology:Genre"
+                ],
+                [
+                    "VideoGameOntology:hasLeaderboard",
+                    "owl:inverseOf",
+                    "VideoGameOntology:isLeaderboardInGame"
+                ],
+                [
+                    "VideoGameOntology:hasPlayingArea",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:hasGameGenre",
+                    "rdfs:domain",
+                    "VideoGameOntology:Game"
+                ],
+                [
+                    "VideoGameOntology:isCharacterInGame",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:isItemInGame",
+                    "rdfs:range",
+                    "VideoGameOntology:Game"
+                ],
+                [
+                    "VideoGameOntology:isCharacterInGame",
+                    "owl:inverseOf",
+                    "VideoGameOntology:hasCharacter"
+                ],
+                [
+                    "VideoGameOntology:hasCharacter",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:hasLeaderboard",
+                    "rdfs:range",
+                    "VideoGameOntology:Leaderboard"
+                ],
+                [
+                    "VideoGameOntology:isLeaderboardInGame",
+                    "rdfs:range",
+                    "VideoGameOntology:Game"
+                ],
+                [
+                    "VideoGameOntology:isCharacterInGame",
+                    "rdfs:domain",
+                    "VideoGameOntology:Character"
+                ],
+                [
+                    "VideoGameOntology:hasLeaderboard",
+                    "rdfs:domain",
+                    "VideoGameOntology:Game"
+                ],
+                [
+                    "VideoGameOntology:Genre",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:Achievement",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:hasAchievement",
+                    "rdfs:domain",
+                    "VideoGameOntology:Game"
+                ],
+                [
+                    "VideoGameOntology:playsGame",
+                    "rdfs:range",
+                    "VideoGameOntology:Game"
+                ],
+                [
+                    "VideoGameOntology:isLeaderboardInGame",
+                    "rdfs:domain",
+                    "VideoGameOntology:Leaderboard"
+                ],
+                [
+                    "VideoGameOntology:hasAchievement",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:hasPlayingArea",
+                    "rdfs:domain",
+                    "VideoGameOntology:Game"
+                ],
+                [
+                    "VideoGameOntology:hasLeaderboard",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:isAchievementInGame",
+                    "rdfs:domain",
+                    "VideoGameOntology:Achievement"
+                ],
+                [
+                    "VideoGameOntology:Leaderboard",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:isAchievementInGame",
+                    "rdfs:range",
+                    "VideoGameOntology:Game"
+                ],
+                [
+                    "VideoGameOntology:isAchievementInGame",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:isCharacterInGame",
+                    "rdfs:range",
+                    "VideoGameOntology:Game"
+                ],
+                [
+                    "VideoGameOntology:playsGame",
+                    "rdfs:domain",
+                    "VideoGameOntology:Player"
+                ],
+                [
+                    "VideoGameOntology:PlayingArea",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:isLeaderboardInGame",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:hasCharacter",
+                    "rdfs:range",
+                    "VideoGameOntology:Character"
+                ],
+                [
+                    "VideoGameOntology:hasGameGenre",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:isAchievementInGame",
+                    "owl:inverseOf",
+                    "VideoGameOntology:hasAchievement"
+                ],
+                [
+                    "VideoGameOntology:hasAchievement",
+                    "rdfs:range",
+                    "VideoGameOntology:Achievement"
+                ],
+                [
+                    "VideoGameOntology:isItemInGame",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:isItemInGame",
+                    "rdfs:domain",
+                    "VideoGameOntology:Item"
+                ],
+                [
+                    "VideoGameOntology:playsGame",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:isItemInGame",
+                    "owl:inverseOf",
+                    "VideoGameOntology:hasItem"
+                ],
+                [
+                    "VideoGameOntology:Leaderboard",
+                    "rdfs:subClassOf",
+                    "owl:Thing"
+                ],
+                [
+                    "VideoGameOntology:hasPlayingArea",
+                    "rdfs:range",
+                    "VideoGameOntology:PlayingArea"
+                ],
+                [
+                    "VideoGameOntology:hasCharacter",
+                    "rdfs:domain",
+                    "VideoGameOntology:Game"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What genre is a specific video game?",
+                "[Simple] Who are the characters in a particular game?",
+                "[Simple] What is the playing area of a certain game?",
+                "[Simple] Which games have leaderboards?",
+                "[Simple] What achievements can be unlocked in a game?",
+                "[Simple] Who plays a specific game?",
+                "[Simple] What items are in a particular game?",
+                "[Simple] What type of leaderboard does a game have?",
+                "[Simple] Is a certain character in a specific game?",
+                "[Simple] Does a game have a multiplayer playing area?",
+                "[Simple] How many achievements are in a game?",
+                "[Simple] Can a player play multiple games?",
+                "[Simple] What genre does a game belong to?",
+                "[Simple] Is an item available in a specific game?",
+                "[Simple] Does a game have a single-player playing area?",
+                "[Intermediate] Which games have both action and adventure genres?",
+                "[Intermediate] Who are the players that play games with a specific character?",
+                "[Intermediate] What are the achievements that can be unlocked by playing a certain type of game?",
+                "[Intermediate] Are there any games that have multiple leaderboards?",
+                "[Intermediate] Can a player unlock an achievement in multiple games?",
+                "[Intermediate] Which games have items that can be used in multiplayer mode?",
+                "[Intermediate] Do players who play a specific game also play other games with the same genre?",
+                "[Complex] If a player has unlocked all achievements in a game, what other games might they be interested in playing?",
+                "[Complex] How do the leaderboards of different games compare in terms of player engagement?",
+                "[Complex] Can we recommend games to players based on their playing history and the genres they prefer?",
+                "[Simple] What is the name of a game with a specific character?",
+                "[Simple] Does a game have a leaderboard for a specific achievement?",
+                "[Intermediate] Which characters are in games that belong to the action genre?",
+                "[Complex] If a player plays multiple games with different genres, what type of games might they be interested in playing next?",
+                "[Simple] Is there a game that has both a single-player and multiplayer playing area?"
+            ]
+        },
+        {
+            "subgraph_id": 5,
+            "namespaces": [
+                {
+                    "prefix": "VideoGameOntology",
+                    "url": "http://purl.org/net/VideoGameOntology#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                }
+            ],
+            "triples": [
+                [
+                    "VideoGameOntology:PlayerEvent",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:Feature",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:isCharacterInSession",
+                    "owl:inverseOf",
+                    "VideoGameOntology:involvesCharacter"
+                ],
+                [
+                    "VideoGameOntology:isEventInGame",
+                    "rdfs:range",
+                    "VideoGameOntology:Game"
+                ],
+                [
+                    "VideoGameOntology:isEventInGame",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:isEventInSession",
+                    "rdfs:domain",
+                    "VideoGameOntology:InstantaneousEvent"
+                ],
+                [
+                    "VideoGameOntology:isCharacterInSession",
+                    "rdfs:range",
+                    "VideoGameOntology:Session"
+                ],
+                [
+                    "VideoGameOntology:isEventInSession",
+                    "rdfs:range",
+                    "VideoGameOntology:Session"
+                ],
+                [
+                    "VideoGameOntology:MenuEvent",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:hasItem",
+                    "rdfs:range",
+                    "VideoGameOntology:Item"
+                ],
+                [
+                    "VideoGameOntology:isEventTriggeredByCharacter",
+                    "rdfs:domain",
+                    "VideoGameOntology:InstantaneousEvent"
+                ],
+                [
+                    "VideoGameOntology:involvesCharacter",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:unlocksAchievement",
+                    "rdfs:domain",
+                    "VideoGameOntology:InstantaneousEvent"
+                ],
+                [
+                    "VideoGameOntology:isEventRelatedToItem",
+                    "rdfs:domain",
+                    "VideoGameOntology:InstantaneousEvent"
+                ],
+                [
+                    "VideoGameOntology:isCharacterInSession",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:isEventInSession",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:isEventTriggeredByCharacter",
+                    "rdfs:range",
+                    "VideoGameOntology:Character"
+                ],
+                [
+                    "VideoGameOntology:hasFeature",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:hasItem",
+                    "rdfs:domain",
+                    "VideoGameOntology:Game"
+                ],
+                [
+                    "VideoGameOntology:involvesCharacter",
+                    "rdfs:domain",
+                    "VideoGameOntology:Session"
+                ],
+                [
+                    "VideoGameOntology:hasFeature",
+                    "rdfs:domain",
+                    "VideoGameOntology:Item"
+                ],
+                [
+                    "VideoGameOntology:isEventInGame",
+                    "rdfs:domain",
+                    "VideoGameOntology:InstantaneousEvent"
+                ],
+                [
+                    "VideoGameOntology:PlayerEvent",
+                    "rdfs:subClassOf",
+                    "VideoGameOntology:InstantaneousEvent"
+                ],
+                [
+                    "VideoGameOntology:unlocksAchievement",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:isEventRelatedToItem",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:Item",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:hasFeature",
+                    "rdfs:range",
+                    "VideoGameOntology:Feature"
+                ],
+                [
+                    "VideoGameOntology:MenuEvent",
+                    "rdfs:subClassOf",
+                    "VideoGameOntology:InstantaneousEvent"
+                ],
+                [
+                    "VideoGameOntology:unlocksAchievement",
+                    "rdfs:range",
+                    "VideoGameOntology:Achievement"
+                ],
+                [
+                    "VideoGameOntology:InstantaneousEvent",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:involvesCharacter",
+                    "rdfs:range",
+                    "VideoGameOntology:Character"
+                ],
+                [
+                    "VideoGameOntology:isEventTriggeredByCharacter",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:isCharacterInSession",
+                    "rdfs:domain",
+                    "VideoGameOntology:Character"
+                ],
+                [
+                    "VideoGameOntology:hasItem",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:isEventRelatedToItem",
+                    "rdfs:range",
+                    "VideoGameOntology:Item"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is a player event in a video game?",
+                "[Simple] What features can an item have in a game?",
+                "[Simple] What types of events occur in a video game session?",
+                "[Simple] How do characters interact with each other in a game?",
+                "[Simple] Can a character be in multiple sessions at once?",
+                "[Simple] What achievements can be unlocked by completing certain events?",
+                "[Simple] Are there different types of instantaneous events in video games?",
+                "[Simple] How do menu events relate to the overall gameplay experience?",
+                "[Simple] Can an item have multiple features?",
+                "[Simple] Is it possible for a character to trigger multiple events at once?",
+                "[Simple] What is the relationship between a game and its sessions?",
+                "[Simple] Are there any specific rules governing how characters interact with items?",
+                "[Simple] How do achievements fit into the overall structure of a video game?",
+                "[Simple] Can an event be related to multiple items simultaneously?",
+                "[Intermediate] Which games feature characters that can trigger events in multiple sessions?",
+                "[Intermediate] What types of features are commonly found in items across different games?",
+                "[Intermediate] How do the different types of instantaneous events contribute to the gameplay experience?",
+                "[Intermediate] Are there any games where characters can unlock achievements by completing specific tasks?",
+                "[Intermediate] Can a single item be used in multiple sessions or games?",
+                "[Intermediate] How do menu events impact the progression of a game's storyline?",
+                "[Complex] If a character triggers an event that unlocks an achievement, how does this affect their overall progress in the game?",
+                "[Complex] What happens when a character is involved in multiple sessions simultaneously, and how does this impact the gameplay experience?",
+                "[Complex] How do the relationships between characters, items, and events influence the overall narrative of a video game?",
+                "[Complex] Can the features of an item be used to unlock specific achievements or trigger certain events in a game?",
+                "[Simple] What is the definition of an instantaneous event in a video game?",
+                "[Simple] How do games use sessions to organize gameplay?",
+                "[Intermediate] Which characters are most commonly involved in triggering events across different games?",
+                "[Intermediate] Are there any items that have features which allow them to be used in creative ways to solve puzzles or overcome challenges?",
+                "[Complex] If a game features multiple characters, each with their own set of abilities and items, how do these interactions impact the overall gameplay experience and storyline?"
+            ]
+        },
+        {
+            "subgraph_id": 6,
+            "namespaces": [
+                {
+                    "prefix": "VideoGameOntology",
+                    "url": "http://purl.org/net/VideoGameOntology#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "foaf",
+                    "url": "http://xmlns.com/foaf/0.1/"
+                },
+                {
+                    "prefix": "dcterms",
+                    "url": "http://purl.org/dc/terms/"
+                },
+                {
+                    "prefix": "ontology",
+                    "url": "http://dbpedia.org/ontology/"
+                }
+            ],
+            "triples": [
+                [
+                    "VideoGameOntology:involvesPlayer",
+                    "rdfs:domain",
+                    "VideoGameOntology:Session"
+                ],
+                [
+                    "VideoGameOntology:isPlayerInSession",
+                    "rdfs:domain",
+                    "VideoGameOntology:Player"
+                ],
+                [
+                    "VideoGameOntology:isEventAssociatedToPlayer",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:Player",
+                    "rdfs:subClassOf",
+                    "foaf:Agent"
+                ],
+                [
+                    "VideoGameOntology:ownsCharacter",
+                    "rdfs:domain",
+                    "VideoGameOntology:Player"
+                ],
+                [
+                    "foaf:Agent",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:isPlayerInSession",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:isPlayerInSession",
+                    "owl:inverseOf",
+                    "VideoGameOntology:involvesPlayer"
+                ],
+                [
+                    "VideoGameOntology:involvesPlayer",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "foaf:knows",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:ownsCharacter",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:isEventAssociatedToPlayer",
+                    "rdfs:domain",
+                    "VideoGameOntology:InstantaneousEvent"
+                ],
+                [
+                    "VideoGameOntology:Player",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:involvesPlayer",
+                    "rdfs:range",
+                    "VideoGameOntology:Player"
+                ],
+                [
+                    "VideoGameOntology:ownsAchievement",
+                    "rdfs:domain",
+                    "VideoGameOntology:Player"
+                ],
+                [
+                    "dcterms:creator",
+                    "rdfs:range",
+                    "foaf:Agent"
+                ],
+                [
+                    "VideoGameOntology:isFriendWithPlayer",
+                    "rdfs:subPropertyOf",
+                    "foaf:knows"
+                ],
+                [
+                    "dcterms:creator",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:livesIn",
+                    "rdfs:range",
+                    "ontology:PopulatedPlace"
+                ],
+                [
+                    "VideoGameOntology:livesIn",
+                    "rdfs:domain",
+                    "VideoGameOntology:Player"
+                ],
+                [
+                    "VideoGameOntology:ownsAchievement",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:isFriendWithPlayer",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:isPlayerInSession",
+                    "rdfs:range",
+                    "VideoGameOntology:Session"
+                ],
+                [
+                    "VideoGameOntology:ownsAchievement",
+                    "rdfs:range",
+                    "VideoGameOntology:Achievement"
+                ],
+                [
+                    "VideoGameOntology:Game",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ontology:PopulatedPlace",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:livesIn",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:ownsCharacter",
+                    "rdfs:range",
+                    "VideoGameOntology:Character"
+                ],
+                [
+                    "dcterms:creator",
+                    "rdfs:domain",
+                    "VideoGameOntology:Game"
+                ],
+                [
+                    "VideoGameOntology:isFriendWithPlayer",
+                    "rdf:type",
+                    "owl:SymmetricProperty"
+                ],
+                [
+                    "VideoGameOntology:isFriendWithPlayer",
+                    "rdfs:range",
+                    "VideoGameOntology:Player"
+                ],
+                [
+                    "VideoGameOntology:isFriendWithPlayer",
+                    "rdfs:domain",
+                    "VideoGameOntology:Player"
+                ],
+                [
+                    "VideoGameOntology:isEventAssociatedToPlayer",
+                    "rdfs:range",
+                    "VideoGameOntology:Player"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What games does a player play?",
+                "[Simple] Who is the creator of a game?",
+                "[Simple] What characters does a player own?",
+                "[Simple] Where does a player live?",
+                "[Simple] What achievements can a player own?",
+                "[Simple] Is a player friends with another player?",
+                "[Simple] What sessions is a player involved in?",
+                "[Simple] Who are the players in a session?",
+                "[Simple] What events are associated with a player?",
+                "[Simple] What type of agent is a player?",
+                "[Intermediate] Which games have players that live in the same city?",
+                "[Intermediate] What achievements do friends of a player own?",
+                "[Intermediate] In which sessions do two specific players play together?",
+                "[Intermediate] Who are the creators of games played by a specific player?",
+                "[Intermediate] What characters do players who live in a certain city own?",
+                "[Complex] If a player owns a certain achievement, what other achievements are they likely to own?",
+                "[Complex] How many players live in cities where a specific game was created?",
+                "[Complex] What is the relationship between the number of friends a player has and the number of achievements they own?",
+                "[Simple] What is the name of a game?",
+                "[Simple] Who is a player's friend?",
+                "[Intermediate] Which players have completed all achievements in a game?",
+                "[Intermediate] In which city do most players of a certain game live?",
+                "[Complex] If two players are friends, what is the probability that they play in the same session?",
+                "[Simple] What type of property is \"isFriendWithPlayer\"?",
+                "[Simple] What is the domain of the property \"ownsCharacter\"?",
+                "[Intermediate] Which games have the most players who live in a certain city?",
+                "[Intermediate] What characters do players own who have completed a certain achievement?",
+                "[Complex] How does the number of friends a player has affect their progress in a game?",
+                "[Simple] Who created a specific game?",
+                "[Simple] What sessions is a player not involved in?"
+            ]
+        },
+        {
+            "subgraph_id": 7,
+            "namespaces": [
+                {
+                    "prefix": "VideoGameOntology",
+                    "url": "http://purl.org/net/VideoGameOntology#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "xsd",
+                    "url": "http://www.w3.org/2001/XMLSchema#"
+                }
+            ],
+            "triples": [
+                [
+                    "VideoGameOntology:isAchievedInSession",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:startTime",
+                    "rdfs:domain",
+                    "VideoGameOntology:Session"
+                ],
+                [
+                    "VideoGameOntology:Luck",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:releaseDate",
+                    "rdfs:domain",
+                    "VideoGameOntology:Game"
+                ],
+                [
+                    "VideoGameOntology:Luck",
+                    "rdfs:subClassOf",
+                    "VideoGameOntology:Achievement"
+                ],
+                [
+                    "VideoGameOntology:username",
+                    "rdfs:domain",
+                    "VideoGameOntology:Player"
+                ],
+                [
+                    "VideoGameOntology:username",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "VideoGameOntology:involvesAchievement",
+                    "rdfs:domain",
+                    "VideoGameOntology:Session"
+                ],
+                [
+                    "VideoGameOntology:endTime",
+                    "rdfs:domain",
+                    "VideoGameOntology:Session"
+                ],
+                [
+                    "VideoGameOntology:releaseDate",
+                    "rdfs:range",
+                    "xsd:dateTime"
+                ],
+                [
+                    "owl:Thing",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:isAchievedInSession",
+                    "owl:inverseOf",
+                    "VideoGameOntology:involvesAchievement"
+                ],
+                [
+                    "VideoGameOntology:involvesAchievement",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "VideoGameOntology:eventName",
+                    "rdfs:domain",
+                    "VideoGameOntology:InstantaneousEvent"
+                ],
+                [
+                    "VideoGameOntology:startTime",
+                    "rdfs:range",
+                    "xsd:dateTime"
+                ],
+                [
+                    "VideoGameOntology:eventTime",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "VideoGameOntology:eventTime",
+                    "rdfs:range",
+                    "xsd:dateTime"
+                ],
+                [
+                    "VideoGameOntology:releaseDate",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "VideoGameOntology:endTime",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "VideoGameOntology:startTime",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "VideoGameOntology:endTime",
+                    "rdfs:range",
+                    "xsd:dateTime"
+                ],
+                [
+                    "VideoGameOntology:involvesAchievement",
+                    "rdfs:range",
+                    "VideoGameOntology:Achievement"
+                ],
+                [
+                    "VideoGameOntology:eventName",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    "VideoGameOntology:Session",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "VideoGameOntology:isAchievedInSession",
+                    "rdfs:range",
+                    "VideoGameOntology:Session"
+                ],
+                [
+                    "VideoGameOntology:isAchievedInSession",
+                    "rdfs:domain",
+                    "VideoGameOntology:Achievement"
+                ],
+                [
+                    "VideoGameOntology:Session",
+                    "rdfs:subClassOf",
+                    "owl:Thing"
+                ],
+                [
+                    "VideoGameOntology:username",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    "VideoGameOntology:eventName",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "VideoGameOntology:eventTime",
+                    "rdfs:domain",
+                    "VideoGameOntology:InstantaneousEvent"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is the release date of a game?",
+                "[Simple] What achievements can be achieved in a session?",
+                "[Simple] What is the username of a player?",
+                "[Simple] What is the start time of a session?",
+                "[Simple] What is the end time of a session?",
+                "[Simple] What are the different types of achievements?",
+                "[Simple] What games involve luck as an achievement?",
+                "[Simple] Who achieved an achievement in a particular session?",
+                "[Simple] What events occur during a game session?",
+                "[Simple] What is the name of an event that occurred during a game?",
+                "[Simple] At what time did an event occur during a game?",
+                "[Simple] How many sessions has a player played?",
+                "[Simple] What are the achievements that can be achieved by playing a particular game?",
+                "[Simple] In which session was an achievement achieved?",
+                "[Simple] What is the duration of a game session?",
+                "[Intermediate] Which games have achievements that involve luck and were released after 2010?",
+                "[Intermediate] What players have achieved all the achievements in a particular game?",
+                "[Intermediate] How many achievements can be achieved by playing games released before 2015?",
+                "[Intermediate] In which sessions did a player achieve multiple achievements?",
+                "[Intermediate] What are the most common events that occur during game sessions?",
+                "[Complex] If a player has achieved all the achievements in a particular game, what other games might they be interested in playing?",
+                "[Complex] How do the achievements earned by a player in one session affect their progress in another session?",
+                "[Complex] What are the most challenging achievements to achieve in a game, based on player data?",
+                "[Simple] Can a player achieve multiple achievements in a single session?",
+                "[Simple] Are there any games that do not have achievements?",
+                "[Intermediate] Do players who achieve luck-based achievements tend to play more sessions than those who do not?",
+                "[Complex] If a new achievement is added to a game, how will it affect the overall difficulty of achieving all achievements in the game?",
+                "[Simple] What types of events can occur during an instantaneous event?",
+                "[Intermediate] Are there any correlations between the time of day and the type of achievements earned by players?",
+                "[Complex] Can we predict which achievements a player is likely to achieve based on their past gaming behavior?"
+            ]
+        }
+    ]
+}

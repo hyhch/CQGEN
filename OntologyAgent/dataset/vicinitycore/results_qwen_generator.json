@@ -1,0 +1,4104 @@
+{
+    "file_name": "vicinitycore.ttl",
+    "description": "VICINITY provides a core ontology for describing the core information to be used in VICINITY ecosystem. This core ontology, which relies in more general modules or cross-domains ontologies (e.g., time, space, web things, etc.), might be extended for more specific domains and applications (e.g., health, buildings, transport, etc.)",
+    "competency_questions": [
+        "What is an IoT device?",
+        "What is a partnership?",
+        "What attributes has a partnership?",
+        "Which are the relationships a partnership is involved in ?",
+        "How many organizations can have a partnership?",
+        "What is the relation between organization and devices?",
+        "What is an IoT infrastructre?",
+        "Who is the owner of a given device?",
+        "Which attributes can have a device?",
+        "What is a device profile?",
+        "Which are the social relationships a device can be involved in?",
+        "Which roles are involved in a ownership relationship?",
+        "Which roles are involved in a partnership relationship?",
+        "What is a user?",
+        "Who is a service provider?",
+        "What are the parameters that has a service?",
+        "What is a service logical name?",
+        "Which devices are there?",
+        "What are the devices of a given agent or organization?",
+        "Which devices can I see?",
+        "Which services can I see?",
+        "What are the devices of a specific partner?",
+        "What are the services of a specific partner?",
+        "Which is the profile of a given device?",
+        "What is a building?",
+        "Where is something located?",
+        "Which devices measure temperature?",
+        "Which devices measure CO2?",
+        "Which devices measure noise?",
+        "Which devices measure humidity?",
+        "What is a thing description?",
+        "Which devices are located at a CERTH lab?",
+        "Which properties does a people counting observe?",
+        "Which properties does a humidity sensor observe?",
+        "Which properties does a light switch observe?",
+        "Which properties does a motion sensor observe?",
+        "Which properties does a thermometer observe?",
+        "Which properties does a CO2 sensor observe?",
+        "Which properties does a HVAC sensor observe?",
+        "Which devices are located at a Oslo SciencePark?",
+        "Which devices are located at UNIKL?",
+        "Which properties does an e;bike charger observe?",
+        "Which properties does a light bulb observe?",
+        "Which properties does a door sensor observe?",
+        "Which properties does a window sensor observe?",
+        "Which properties does a thermostat observe?",
+        "Which devices are located at a CERTH lab?",
+        "Which properties does a weight scale observe?",
+        "Which properties does a weight scale affect?",
+        "Which properties from a weight scale are observed in events?",
+        "Which properties does a blood pressure monitor observe?",
+        "Which properties does a blood pressure monitor affect?",
+        "Which properties from a blood pressure monitor are observed in events?",
+        "Which properties does an activity tracker observe?",
+        "Which properties does an activity tracker affect?",
+        "Which properties from an activity trackerare observed in events?",
+        "Which properties from a panic button observed in events?",
+        "Which properties does a motion sensor observe?"
+    ],
+    "namespaces": [
+        {
+            "prefix": "brick",
+            "url": "https://brickschema.org/schema/Brick#"
+        },
+        {
+            "prefix": "csvw",
+            "url": "http://www.w3.org/ns/csvw#"
+        },
+        {
+            "prefix": "dc",
+            "url": "http://purl.org/dc/elements/1.1/"
+        },
+        {
+            "prefix": "dcat",
+            "url": "http://www.w3.org/ns/dcat#"
+        },
+        {
+            "prefix": "dcmitype",
+            "url": "http://purl.org/dc/dcmitype/"
+        },
+        {
+            "prefix": "dcterms",
+            "url": "http://purl.org/dc/terms/"
+        },
+        {
+            "prefix": "dcam",
+            "url": "http://purl.org/dc/dcam/"
+        },
+        {
+            "prefix": "doap",
+            "url": "http://usefulinc.com/ns/doap#"
+        },
+        {
+            "prefix": "foaf",
+            "url": "http://xmlns.com/foaf/0.1/"
+        },
+        {
+            "prefix": "geo",
+            "url": "http://www.opengis.net/ont/geosparql#"
+        },
+        {
+            "prefix": "odrl",
+            "url": "http://www.w3.org/ns/odrl/2/"
+        },
+        {
+            "prefix": "org",
+            "url": "http://www.w3.org/ns/org#"
+        },
+        {
+            "prefix": "prof",
+            "url": "http://www.w3.org/ns/dx/prof/"
+        },
+        {
+            "prefix": "prov",
+            "url": "http://www.w3.org/ns/prov#"
+        },
+        {
+            "prefix": "qb",
+            "url": "http://purl.org/linked-data/cube#"
+        },
+        {
+            "prefix": "schema",
+            "url": "https://schema.org/"
+        },
+        {
+            "prefix": "sh",
+            "url": "http://www.w3.org/ns/shacl#"
+        },
+        {
+            "prefix": "skos",
+            "url": "http://www.w3.org/2004/02/skos/core#"
+        },
+        {
+            "prefix": "sosa",
+            "url": "http://www.w3.org/ns/sosa/"
+        },
+        {
+            "prefix": "ssn",
+            "url": "http://www.w3.org/ns/ssn/"
+        },
+        {
+            "prefix": "time",
+            "url": "http://www.w3.org/2006/time#"
+        },
+        {
+            "prefix": "vann",
+            "url": "http://purl.org/vocab/vann/"
+        },
+        {
+            "prefix": "void",
+            "url": "http://rdfs.org/ns/void#"
+        },
+        {
+            "prefix": "wgs",
+            "url": "https://www.w3.org/2003/01/geo/wgs84_pos#"
+        },
+        {
+            "prefix": "owl",
+            "url": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+            "prefix": "rdf",
+            "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+            "prefix": "rdfs",
+            "url": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+            "prefix": "xsd",
+            "url": "http://www.w3.org/2001/XMLSchema#"
+        },
+        {
+            "prefix": "xml",
+            "url": "http://www.w3.org/XML/1998/namespace"
+        },
+        {
+            "prefix": "",
+            "url": "http://iot.linkeddata.es/def/core#"
+        },
+        {
+            "prefix": "vs",
+            "url": "http://www.w3.org/2003/06/sw-vocab-status/ns#"
+        },
+        {
+            "prefix": "geo1",
+            "url": "http://www.w3.org/2003/01/geo/wgs84_pos#"
+        },
+        {
+            "prefix": "wot",
+            "url": "http://xmlns.com/wot/0.1/"
+        },
+        {
+            "prefix": "om18",
+            "url": "http://www.wurvoc.org/vocabularies/om-1.8/"
+        },
+        {
+            "prefix": "saref",
+            "url": "https://w3id.org/saref#"
+        },
+        {
+            "prefix": "s4bldg",
+            "url": "https://w3id.org/def/saref4bldg#"
+        },
+        {
+            "prefix": "ssn-system",
+            "url": "http://www.w3.org/ns/ssn/systems/"
+        }
+    ],
+    "triples": [
+        [
+            ":Device",
+            "rdfs:subClassOf",
+            ":PhysicalThing"
+        ],
+        [
+            "geo:sfWithin",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":Service",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":exposes",
+            "rdfs:domain",
+            ":VirtualThing"
+        ],
+        [
+            ":dataModelVersion",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            ":serviceId",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            ":Value",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "ssn-system:BatteryLifetime",
+            "rdfs:subClassOf",
+            "ssn-system:SurvivalProperty"
+        ],
+        [
+            ":avatar",
+            "rdfs:subPropertyOf",
+            "foaf:depiction"
+        ],
+        [
+            ":hasNeighbourhood",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "ssn-system:hasSurvivalRange",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":represents",
+            "rdf:type",
+            "owl:FunctionalProperty"
+        ],
+        [
+            "ssn:isPropertyOf",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":deviceDescription",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "sosa:ObservableProperty",
+            "rdfs:subClassOf",
+            "ssn:Property"
+        ],
+        [
+            "ssn-system:OperatingRange",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":timeStamp",
+            "rdfs:range",
+            "xsd:dateTime"
+        ],
+        [
+            ":hasMinValue",
+            "rdfs:domain",
+            "rdfs:Resource"
+        ],
+        [
+            "ssn-system:Selectivity",
+            "rdfs:subClassOf",
+            "ssn-system:SystemProperty"
+        ],
+        [
+            ":hasComponent",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "ssn-system:Precision",
+            "rdfs:subClassOf",
+            "ssn-system:SystemProperty"
+        ],
+        [
+            "<http://iot.linkeddata.es/def/core#>",
+            "owl:imports",
+            "<http://www.w3.org/ns/org#>"
+        ],
+        [
+            ":deviceDescription",
+            "rdfs:subPropertyOf",
+            ":description"
+        ],
+        [
+            ":readWrite",
+            "rdf:type",
+            "owl:FunctionalProperty"
+        ],
+        [
+            "geo:sfContains",
+            "rdfs:isDefinedBy",
+            "<http://www.opengis.net/ont/geosparql>"
+        ],
+        [
+            "ssn-system:SystemProperty",
+            "rdfs:subClassOf",
+            "ssn:Property"
+        ],
+        [
+            "ssn-system:Sensitivity",
+            "rdfs:subClassOf",
+            "ssn-system:SystemProperty"
+        ],
+        [
+            "ssn:System",
+            "rdfs:isDefinedBy",
+            "<http://www.w3.org/ns/ssn/>"
+        ],
+        [
+            ":Sensor",
+            "rdfs:subClassOf",
+            "sosa:Sensor"
+        ],
+        [
+            "ssn-system:hasSystemProperty",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":hasNeighbourhood",
+            "rdfs:subPropertyOf",
+            ":isInvolvedIn"
+        ],
+        [
+            "ssn-system:Drift",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":isNeighbourhoodOf",
+            "rdf:type",
+            "owl:FunctionalProperty"
+        ],
+        [
+            "s4bldg:Building",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":serviceVersion",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            "vs:term_status",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            "ssn-system:SurvivalProperty",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "ssn-system:SystemCapability",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "ssn:Property",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":serviceName",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            ":specVersion",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            ":timeStamp",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "ssn-system:OperatingProperty",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":represents",
+            "rdfs:range",
+            "owl:Thing"
+        ],
+        [
+            ":serviceId",
+            "rdfs:domain",
+            ":Service"
+        ],
+        [
+            ":Application",
+            "rdfs:subClassOf",
+            ":Service"
+        ],
+        [
+            "geo:Feature",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":isLocatedAt",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "ssn-system:ResponseTime",
+            "rdfs:subClassOf",
+            "ssn-system:SystemProperty"
+        ],
+        [
+            ":actsOnFeatureProperty",
+            "rdfs:range",
+            ":FeatureProperty"
+        ],
+        [
+            ":hasComponent",
+            "owl:inverseOf",
+            ":isComponentOf"
+        ],
+        [
+            ":contractId",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            ":isRepresentedBy",
+            "rdf:type",
+            "owl:InverseFunctionalProperty"
+        ],
+        [
+            "s4bldg:BuildingSpace",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":aboutFeatureOfInterest",
+            "rdf:type",
+            "owl:FunctionalProperty"
+        ],
+        [
+            "<http://iot.linkeddata.es/def/core#>",
+            "rdf:type",
+            "owl:Ontology"
+        ],
+        [
+            ":Device",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "ssn-system:hasOperatingRange",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "ssn-system:hasOperatingProperty",
+            "rdfs:subPropertyOf",
+            "ssn:hasProperty"
+        ],
+        [
+            ":describes",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "rdf:value",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "ssn-system:hasSystemCapability",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "geo:Geometry",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "s4bldg:hasSpace",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":ThingDescription",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "<https://w3id.org/def/saref4city#City>",
+            "rdfs:subClassOf",
+            "<https://w3id.org/def/saref4city#AdministrativeArea>"
+        ],
+        [
+            ":petitionerItemInvolved",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "foaf:Image",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":hasNeighbourhood",
+            "rdfs:range",
+            ":Neighbourhood"
+        ],
+        [
+            ":DigitalUser",
+            "rdfs:subClassOf",
+            "foaf:Agent"
+        ],
+        [
+            ":hasMinValue",
+            "rdfs:subPropertyOf",
+            "rdf:value"
+        ],
+        [
+            ":hasValue",
+            "rdfs:range",
+            ":Value"
+        ],
+        [
+            "foaf:depiction",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":protocolIndependentId",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            ":Sensor",
+            "rdfs:subClassOf",
+            ":Device"
+        ],
+        [
+            ":VirtualThing",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "geo:sfContains",
+            "rdfs:range",
+            "geo:SpatialObject"
+        ],
+        [
+            ":Service",
+            "rdfs:subClassOf",
+            ":VirtualThing"
+        ],
+        [
+            ":literalValue",
+            "rdfs:range",
+            "rdfs:Resource"
+        ],
+        [
+            "rdf:value",
+            "rdfs:isDefinedBy",
+            "<http://www.w3.org/1999/02/22-rdf-syntax-ns#>"
+        ],
+        [
+            ":avatar",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":Application",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "sosa:Sensor",
+            "rdfs:subClassOf",
+            "ssn:System"
+        ],
+        [
+            "s4bldg:PhysicalObject",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "geo:Feature",
+            "rdfs:isDefinedBy",
+            "<http://www.opengis.net/ont/geosparql>"
+        ],
+        [
+            ":serviceDescription",
+            "rdfs:domain",
+            ":Service"
+        ],
+        [
+            "sosa:Actuator",
+            "rdfs:subClassOf",
+            "ssn:System"
+        ],
+        [
+            ":description",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            "<http://iot.linkeddata.es/def/core#>",
+            "owl:imports",
+            "<http://iot.linkeddata.es/def/wot#>"
+        ],
+        [
+            ":dataModelVersion",
+            "rdfs:domain",
+            ":Device"
+        ],
+        [
+            ":readWrite",
+            "rdfs:domain",
+            ":Contract"
+        ],
+        [
+            "<https://w3id.org/def/saref4city#Country>",
+            "rdfs:subClassOf",
+            "<https://w3id.org/def/saref4city#AdministrativeArea>"
+        ],
+        [
+            "ssn-system:Latency",
+            "rdfs:subClassOf",
+            "ssn-system:SystemProperty"
+        ],
+        [
+            ":isComposedBy",
+            "rdfs:domain",
+            ":ComposedThing"
+        ],
+        [
+            "ssn:hasProperty",
+            "owl:inverseOf",
+            "ssn:isPropertyOf"
+        ],
+        [
+            ":isInvolvedIn",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":interactsUsing",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":isComposedBy",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":serialNumber",
+            "rdfs:domain",
+            ":Device"
+        ],
+        [
+            ":contractId",
+            "rdfs:domain",
+            ":Contract"
+        ],
+        [
+            ":serviceDescription",
+            "rdfs:subPropertyOf",
+            ":description"
+        ],
+        [
+            ":expressedInFormat",
+            "rdfs:domain",
+            ":Value"
+        ],
+        [
+            "ssn:hasProperty",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "ssn-system:Frequency",
+            "rdfs:subClassOf",
+            "ssn-system:SystemProperty"
+        ],
+        [
+            ":aboutProperty",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":describesEcosystem",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":Ecosystem",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "ssn-system:SurvivalRange",
+            "rdfs:subClassOf",
+            "ssn:Property"
+        ],
+        [
+            ":hasMaxValue",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "ssn:hasSubSystem",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":ThingEcosystemDescription",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":deviceDescription",
+            "rdfs:domain",
+            ":Device"
+        ],
+        [
+            "geo:sfWithin",
+            "rdfs:range",
+            "geo:SpatialObject"
+        ],
+        [
+            ":literalValue",
+            "rdfs:domain",
+            ":Value"
+        ],
+        [
+            ":serialNumber",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            ":DigitalUser",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":hasNeighbourhood",
+            "rdf:type",
+            "owl:FunctionalProperty"
+        ],
+        [
+            ":isComposedBy",
+            "rdfs:range",
+            "owl:Thing"
+        ],
+        [
+            ":relativeHref",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            ":Agent",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":isDescribedBy",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":dataModelVersion",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            ":serviceDescription",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "ssn-system:MaintenanceSchedule",
+            "rdfs:subClassOf",
+            "ssn-system:OperatingProperty"
+        ],
+        [
+            ":ComposedThing",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":hasNeighbourhood",
+            "owl:inverseOf",
+            ":isNeighbourhoodOf"
+        ],
+        [
+            "ssn-system:SystemLifetime",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "ssn-system:OperatingRange",
+            "rdfs:subClassOf",
+            "ssn:Property"
+        ],
+        [
+            "<https://w3id.org/def/saref4city#AdministrativeArea>",
+            "rdfs:subClassOf",
+            "geo:Feature"
+        ],
+        [
+            ":monitorsFeatureProperty",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "ssn-system:Resolution",
+            "rdfs:subClassOf",
+            "ssn-system:SystemProperty"
+        ],
+        [
+            ":softwareVersion",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "ssn-system:Accuracy",
+            "rdfs:subClassOf",
+            "ssn-system:SystemProperty"
+        ],
+        [
+            "ssn-system:ResponseTime",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":describes",
+            "owl:inverseOf",
+            ":isDescribedBy"
+        ],
+        [
+            ":hasOwner",
+            "owl:inverseOf",
+            ":owns"
+        ],
+        [
+            "ssn-system:Selectivity",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":deviceDescription",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            "geo:hasGeometry",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":isRepresentedBy",
+            "rdfs:range",
+            "<http://iot.linkeddata.es/def/wot#Thing>"
+        ],
+        [
+            "ssn-system:SurvivalProperty",
+            "rdfs:subClassOf",
+            "ssn:Property"
+        ],
+        [
+            ":protocolIndependentId",
+            "rdfs:domain",
+            ":Device"
+        ],
+        [
+            "ssn:hasDeployment",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":isComponentOf",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "ssn-system:MeasurementRange",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "<http://iot.linkeddata.es/def/core#>",
+            "dcterms:creator",
+            "<http://purl.org/net/mpoveda>"
+        ],
+        [
+            "geo:sfWithin",
+            "rdfs:domain",
+            "geo:SpatialObject"
+        ],
+        [
+            "ssn-system:SystemCapability",
+            "rdfs:subClassOf",
+            "ssn:Property"
+        ],
+        [
+            "ssn:hasProperty",
+            "rdfs:isDefinedBy",
+            "<http://www.w3.org/ns/ssn/>"
+        ],
+        [
+            ":isRepresentedBy",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "<https://w3id.org/def/saref4city#City>",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "dcterms:contributor",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            "ssn-system:OperatingPowerRange",
+            "rdfs:subClassOf",
+            "ssn-system:OperatingProperty"
+        ],
+        [
+            "ssn-system:Precision",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "ssn-system:DetectionLimit",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "ssn-system:OperatingProperty",
+            "rdfs:subClassOf",
+            "ssn:Property"
+        ],
+        [
+            ":deviceName",
+            "rdfs:subPropertyOf",
+            "<http://iot.linkeddata.es/def/wot#name>"
+        ],
+        [
+            "<https://w3id.org/def/saref4city#Country>",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "ssn-system:Sensitivity",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "<http://iot.linkeddata.es/def/core#>",
+            "owl:imports",
+            "<http://www.w3.org/ns/sosa/>"
+        ],
+        [
+            ":isEcosystemDescribedBy",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":isNeighbourhoodOf",
+            "rdfs:range",
+            ":Agent"
+        ],
+        [
+            ":exposes",
+            "rdfs:range",
+            "<http://iot.linkeddata.es/def/wot#Thing>"
+        ],
+        [
+            "geo:sfWithin",
+            "rdfs:isDefinedBy",
+            "<http://www.opengis.net/ont/geosparql>"
+        ],
+        [
+            ":hasMaxValue",
+            "rdfs:range",
+            "rdfs:Resource"
+        ],
+        [
+            ":serviceVersion",
+            "rdfs:domain",
+            ":Service"
+        ],
+        [
+            ":timeStamp",
+            "rdf:type",
+            "owl:FunctionalProperty"
+        ],
+        [
+            "ssn-system:DetectionLimit",
+            "rdfs:subClassOf",
+            "ssn-system:SystemProperty"
+        ],
+        [
+            ":hasNeighbourhood",
+            "rdfs:domain",
+            ":Agent"
+        ],
+        [
+            "prov:hadPrimarySource",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            ":serviceName",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            ":isRepresentedBy",
+            "rdfs:domain",
+            "owl:Thing"
+        ],
+        [
+            ":Neighbourhood",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":serviceOwner",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "ssn:isPropertyOf",
+            "rdfs:isDefinedBy",
+            "<http://www.w3.org/ns/ssn/>"
+        ],
+        [
+            ":readWrite",
+            "rdfs:subPropertyOf",
+            "owl:topDataProperty"
+        ],
+        [
+            "saref:Service",
+            "rdfs:isDefinedBy",
+            "<https://w3id.org/saref#>"
+        ],
+        [
+            ":hasPartnershipWith",
+            "rdfs:range",
+            "org:Organization"
+        ],
+        [
+            ":serviceId",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            ":FeatureProperty",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "geo1:location",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":HumanUser",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":actsOnFeatureProperty",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "dc:creator",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            ":deviceName",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "geo:SpatialObject",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "ssn-system:SystemLifetime",
+            "rdfs:subClassOf",
+            "ssn-system:SurvivalProperty"
+        ],
+        [
+            "dc:source",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            "geo:Feature",
+            "rdfs:subClassOf",
+            "geo:SpatialObject"
+        ],
+        [
+            "ssn-system:Drift",
+            "rdfs:subClassOf",
+            "ssn-system:SystemProperty"
+        ],
+        [
+            "ssn-system:MeasurementRange",
+            "rdfs:subClassOf",
+            "ssn-system:SystemProperty"
+        ],
+        [
+            ":servicePetitioner",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":protocolIndependentId",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            ":hasPartnershipWith",
+            "rdfs:domain",
+            "org:Organization"
+        ],
+        [
+            ":isNeighbourhoodOf",
+            "rdfs:domain",
+            ":Neighbourhood"
+        ],
+        [
+            "ssn-system:MaintenanceSchedule",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "<http://iot.linkeddata.es/def/core#>",
+            "dcterms:contributor",
+            "<http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/>"
+        ],
+        [
+            "<http://iot.linkeddata.es/def/core#>",
+            "dcterms:license",
+            "<http://purl.org/NET/rdflicense/cc-by4.0>"
+        ],
+        [
+            "rdf:value",
+            "rdfs:domain",
+            "rdfs:Resource"
+        ],
+        [
+            "owl:cardinality",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            ":RelativeEndpoint",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":serviceVersion",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            ":represents",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":hasPartnershipWith",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "ssn-system:hasSurvivalProperty",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":isNeighbourhoodOf",
+            "rdfs:subPropertyOf",
+            ":involves"
+        ],
+        [
+            "rdf:value",
+            "rdfs:range",
+            "rdfs:Resource"
+        ],
+        [
+            ":softwareVersion",
+            "rdfs:domain",
+            ":Device"
+        ],
+        [
+            "rdfs:Resource",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "ssn-system:Condition",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":isComposedBy",
+            "rdf:type",
+            "owl:TransitiveProperty"
+        ],
+        [
+            ":Actuator",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":aboutProperty",
+            "rdf:type",
+            "owl:FunctionalProperty"
+        ],
+        [
+            "s4bldg:BuildingSpace",
+            "rdfs:isDefinedBy",
+            "<https://w3id.org/def/saref4bldg#>"
+        ],
+        [
+            ":specVersion",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            ":describesEcosystem",
+            "rdf:type",
+            "owl:FunctionalProperty"
+        ],
+        [
+            "geo:SpatialObject",
+            "rdfs:isDefinedBy",
+            "<http://www.opengis.net/ont/geosparql>"
+        ],
+        [
+            ":PhysicalThing",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":deviceName",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            "ssn-system:qualityOfObservation",
+            "rdfs:subPropertyOf",
+            "ssn:hasProperty"
+        ],
+        [
+            "ssn-system:Latency",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":isNeighbourhoodOf",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "ssn-system:Condition",
+            "rdfs:subClassOf",
+            "ssn:Property"
+        ],
+        [
+            ":hasPartnershipWith",
+            "rdf:type",
+            "owl:SymmetricProperty"
+        ],
+        [
+            ":owns",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":hasValue",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":involves",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "<https://w3id.org/def/saref4city#AdministrativeArea>",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":RelativeEndpoint",
+            "rdfs:subClassOf",
+            "<http://iot.linkeddata.es/def/wot#Link>"
+        ],
+        [
+            ":expressedInFormat",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":involves",
+            "owl:inverseOf",
+            ":isInvolvedIn"
+        ],
+        [
+            ":hasMaxValue",
+            "rdfs:subPropertyOf",
+            "rdf:value"
+        ],
+        [
+            ":represents",
+            "rdfs:domain",
+            "<http://iot.linkeddata.es/def/wot#Thing>"
+        ],
+        [
+            "s4bldg:Building",
+            "rdfs:subClassOf",
+            "geo:Feature"
+        ],
+        [
+            "ssn-system:OperatingPowerRange",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "ssn-system:SystemProperty",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "ssn-system:inCondition",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "ssn-system:Frequency",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":literalValue",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":contractId",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "<http://iot.linkeddata.es/def/core#>",
+            "dcterms:creator",
+            "<http://www.garcia-castro.com/foaf.rdf#me>"
+        ],
+        [
+            "ssn:Deployment",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":relativeHref",
+            "rdfs:subPropertyOf",
+            "<http://iot.linkeddata.es/def/wot#href>"
+        ],
+        [
+            "geo:sfContains",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "ssn-system:BatteryLifetime",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":relativeHref",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            ":aboutFeatureOfInterest",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":description",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            ":serviceDescription",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            "<http://iot.linkeddata.es/def/core#>",
+            "dc:publisher",
+            "<http://www.oeg-upm.net/>"
+        ],
+        [
+            ":exposes",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":requestedService",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":hasVendor",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "s4bldg:BuildingSpace",
+            "rdfs:subClassOf",
+            "geo:Feature"
+        ],
+        [
+            "geo:Feature",
+            "owl:disjointWith",
+            "geo:Geometry"
+        ],
+        [
+            ":expressedInFormat",
+            "rdfs:range",
+            "<http://iot.linkeddata.es/def/wot#DataSchema>"
+        ],
+        [
+            "ssn-system:qualityOfObservation",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":softwareVersion",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            ":isRepresentedBy",
+            "owl:inverseOf",
+            ":represents"
+        ],
+        [
+            "ssn:forProperty",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "ssn-system:hasSurvivalProperty",
+            "rdfs:subPropertyOf",
+            "ssn:hasProperty"
+        ],
+        [
+            "ssn-system:Resolution",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":Actuator",
+            "rdfs:subClassOf",
+            "sosa:Actuator"
+        ],
+        [
+            ":isRelativeTo",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "ssn-system:Accuracy",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":isEcosystemDescribedBy",
+            "rdf:type",
+            "owl:InverseFunctionalProperty"
+        ],
+        [
+            ":hasMinValue",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "geo:sfContains",
+            "rdfs:domain",
+            "geo:SpatialObject"
+        ],
+        [
+            "ssn-system:hasSurvivalRange",
+            "rdfs:subPropertyOf",
+            "ssn:hasProperty"
+        ],
+        [
+            "s4bldg:Building",
+            "rdfs:seeAlso",
+            "<https://w3id.org/ifc/IFC4_ADD1#IfcBuilding>"
+        ],
+        [
+            ":hasOwner",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":relativeHref",
+            "rdfs:domain",
+            ":RelativeEndpoint"
+        ],
+        [
+            "s4bldg:Building",
+            "prov:hadPrimarySource",
+            "<http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcproductextension/lexical/ifcbuilding.htm>"
+        ],
+        [
+            ":HumanUser",
+            "rdfs:subClassOf",
+            "foaf:Person"
+        ],
+        [
+            ":Agent",
+            "rdfs:subClassOf",
+            "foaf:Agent"
+        ],
+        [
+            "ssn:Property",
+            "rdfs:isDefinedBy",
+            "<http://www.w3.org/ns/ssn/>"
+        ],
+        [
+            ":readWrite",
+            "rdfs:range",
+            "xsd:boolean"
+        ],
+        [
+            "ssn:implements",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":deviceName",
+            "rdfs:domain",
+            ":Device"
+        ],
+        [
+            "geo1:Point",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "saref:Service",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "ssn-system:hasSystemProperty",
+            "rdfs:subPropertyOf",
+            "ssn:hasProperty"
+        ],
+        [
+            ":Contract",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":describesEcosystem",
+            "owl:inverseOf",
+            ":isEcosystemDescribedBy"
+        ],
+        [
+            ":specVersion",
+            "rdfs:domain",
+            ":Device"
+        ],
+        [
+            "s4bldg:isSpaceOf",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":serviceName",
+            "rdfs:subPropertyOf",
+            "<http://iot.linkeddata.es/def/wot#name>"
+        ],
+        [
+            "ssn:System",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":readWrite",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "ssn-system:hasOperatingRange",
+            "rdfs:subPropertyOf",
+            "ssn:hasProperty"
+        ],
+        [
+            ":Device",
+            "rdfs:subClassOf",
+            "ssn:System"
+        ],
+        [
+            "ssn-system:SurvivalRange",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "ssn-system:hasSystemCapability",
+            "rdfs:subPropertyOf",
+            "ssn:hasProperty"
+        ],
+        [
+            ":monitorsFeatureProperty",
+            "rdfs:range",
+            ":FeatureProperty"
+        ],
+        [
+            "sosa:ActuatableProperty",
+            "rdfs:subClassOf",
+            "ssn:Property"
+        ],
+        [
+            ":Actuator",
+            "rdfs:subClassOf",
+            ":Device"
+        ],
+        [
+            "ssn-system:hasOperatingProperty",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "s4bldg:contains",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            ":Sensor",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            ":serviceName",
+            "rdfs:domain",
+            ":Service"
+        ],
+        [
+            ":serialNumber",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ]
+    ],
+    "retrofitted_competency_questions": [
+        "[Simple] What properties does a system have?",
+        "[Simple] Which systems are owned by a specific owner?",
+        "[Simple] What is the operating range of a system?",
+        "[Simple] What does a system describe?",
+        "[Simple] What capabilities does a system have?",
+        "[Simple] What survival properties does a system have?",
+        "[Simple] What quality of observation can a system provide?",
+        "[Simple] What subsystems does a system have?",
+        "[Simple] What services are requested by a system?",
+        "[Simple] What systems are described by a specific description?",
+        "[Intermediate] Which systems have both a specific operating range and a specific capability?",
+        "[Intermediate] What are the properties of the subsystems within a given system?",
+        "[Intermediate] Which systems, owned by a specific owner, have a particular property?",
+        "[Intermediate] What are the survival properties of the systems that describe a specific entity?",
+        "[Intermediate] Which systems have a quality of observation that meets a certain standard?",
+        "[Complex] For a system with a specific set of properties, what are the possible operating ranges and capabilities it can have?",
+        "[Complex] If a system has a specific set of survival properties, what other properties and capabilities must it also have to ensure its functionality?",
+        "[Complex] How do the properties and capabilities of a system change if it is owned by different owners?",
+        "[Simple] What is the definition of a Value?",
+        "[Simple] What types of resources can have a minimum value?",
+        "[Simple] What is the range of the hasValue property?",
+        "[Simple] What is the domain of the literalValue property?",
+        "[Simple] Can you provide an example of a PhysicalObject?",
+        "[Simple] What is the relationship between hasMinValue and rdf:value?",
+        "[Simple] What is the range of the hasMaxValue property?",
+        "[Simple] What is the domain of the expressedInFormat property?",
+        "[Simple] What is the type of the foaf:Image class?",
+        "[Simple] What is the range of the rdf:value property?",
+        "[Intermediate] Which resources have both a minimum and maximum value?",
+        "[Intermediate] What are the formats in which a Value can be expressed?",
+        "[Intermediate] Which PhysicalObjects interact using a specific service?",
+        "[Intermediate] What types of resources can have a literal value?",
+        "[Intermediate] How many different values can a resource have?",
+        "[Complex] If a resource has a minimum value, what other properties can it have?",
+        "[Complex] For a given format, what are all the values that are expressed in that format?",
+        "[Complex] Which resources have a value that is also a physical object?",
+        "[Complex] How do the hasMinValue and hasMaxValue properties relate to each other for a specific resource?",
+        "[Complex] What are the relationships between different resources that share the same value?",
+        "[Simple] What is an avatar in this context?",
+        "[Simple] Which components does a specific device have?",
+        "[Simple] Where is a particular component located?",
+        "[Simple] What is the location of a specific space?",
+        "[Simple] What is the depiction of a given entity?",
+        "[Simple] What is the geometry of a specific location?",
+        "[Simple] Who owns a particular service?",
+        "[Simple] What is the deployment of a specific sensor?",
+        "[Simple] What is the condition of a system?",
+        "[Simple] Who is the vendor of a specific device?",
+        "[Simple] What property is a sensor for?",
+        "[Simple] What is a component relative to?",
+        "[Intermediate] Which devices are components of a specific building?",
+        "[Intermediate] What are the spaces that belong to a specific building?",
+        "[Intermediate] What are the locations of all components of a specific device?",
+        "[Intermediate] Which components are part of a specific space?",
+        "[Intermediate] What are the depictions of all entities in a specific location?",
+        "[Intermediate] What are the geometries of all locations associated with a specific building?",
+        "[Intermediate] Which services are owned by a specific organization?",
+        "[Intermediate] What are the conditions of all systems deployed in a specific area?",
+        "[Complex] Which components, located in a specific building, are also part of a particular space and have a specific vendor?",
+        "[Complex] What are the conditions of systems that are deployed in a specific location and are related to a particular property?",
+        "[Complex] Which components, that have a specific geometry, are also depicted in a certain way and are part of a specific building?",
+        "[Complex] What are the services owned by organizations that are located in a specific area and have components with a particular vendor?",
+        "[Complex] Which spaces, that have specific components, are also part of buildings with a particular geometry and are located in a specific area?",
+        "[Simple] What is a Digital User in the context of this ecosystem?",
+        "[Simple] Can you name an Agent in the system?",
+        "[Simple] What is a Neighbourhood in this ontology?",
+        "[Simple] Which property describes the relationship between an Agent and a Neighbourhood?",
+        "[Simple] What does the 'hasNeighbourhood' property indicate about an Agent?",
+        "[Simple] What is the inverse relationship of 'hasNeighbourhood'?",
+        "[Simple] What is the range of the 'isNeighbourhoodOf' property?",
+        "[Simple] What kind of property is 'aboutFeatureOfInterest'?",
+        "[Simple] What is the domain of the 'hasNeighbourhood' property?",
+        "[Simple] What is the range of the 'hasNeighbourhood' property?",
+        "[Intermediate] Which Agents are involved in a specific Neighbourhood?",
+        "[Intermediate] How many Neighbourhoods is a particular Agent involved in?",
+        "[Intermediate] Which Neighbourhoods involve a specific Agent?",
+        "[Intermediate] What are all the properties that a specific Neighbourhood has?",
+        "[Intermediate] Which Agents are part of the same Neighbourhood as a given Agent?",
+        "[Intermediate] What are the features of interest for a specific Neighbourhood?",
+        "[Complex] If an Agent is involved in multiple Neighbourhoods, what are the properties common to all those Neighbourhoods?",
+        "[Complex] For a given Neighbourhood, which Agents are involved and what are their respective roles or properties?",
+        "[Complex] How do the properties of a Neighbourhood influence the involvement of different Agents?",
+        "[Complex] What are the relationships between the Neighbourhoods that a specific Agent is part of, and how do they interconnect?",
+        "[Simple] What is the description of a specific device?",
+        "[Simple] What is the serial number of a device?",
+        "[Simple] What is the name of a device?",
+        "[Simple] What is the data model version of a device?",
+        "[Simple] What is the software version of a device?",
+        "[Simple] What is the service description of a service?",
+        "[Simple] What is the service version of a service?",
+        "[Simple] What is the contract ID of a contract?",
+        "[Simple] What is the protocol-independent ID of a device?",
+        "[Simple] What is the specification version of a device?",
+        "[Intermediate] Which devices have a specific software version and are part of a particular contract?",
+        "[Intermediate] How many devices have the same serial number?",
+        "[Intermediate] Which services have a specific service version and a particular service description?",
+        "[Intermediate] Which devices have a specific data model version and a particular software version?",
+        "[Complex] If a device has a specific software version and a particular data model version, what is its protocol-independent ID and the contract it is associated with?",
+        "[Complex] How many devices have a specific software version, a particular data model version, and are located in a specific location?",
+        "[Complex] For a given device, if it has a specific software version and a particular data model version, what are all the services that it provides along with their descriptions and versions?",
+        "[Simple] What is the name of a service?",
+        "[Simple] What is the ID of a service?",
+        "[Simple] When was a service last updated?",
+        "[Simple] What is the name of an application?",
+        "[Simple] What is the ID of an application?",
+        "[Simple] When was an application last updated?",
+        "[Simple] Which virtual things expose a specific service?",
+        "[Simple] What is the time stamp of a service?",
+        "[Simple] What is the time stamp of an application?",
+        "[Intermediate] Which services are exposed by a specific virtual thing?",
+        "[Intermediate] Which applications are exposed by a specific virtual thing?",
+        "[Intermediate] Which virtual things have a specific service ID?",
+        "[Intermediate] Which virtual things have a specific application ID?",
+        "[Intermediate] Which organizations have a partnership with a specific organization?",
+        "[Complex] Which services, exposed by a specific virtual thing, were last updated within the last 24 hours?",
+        "[Complex] Which applications, exposed by a specific virtual thing, were last updated within the last 24 hours and have a specific service name?",
+        "[Complex] How many services and applications does a specific virtual thing expose, and what are their names and IDs?",
+        "[Complex] Which virtual things, exposed by a specific organization, have services or applications that were last updated in the last week?",
+        "[Complex] Which organizations have partnerships with multiple other organizations, and what are the names of the services they expose?",
+        "[Simple] What is a Sensor?",
+        "[Simple] What is an Actuator?",
+        "[Simple] What does the property 'represents' do?",
+        "[Simple] What is an Observable Property?",
+        "[Simple] What is a Composed Thing?",
+        "[Simple] Can a Sensor be a type of Device?",
+        "[Simple] Is an Actuator a type of System?",
+        "[Intermediate] Which Sensors are part of a specific Composed Thing?",
+        "[Intermediate] What Things are represented by a particular Sensor?",
+        "[Intermediate] How many different types of Devices are there in the ontology?",
+        "[Intermediate] Which Actuators are located within a certain System?",
+        "[Complex] For a given Composed Thing, what are all the Sensors and Actuators it is composed of?",
+        "[Complex] If a Sensor represents a Thing, can you find out all the properties of that Thing?",
+        "[Complex] How many different Systems include both a specific Sensor and a specific Actuator?",
+        "[Simple] What are the different types of system properties?",
+        "[Simple] Is selectivity a type of system property?",
+        "[Simple] Can you list all the subclasses of SystemProperty?",
+        "[Simple] Is precision considered a system property?",
+        "[Simple] What is the definition of a system property?",
+        "[Simple] Is drift a subclass of SystemProperty?",
+        "[Simple] Is response time a type of system property?",
+        "[Simple] Is latency a subclass of SystemProperty?",
+        "[Simple] Is frequency a type of system property?",
+        "[Simple] Is resolution a subclass of SystemProperty?",
+        "[Simple] Is accuracy a type of system property?",
+        "[Simple] Is detection limit a subclass of SystemProperty?",
+        "[Simple] Is sensitivity a type of system property?",
+        "[Simple] Is measurement range a subclass of SystemProperty?",
+        "[Intermediate] Which system properties are also defined as classes in the ontology?",
+        "[Intermediate] How many different types of system properties are there in the ontology?",
+        "[Intermediate] Are there any system properties that are not subclasses of ssn:Property?",
+        "[Complex] If a device has a high selectivity, what other system properties might it also have?",
+        "[Complex] How do the different system properties like selectivity, precision, and sensitivity relate to each other in the context of a sensor's performance?",
+        "[Complex] Can you identify any system properties that are commonly associated with sensors used in environmental monitoring?",
+        "[Simple] What is a survival property?",
+        "[Simple] Can you explain what an operating range is?",
+        "[Simple] What does the term \"system capability\" refer to?",
+        "[Simple] What is a maintenance schedule?",
+        "[Simple] What is a system lifetime?",
+        "[Simple] What is an operating power range?",
+        "[Simple] What is a condition in the context of this ontology?",
+        "[Simple] What is a battery lifetime?",
+        "[Simple] What is a deployment in the context of this ontology?",
+        "[Simple] What is a point in the geographic context?",
+        "[Intermediate] Which properties are considered survival properties?",
+        "[Intermediate] What types of properties are classified as operating properties?",
+        "[Intermediate] How many different types of system capabilities are there?",
+        "[Intermediate] Which properties are related to the maintenance schedule?",
+        "[Intermediate] What are the different types of conditions that can be defined?",
+        "[Complex] How do the various operating properties relate to the overall system capability?",
+        "[Complex] What is the relationship between the system lifetime and the battery lifetime, and how do they affect the maintenance schedule?",
+        "[Complex] How do the different types of ranges (e.g., operating range, survival range) impact the system's performance and maintenance requirements?",
+        "[Simple] What is a Thing Description?",
+        "[Simple] What is a Relative Endpoint?",
+        "[Simple] Who are the creators of this ontology?",
+        "[Simple] Which organizations contributed to this ontology?",
+        "[Simple] Under which license is this ontology published?",
+        "[Simple] What kind of data can be associated with a relativeHref?",
+        "[Simple] What is the relationship between relativeHref and href?",
+        "[Intermediate] Which properties are specific to a Relative Endpoint?",
+        "[Intermediate] How does a Relative Endpoint differ from a regular Link in the Web of Things?",
+        "[Intermediate] Can you list all the ontologies that this core ontology imports?",
+        "[Complex] If a Relative Endpoint has a relativeHref, what other information might it also include?",
+        "[Complex] How can the information about Relative Endpoints and their relativeHrefs be used to understand the structure of an IoT system?",
+        "[Simple] What is a building in the context of this ontology?",
+        "[Simple] Can you define what a building space is?",
+        "[Simple] What is an administrative area?",
+        "[Simple] What is a spatial object?",
+        "[Simple] What is a feature in the context of this ontology?",
+        "[Simple] How is a city defined in this ontology?",
+        "[Simple] What is a human user?",
+        "[Simple] What is a geometry in the context of this ontology?",
+        "[Intermediate] Which features are contained within a specific spatial object?",
+        "[Intermediate] Which spatial objects are within a particular administrative area?",
+        "[Intermediate] What are the buildings located in a specific city?",
+        "[Intermediate] Which building spaces are part of a specific building?",
+        "[Intermediate] What types of administrative areas are there in the ontology?",
+        "[Complex] How many buildings and building spaces are there in a specific administrative area, and which ones are they?",
+        "[Complex] If a building is within a specific administrative area, which other spatial objects are also within that same area?",
+        "[Complex] For a given city, list all the buildings and their corresponding building spaces, and indicate which administrative area they belong to.",
+        "[Simple] What is a FeatureProperty?",
+        "[Simple] Can you tell me what a Contract is in this context?",
+        "[Simple] Is readWrite a property that can have only one value for each subject?",
+        "[Simple] What type of data does the readWrite property handle?",
+        "[Simple] What is the relationship between a Country and an AdministrativeArea?",
+        "[Simple] Is monitorsFeatureProperty a property that connects to other properties or classes?",
+        "[Intermediate] Which properties are used to annotate information in the ontology?",
+        "[Intermediate] Can a FeatureProperty be acted upon by more than one action?",
+        "[Intermediate] What kind of features can be monitored by a FeatureProperty?",
+        "[Intermediate] How is the readWrite property related to the Contract class?",
+        "[Complex] If a FeatureProperty is being monitored, which other properties or actions might it be associated with in the same context?",
+        "[Complex] In a scenario where multiple Contracts are defined, how would the readWrite property determine the access level for each contract?"
+    ],
+    "subgraph_chunks": [
+        {
+            "subgraph_id": 1,
+            "namespaces": [
+                {
+                    "prefix": "ssn-system",
+                    "url": "http://www.w3.org/ns/ssn/systems/"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "ssn",
+                    "url": "http://www.w3.org/ns/ssn/"
+                },
+                {
+                    "prefix": "",
+                    "url": "http://iot.linkeddata.es/def/core#"
+                }
+            ],
+            "triples": [
+                [
+                    "ssn-system:hasSystemProperty",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "ssn-system:hasOperatingRange",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "ssn-system:hasOperatingProperty",
+                    "rdfs:subPropertyOf",
+                    "ssn:hasProperty"
+                ],
+                [
+                    ":describes",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "ssn-system:hasSystemCapability",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "ssn:hasProperty",
+                    "owl:inverseOf",
+                    "ssn:isPropertyOf"
+                ],
+                [
+                    "ssn:hasProperty",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "ssn:hasSubSystem",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":isDescribedBy",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":describes",
+                    "owl:inverseOf",
+                    ":isDescribedBy"
+                ],
+                [
+                    ":hasOwner",
+                    "owl:inverseOf",
+                    ":owns"
+                ],
+                [
+                    "ssn:hasProperty",
+                    "rdfs:isDefinedBy",
+                    "<http://www.w3.org/ns/ssn/>"
+                ],
+                [
+                    "ssn-system:hasSurvivalProperty",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "ssn-system:qualityOfObservation",
+                    "rdfs:subPropertyOf",
+                    "ssn:hasProperty"
+                ],
+                [
+                    ":owns",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":requestedService",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "ssn-system:qualityOfObservation",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "ssn-system:hasSurvivalProperty",
+                    "rdfs:subPropertyOf",
+                    "ssn:hasProperty"
+                ],
+                [
+                    ":hasOwner",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "ssn:implements",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "ssn-system:hasSystemProperty",
+                    "rdfs:subPropertyOf",
+                    "ssn:hasProperty"
+                ],
+                [
+                    "ssn-system:hasOperatingRange",
+                    "rdfs:subPropertyOf",
+                    "ssn:hasProperty"
+                ],
+                [
+                    "ssn-system:hasSystemCapability",
+                    "rdfs:subPropertyOf",
+                    "ssn:hasProperty"
+                ],
+                [
+                    "ssn-system:hasOperatingProperty",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What properties does a system have?",
+                "[Simple] Which systems are owned by a specific owner?",
+                "[Simple] What is the operating range of a system?",
+                "[Simple] What does a system describe?",
+                "[Simple] What capabilities does a system have?",
+                "[Simple] What survival properties does a system have?",
+                "[Simple] What quality of observation can a system provide?",
+                "[Simple] What subsystems does a system have?",
+                "[Simple] What services are requested by a system?",
+                "[Simple] What systems are described by a specific description?",
+                "[Intermediate] Which systems have both a specific operating range and a specific capability?",
+                "[Intermediate] What are the properties of the subsystems within a given system?",
+                "[Intermediate] Which systems, owned by a specific owner, have a particular property?",
+                "[Intermediate] What are the survival properties of the systems that describe a specific entity?",
+                "[Intermediate] Which systems have a quality of observation that meets a certain standard?",
+                "[Complex] For a system with a specific set of properties, what are the possible operating ranges and capabilities it can have?",
+                "[Complex] If a system has a specific set of survival properties, what other properties and capabilities must it also have to ensure its functionality?",
+                "[Complex] How do the properties and capabilities of a system change if it is owned by different owners?"
+            ]
+        },
+        {
+            "subgraph_id": 2,
+            "namespaces": [
+                {
+                    "prefix": "",
+                    "url": "http://iot.linkeddata.es/def/core#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "foaf",
+                    "url": "http://xmlns.com/foaf/0.1/"
+                },
+                {
+                    "prefix": "s4bldg",
+                    "url": "https://w3id.org/def/saref4bldg#"
+                }
+            ],
+            "triples": [
+                [
+                    ":Value",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    ":hasMinValue",
+                    "rdfs:domain",
+                    "rdfs:Resource"
+                ],
+                [
+                    "rdf:value",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":petitionerItemInvolved",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "foaf:Image",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    ":hasMinValue",
+                    "rdfs:subPropertyOf",
+                    "rdf:value"
+                ],
+                [
+                    ":hasValue",
+                    "rdfs:range",
+                    ":Value"
+                ],
+                [
+                    ":literalValue",
+                    "rdfs:range",
+                    "rdfs:Resource"
+                ],
+                [
+                    "rdf:value",
+                    "rdfs:isDefinedBy",
+                    "<http://www.w3.org/1999/02/22-rdf-syntax-ns#>"
+                ],
+                [
+                    "s4bldg:PhysicalObject",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    ":interactsUsing",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":expressedInFormat",
+                    "rdfs:domain",
+                    ":Value"
+                ],
+                [
+                    ":hasMaxValue",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":literalValue",
+                    "rdfs:domain",
+                    ":Value"
+                ],
+                [
+                    ":hasMaxValue",
+                    "rdfs:range",
+                    "rdfs:Resource"
+                ],
+                [
+                    ":servicePetitioner",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "rdf:value",
+                    "rdfs:domain",
+                    "rdfs:Resource"
+                ],
+                [
+                    "rdf:value",
+                    "rdfs:range",
+                    "rdfs:Resource"
+                ],
+                [
+                    "rdfs:Resource",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    ":hasValue",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":expressedInFormat",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":hasMaxValue",
+                    "rdfs:subPropertyOf",
+                    "rdf:value"
+                ],
+                [
+                    ":literalValue",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":expressedInFormat",
+                    "rdfs:range",
+                    "<http://iot.linkeddata.es/def/wot#DataSchema>"
+                ],
+                [
+                    ":hasMinValue",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is the definition of a Value?",
+                "[Simple] What types of resources can have a minimum value?",
+                "[Simple] What is the range of the hasValue property?",
+                "[Simple] What is the domain of the literalValue property?",
+                "[Simple] Can you provide an example of a PhysicalObject?",
+                "[Simple] What is the relationship between hasMinValue and rdf:value?",
+                "[Simple] What is the range of the hasMaxValue property?",
+                "[Simple] What is the domain of the expressedInFormat property?",
+                "[Simple] What is the type of the foaf:Image class?",
+                "[Simple] What is the range of the rdf:value property?",
+                "[Intermediate] Which resources have both a minimum and maximum value?",
+                "[Intermediate] What are the formats in which a Value can be expressed?",
+                "[Intermediate] Which PhysicalObjects interact using a specific service?",
+                "[Intermediate] What types of resources can have a literal value?",
+                "[Intermediate] How many different values can a resource have?",
+                "[Complex] If a resource has a minimum value, what other properties can it have?",
+                "[Complex] For a given format, what are all the values that are expressed in that format?",
+                "[Complex] Which resources have a value that is also a physical object?",
+                "[Complex] How do the hasMinValue and hasMaxValue properties relate to each other for a specific resource?",
+                "[Complex] What are the relationships between different resources that share the same value?"
+            ]
+        },
+        {
+            "subgraph_id": 3,
+            "namespaces": [
+                {
+                    "prefix": "",
+                    "url": "http://iot.linkeddata.es/def/core#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "foaf",
+                    "url": "http://xmlns.com/foaf/0.1/"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "s4bldg",
+                    "url": "https://w3id.org/def/saref4bldg#"
+                },
+                {
+                    "prefix": "geo",
+                    "url": "http://www.opengis.net/ont/geosparql#"
+                },
+                {
+                    "prefix": "ssn",
+                    "url": "http://www.w3.org/ns/ssn/"
+                },
+                {
+                    "prefix": "geo1",
+                    "url": "http://www.w3.org/2003/01/geo/wgs84_pos#"
+                },
+                {
+                    "prefix": "ssn-system",
+                    "url": "http://www.w3.org/ns/ssn/systems/"
+                }
+            ],
+            "triples": [
+                [
+                    ":avatar",
+                    "rdfs:subPropertyOf",
+                    "foaf:depiction"
+                ],
+                [
+                    ":hasComponent",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":isLocatedAt",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":hasComponent",
+                    "owl:inverseOf",
+                    ":isComponentOf"
+                ],
+                [
+                    "s4bldg:hasSpace",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "foaf:depiction",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":avatar",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "geo:hasGeometry",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "ssn:hasDeployment",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":isComponentOf",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":serviceOwner",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "geo1:location",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "ssn-system:inCondition",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":hasVendor",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "ssn:forProperty",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":isRelativeTo",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "s4bldg:isSpaceOf",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is an avatar in this context?",
+                "[Simple] Which components does a specific device have?",
+                "[Simple] Where is a particular component located?",
+                "[Simple] What is the location of a specific space?",
+                "[Simple] What is the depiction of a given entity?",
+                "[Simple] What is the geometry of a specific location?",
+                "[Simple] Who owns a particular service?",
+                "[Simple] What is the deployment of a specific sensor?",
+                "[Simple] What is the condition of a system?",
+                "[Simple] Who is the vendor of a specific device?",
+                "[Simple] What property is a sensor for?",
+                "[Simple] What is a component relative to?",
+                "[Intermediate] Which devices are components of a specific building?",
+                "[Intermediate] What are the spaces that belong to a specific building?",
+                "[Intermediate] What are the locations of all components of a specific device?",
+                "[Intermediate] Which components are part of a specific space?",
+                "[Intermediate] What are the depictions of all entities in a specific location?",
+                "[Intermediate] What are the geometries of all locations associated with a specific building?",
+                "[Intermediate] Which services are owned by a specific organization?",
+                "[Intermediate] What are the conditions of all systems deployed in a specific area?",
+                "[Complex] Which components, located in a specific building, are also part of a particular space and have a specific vendor?",
+                "[Complex] What are the conditions of systems that are deployed in a specific location and are related to a particular property?",
+                "[Complex] Which components, that have a specific geometry, are also depicted in a certain way and are part of a specific building?",
+                "[Complex] What are the services owned by organizations that are located in a specific area and have components with a particular vendor?",
+                "[Complex] Which spaces, that have specific components, are also part of buildings with a particular geometry and are located in a specific area?"
+            ]
+        },
+        {
+            "subgraph_id": 4,
+            "namespaces": [
+                {
+                    "prefix": "",
+                    "url": "http://iot.linkeddata.es/def/core#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "ssn-system",
+                    "url": "http://www.w3.org/ns/ssn/systems/"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "foaf",
+                    "url": "http://xmlns.com/foaf/0.1/"
+                },
+                {
+                    "prefix": "ssn",
+                    "url": "http://www.w3.org/ns/ssn/"
+                }
+            ],
+            "triples": [
+                [
+                    ":hasNeighbourhood",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "ssn-system:hasSurvivalRange",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":hasNeighbourhood",
+                    "rdfs:subPropertyOf",
+                    ":isInvolvedIn"
+                ],
+                [
+                    ":isNeighbourhoodOf",
+                    "rdf:type",
+                    "owl:FunctionalProperty"
+                ],
+                [
+                    ":aboutFeatureOfInterest",
+                    "rdf:type",
+                    "owl:FunctionalProperty"
+                ],
+                [
+                    ":hasNeighbourhood",
+                    "rdfs:range",
+                    ":Neighbourhood"
+                ],
+                [
+                    ":DigitalUser",
+                    "rdfs:subClassOf",
+                    "foaf:Agent"
+                ],
+                [
+                    ":isInvolvedIn",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":aboutProperty",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":describesEcosystem",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":DigitalUser",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    ":hasNeighbourhood",
+                    "rdf:type",
+                    "owl:FunctionalProperty"
+                ],
+                [
+                    ":Agent",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    ":hasNeighbourhood",
+                    "owl:inverseOf",
+                    ":isNeighbourhoodOf"
+                ],
+                [
+                    ":isEcosystemDescribedBy",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":isNeighbourhoodOf",
+                    "rdfs:range",
+                    ":Agent"
+                ],
+                [
+                    ":hasNeighbourhood",
+                    "rdfs:domain",
+                    ":Agent"
+                ],
+                [
+                    ":Neighbourhood",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    ":isNeighbourhoodOf",
+                    "rdfs:domain",
+                    ":Neighbourhood"
+                ],
+                [
+                    ":isNeighbourhoodOf",
+                    "rdfs:subPropertyOf",
+                    ":involves"
+                ],
+                [
+                    ":aboutProperty",
+                    "rdf:type",
+                    "owl:FunctionalProperty"
+                ],
+                [
+                    ":describesEcosystem",
+                    "rdf:type",
+                    "owl:FunctionalProperty"
+                ],
+                [
+                    ":isNeighbourhoodOf",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":involves",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":involves",
+                    "owl:inverseOf",
+                    ":isInvolvedIn"
+                ],
+                [
+                    ":aboutFeatureOfInterest",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":isEcosystemDescribedBy",
+                    "rdf:type",
+                    "owl:InverseFunctionalProperty"
+                ],
+                [
+                    "ssn-system:hasSurvivalRange",
+                    "rdfs:subPropertyOf",
+                    "ssn:hasProperty"
+                ],
+                [
+                    ":Agent",
+                    "rdfs:subClassOf",
+                    "foaf:Agent"
+                ],
+                [
+                    ":describesEcosystem",
+                    "owl:inverseOf",
+                    ":isEcosystemDescribedBy"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is a Digital User in the context of this ecosystem?",
+                "[Simple] Can you name an Agent in the system?",
+                "[Simple] What is a Neighbourhood in this ontology?",
+                "[Simple] Which property describes the relationship between an Agent and a Neighbourhood?",
+                "[Simple] What does the 'hasNeighbourhood' property indicate about an Agent?",
+                "[Simple] What is the inverse relationship of 'hasNeighbourhood'?",
+                "[Simple] What is the range of the 'isNeighbourhoodOf' property?",
+                "[Simple] What kind of property is 'aboutFeatureOfInterest'?",
+                "[Simple] What is the domain of the 'hasNeighbourhood' property?",
+                "[Simple] What is the range of the 'hasNeighbourhood' property?",
+                "[Intermediate] Which Agents are involved in a specific Neighbourhood?",
+                "[Intermediate] How many Neighbourhoods is a particular Agent involved in?",
+                "[Intermediate] Which Neighbourhoods involve a specific Agent?",
+                "[Intermediate] What are all the properties that a specific Neighbourhood has?",
+                "[Intermediate] Which Agents are part of the same Neighbourhood as a given Agent?",
+                "[Intermediate] What are the features of interest for a specific Neighbourhood?",
+                "[Complex] If an Agent is involved in multiple Neighbourhoods, what are the properties common to all those Neighbourhoods?",
+                "[Complex] For a given Neighbourhood, which Agents are involved and what are their respective roles or properties?",
+                "[Complex] How do the properties of a Neighbourhood influence the involvement of different Agents?",
+                "[Complex] What are the relationships between the Neighbourhoods that a specific Agent is part of, and how do they interconnect?"
+            ]
+        },
+        {
+            "subgraph_id": 5,
+            "namespaces": [
+                {
+                    "prefix": "",
+                    "url": "http://iot.linkeddata.es/def/core#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "xsd",
+                    "url": "http://www.w3.org/2001/XMLSchema#"
+                },
+                {
+                    "prefix": "ssn",
+                    "url": "http://www.w3.org/ns/ssn/"
+                }
+            ],
+            "triples": [
+                [
+                    ":Device",
+                    "rdfs:subClassOf",
+                    ":PhysicalThing"
+                ],
+                [
+                    ":dataModelVersion",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    ":deviceDescription",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    ":deviceDescription",
+                    "rdfs:subPropertyOf",
+                    ":description"
+                ],
+                [
+                    ":serviceVersion",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    ":specVersion",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    ":contractId",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    ":Device",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    ":protocolIndependentId",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    ":serviceDescription",
+                    "rdfs:domain",
+                    ":Service"
+                ],
+                [
+                    ":description",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    ":dataModelVersion",
+                    "rdfs:domain",
+                    ":Device"
+                ],
+                [
+                    ":serialNumber",
+                    "rdfs:domain",
+                    ":Device"
+                ],
+                [
+                    ":contractId",
+                    "rdfs:domain",
+                    ":Contract"
+                ],
+                [
+                    ":serviceDescription",
+                    "rdfs:subPropertyOf",
+                    ":description"
+                ],
+                [
+                    ":deviceDescription",
+                    "rdfs:domain",
+                    ":Device"
+                ],
+                [
+                    ":serialNumber",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    ":dataModelVersion",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    ":serviceDescription",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    ":softwareVersion",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    ":deviceDescription",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    ":protocolIndependentId",
+                    "rdfs:domain",
+                    ":Device"
+                ],
+                [
+                    ":deviceName",
+                    "rdfs:subPropertyOf",
+                    "<http://iot.linkeddata.es/def/wot#name>"
+                ],
+                [
+                    ":serviceVersion",
+                    "rdfs:domain",
+                    ":Service"
+                ],
+                [
+                    ":deviceName",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    ":protocolIndependentId",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    ":serviceVersion",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    ":softwareVersion",
+                    "rdfs:domain",
+                    ":Device"
+                ],
+                [
+                    ":specVersion",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    ":PhysicalThing",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    ":deviceName",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    ":contractId",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    ":description",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    ":serviceDescription",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    ":softwareVersion",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    ":deviceName",
+                    "rdfs:domain",
+                    ":Device"
+                ],
+                [
+                    ":specVersion",
+                    "rdfs:domain",
+                    ":Device"
+                ],
+                [
+                    ":Device",
+                    "rdfs:subClassOf",
+                    "ssn:System"
+                ],
+                [
+                    ":serialNumber",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is the description of a specific device?",
+                "[Simple] What is the serial number of a device?",
+                "[Simple] What is the name of a device?",
+                "[Simple] What is the data model version of a device?",
+                "[Simple] What is the software version of a device?",
+                "[Simple] What is the service description of a service?",
+                "[Simple] What is the service version of a service?",
+                "[Simple] What is the contract ID of a contract?",
+                "[Simple] What is the protocol-independent ID of a device?",
+                "[Simple] What is the specification version of a device?",
+                "[Intermediate] Which devices have a specific software version and are part of a particular contract?",
+                "[Intermediate] How many devices have the same serial number?",
+                "[Intermediate] Which services have a specific service version and a particular service description?",
+                "[Intermediate] Which devices have a specific data model version and a particular software version?",
+                "[Complex] If a device has a specific software version and a particular data model version, what is its protocol-independent ID and the contract it is associated with?",
+                "[Complex] How many devices have a specific software version, a particular data model version, and are located in a specific location?",
+                "[Complex] For a given device, if it has a specific software version and a particular data model version, what are all the services that it provides along with their descriptions and versions?"
+            ]
+        },
+        {
+            "subgraph_id": 6,
+            "namespaces": [
+                {
+                    "prefix": "",
+                    "url": "http://iot.linkeddata.es/def/core#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "xsd",
+                    "url": "http://www.w3.org/2001/XMLSchema#"
+                },
+                {
+                    "prefix": "ssn",
+                    "url": "http://www.w3.org/ns/ssn/"
+                },
+                {
+                    "prefix": "org",
+                    "url": "http://www.w3.org/ns/org#"
+                },
+                {
+                    "prefix": "s4bldg",
+                    "url": "https://w3id.org/def/saref4bldg#"
+                }
+            ],
+            "triples": [
+                [
+                    ":Service",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    ":exposes",
+                    "rdfs:domain",
+                    ":VirtualThing"
+                ],
+                [
+                    ":serviceId",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    "ssn:isPropertyOf",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":timeStamp",
+                    "rdfs:range",
+                    "xsd:dateTime"
+                ],
+                [
+                    ":serviceName",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    ":timeStamp",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    ":serviceId",
+                    "rdfs:domain",
+                    ":Service"
+                ],
+                [
+                    ":Application",
+                    "rdfs:subClassOf",
+                    ":Service"
+                ],
+                [
+                    ":VirtualThing",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    ":Service",
+                    "rdfs:subClassOf",
+                    ":VirtualThing"
+                ],
+                [
+                    ":Application",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    ":exposes",
+                    "rdfs:range",
+                    "<http://iot.linkeddata.es/def/wot#Thing>"
+                ],
+                [
+                    ":timeStamp",
+                    "rdf:type",
+                    "owl:FunctionalProperty"
+                ],
+                [
+                    ":serviceName",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    "ssn:isPropertyOf",
+                    "rdfs:isDefinedBy",
+                    "<http://www.w3.org/ns/ssn/>"
+                ],
+                [
+                    ":hasPartnershipWith",
+                    "rdfs:range",
+                    "org:Organization"
+                ],
+                [
+                    ":serviceId",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    ":hasPartnershipWith",
+                    "rdfs:domain",
+                    "org:Organization"
+                ],
+                [
+                    ":hasPartnershipWith",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":hasPartnershipWith",
+                    "rdf:type",
+                    "owl:SymmetricProperty"
+                ],
+                [
+                    ":exposes",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":serviceName",
+                    "rdfs:subPropertyOf",
+                    "<http://iot.linkeddata.es/def/wot#name>"
+                ],
+                [
+                    "s4bldg:contains",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":serviceName",
+                    "rdfs:domain",
+                    ":Service"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is the name of a service?",
+                "[Simple] What is the ID of a service?",
+                "[Simple] When was a service last updated?",
+                "[Simple] What is the name of an application?",
+                "[Simple] What is the ID of an application?",
+                "[Simple] When was an application last updated?",
+                "[Simple] Which virtual things expose a specific service?",
+                "[Simple] What is the time stamp of a service?",
+                "[Simple] What is the time stamp of an application?",
+                "[Intermediate] Which services are exposed by a specific virtual thing?",
+                "[Intermediate] Which applications are exposed by a specific virtual thing?",
+                "[Intermediate] Which virtual things have a specific service ID?",
+                "[Intermediate] Which virtual things have a specific application ID?",
+                "[Intermediate] Which organizations have a partnership with a specific organization?",
+                "[Complex] Which services, exposed by a specific virtual thing, were last updated within the last 24 hours?",
+                "[Complex] Which applications, exposed by a specific virtual thing, were last updated within the last 24 hours and have a specific service name?",
+                "[Complex] How many services and applications does a specific virtual thing expose, and what are their names and IDs?",
+                "[Complex] Which virtual things, exposed by a specific organization, have services or applications that were last updated in the last week?",
+                "[Complex] Which organizations have partnerships with multiple other organizations, and what are the names of the services they expose?"
+            ]
+        },
+        {
+            "subgraph_id": 7,
+            "namespaces": [
+                {
+                    "prefix": "",
+                    "url": "http://iot.linkeddata.es/def/core#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "sosa",
+                    "url": "http://www.w3.org/ns/sosa/"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "ssn",
+                    "url": "http://www.w3.org/ns/ssn/"
+                }
+            ],
+            "triples": [
+                [
+                    ":represents",
+                    "rdf:type",
+                    "owl:FunctionalProperty"
+                ],
+                [
+                    "sosa:ObservableProperty",
+                    "rdfs:subClassOf",
+                    "ssn:Property"
+                ],
+                [
+                    "ssn:System",
+                    "rdfs:isDefinedBy",
+                    "<http://www.w3.org/ns/ssn/>"
+                ],
+                [
+                    ":Sensor",
+                    "rdfs:subClassOf",
+                    "sosa:Sensor"
+                ],
+                [
+                    ":represents",
+                    "rdfs:range",
+                    "owl:Thing"
+                ],
+                [
+                    ":isRepresentedBy",
+                    "rdf:type",
+                    "owl:InverseFunctionalProperty"
+                ],
+                [
+                    ":Sensor",
+                    "rdfs:subClassOf",
+                    ":Device"
+                ],
+                [
+                    "sosa:Sensor",
+                    "rdfs:subClassOf",
+                    "ssn:System"
+                ],
+                [
+                    "sosa:Actuator",
+                    "rdfs:subClassOf",
+                    "ssn:System"
+                ],
+                [
+                    ":isComposedBy",
+                    "rdfs:domain",
+                    ":ComposedThing"
+                ],
+                [
+                    ":isComposedBy",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":isComposedBy",
+                    "rdfs:range",
+                    "owl:Thing"
+                ],
+                [
+                    ":ComposedThing",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    ":isRepresentedBy",
+                    "rdfs:range",
+                    "<http://iot.linkeddata.es/def/wot#Thing>"
+                ],
+                [
+                    ":isRepresentedBy",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":isRepresentedBy",
+                    "rdfs:domain",
+                    "owl:Thing"
+                ],
+                [
+                    ":represents",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    ":isComposedBy",
+                    "rdf:type",
+                    "owl:TransitiveProperty"
+                ],
+                [
+                    ":Actuator",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    ":represents",
+                    "rdfs:domain",
+                    "<http://iot.linkeddata.es/def/wot#Thing>"
+                ],
+                [
+                    ":isRepresentedBy",
+                    "owl:inverseOf",
+                    ":represents"
+                ],
+                [
+                    ":Actuator",
+                    "rdfs:subClassOf",
+                    "sosa:Actuator"
+                ],
+                [
+                    "ssn:System",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "sosa:ActuatableProperty",
+                    "rdfs:subClassOf",
+                    "ssn:Property"
+                ],
+                [
+                    ":Actuator",
+                    "rdfs:subClassOf",
+                    ":Device"
+                ],
+                [
+                    ":Sensor",
+                    "rdf:type",
+                    "owl:Class"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is a Sensor?",
+                "[Simple] What is an Actuator?",
+                "[Simple] What does the property 'represents' do?",
+                "[Simple] What is an Observable Property?",
+                "[Simple] What is a Composed Thing?",
+                "[Simple] Can a Sensor be a type of Device?",
+                "[Simple] Is an Actuator a type of System?",
+                "[Intermediate] Which Sensors are part of a specific Composed Thing?",
+                "[Intermediate] What Things are represented by a particular Sensor?",
+                "[Intermediate] How many different types of Devices are there in the ontology?",
+                "[Intermediate] Which Actuators are located within a certain System?",
+                "[Complex] For a given Composed Thing, what are all the Sensors and Actuators it is composed of?",
+                "[Complex] If a Sensor represents a Thing, can you find out all the properties of that Thing?",
+                "[Complex] How many different Systems include both a specific Sensor and a specific Actuator?"
+            ]
+        },
+        {
+            "subgraph_id": 8,
+            "namespaces": [
+                {
+                    "prefix": "ssn-system",
+                    "url": "http://www.w3.org/ns/ssn/systems/"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "ssn",
+                    "url": "http://www.w3.org/ns/ssn/"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "saref",
+                    "url": "https://w3id.org/saref#"
+                }
+            ],
+            "triples": [
+                [
+                    "ssn-system:Selectivity",
+                    "rdfs:subClassOf",
+                    "ssn-system:SystemProperty"
+                ],
+                [
+                    "ssn-system:Precision",
+                    "rdfs:subClassOf",
+                    "ssn-system:SystemProperty"
+                ],
+                [
+                    "ssn-system:SystemProperty",
+                    "rdfs:subClassOf",
+                    "ssn:Property"
+                ],
+                [
+                    "ssn-system:Sensitivity",
+                    "rdfs:subClassOf",
+                    "ssn-system:SystemProperty"
+                ],
+                [
+                    "ssn-system:Drift",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:ResponseTime",
+                    "rdfs:subClassOf",
+                    "ssn-system:SystemProperty"
+                ],
+                [
+                    "ssn-system:Latency",
+                    "rdfs:subClassOf",
+                    "ssn-system:SystemProperty"
+                ],
+                [
+                    "ssn-system:Frequency",
+                    "rdfs:subClassOf",
+                    "ssn-system:SystemProperty"
+                ],
+                [
+                    "ssn-system:Resolution",
+                    "rdfs:subClassOf",
+                    "ssn-system:SystemProperty"
+                ],
+                [
+                    "ssn-system:Accuracy",
+                    "rdfs:subClassOf",
+                    "ssn-system:SystemProperty"
+                ],
+                [
+                    "ssn-system:ResponseTime",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:Selectivity",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:MeasurementRange",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:Precision",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:DetectionLimit",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:Sensitivity",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:DetectionLimit",
+                    "rdfs:subClassOf",
+                    "ssn-system:SystemProperty"
+                ],
+                [
+                    "saref:Service",
+                    "rdfs:isDefinedBy",
+                    "<https://w3id.org/saref#>"
+                ],
+                [
+                    "ssn-system:Drift",
+                    "rdfs:subClassOf",
+                    "ssn-system:SystemProperty"
+                ],
+                [
+                    "ssn-system:MeasurementRange",
+                    "rdfs:subClassOf",
+                    "ssn-system:SystemProperty"
+                ],
+                [
+                    "ssn-system:Latency",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:SystemProperty",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:Frequency",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:Resolution",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:Accuracy",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "saref:Service",
+                    "rdf:type",
+                    "owl:Class"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What are the different types of system properties?",
+                "[Simple] Is selectivity a type of system property?",
+                "[Simple] Can you list all the subclasses of SystemProperty?",
+                "[Simple] Is precision considered a system property?",
+                "[Simple] What is the definition of a system property?",
+                "[Simple] Is drift a subclass of SystemProperty?",
+                "[Simple] Is response time a type of system property?",
+                "[Simple] Is latency a subclass of SystemProperty?",
+                "[Simple] Is frequency a type of system property?",
+                "[Simple] Is resolution a subclass of SystemProperty?",
+                "[Simple] Is accuracy a type of system property?",
+                "[Simple] Is detection limit a subclass of SystemProperty?",
+                "[Simple] Is sensitivity a type of system property?",
+                "[Simple] Is measurement range a subclass of SystemProperty?",
+                "[Intermediate] Which system properties are also defined as classes in the ontology?",
+                "[Intermediate] How many different types of system properties are there in the ontology?",
+                "[Intermediate] Are there any system properties that are not subclasses of ssn:Property?",
+                "[Complex] If a device has a high selectivity, what other system properties might it also have?",
+                "[Complex] How do the different system properties like selectivity, precision, and sensitivity relate to each other in the context of a sensor's performance?",
+                "[Complex] Can you identify any system properties that are commonly associated with sensors used in environmental monitoring?"
+            ]
+        },
+        {
+            "subgraph_id": 9,
+            "namespaces": [
+                {
+                    "prefix": "ssn-system",
+                    "url": "http://www.w3.org/ns/ssn/systems/"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "ssn",
+                    "url": "http://www.w3.org/ns/ssn/"
+                },
+                {
+                    "prefix": "",
+                    "url": "http://iot.linkeddata.es/def/core#"
+                },
+                {
+                    "prefix": "geo1",
+                    "url": "http://www.w3.org/2003/01/geo/wgs84_pos#"
+                }
+            ],
+            "triples": [
+                [
+                    "ssn-system:BatteryLifetime",
+                    "rdfs:subClassOf",
+                    "ssn-system:SurvivalProperty"
+                ],
+                [
+                    "ssn-system:OperatingRange",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:SurvivalProperty",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:SystemCapability",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn:Property",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:OperatingProperty",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    ":Ecosystem",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:SurvivalRange",
+                    "rdfs:subClassOf",
+                    "ssn:Property"
+                ],
+                [
+                    ":ThingEcosystemDescription",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:MaintenanceSchedule",
+                    "rdfs:subClassOf",
+                    "ssn-system:OperatingProperty"
+                ],
+                [
+                    "ssn-system:SystemLifetime",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:OperatingRange",
+                    "rdfs:subClassOf",
+                    "ssn:Property"
+                ],
+                [
+                    "ssn-system:SurvivalProperty",
+                    "rdfs:subClassOf",
+                    "ssn:Property"
+                ],
+                [
+                    "ssn-system:SystemCapability",
+                    "rdfs:subClassOf",
+                    "ssn:Property"
+                ],
+                [
+                    "ssn-system:OperatingPowerRange",
+                    "rdfs:subClassOf",
+                    "ssn-system:OperatingProperty"
+                ],
+                [
+                    "ssn-system:OperatingProperty",
+                    "rdfs:subClassOf",
+                    "ssn:Property"
+                ],
+                [
+                    "ssn-system:SystemLifetime",
+                    "rdfs:subClassOf",
+                    "ssn-system:SurvivalProperty"
+                ],
+                [
+                    "ssn-system:MaintenanceSchedule",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:Condition",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:Condition",
+                    "rdfs:subClassOf",
+                    "ssn:Property"
+                ],
+                [
+                    "ssn-system:OperatingPowerRange",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn:Deployment",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:BatteryLifetime",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn:Property",
+                    "rdfs:isDefinedBy",
+                    "<http://www.w3.org/ns/ssn/>"
+                ],
+                [
+                    "geo1:Point",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "ssn-system:SurvivalRange",
+                    "rdf:type",
+                    "owl:Class"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is a survival property?",
+                "[Simple] Can you explain what an operating range is?",
+                "[Simple] What does the term \"system capability\" refer to?",
+                "[Simple] What is a maintenance schedule?",
+                "[Simple] What is a system lifetime?",
+                "[Simple] What is an operating power range?",
+                "[Simple] What is a condition in the context of this ontology?",
+                "[Simple] What is a battery lifetime?",
+                "[Simple] What is a deployment in the context of this ontology?",
+                "[Simple] What is a point in the geographic context?",
+                "[Intermediate] Which properties are considered survival properties?",
+                "[Intermediate] What types of properties are classified as operating properties?",
+                "[Intermediate] How many different types of system capabilities are there?",
+                "[Intermediate] Which properties are related to the maintenance schedule?",
+                "[Intermediate] What are the different types of conditions that can be defined?",
+                "[Complex] How do the various operating properties relate to the overall system capability?",
+                "[Complex] What is the relationship between the system lifetime and the battery lifetime, and how do they affect the maintenance schedule?",
+                "[Complex] How do the different types of ranges (e.g., operating range, survival range) impact the system's performance and maintenance requirements?"
+            ]
+        },
+        {
+            "subgraph_id": 10,
+            "namespaces": [
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "",
+                    "url": "http://iot.linkeddata.es/def/core#"
+                },
+                {
+                    "prefix": "dcterms",
+                    "url": "http://purl.org/dc/terms/"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "xsd",
+                    "url": "http://www.w3.org/2001/XMLSchema#"
+                },
+                {
+                    "prefix": "dc",
+                    "url": "http://purl.org/dc/elements/1.1/"
+                }
+            ],
+            "triples": [
+                [
+                    "<http://iot.linkeddata.es/def/core#>",
+                    "owl:imports",
+                    "<http://www.w3.org/ns/org#>"
+                ],
+                [
+                    "<http://iot.linkeddata.es/def/core#>",
+                    "rdf:type",
+                    "owl:Ontology"
+                ],
+                [
+                    ":ThingDescription",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "<http://iot.linkeddata.es/def/core#>",
+                    "owl:imports",
+                    "<http://iot.linkeddata.es/def/wot#>"
+                ],
+                [
+                    ":relativeHref",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "<http://iot.linkeddata.es/def/core#>",
+                    "dcterms:creator",
+                    "<http://purl.org/net/mpoveda>"
+                ],
+                [
+                    "<http://iot.linkeddata.es/def/core#>",
+                    "owl:imports",
+                    "<http://www.w3.org/ns/sosa/>"
+                ],
+                [
+                    "<http://iot.linkeddata.es/def/core#>",
+                    "dcterms:contributor",
+                    "<http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/>"
+                ],
+                [
+                    "<http://iot.linkeddata.es/def/core#>",
+                    "dcterms:license",
+                    "<http://purl.org/NET/rdflicense/cc-by4.0>"
+                ],
+                [
+                    ":RelativeEndpoint",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    ":RelativeEndpoint",
+                    "rdfs:subClassOf",
+                    "<http://iot.linkeddata.es/def/wot#Link>"
+                ],
+                [
+                    "<http://iot.linkeddata.es/def/core#>",
+                    "dcterms:creator",
+                    "<http://www.garcia-castro.com/foaf.rdf#me>"
+                ],
+                [
+                    ":relativeHref",
+                    "rdfs:subPropertyOf",
+                    "<http://iot.linkeddata.es/def/wot#href>"
+                ],
+                [
+                    ":relativeHref",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    "<http://iot.linkeddata.es/def/core#>",
+                    "dc:publisher",
+                    "<http://www.oeg-upm.net/>"
+                ],
+                [
+                    ":relativeHref",
+                    "rdfs:domain",
+                    ":RelativeEndpoint"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is a Thing Description?",
+                "[Simple] What is a Relative Endpoint?",
+                "[Simple] Who are the creators of this ontology?",
+                "[Simple] Which organizations contributed to this ontology?",
+                "[Simple] Under which license is this ontology published?",
+                "[Simple] What kind of data can be associated with a relativeHref?",
+                "[Simple] What is the relationship between relativeHref and href?",
+                "[Intermediate] Which properties are specific to a Relative Endpoint?",
+                "[Intermediate] How does a Relative Endpoint differ from a regular Link in the Web of Things?",
+                "[Intermediate] Can you list all the ontologies that this core ontology imports?",
+                "[Complex] If a Relative Endpoint has a relativeHref, what other information might it also include?",
+                "[Complex] How can the information about Relative Endpoints and their relativeHrefs be used to understand the structure of an IoT system?"
+            ]
+        },
+        {
+            "subgraph_id": 11,
+            "namespaces": [
+                {
+                    "prefix": "geo",
+                    "url": "http://www.opengis.net/ont/geosparql#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "s4bldg",
+                    "url": "https://w3id.org/def/saref4bldg#"
+                },
+                {
+                    "prefix": "",
+                    "url": "http://iot.linkeddata.es/def/core#"
+                },
+                {
+                    "prefix": "prov",
+                    "url": "http://www.w3.org/ns/prov#"
+                },
+                {
+                    "prefix": "foaf",
+                    "url": "http://xmlns.com/foaf/0.1/"
+                }
+            ],
+            "triples": [
+                [
+                    "geo:sfWithin",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "geo:sfContains",
+                    "rdfs:isDefinedBy",
+                    "<http://www.opengis.net/ont/geosparql>"
+                ],
+                [
+                    "s4bldg:Building",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "geo:Feature",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "s4bldg:BuildingSpace",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "geo:Geometry",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "<https://w3id.org/def/saref4city#City>",
+                    "rdfs:subClassOf",
+                    "<https://w3id.org/def/saref4city#AdministrativeArea>"
+                ],
+                [
+                    "geo:sfContains",
+                    "rdfs:range",
+                    "geo:SpatialObject"
+                ],
+                [
+                    "geo:Feature",
+                    "rdfs:isDefinedBy",
+                    "<http://www.opengis.net/ont/geosparql>"
+                ],
+                [
+                    "geo:sfWithin",
+                    "rdfs:range",
+                    "geo:SpatialObject"
+                ],
+                [
+                    "<https://w3id.org/def/saref4city#AdministrativeArea>",
+                    "rdfs:subClassOf",
+                    "geo:Feature"
+                ],
+                [
+                    "geo:sfWithin",
+                    "rdfs:domain",
+                    "geo:SpatialObject"
+                ],
+                [
+                    "<https://w3id.org/def/saref4city#City>",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "geo:sfWithin",
+                    "rdfs:isDefinedBy",
+                    "<http://www.opengis.net/ont/geosparql>"
+                ],
+                [
+                    ":HumanUser",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "geo:SpatialObject",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "geo:Feature",
+                    "rdfs:subClassOf",
+                    "geo:SpatialObject"
+                ],
+                [
+                    "s4bldg:BuildingSpace",
+                    "rdfs:isDefinedBy",
+                    "<https://w3id.org/def/saref4bldg#>"
+                ],
+                [
+                    "geo:SpatialObject",
+                    "rdfs:isDefinedBy",
+                    "<http://www.opengis.net/ont/geosparql>"
+                ],
+                [
+                    "<https://w3id.org/def/saref4city#AdministrativeArea>",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "s4bldg:Building",
+                    "rdfs:subClassOf",
+                    "geo:Feature"
+                ],
+                [
+                    "geo:sfContains",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "s4bldg:BuildingSpace",
+                    "rdfs:subClassOf",
+                    "geo:Feature"
+                ],
+                [
+                    "geo:Feature",
+                    "owl:disjointWith",
+                    "geo:Geometry"
+                ],
+                [
+                    "geo:sfContains",
+                    "rdfs:domain",
+                    "geo:SpatialObject"
+                ],
+                [
+                    "s4bldg:Building",
+                    "rdfs:seeAlso",
+                    "<https://w3id.org/ifc/IFC4_ADD1#IfcBuilding>"
+                ],
+                [
+                    "s4bldg:Building",
+                    "prov:hadPrimarySource",
+                    "<http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcproductextension/lexical/ifcbuilding.htm>"
+                ],
+                [
+                    ":HumanUser",
+                    "rdfs:subClassOf",
+                    "foaf:Person"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is a building in the context of this ontology?",
+                "[Simple] Can you define what a building space is?",
+                "[Simple] What is an administrative area?",
+                "[Simple] What is a spatial object?",
+                "[Simple] What is a feature in the context of this ontology?",
+                "[Simple] How is a city defined in this ontology?",
+                "[Simple] What is a human user?",
+                "[Simple] What is a geometry in the context of this ontology?",
+                "[Intermediate] Which features are contained within a specific spatial object?",
+                "[Intermediate] Which spatial objects are within a particular administrative area?",
+                "[Intermediate] What are the buildings located in a specific city?",
+                "[Intermediate] Which building spaces are part of a specific building?",
+                "[Intermediate] What types of administrative areas are there in the ontology?",
+                "[Complex] How many buildings and building spaces are there in a specific administrative area, and which ones are they?",
+                "[Complex] If a building is within a specific administrative area, which other spatial objects are also within that same area?",
+                "[Complex] For a given city, list all the buildings and their corresponding building spaces, and indicate which administrative area they belong to."
+            ]
+        },
+        {
+            "subgraph_id": 12,
+            "namespaces": [
+                {
+                    "prefix": "",
+                    "url": "http://iot.linkeddata.es/def/core#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "vs",
+                    "url": "http://www.w3.org/2003/06/sw-vocab-status/ns#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "dcterms",
+                    "url": "http://purl.org/dc/terms/"
+                },
+                {
+                    "prefix": "prov",
+                    "url": "http://www.w3.org/ns/prov#"
+                },
+                {
+                    "prefix": "dc",
+                    "url": "http://purl.org/dc/elements/1.1/"
+                },
+                {
+                    "prefix": "xsd",
+                    "url": "http://www.w3.org/2001/XMLSchema#"
+                }
+            ],
+            "triples": [
+                [
+                    ":readWrite",
+                    "rdf:type",
+                    "owl:FunctionalProperty"
+                ],
+                [
+                    "vs:term_status",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ],
+                [
+                    ":actsOnFeatureProperty",
+                    "rdfs:range",
+                    ":FeatureProperty"
+                ],
+                [
+                    ":readWrite",
+                    "rdfs:domain",
+                    ":Contract"
+                ],
+                [
+                    "<https://w3id.org/def/saref4city#Country>",
+                    "rdfs:subClassOf",
+                    "<https://w3id.org/def/saref4city#AdministrativeArea>"
+                ],
+                [
+                    ":monitorsFeatureProperty",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "dcterms:contributor",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ],
+                [
+                    "<https://w3id.org/def/saref4city#Country>",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "prov:hadPrimarySource",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ],
+                [
+                    ":readWrite",
+                    "rdfs:subPropertyOf",
+                    "owl:topDataProperty"
+                ],
+                [
+                    ":FeatureProperty",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    ":actsOnFeatureProperty",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "dc:creator",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ],
+                [
+                    "dc:source",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ],
+                [
+                    "owl:cardinality",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ],
+                [
+                    ":readWrite",
+                    "rdfs:range",
+                    "xsd:boolean"
+                ],
+                [
+                    ":Contract",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    ":readWrite",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    ":monitorsFeatureProperty",
+                    "rdfs:range",
+                    ":FeatureProperty"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is a FeatureProperty?",
+                "[Simple] Can you tell me what a Contract is in this context?",
+                "[Simple] Is readWrite a property that can have only one value for each subject?",
+                "[Simple] What type of data does the readWrite property handle?",
+                "[Simple] What is the relationship between a Country and an AdministrativeArea?",
+                "[Simple] Is monitorsFeatureProperty a property that connects to other properties or classes?",
+                "[Intermediate] Which properties are used to annotate information in the ontology?",
+                "[Intermediate] Can a FeatureProperty be acted upon by more than one action?",
+                "[Intermediate] What kind of features can be monitored by a FeatureProperty?",
+                "[Intermediate] How is the readWrite property related to the Contract class?",
+                "[Complex] If a FeatureProperty is being monitored, which other properties or actions might it be associated with in the same context?",
+                "[Complex] In a scenario where multiple Contracts are defined, how would the readWrite property determine the access level for each contract?"
+            ]
+        }
+    ]
+}

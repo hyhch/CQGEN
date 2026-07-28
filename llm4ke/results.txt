@@ -1,0 +1,60 @@
+Input Path: data/DemCare
+Simple Hit Rate: 0.5821
+Complex Hit Rate: 0.4750
+----------------------------------------
+Input Path: data/DemCare
+Simple Hit Rate: 0.4030
+Complex Hit Rate: 0.2500
+----------------------------------------
+Input Path: data/saref4env
+Simple Hit Rate: 0.3333
+Complex Hit Rate: 0.0769
+----------------------------------------
+Input Path: data/saref4env
+Simple Hit Rate: 0.2889
+Complex Hit Rate: 0.0000
+----------------------------------------
+Input Path: data/vicinitycore
+Simple Hit Rate: 0.1961
+Complex Hit Rate: 0.2857
+----------------------------------------
+Input Path: data/vicinitycore
+Simple Hit Rate: 0.1765
+Complex Hit Rate: 0.0000
+----------------------------------------
+Input Path: data/videogameontology
+Simple Hit Rate: 0.5556
+Complex Hit Rate: 0.2083
+----------------------------------------
+Input Path: data/videogameontology
+Simple Hit Rate: 0.5556
+Complex Hit Rate: 0.2292
+----------------------------------------
+Input Path: data/SAREF
+Simple Hit Rate: 0.1525
+Complex Hit Rate: 0.0000
+----------------------------------------
+Input Path: data/OneM2M
+Simple Hit Rate: 0.1220
+Complex Hit Rate: 0.1176
+----------------------------------------
+Input Path: data/OneM2M
+Simple Hit Rate: 0.1220
+Complex Hit Rate: 0.1176
+----------------------------------------
+Input Path: data/OneM2M
+Simple Hit Rate: 0.2195
+Complex Hit Rate: 0.1765
+----------------------------------------
+Input Path: data/OneM2M
+Simple Hit Rate: 0.1220
+Complex Hit Rate: 0.1176
+----------------------------------------
+Input Path: data/OneM2M
+Simple Hit Rate: 0.2195
+Complex Hit Rate: 0.1765
+----------------------------------------
+Input Path: data/OneM2M
+Simple Hit Rate: 0.1463
+Complex Hit Rate: 0.1176
+----------------------------------------

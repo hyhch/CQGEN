@@ -1,0 +1,266 @@
+[
+    {
+        "question": "What is the username of the player?",
+        "pattern": "LSP-OP-DP-EN"
+    },
+    {
+        "question": "Who are the friends of the player?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Who are the friends that play other games as well with this player?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Who are the most active players in the game?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What are the achievements of my friends?",
+        "pattern": "LSP-OP-DP-EN"
+    },
+    {
+        "question": "Who does the player play with?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What are the achievements your friend has received?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What achievements does a game have?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "How many hours has this game been played in total?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What are the types of achievements in this game?",
+        "pattern": "LSP-INST-SC-EN"
+    },
+    {
+        "question": "What are the types of achievements a game can have?",
+        "pattern": "LSP-INST-SC-EN"
+    },
+    {
+        "question": "What is the genre of the game?",
+        "pattern": "LSP-OP-DP-EN"
+    },
+    {
+        "question": "What items exist in a game?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Who is the creator of the game?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What is the release date of the game?",
+        "pattern": "LSP-OP-DP-EN"
+    },
+    {
+        "question": "What are the games similar to this one?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "List all games of a certain Genre?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What type is the item of?",
+        "pattern": "LSP-INST-SC-EN"
+    },
+    {
+        "question": "What abilities does an item have?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "What is the fastest car in the game?",
+        "pattern": "LSP-OP-DP-EN"
+    },
+    {
+        "question": "How much damage does a weapon deal?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Who has the best kill count in the game?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Who are the top 3 players in the game?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What games has the player played?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What items does the player have?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "What achievements of a certain type does the player have?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "What kind of games are owned by players that have certain achievement?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What is the last game a player has played?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "How big percentage of players have a certain item in the game?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "What are the most common genres played by players with a certain character class in a game?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What is the preferred weapon of players with a certain character class?",
+        "pattern": "LSP-OP-DP-EN"
+    },
+    {
+        "question": "What type of weapon are players using who win mostly in the game?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "When was the last time a certain player played this game?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "In how many games does the player have all the achievements?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "What is the favorite map of the player in the game?",
+        "pattern": "LSP-OP-DP-EN"
+    },
+    {
+        "question": "What is the most played map in a game?",
+        "pattern": "LSP-OP-DP-EN"
+    },
+    {
+        "question": "What is the difficulty level the player uses in certain game genres?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "How many times have I killed someone in a game?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "How many goals did I score in FIFA 15?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What is the most common level in the game where players stop playing?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "How big percentage of players have made a certain decision in the game?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "How big percentage of players skip the cutscenes?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "How many players mute the game music?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "After gaining an item in the game, how many players use it?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "How many times players have died in a level?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "How big percentage of players use the item in question in other linked games?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "How many players have moved from game to another when they have seen a linked_x000D_commercial?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What is the first action done by the player after an event?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What is the location in map where the players die the most?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What equipment does a player have in a game?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "What consumable items does a player have in game?",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "What is the most used item in the game?",
+        "pattern": "LSP-OP-DP-EN"
+    },
+    {
+        "question": " What are the games where a player can use this item?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "How many players have made in-app purchases?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "How many players who have already spent money in this game, spend money again?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What is the likelihood that a player who has purchased in-app purchase in one game, do so in the other one?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "If a player is given free item in the game, how likely are they to make an in-app purchase?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What type of items are the most traded ones in the game's marketplace?",
+        "pattern": "LSP-INST-SC-EN"
+    },
+    {
+        "question": "How much money an average player spends in in-app purchases?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What time are most of the in-app purchases done?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Where do the most paying customers live in?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "How long does an average player spend in the game before making first in-app purchase?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Where do the players live who have not made any in-app purchases?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Where do the players who have done the most in-app purchases live?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "How many players clicked an ingame advertisement?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "How many players start the other game after seeing an advertisement?",
+        "pattern": "LSP-OP-EN"
+    }
+]

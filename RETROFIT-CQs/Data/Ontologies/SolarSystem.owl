@@ -1,0 +1,953 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#"
+     xml:base="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-21="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21">
+        <rdfs:comment>The solar system ontology that describes the topic of the solar system and its different components.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#hasAtmosphere -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#hasAtmosphere">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Planet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Planet_Atmosphere"/>
+        <rdfs:comment>Solar System Planet hasAtmosphere Planet Atmosphere</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#hasSatellite -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#hasSatellite">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#isSatelliteOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Planet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+        <rdfs:comment>Solar System Planet hasSatellite Solar System Satellite</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#isComposedOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#isComposedOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Planet_Atmosphere"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Gas"/>
+        <rdfs:comment>Planet atmosphere isComposedOf Gas</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#isSatelliteOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#isSatelliteOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Density -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Density">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Discovered -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Discovered">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Discoverer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Discoverer">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#hasMass -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#hasMass">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#hasOrbitalPeriod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#hasOrbitalPeriod">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#hasOrbitalRadius -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#hasOrbitalRadius">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#hasRings -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#hasRings">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Asteroids -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Asteroids">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System"/>
+        <rdfs:comment>Asteroids are small, rocky objects that orbit the Sun.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Comets -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Comets">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System"/>
+        <rdfs:comment>Comets are cosmic snowballs of frozen gases, rock, and dust that orbit the Sun.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Dwarf_Planets -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Dwarf_Planets">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Planet"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Gas_Giant"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Terrestrial_Planet"/>
+        <rdfs:comment>A celestial body resembling a small planet but lacking certain technical criteria that are required for it to be classed as such.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Gas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Gas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Planet_Atmosphere"/>
+        <rdfs:comment>Gas is one of the four fundamental states of matter</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Gas_Giant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Gas_Giant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Planet"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Terrestrial_Planet"/>
+        <rdfs:comment>A gas giant is a giant planet composed mainly of hydrogen and helium.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Planet_Atmosphere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Planet_Atmosphere">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Planet"/>
+        <rdfs:comment>The envelope of gases that surrounds any of the planets or dwarf planets within or outside the solar system.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System">
+        <rdfs:comment>The Solar System is the gravitationally bound system of the Sun and the objects that orbit it.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Planet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Planet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System"/>
+        <rdfs:comment>A planet is a celestial body that (a) is in orbit around the Sun, (b) has sufficient mass for its self-gravity to overcome rigid body forces so that it assumes a hydrostatic equilibrium (nearly round) shape, and (c) has cleared the neighbourhood around its orbit.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#isSatelliteOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Planet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A satellite is any moon, planet, or machine that is in orbit around a planet or star.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Terrestrial_Planet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Terrestrial_Planet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Planet"/>
+        <rdfs:comment>A terrestrial planet, telluric planet, or rocky planet, is a planet that is composed primarily of silicate rocks or metals</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Amalthea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Amalthea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Ananke -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Ananke">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Argon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Argon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Gas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Ariel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Ariel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Borrelly -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Borrelly">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Comets"/>
+        <Discovered rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1904</Discovered>
+        <Discoverer>Alphonse Borrelly</Discoverer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Callirrhoe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Callirrhoe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Callisto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Callisto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Carbon_dioxide -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Carbon_dioxide">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Gas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Carme -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Carme">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Chaldene -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Chaldene">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Deimos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Deimos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Dione -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Dione">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Earth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Earth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Terrestrial_Planet"/>
+        <hasAtmosphere rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#EarthAtmosphere"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Moon"/>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59700000000</hasMass>
+        <hasOrbitalPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">365</hasOrbitalPeriod>
+        <hasOrbitalRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6371.0</hasOrbitalRadius>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#EarthAtmosphere -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#EarthAtmosphere">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Planet_Atmosphere"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Argon"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Nitrogen"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Oxygen"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Elara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Elara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Enceladus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Enceladus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Euporie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Euporie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Europa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Europa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Ganymede -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Ganymede">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Halimede -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Halimede">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Harpalyke -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Harpalyke">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Helium -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Helium">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Gas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Himalia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Himalia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Hippocamp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Hippocamp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Hydrogen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Hydrogen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Gas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Hygiea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Hygiea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Asteroids"/>
+        <Discovered rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1849</Discovered>
+        <Discoverer>Annibale de Gasparis</Discoverer>
+        <hasOrbitalPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2033</hasOrbitalPeriod>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Iapetus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Iapetus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+        <isSatelliteOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Saturn"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Interamnia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Interamnia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Asteroids"/>
+        <Discovered rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1910</Discovered>
+        <Discoverer>Vincenzo Cerulli</Discoverer>
+        <hasOrbitalPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1955</hasOrbitalPeriod>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Isonoe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Isonoe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Jupiter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Jupiter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Gas_Giant"/>
+        <hasAtmosphere rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#JupiterAtmosphere"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Amalthea"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Ananke"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Callirrhoe"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Callisto"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Carme"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Chaldene"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Elara"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Euporie"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Europa"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Ganymede"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Harpalyke"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Himalia"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Isonoe"/>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1900000000000</hasMass>
+        <hasOrbitalPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4380</hasOrbitalPeriod>
+        <hasOrbitalRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">69911</hasOrbitalRadius>
+        <hasRings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasRings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#JupiterAtmosphere -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#JupiterAtmosphere">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Planet_Atmosphere"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Helium"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Hydrogen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Laomedeia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Laomedeia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Lapetus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Lapetus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Mars -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Mars">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Terrestrial_Planet"/>
+        <hasAtmosphere rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#MarsAtmosphere"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Deimos"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Phobos"/>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">642000000000</hasMass>
+        <hasOrbitalPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">687</hasOrbitalPeriod>
+        <hasOrbitalRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3389.5</hasOrbitalRadius>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#MarsAtmosphere -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#MarsAtmosphere">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Planet_Atmosphere"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Carbon_dioxide"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Nitrogen"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Oxygen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Mercury -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Mercury">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Terrestrial_Planet"/>
+        <hasAtmosphere rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#MercuryAtmosphere"/>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">33000000000</hasMass>
+        <hasOrbitalPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">88</hasOrbitalPeriod>
+        <hasOrbitalRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2439.7</hasOrbitalRadius>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#MercuryAtmosphere -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#MercuryAtmosphere">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Planet_Atmosphere"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Helium"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Hydrogen"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Oxygen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Mimas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Mimas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Miranda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Miranda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Moon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Moon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Neptune -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Neptune">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Gas_Giant"/>
+        <hasAtmosphere rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#NeptuneAtmosphere"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Halimede"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Hippocamp"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Laomedeia"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Nereid"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Neso"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Proteus"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Psamathe"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Sao"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Triton"/>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1020000000000</hasMass>
+        <hasOrbitalPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60190</hasOrbitalPeriod>
+        <hasOrbitalRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24622</hasOrbitalRadius>
+        <hasRings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasRings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#NeptuneAtmosphere -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#NeptuneAtmosphere">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Planet_Atmosphere"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Helium"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Hydrogen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Nereid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Nereid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Neso -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Neso">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Nitrogen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Nitrogen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Gas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Oberon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Oberon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Oxygen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Oxygen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Gas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Pallas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Pallas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Asteroids"/>
+        <Discovered rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1802</Discovered>
+        <Discoverer>Heinrich Wilhelm Matthias Olbers</Discoverer>
+        <hasOrbitalPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1686</hasOrbitalPeriod>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Phobos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Phobos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Pluto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Pluto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Proteus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Proteus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Psamathe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Psamathe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Rhea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Rhea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Sao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Sao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Saturn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Saturn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Gas_Giant"/>
+        <hasAtmosphere rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#SaturnAtmosphere"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Dione"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Enceladus"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Lapetus"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Mimas"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Rhea"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Tethys"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Titan"/>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">568000000000000</hasMass>
+        <hasOrbitalPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10756</hasOrbitalPeriod>
+        <hasOrbitalRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">58232</hasOrbitalRadius>
+        <hasRings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</hasRings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#SaturnAtmosphere -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#SaturnAtmosphere">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Planet_Atmosphere"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Helium"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Hydrogen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Sodium -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Sodium">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Gas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Tethys -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Tethys">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Titan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Titan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Titania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Titania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Triton -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Triton">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Uranus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Uranus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Gas_Giant"/>
+        <hasAtmosphere rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#UranusAtmosphere"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Ariel"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Miranda"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Oberon"/>
+        <hasSatellite rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Titania"/>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8680000000000</hasMass>
+        <hasOrbitalPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30688</hasOrbitalPeriod>
+        <hasOrbitalRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25362</hasOrbitalRadius>
+        <hasRings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</hasRings>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#UranusAtmosphere -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#UranusAtmosphere">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Planet_Atmosphere"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Helium"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Hydrogen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Venus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Venus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Terrestrial_Planet"/>
+        <hasAtmosphere rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#VenusAtmosphere"/>
+        <hasMass rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">487000000000</hasMass>
+        <hasOrbitalPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">225</hasOrbitalPeriod>
+        <hasOrbitalRadius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6051.8</hasOrbitalRadius>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#VenusAtmosphere -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#VenusAtmosphere">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Planet_Atmosphere"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Carbon_dioxide"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Nitrogen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#4_Vesta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#4_Vesta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Asteroids"/>
+        <Discovered rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1807</Discovered>
+        <Discoverer>Heinrich Wilhelm Matthias Olbers</Discoverer>
+        <hasOrbitalPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1325</hasOrbitalPeriod>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#52_Europa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#52_Europa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Asteroids"/>
+        <Discovered rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1858</Discovered>
+        <Discoverer>Hermann Goldschmidt</Discoverer>
+        <hasOrbitalPeriod rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1988</hasOrbitalPeriod>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Hale–Bopp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Hale–Bopp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Comets"/>
+        <Density rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</Density>
+        <Discovered rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1995</Discovered>
+        <Discoverer>Alan Hale</Discoverer>
+        <Discoverer>Thomas Bopp</Discoverer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Halley&apos;s_comet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Halley&apos;s_comet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Comets"/>
+        <Density rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</Density>
+        <Discovered rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1758</Discovered>
+        <Discoverer>Edmond Halley</Discoverer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Shoemaker–Levy_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Shoemaker–Levy_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Comets"/>
+        <Density rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</Density>
+        <Discovered rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1993</Discovered>
+        <Discoverer>Carolyn S. Shoemaker</Discoverer>
+        <Discoverer>David H. Levy</Discoverer>
+        <Discoverer>Eugene Merle Shoemaker</Discoverer>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Asteroids"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Comets"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Planet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/samahalkhuzaey/ontologies/2022/5/untitled-ontology-21#Solar_System_Satellite"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

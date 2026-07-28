@@ -1,0 +1,19 @@
+# LLM4KE Configuration
+# API keys should be set via environment variables (see api_key_env fields).
+# Example: export DASHSCOPE_API_KEY="sk-your-key-here"
+
+llms:
+  qwen:
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    model: qwen-max
+    api_key_env: DASHSCOPE_API_KEY
+
+  gpt4o:
+    base_url: https://YOUR_AZURE_ENDPOINT.openai.azure.com/
+    model: gpt-4o
+    api_key_env: AZURE_OPENAI_API_KEY
+
+  llama3:
+    base_url: http://localhost:11434/v1
+    model: llama3.3:latest
+    api_key_env: OLLAMA_API_KEY

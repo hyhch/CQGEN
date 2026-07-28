@@ -1,0 +1,24 @@
+{
+  "qwen-max": {
+    "api_type": "openai",
+    "model": "qwen-max",
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "api_key": "YOUR_API_KEY_HERE",
+    "concurrency_group": "dashscope"
+  },
+  "glm-5": {
+    "api_type": "openai",
+    "model": "glm-5",
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "api_key": "YOUR_API_KEY_HERE",
+    "concurrency_group": "dashscope"
+  },
+  "gpt-5": {
+    "api_type": "azure",
+    "model": "gpt-5",
+    "base_url": "https://YOUR_AZURE_ENDPOINT.openai.azure.com/",
+    "api_key": "YOUR_API_KEY_HERE",
+    "api_version": "2024-12-01-preview",
+    "concurrency_group": "azure"
+  }
+}

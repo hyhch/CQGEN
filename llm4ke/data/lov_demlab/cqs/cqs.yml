@@ -1,0 +1,234 @@
+ontology:
+  name: lov_demlab
+  cqs:
+  - ID: lov_demlab_125
+    question: What are the protocol parts?
+  - ID: lov_demlab_126
+    question: What types of data are collected during medical and clinical consultation?
+  - ID: lov_demlab_127
+    question: What types of demographic data are collected?
+  - ID: lov_demlab_128
+    question: What is the gender information?
+  - ID: lov_demlab_129
+    question: What are the main types of education level?
+  - ID: lov_demlab_130
+    question: What are the main types of laterality?
+  - ID: lov_demlab_131
+    question: What types of clinical data are collected?
+  - ID: lov_demlab_132
+    question: What are the types of diagnosis?
+  - ID: lov_demlab_133
+    question: What types of cognitive abilities assessment data are collected?
+  - ID: lov_demlab_134
+    question: What data are collected for MMSE
+  - ID: lov_demlab_135
+    question: What data are collected for FAB
+  - ID: lov_demlab_136
+    question: What data are collected for the trail making test?
+  - ID: lov_demlab_137
+    question: What data are collected for the short cognitive battery test?
+  - ID: lov_demlab_138
+    question: What data are collected for the free and cued selective reminding test?
+  - ID: lov_demlab_139
+    question: What types of neuropsychiatric/mood assessment data are collected?
+  - ID: lov_demlab_140
+    question: What data are collected for NPI?
+  - ID: lov_demlab_141
+    question: What data are collected for DSM-IV criteria?
+  - ID: lov_demlab_142
+    question: What data are collected for AI and diagnostic criteria for apathy?
+  - ID: lov_demlab_143
+    question: What types of motricity abilities assessment data are collected?
+  - ID: lov_demlab_144
+    question: What data are collected for UPDRS?
+  - ID: lov_demlab_145
+    question: What types of autonomy assessment data are collected?
+  - ID: lov_demlab_146
+    question: What types of steps does ecological assessment consist of?
+  - ID: lov_demlab_147
+    question: What are the types of directed tasks?
+  - ID: lov_demlab_148
+    question: Which are the physical directed tasks?
+  - ID: lov_demlab_149
+    question: Which are the vocal directed tasks?
+  - ID: lov_demlab_150
+    question: What is the nature of a directed task?
+  - ID: lov_demlab_151
+    question: Which directed tasks are mono tasks?
+  - ID: lov_demlab_152
+    question: Which directed tasks are dual tasks?
+  - ID: lov_demlab_153
+    question: Which are the tasks of the semi-directed step?
+  - ID: lov_demlab_154
+    question: What are the types of tasks in the discussion with clinician step?
+  - ID: lov_demlab_155
+    question: Which are the directed discussion tasks?
+  - ID: lov_demlab_156
+    question: Which are the free discussion tasks?
+  - ID: lov_demlab_157
+    question: What is assessed in the walking task?
+  - ID: lov_demlab_158
+    question: What is assessed in the counting backwards task?
+  - ID: lov_demlab_159
+    question: What is assessed in the walking and counting backwards task?
+  - ID: lov_demlab_160
+    question: What is assessed in the sentence repeating task?
+  - ID: lov_demlab_161
+    question: What is assessed in the articulation control task?
+  - ID: lov_demlab_162
+    question: What is assessed in the tasks of the semi-directed protocol step?
+  - ID: lov_demlab_163
+    question: What is assessed in the tasks of the discussion with clinician step?
+  - ID: lov_demlab_164
+    question: What data are measured for gait assessment?
+  - ID: lov_demlab_165
+    question: What data are measured for dynamic balance?
+  - ID: lov_demlab_166
+    question: What data are measured for step length?
+  - ID: lov_demlab_167
+    question: What data are measured for walking speed?
+  - ID: lov_demlab_168
+    question: What data are measured for walking speed instantaneous?
+  - ID: lov_demlab_169
+    question: What data are measured for stopping displacement?
+  - ID: lov_demlab_170
+    question: What data are measured for latency?
+  - ID: lov_demlab_171
+    question: What data are measured for stress?
+  - ID: lov_demlab_172
+    question: What data are measured for cognitive and neuromuscular assessment?
+  - ID: lov_demlab_173
+    question: What data are measured for affective state assessment?
+  - ID: lov_demlab_174
+    question: What data are measured for interaction assessment?
+  - ID: lov_demlab_175
+    question: What data are measured for neuromuscular impairment in speech production
+      mechanism?
+  - ID: lov_demlab_176
+    question: What data are measured for cognitive abilities assessment?
+  - ID: lov_demlab_177
+    question: What data are measured for organizational efficiency assessment?
+  - ID: lov_demlab_178
+    question: What data are measured for functional abilities assessment?
+  - ID: lov_demlab_179
+    question: What functional areas are of clinical relevance for the home and nursing
+      home environments?
+  - ID: lov_demlab_180
+    question: How are the statistics and identified problematic situations about the
+      monitored functional areas reported to the clinician?
+  - ID: lov_demlab_181
+    question: What types of questionnaires are administered for self-assessment?
+  - ID: lov_demlab_182
+    question: What activities (situations) are of clinical interest with respect to
+      sleep?
+  - ID: lov_demlab_183
+    question: What information is of clinical interest regarding night sleep?
+  - ID: lov_demlab_184
+    question: What information is of clinical interest regarding a nap?
+  - ID: lov_demlab_185
+    question: What information is of clinical interest regarding an awakening?
+  - ID: lov_demlab_186
+    question: What information is of clinical interest regarding a bed exit?
+  - ID: lov_demlab_187
+    question: What information if of clinical interest regarding a night bathroom
+      visit?
+  - ID: lov_demlab_188
+    question: What information is clinically relevant for sleep assessment?
+  - ID: lov_demlab_189
+    question: What sleep-related situations indicate a problem or possibly problematic
+      behaviour that needs to be highlighted to the clinician?
+  - ID: lov_demlab_190
+    question: What activities (situations) are of clinical interest with respect to
+      ADLs?
+  - ID: lov_demlab_191
+    question: What information is of clinical interest regarding food and drink preparation?
+  - ID: lov_demlab_192
+    question: What information is of clinical interest regarding food and drink consumption?
+  - ID: lov_demlab_193
+    question: What information is of clinical interest regarding housekeeping?
+  - ID: lov_demlab_194
+    question: What information is of clinical interest regarding personal hygiene?
+  - ID: lov_demlab_195
+    question: What food and drink preparation-related situations indicate a problem
+      or possibly problematic behaviour that needs to be highlighted to the clinician?
+  - ID: lov_demlab_196
+    question: What food and drink consumption-related situations indicate a problem
+      or possibly problematic behaviour that needs to be highlighted to the clinician?
+  - ID: lov_demlab_197
+    question: 'What housekeeping-related situations indicate a problem or possibly
+      problematic behaviour that needs to be highlighted to the clinician? '
+  - ID: lov_demlab_198
+    question: What personal hygiene-related situations indicate a problem or possibly
+      problematic behaviour that needs to be highlighted to the clinician?
+  - ID: lov_demlab_199
+    question: What activities (situations) are of clinical interest with respect to
+      social interaction?
+  - ID: lov_demlab_200
+    question: What information is clinically relevant for social interaction assessment?
+  - ID: lov_demlab_201
+    question: What social interaction related situations indicate a problem or possibly
+      problematic behaviour that needs to be highlighted to the clinician?
+  - ID: lov_demlab_202
+    question: What activities (situations) are of clinical interest with respect to
+      physical activity?
+  - ID: lov_demlab_203
+    question: What information is clinically relevant for walking?
+  - ID: lov_demlab_204
+    question: What information is clinically relevant for dedicated physical activities
+      (i.e. exercises)?
+  - ID: lov_demlab_205
+    question: What information is clinically relevant for physical activity assessment?
+  - ID: lov_demlab_206
+    question: What physical activity related situations indicate a problem or possibly
+      problematic behaviour that needs to be highlighted to the clinician?
+  - ID: lov_demlab_207
+    question: What are the main types of entities?
+  - ID: lov_demlab_208
+    question: What are the main categories a person may belong to?
+  - ID: lov_demlab_209
+    question: What are the main types of objects?
+  - ID: lov_demlab_210
+    question: What are the main categories of places?
+  - ID: lov_demlab_211
+    question: What are the types of indoor place?
+  - ID: lov_demlab_212
+    question: What are the main types of events?
+  - ID: lov_demlab_213
+    question: What are the main types of information describing an event?
+  - ID: lov_demlab_214
+    question: What are the main categories of events?
+  - ID: lov_demlab_215
+    question: What activities are detected?
+  - ID: lov_demlab_216
+    question: What states are detected?
+  - ID: lov_demlab_217
+    question: What object related events are detected?
+  - ID: lov_demlab_218
+    question: What ambient measurements are detected?
+  - ID: lov_demlab_219
+    question: What physiological measurements are detected?
+  - ID: lov_demlab_220
+    question: What activities are inferred?
+  - ID: lov_demlab_221
+    question: ' What are the main types of data considered?'
+  - ID: lov_demlab_222
+    question: What are the main types of data an observation may refer to?
+  - ID: lov_demlab_223
+    question: 'What types of descriptive information are relevant to an observation? '
+  - ID: lov_demlab_224
+    question: What are the main types of data a report may refer to?
+  - ID: lov_demlab_225
+    question: 'What types of descriptive information are relevant to a report? '
+  - ID: lov_demlab_226
+    question: 'What are the main types of data an interpretation result may refer
+      to? '
+  - ID: lov_demlab_227
+    question: 'What types of descriptive information are relevant to a result? '
+  - ID: lov_demlab_228
+    question: 'What are the main types of sensors? '
+  - ID: lov_demlab_229
+    question: 'What are the possible types of wearable sensors? '
+  - ID: lov_demlab_230
+    question: What are the possible types of fixed sensors?
+  - ID: lov_demlab_231
+    question: What are the possible types processing components?

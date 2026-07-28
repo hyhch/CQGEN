@@ -1,0 +1,234 @@
+[
+    {
+        "question": "What is a TESS?",
+        "pattern": "LSP-DC-SC-EN"
+    },
+    {
+        "question": "Which type of sensor is a TESS?",
+        "pattern": "LSP-DC-SC-EN"
+    },
+    {
+        "question": "What is a photometer?",
+        "pattern": "LSP-DC-SC-EN"
+    },
+    {
+        "question": "What is the main component of TESS?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Which are the communication interfaces available in TESS?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Which components of TESS are sensors?",
+        "pattern": "LSP-DC-SC-EN"
+    },
+    {
+        "question": "Which properties can be measured by a photometer?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Each reading in a TESS has a timestamp",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Which are the properties observed by a TESS?",
+        "pattern": "LSP-DC-SC-EN"
+    },
+    {
+        "question": "Physical objects can contain devices",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "A sensor could be a person",
+        "pattern": "LSP-DC-SC-EN"
+    },
+    {
+        "question": "Devices might have different versions and revision numbers",
+        "pattern": "LSP-DC-SC-EN"
+    },
+    {
+        "question": "Which type(s) of RS232 is supported by TESS?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Which type(s) of Bluetooth is supported by TESS?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Which type(s) of WiFi is supported by TESS?",
+        "pattern": "LSP-SC-EN"
+    },
+    {
+        "question": "Which are the components of TESS?",
+        "pattern": "LSP-DC-SC-EN"
+    },
+    {
+        "question": "Which hardware elements is a TESS connected to?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Which is the communication protocol used by TESS?",
+        "pattern": "LSP-OP-Min-EN"
+    },
+    {
+        "question": "What is the transmission period of the TESS?",
+        "pattern": "LSP-SC-EN"
+    },
+    {
+        "question": "A device is located in a given geographical point defined by a latitude and a longitude",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "A device position is defined using the azimuth and altitude horizontal coordinates",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "A sensing device takes measures following a frequency",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "A device can be actionable or not",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "A device is part of a system",
+        "pattern": "LSP-OP-Min-EN"
+    },
+    {
+        "question": "An actuator is a type of device",
+        "pattern": "LSP-OP-Min-EN"
+    },
+    {
+        "question": "A device has energy consumption",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "A lamppost uses a given light generation method",
+        "pattern": "LSP-OP-Min-EN"
+    },
+    {
+        "question": "A lamppost has energy consumption",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "A lamppost might have a light shield",
+        "pattern": "LSP-U-EN"
+    },
+    {
+        "question": "What is a lamppost?",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "A light has a geometry",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "A light is projected in a given direction",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "A light is projected in a given angle",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "A light is projected from a given height",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "A light has a colour",
+        "pattern": "LSP-U-EN"
+    },
+    {
+        "question": "A light can have flash",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "What can be considered as physical objects?",
+        "pattern": "LSP-CD-EN"
+    },
+    {
+        "question": "A digital representation of an object has a name",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "A digital representation of an object has a description",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "A physical object has a description",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "A digital representation of an object has a unique identifier",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "A digital representation of an object can have zero or more tags",
+        "pattern": "LSP-OP-DP-PW-EN"
+    },
+    {
+        "question": "A digital representation of an object has exactly one creation date",
+        "pattern": "LSP-OP-Exact-EN"
+    },
+    {
+        "question": "A digital representation of an object includes the date in which some characteristic of object was last modified (e.g., its geolocation)",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "A sensing device produces a log of property observations",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "A log indicates which is its last value",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "Values in a log are related to the time in which they were observed",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "A physical representation of an object includes an observation log for each property to be observed",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "An observation value is measured in a given unit",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "What is a service?",
+        "pattern": "LSP-CD-EN"
+    },
+    {
+        "question": "Physical objects can have digital representations that are accessible through services",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "A service can expose either none or multiple digital representations of an object",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "A digital representation of an object is exposed at maximum by one service",
+        "pattern": "LSP-OP-Max-EN"
+    },
+    {
+        "question": "A digital representation of an object performs actions",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "An action manages an actuator",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "An action of a digital representation of an object can keep an action log",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "A property of a digital representation of an object can keep an observation log",
+        "pattern": "LSP-OP-EN"
+    },
+    {
+        "question": "A digital representation of an object encapsulates a system",
+        "pattern": "LSP-OP-EN"
+    }
+]

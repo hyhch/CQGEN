@@ -1,0 +1,119 @@
+ontology:
+  name: vicinitycore
+  cqs:
+  - ID: vicinitycore_67
+    question: What is an IoT device?
+  - ID: vicinitycore_68
+    question: What is a partnership?
+  - ID: vicinitycore_69
+    question: What attributes has a partnership?
+  - ID: vicinitycore_70
+    question: Which are the relationships a partnership is involved in ?
+  - ID: vicinitycore_71
+    question: How many organizations can have a partnership?
+  - ID: vicinitycore_72
+    question: What is the relation between organization and devices?
+  - ID: vicinitycore_73
+    question: What is an IoT infrastructre?
+  - ID: vicinitycore_74
+    question: Who is the owner of a given device?
+  - ID: vicinitycore_75
+    question: Which attributes can have a device?
+  - ID: vicinitycore_76
+    question: What is a device profile?
+  - ID: vicinitycore_77
+    question: Which are the social relationships a device can be involved in?
+  - ID: vicinitycore_78
+    question: Which roles are involved in a ownership relationship?
+  - ID: vicinitycore_79
+    question: Which roles are involved in a partnership relationship?
+  - ID: vicinitycore_80
+    question: What is a user?
+  - ID: vicinitycore_81
+    question: Who is a service provider?
+  - ID: vicinitycore_82
+    question: What are the parameters that has a service?
+  - ID: vicinitycore_83
+    question: What is a service logical name?
+  - ID: vicinitycore_84
+    question: Which devices are there?
+  - ID: vicinitycore_85
+    question: What are the devices of a given agent or organization?
+  - ID: vicinitycore_86
+    question: Which devices can I see?
+  - ID: vicinitycore_87
+    question: Which services can I see?
+  - ID: vicinitycore_88
+    question: What are the devices of a specific partner?
+  - ID: vicinitycore_89
+    question: What are the services of a specific partner?
+  - ID: vicinitycore_90
+    question: Which is the profile of a given device?
+  - ID: vicinitycore_91
+    question: What is a building?
+  - ID: vicinitycore_92
+    question: Where is something located?
+  - ID: vicinitycore_93
+    question: Which devices measure temperature?
+  - ID: vicinitycore_94
+    question: Which devices measure CO2?
+  - ID: vicinitycore_95
+    question: Which devices measure noise?
+  - ID: vicinitycore_96
+    question: Which devices measure humidity?
+  - ID: vicinitycore_97
+    question: What is a thing description?
+  - ID: vicinitycore_98
+    question: Which devices are located at a CERTH lab?
+  - ID: vicinitycore_99
+    question: Which properties does a people counting observe?
+  - ID: vicinitycore_100
+    question: Which properties does a humidity sensor observe?
+  - ID: vicinitycore_101
+    question: Which properties does a light switch observe?
+  - ID: vicinitycore_102
+    question: Which properties does a motion sensor observe?
+  - ID: vicinitycore_103
+    question: Which properties does a thermometer observe?
+  - ID: vicinitycore_104
+    question: Which properties does a CO2 sensor observe?
+  - ID: vicinitycore_105
+    question: Which properties does a HVAC sensor observe?
+  - ID: vicinitycore_106
+    question: Which devices are located at a Oslo SciencePark?
+  - ID: vicinitycore_107
+    question: Which devices are located at UNIKL?
+  - ID: vicinitycore_108
+    question: Which properties does an e;bike charger observe?
+  - ID: vicinitycore_109
+    question: Which properties does a light bulb observe?
+  - ID: vicinitycore_110
+    question: Which properties does a door sensor observe?
+  - ID: vicinitycore_111
+    question: Which properties does a window sensor observe?
+  - ID: vicinitycore_112
+    question: Which properties does a thermostat observe?
+  - ID: vicinitycore_113
+    question: Which devices are located at a CERTH lab?
+  - ID: vicinitycore_114
+    question: Which properties does a weight scale observe?
+  - ID: vicinitycore_115
+    question: Which properties does a weight scale affect?
+  - ID: vicinitycore_116
+    question: Which properties from a weight scale are observed in events?
+  - ID: vicinitycore_117
+    question: Which properties does a blood pressure monitor observe?
+  - ID: vicinitycore_118
+    question: Which properties does a blood pressure monitor affect?
+  - ID: vicinitycore_119
+    question: Which properties from a blood pressure monitor are observed in events?
+  - ID: vicinitycore_120
+    question: Which properties does an activity tracker observe?
+  - ID: vicinitycore_121
+    question: Which properties does an activity tracker affect?
+  - ID: vicinitycore_122
+    question: Which properties from an activity trackerare observed in events?
+  - ID: vicinitycore_123
+    question: Which properties from a panic button observed in events?
+  - ID: vicinitycore_124
+    question: Which properties does a motion sensor observe?

@@ -1,0 +1,326 @@
+[
+  {
+    "onto": "DemCare",
+    "llm": "GPT3",
+    "mode": "all_classes",
+    "examples": "0",
+    "precision": 0.13071895424836602,
+    "recall": 0.18691588785046728,
+    "f1_score": 0.15384615384615385
+  },
+  {
+    "onto": "DemCare",
+    "llm": "GPT3",
+    "mode": "all_classes",
+    "examples": "3",
+    "precision": 0.15384615384615385,
+    "recall": 0.22429906542056074,
+    "f1_score": 0.18250950570342206
+  },
+  {
+    "onto": "DemCare",
+    "llm": "GPT4",
+    "mode": "all_classes",
+    "examples": "0",
+    "precision": 0.11842105263157894,
+    "recall": 0.16822429906542055,
+    "f1_score": 0.13899613899613897
+  },
+  {
+    "onto": "DemCare",
+    "llm": "GPT4",
+    "mode": "all_classes",
+    "examples": "3",
+    "precision": 0.16129032258064516,
+    "recall": 0.2336448598130841,
+    "f1_score": 0.19083969465648853
+  },
+  {
+    "onto": "DemCare",
+    "llm": "dpo",
+    "mode": "all_classes",
+    "examples": "0",
+    "precision": 0.04375,
+    "recall": 0.06542056074766354,
+    "f1_score": 0.05243445692883895
+  },
+  {
+    "onto": "DemCare",
+    "llm": "dpo",
+    "mode": "all_classes",
+    "examples": "3",
+    "precision": 0.11834319526627218,
+    "recall": 0.18691588785046728,
+    "f1_score": 0.14492753623188406
+  },
+  {
+    "onto": "DemCare",
+    "llm": "solar",
+    "mode": "all_classes",
+    "examples": "0",
+    "precision": 0.07051282051282051,
+    "recall": 0.102803738317757,
+    "f1_score": 0.08365019011406845
+  },
+  {
+    "onto": "DemCare",
+    "llm": "solar",
+    "mode": "all_classes",
+    "examples": "3",
+    "precision": 0.0967741935483871,
+    "recall": 0.14018691588785046,
+    "f1_score": 0.11450381679389313
+  },
+  {
+    "onto": "DemCare",
+    "llm": "una",
+    "mode": "all_classes",
+    "examples": "0",
+    "precision": 0.09740259740259741,
+    "recall": 0.14018691588785046,
+    "f1_score": 0.11494252873563218
+  },
+  {
+    "onto": "DemCare",
+    "llm": "una",
+    "mode": "all_classes",
+    "examples": "3",
+    "precision": 0.1597222222222222,
+    "recall": 0.21495327102803738,
+    "f1_score": 0.1832669322709163
+  },
+  {
+    "onto": "DemCare",
+    "llm": "zephyr",
+    "mode": "all_classes",
+    "examples": "0",
+    "precision": 0.04666666666666667,
+    "recall": 0.06542056074766354,
+    "f1_score": 0.05447470817120622
+  },
+  {
+    "onto": "DemCare",
+    "llm": "zephyr",
+    "mode": "all_classes",
+    "examples": "3",
+    "precision": 0.15384615384615385,
+    "recall": 0.07476635514018691,
+    "f1_score": 0.10062893081761005
+  },
+  {
+    "onto": "DemCare",
+    "llm": "GPT3",
+    "mode": "classes_and_properties",
+    "examples": "0",
+    "precision": 0.12582781456953643,
+    "recall": 0.17757009345794392,
+    "f1_score": 0.14728682170542637
+  },
+  {
+    "onto": "DemCare",
+    "llm": "GPT3",
+    "mode": "classes_and_properties",
+    "examples": "3",
+    "precision": 0.11920529801324503,
+    "recall": 0.16822429906542055,
+    "f1_score": 0.13953488372093026
+  },
+  {
+    "onto": "DemCare",
+    "llm": "GPT4",
+    "mode": "classes_and_properties",
+    "examples": "0",
+    "precision": 0.1986754966887417,
+    "recall": 0.2803738317757009,
+    "f1_score": 0.23255813953488372
+  },
+  {
+    "onto": "DemCare",
+    "llm": "GPT4",
+    "mode": "classes_and_properties",
+    "examples": "3",
+    "precision": 0.14743589743589744,
+    "recall": 0.21495327102803738,
+    "f1_score": 0.1749049429657795
+  },
+  {
+    "onto": "DemCare",
+    "llm": "dpo",
+    "mode": "classes_and_properties",
+    "examples": "0",
+    "precision": 0.06962025316455696,
+    "recall": 0.102803738317757,
+    "f1_score": 0.0830188679245283
+  },
+  {
+    "onto": "DemCare",
+    "llm": "dpo",
+    "mode": "classes_and_properties",
+    "examples": "3",
+    "precision": 0.11949685534591195,
+    "recall": 0.17757009345794392,
+    "f1_score": 0.14285714285714285
+  },
+  {
+    "onto": "DemCare",
+    "llm": "solar",
+    "mode": "classes_and_properties",
+    "examples": "0",
+    "precision": 0.05806451612903226,
+    "recall": 0.08411214953271028,
+    "f1_score": 0.06870229007633588
+  },
+  {
+    "onto": "DemCare",
+    "llm": "solar",
+    "mode": "classes_and_properties",
+    "examples": "3",
+    "precision": 0.14093959731543623,
+    "recall": 0.19626168224299065,
+    "f1_score": 0.1640625
+  },
+  {
+    "onto": "DemCare",
+    "llm": "una",
+    "mode": "classes_and_properties",
+    "examples": "0",
+    "precision": 0.08974358974358974,
+    "recall": 0.1308411214953271,
+    "f1_score": 0.10646387832699619
+  },
+  {
+    "onto": "DemCare",
+    "llm": "una",
+    "mode": "classes_and_properties",
+    "examples": "3",
+    "precision": 0.1888111888111888,
+    "recall": 0.2523364485981308,
+    "f1_score": 0.216
+  },
+  {
+    "onto": "DemCare",
+    "llm": "zephyr",
+    "mode": "classes_and_properties",
+    "examples": "0",
+    "precision": 0.07236842105263158,
+    "recall": 0.102803738317757,
+    "f1_score": 0.08494208494208494
+  },
+  {
+    "onto": "DemCare",
+    "llm": "zephyr",
+    "mode": "classes_and_properties",
+    "examples": "3",
+    "precision": 0.20192307692307693,
+    "recall": 0.19626168224299065,
+    "f1_score": 0.19905213270142183
+  },
+  {
+    "onto": "DemCare",
+    "llm": "GPT3",
+    "mode": "logic",
+    "examples": "0",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0
+  },
+  {
+    "onto": "DemCare",
+    "llm": "GPT3",
+    "mode": "logic",
+    "examples": "3",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0
+  },
+  {
+    "onto": "DemCare",
+    "llm": "GPT4",
+    "mode": "logic",
+    "examples": "0",
+    "precision": 0.006289308176100629,
+    "recall": 0.009345794392523364,
+    "f1_score": 0.0075187969924812035
+  },
+  {
+    "onto": "DemCare",
+    "llm": "GPT4",
+    "mode": "logic",
+    "examples": "3",
+    "precision": 0.013157894736842105,
+    "recall": 0.018691588785046728,
+    "f1_score": 0.015444015444015443
+  },
+  {
+    "onto": "DemCare",
+    "llm": "dpo",
+    "mode": "logic",
+    "examples": "0",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0
+  },
+  {
+    "onto": "DemCare",
+    "llm": "dpo",
+    "mode": "logic",
+    "examples": "3",
+    "precision": 0.02631578947368421,
+    "recall": 0.018691588785046728,
+    "f1_score": 0.02185792349726776
+  },
+  {
+    "onto": "DemCare",
+    "llm": "solar",
+    "mode": "logic",
+    "examples": "0",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0
+  },
+  {
+    "onto": "DemCare",
+    "llm": "solar",
+    "mode": "logic",
+    "examples": "3",
+    "precision": 0.0017211703958691911,
+    "recall": 0.009345794392523364,
+    "f1_score": 0.0029069767441860465
+  },
+  {
+    "onto": "DemCare",
+    "llm": "una",
+    "mode": "logic",
+    "examples": "0",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0
+  },
+  {
+    "onto": "DemCare",
+    "llm": "una",
+    "mode": "logic",
+    "examples": "3",
+    "precision": 0.0047169811320754715,
+    "recall": 0.028037383177570093,
+    "f1_score": 0.00807537012113055
+  },
+  {
+    "onto": "DemCare",
+    "llm": "zephyr",
+    "mode": "logic",
+    "examples": "0",
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0
+  },
+  {
+    "onto": "DemCare",
+    "llm": "zephyr",
+    "mode": "logic",
+    "examples": "3",
+    "precision": 0,
+    "recall": 0,
+    "f1_score": 0
+  }
+]

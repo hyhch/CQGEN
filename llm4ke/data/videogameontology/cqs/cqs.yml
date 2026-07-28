@@ -1,0 +1,144 @@
+ontology:
+  name: videogameontology
+  cqs:
+  - ID: videogameontology_1
+    question: What is the username of the player?
+  - ID: videogameontology_2
+    question: Who are the friends of the player?
+  - ID: videogameontology_3
+    question: Who are the friends that play other games as well with this player?
+  - ID: videogameontology_4
+    question: Who are the most active players in the game?
+  - ID: videogameontology_5
+    question: What are the achievements of my friends?
+  - ID: videogameontology_6
+    question: Who does the player play with?
+  - ID: videogameontology_7
+    question: What are the achievements your friend has received?
+  - ID: videogameontology_8
+    question: What achievements does a game have?
+  - ID: videogameontology_9
+    question: How many hours has this game been played in total?
+  - ID: videogameontology_10
+    question: What are the types of achievements in this game?
+  - ID: videogameontology_11
+    question: What are the types of achievements a game can have?
+  - ID: videogameontology_12
+    question: What is the genre of the game?
+  - ID: videogameontology_13
+    question: What items exist in a game?
+  - ID: videogameontology_14
+    question: Who is the creator of the game?
+  - ID: videogameontology_15
+    question: What is the release date of the game?
+  - ID: videogameontology_16
+    question: What are the games similar to this one?
+  - ID: videogameontology_17
+    question: List all games of a certain Genre?
+  - ID: videogameontology_18
+    question: What type is the item of?
+  - ID: videogameontology_19
+    question: What abilities does an item have?
+  - ID: videogameontology_20
+    question: 9. What is the fastest car in the game?
+  - ID: videogameontology_21
+    question: How much damage does a weapon deal?
+  - ID: videogameontology_22
+    question: Who has the best kill count in the game?
+  - ID: videogameontology_23
+    question: Who are the top 3 players in the game?
+  - ID: videogameontology_24
+    question: What games has the player played?
+  - ID: videogameontology_25
+    question: What items does the player have?
+  - ID: videogameontology_26
+    question: What achievements of a certain type does the player have?
+  - ID: videogameontology_27
+    question: 'What kind of games are owned by players that have certain achievement? '
+  - ID: videogameontology_28
+    question: What is the last game a player has played?
+  - ID: videogameontology_29
+    question: How big percentage of players have a certain item in the game?
+  - ID: videogameontology_30
+    question: What are the most common genres played by players with a certain character
+      class in a game?
+  - ID: videogameontology_31
+    question: What is the preferred weapon of players with a certain character class?
+  - ID: videogameontology_32
+    question: What type of weapon are players using who win mostly in the game?
+  - ID: videogameontology_33
+    question: When was the last time a certain player played this game?
+  - ID: videogameontology_34
+    question: In how many games does the player have all the achievements?
+  - ID: videogameontology_35
+    question: What is the favorite map of the player in the game?
+  - ID: videogameontology_36
+    question: What is the most played map in a game?
+  - ID: videogameontology_37
+    question: What is the difficulty level the player uses in certain game genres?
+  - ID: videogameontology_38
+    question: How many times have I killed someone in a game?
+  - ID: videogameontology_39
+    question: How many goals did I score in FIFA 15?
+  - ID: videogameontology_40
+    question: What is the most common level in the game where players stop playing?
+  - ID: videogameontology_41
+    question: How big percentage of players have made a certain decision in the game?
+  - ID: videogameontology_42
+    question: How big percentage of players skip the cutscenes?
+  - ID: videogameontology_43
+    question: How many players mute the game music?
+  - ID: videogameontology_44
+    question: After gaining an item in the game, how many players use it?
+  - ID: videogameontology_45
+    question: How many times players have died in a level?
+  - ID: videogameontology_46
+    question: How big percentage of players use the item in question in other linked
+      games?
+  - ID: videogameontology_47
+    question: 'How many players have moved from game to another when they have seen
+      a linked_x000D_
+
+      commercial?'
+  - ID: videogameontology_48
+    question: 'What is the first action done by the player after an event? '
+  - ID: videogameontology_49
+    question: What is the location in map where the players die the most?
+  - ID: videogameontology_50
+    question: What equipment does a player have in a game?
+  - ID: videogameontology_51
+    question: What consumable items does a player have in game?
+  - ID: videogameontology_52
+    question: What is the most used item in the game?
+  - ID: videogameontology_53
+    question: ' What are the games where a player can use this item?'
+  - ID: videogameontology_54
+    question: "How many players have made in\xADapp purchases?"
+  - ID: videogameontology_55
+    question: How many players who have already spent money in this game, spend money
+      again?
+  - ID: videogameontology_56
+    question: "What is the likelihood that a player who has purchased in\xADapp purchase\
+      \ in one game, do_x000D_\nso in the other one?"
+  - ID: videogameontology_57
+    question: "If a player is given free item in the game, how likely are they to\
+      \ make an in\xADapp purchase?"
+  - ID: videogameontology_58
+    question: "What type of items are the most traded ones in the game\u2019s marketplace?"
+  - ID: videogameontology_59
+    question: "How much money an average player spends in in\xADapp purchases?"
+  - ID: videogameontology_60
+    question: "What time are most of the in\xADapp purchases done?"
+  - ID: videogameontology_61
+    question: Where do the most paying customers live in?
+  - ID: videogameontology_62
+    question: "How long does an average player spend in the game before making first\
+      \ in-\xADapp purchase?"
+  - ID: videogameontology_63
+    question: "Where do the players live who have not made any in\xAD-app purchases?"
+  - ID: videogameontology_64
+    question: "Where do the players who have done the most in\xAD-app purchases live?"
+  - ID: videogameontology_65
+    question: How many players clicked an ingame advertisement?
+  - ID: videogameontology_66
+    question: How many players start the other game after seeing an advertisement?

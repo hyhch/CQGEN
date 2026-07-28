@@ -1,0 +1,8 @@
+langchain-core
+langchain-openai
+pyyaml>=6.0
+rdflib>=7.0
+sentence-transformers
+pandas
+openpyxl
+tqdm

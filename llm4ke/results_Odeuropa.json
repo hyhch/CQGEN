@@ -1,0 +1,56 @@
+[
+    {
+        "onto": "Odeuropa",
+        "llm": "qwenmax",
+        "mode": "logic",
+        "examples": "0",
+        "precision": 0.036585365853658534,
+        "recall": 0.04054054054054054,
+        "f1_score": 0.03846153846153846
+    },
+    {
+        "onto": "Odeuropa",
+        "llm": "qwenmax",
+        "mode": "logic",
+        "examples": "5",
+        "precision": 0.9041095890410958,
+        "recall": 0.8918918918918919,
+        "f1_score": 0.8979591836734694
+    },
+    {
+        "onto": "Odeuropa",
+        "llm": "qwenmax",
+        "mode": "classes_and_properties",
+        "examples": "0",
+        "precision": 0.0967741935483871,
+        "recall": 0.12162162162162163,
+        "f1_score": 0.10778443113772455
+    },
+    {
+        "onto": "Odeuropa",
+        "llm": "qwenmax",
+        "mode": "classes_and_properties",
+        "examples": "5",
+        "precision": 0.5357142857142857,
+        "recall": 0.8108108108108109,
+        "f1_score": 0.6451612903225806
+    },
+    {
+        "onto": "Odeuropa",
+        "llm": "qwenmax",
+        "mode": "all_classes",
+        "examples": "0",
+        "precision": 0.0547945205479452,
+        "recall": 0.05405405405405406,
+        "f1_score": 0.054421768707483
+    },
+    {
+        "onto": "Odeuropa",
+        "llm": "qwenmax",
+        "mode": "all_classes",
+        "examples": "5",
+        "precision": 0.25,
+        "recall": 0.35135135135135137,
+        "f1_score": 0.2921348314606742
+    }
+]

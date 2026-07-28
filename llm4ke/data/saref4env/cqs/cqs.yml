@@ -1,0 +1,127 @@
+ontology:
+  name: saref4env
+  cqs:
+  - ID: saref4env_568
+    question: What is a TESS?
+  - ID: saref4env_569
+    question: Which type of sensor is a TESS?
+  - ID: saref4env_570
+    question: What is a photometer?
+  - ID: saref4env_571
+    question: What is the main component of TESS?
+  - ID: saref4env_572
+    question: Which are the communication interfaces available in TESS?
+  - ID: saref4env_573
+    question: Which components of TESS are sensors?
+  - ID: saref4env_574
+    question: Which properties can be measured by a photometer?
+  - ID: saref4env_575
+    question: Each reading in a TESS has a timestamp
+  - ID: saref4env_576
+    question: Which are the properties observed by a TESS?
+  - ID: saref4env_577
+    question: Physical objects can contain devices
+  - ID: saref4env_578
+    question: A sensor could be a person
+  - ID: saref4env_579
+    question: Devices might have different versions and revision numbers
+  - ID: saref4env_580
+    question: Which type(s) of RS232 is supported by TESS?
+  - ID: saref4env_581
+    question: Which type(s) of Bluetooth is supported by TESS?
+  - ID: saref4env_582
+    question: Which type(s) of WiFi is supported by TESS?
+  - ID: saref4env_583
+    question: Which are the components of TESS?
+  - ID: saref4env_584
+    question: Which hardware elements is a TESS connected to?
+  - ID: saref4env_585
+    question: Which is the communication protocol used by TESS?
+  - ID: saref4env_586
+    question: What is the transmission period of the TESS?
+  - ID: saref4env_587
+    question: A device is located in a given geographical point defined by a latitude
+      and a longitude
+  - ID: saref4env_588
+    question: A device position is defined using the azimuth and altitude horizontal
+      coordinates
+  - ID: saref4env_589
+    question: A sensing device takes measures following a frequency
+  - ID: saref4env_590
+    question: A device can be actionable or not
+  - ID: saref4env_591
+    question: A device is part of a system
+  - ID: saref4env_592
+    question: An actuator is a type of device
+  - ID: saref4env_593
+    question: A device has energy consumption
+  - ID: saref4env_594
+    question: A lamppost uses a given light generation method
+  - ID: saref4env_595
+    question: A lamppost has energy consumption
+  - ID: saref4env_596
+    question: A lamppost might have a light shield
+  - ID: saref4env_597
+    question: What is a lamppost?
+  - ID: saref4env_598
+    question: A light has a geometry
+  - ID: saref4env_599
+    question: A light is projected in a given direction
+  - ID: saref4env_600
+    question: A light is projected in a given angle
+  - ID: saref4env_601
+    question: A light is projected from a given height
+  - ID: saref4env_602
+    question: A light has a colour
+  - ID: saref4env_603
+    question: A light can have flash
+  - ID: saref4env_604
+    question: What can be considered as physical objects?
+  - ID: saref4env_605
+    question: A digital representation of an object has a name
+  - ID: saref4env_606
+    question: A digital representation of an object has a description
+  - ID: saref4env_607
+    question: A physical object has a description
+  - ID: saref4env_608
+    question: A digital representation of an object has a unique identifier
+  - ID: saref4env_609
+    question: A digital representation of an object can have zero or more tags
+  - ID: saref4env_610
+    question: A digital representation of an object has exactly one creation date
+  - ID: saref4env_611
+    question: A digital representation of an object includes the date in which some
+      characteristic of object was last modified (e.g., its geolocation)
+  - ID: saref4env_612
+    question: A sensing device produces a log of property observations
+  - ID: saref4env_613
+    question: A log indicates which is its last value
+  - ID: saref4env_614
+    question: Values in a log are related to the time in which they were observed
+  - ID: saref4env_615
+    question: A physical representation of an object includes an observation log for
+      each property to be observed
+  - ID: saref4env_616
+    question: An observation value is measured in a given unit
+  - ID: saref4env_617
+    question: What is a service?
+  - ID: saref4env_618
+    question: Physical objects can have digital representations that are accessible
+      through services
+  - ID: saref4env_619
+    question: A service can expose either none or multiple digital representations
+      of an object
+  - ID: saref4env_620
+    question: A digital representation of an object is exposed at maximum by one service
+  - ID: saref4env_621
+    question: A digital representation of an object performs actions
+  - ID: saref4env_622
+    question: An action manages an actuator
+  - ID: saref4env_623
+    question: An action of a digital representation of an object can keep an action
+      log
+  - ID: saref4env_624
+    question: A property of a digital representation of an object can keep an observation
+      log
+  - ID: saref4env_625
+    question: A digital representation of an object encapsulates a system

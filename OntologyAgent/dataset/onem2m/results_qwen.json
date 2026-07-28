@@ -1,0 +1,3473 @@
+{
+    "file_name": "onem2m.owl",
+    "description": "Ontologies and their OWL representations are used in oneM2M to provide syntactic and semantic interoperability between oneM2M and external systems. The oneM2M Base Ontology is described in TS-0012.",
+    "competency_questions": [
+        "A thing is an entity that can be identified in the oneM2M System.",
+        "A thing may have properties",
+        "A thing can have relations to other things",
+        "An aspect could be a (physical or non-physical) entity or it could be a quality",
+        "An aspect can have metadata",
+        "Metadata contain data (like units, precision-ranges â¦) about a variable or about an aspect",
+        "A device is a thing that is able to interact electronically with its environment via a network",
+        "A device may be a physical or non-physical entity",
+        "A device performs one or more functionalities in order to accomplish a particular task",
+        "A device has one or more services that expose in the network its functionalities",
+        "A device can be composed of several (sub-)devices",
+        "An interworked device is a device that does not support oneM2M interfaces and can only be accessed from the oneM2M System by communicating with a \"proxied\" (virtual) device that has been created by an interworking proxy entity",
+        "An interworked device is part of an area network",
+        "An area network is a network that provides data transport services between an interworked device and the oneM2M System",
+        "An area network follows an standard that defines its physical properties",
+        "An area network follows a communication protocol",
+        "An area network follows a profile",
+        "A service is an electronic representation of a functionality in a network",
+        "A service can expose one or more functionalities",
+        "A service can be composed of independent (sub-)services",
+        "A service has an operation",
+        "A service has an input data point",
+        "A service has an output data point",
+        "A functionality represents the functionality necessary to accomplish the task for which a device is designed",
+        "A functionality refers to (e.g. observes or influences) some real-world aspect(s)",
+        "A functionality has commands that allow human users to influence/observe such functionality",
+        "A controlling functionality represents a functionality that has impacts on the real world, but does not gather data",
+        "A measuring functionality represents a functionality that has no impacts on the real world, but only gathers data",
+        "An operation is the means of a service to communicate in a procedure-type manner over the network (i.e. transmit data to/from other devices)",
+        "An operation is the -machine interpretable- exposure of a -human understandable- command to a network",
+        "An operation may receive input data from input data points (persistent entities)",
+        "An operation may receive data from operation inputs (transient entities that are deleted when the operation finishes)",
+        "An operation may produce output data into output data points (persistent entities)",
+        "An operation may produce data into operation outputs (transient entities that are deleted when the operation finishes)",
+        "An operation has an operation state that allows a oneM2M entity to get informed on the progress of that operation",
+        "An operation has a method",
+        "An operation has a target URI",
+        "A command represents an action that can be performed to support a functionality",
+        "A command has as input one or more operation inputs",
+        "A command has as output one or more operation outputs",
+        "An operation input describes an input of an operation and also describes the input of a command",
+        "An operation output describes an output of an operation and also describes the output of a command",
+        "An operation state describes the current state of an operation",
+        "An operation state is a simple type variable",
+        "An operation state has exactly one data restriction pattern",
+        "An input data point is a variable of a service that is accessed by a RESTful device in its environment and that the device reads out autonomously (e.g. at periodic times)",
+        "An output data point is a variable of a service that is set by a RESTful device in its environment and that the device updates autonomously (e.g. at periodic times)",
+        "A variable describes an entity that stores some data (e.g. integers, text, etc., or structured data) that can change over time",
+        "A variable describes a real-world aspect",
+        "A variable can have metadata",
+        "A variable can be structured using other variables",
+        "A variable may have a value (useful for values that are relatively static)",
+        "A variable has a CRUD method through which the instantiation of the variable value can be manipulated",
+        "A variable has a URI of a resource through which the instantiation of the value of the variable can be manipulated",
+        "A simple type variable is a variable that only consists of variables of simple XML types like xsd:integer, xsd:string, etc., potentially including restrictions",
+        "A simple type variable contains the name of the attribute of the resource that is referenced with the target URI and that stores the value of the simple type variable",
+        "A simple type variable has exactly one datatype",
+        "A simple type variable has a data restriction"
+    ],
+    "namespaces": [
+        {
+            "prefix": "brick",
+            "url": "https://brickschema.org/schema/Brick#"
+        },
+        {
+            "prefix": "csvw",
+            "url": "http://www.w3.org/ns/csvw#"
+        },
+        {
+            "prefix": "dc",
+            "url": "http://purl.org/dc/elements/1.1/"
+        },
+        {
+            "prefix": "dcat",
+            "url": "http://www.w3.org/ns/dcat#"
+        },
+        {
+            "prefix": "dcmitype",
+            "url": "http://purl.org/dc/dcmitype/"
+        },
+        {
+            "prefix": "dcterms",
+            "url": "http://purl.org/dc/terms/"
+        },
+        {
+            "prefix": "dcam",
+            "url": "http://purl.org/dc/dcam/"
+        },
+        {
+            "prefix": "doap",
+            "url": "http://usefulinc.com/ns/doap#"
+        },
+        {
+            "prefix": "foaf",
+            "url": "http://xmlns.com/foaf/0.1/"
+        },
+        {
+            "prefix": "geo",
+            "url": "http://www.opengis.net/ont/geosparql#"
+        },
+        {
+            "prefix": "odrl",
+            "url": "http://www.w3.org/ns/odrl/2/"
+        },
+        {
+            "prefix": "org",
+            "url": "http://www.w3.org/ns/org#"
+        },
+        {
+            "prefix": "prof",
+            "url": "http://www.w3.org/ns/dx/prof/"
+        },
+        {
+            "prefix": "prov",
+            "url": "http://www.w3.org/ns/prov#"
+        },
+        {
+            "prefix": "qb",
+            "url": "http://purl.org/linked-data/cube#"
+        },
+        {
+            "prefix": "schema",
+            "url": "https://schema.org/"
+        },
+        {
+            "prefix": "sh",
+            "url": "http://www.w3.org/ns/shacl#"
+        },
+        {
+            "prefix": "skos",
+            "url": "http://www.w3.org/2004/02/skos/core#"
+        },
+        {
+            "prefix": "sosa",
+            "url": "http://www.w3.org/ns/sosa/"
+        },
+        {
+            "prefix": "ssn",
+            "url": "http://www.w3.org/ns/ssn/"
+        },
+        {
+            "prefix": "time",
+            "url": "http://www.w3.org/2006/time#"
+        },
+        {
+            "prefix": "vann",
+            "url": "http://purl.org/vocab/vann/"
+        },
+        {
+            "prefix": "void",
+            "url": "http://rdfs.org/ns/void#"
+        },
+        {
+            "prefix": "wgs",
+            "url": "https://www.w3.org/2003/01/geo/wgs84_pos#"
+        },
+        {
+            "prefix": "owl",
+            "url": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+            "prefix": "rdf",
+            "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+            "prefix": "rdfs",
+            "url": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+            "prefix": "xsd",
+            "url": "http://www.w3.org/2001/XMLSchema#"
+        },
+        {
+            "prefix": "xml",
+            "url": "http://www.w3.org/XML/1998/namespace"
+        },
+        {
+            "prefix": "BO",
+            "url": "https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#"
+        }
+    ],
+    "triples": [
+        [
+            "BO:Command",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:InputDataPoint",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasSubStructure",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasInput",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:convertsTo",
+            "rdfs:range",
+            "BO:Variable"
+        ],
+        [
+            "BO:hasConversion",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:OperationOutput",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:refersTo",
+            "rdfs:domain",
+            "BO:Function"
+        ],
+        [
+            "BO:hasDataRestriction_pattern",
+            "rdfs:subPropertyOf",
+            "BO:hasDataRestriction"
+        ],
+        [
+            "BO:SET_OutputDataPoint",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasOutputDataPoint",
+            "rdfs:domain",
+            "BO:Service"
+        ],
+        [
+            "BO:oneM2MMethod",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasDataRestriction_length",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:OperationOutput",
+            "rdfs:subClassOf",
+            "BO:Variable"
+        ],
+        [
+            "BO:oneM2MAttribute",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:exposesCommand",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:OperationInput",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasOutput",
+            "rdfs:range",
+            "BO:OperationOutput"
+        ],
+        [
+            "BO:resourceDescriptorLink",
+            "rdfs:range",
+            "xsd:anyURI"
+        ],
+        [
+            "BO:resourceDescriptorLink",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            "BO:hasCommand",
+            "rdfs:domain",
+            "BO:Function"
+        ],
+        [
+            "BO:isDataList",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:hasFunction",
+            "rdfs:range",
+            "BO:Function"
+        ],
+        [
+            "BO:hasDataRestriction_maxInclusive",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:ThingProperty",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:StructuredTypeVariable",
+            "rdfs:subClassOf",
+            "BO:Variable"
+        ],
+        [
+            "BO:hasDataRestriction_pattern",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:isDataList",
+            "rdfs:range",
+            "xsd:boolean"
+        ],
+        [
+            "BO:convertsTo",
+            "rdfs:domain",
+            "BO:VariableConversion"
+        ],
+        [
+            "BO:InterworkedDevice",
+            "rdfs:subClassOf",
+            "BO:Device"
+        ],
+        [
+            "BO:hasValue",
+            "rdfs:range",
+            "rdfs:Literal"
+        ],
+        [
+            "BO:hasSubStructure",
+            "rdfs:range",
+            "BO:Variable"
+        ],
+        [
+            "BO:isPartOf",
+            "rdfs:range",
+            "BO:AreaNetwork"
+        ],
+        [
+            "BO:hasDataRestriction_maxInclusive",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasMetaData",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:netTechnologyProfile",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasCommand",
+            "rdfs:range",
+            "BO:Command"
+        ],
+        [
+            "BO:refersTo",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasMetaData",
+            "rdfs:range",
+            "BO:MetaData"
+        ],
+        [
+            "BO:hasSubService",
+            "rdfs:domain",
+            "BO:Service"
+        ],
+        [
+            "BO:hasThingAnnotation",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasDataRestriction_minLength",
+            "rdfs:subPropertyOf",
+            "BO:hasDataRestriction"
+        ],
+        [
+            "<https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl>",
+            "owl:versionIRI",
+            "<https://git.onem2m.org/MAS/BaseOntology/raw/3_6_0/base_ontology.owl>"
+        ],
+        [
+            "BO:netTechnologyCommunicationProtocol",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:SET_OutputDataPoint",
+            "rdfs:subClassOf",
+            "BO:Operation"
+        ],
+        [
+            "BO:GET_InputDataPoint",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:consistsOf",
+            "rdfs:domain",
+            "BO:Device"
+        ],
+        [
+            "BO:hasDataRestriction_length",
+            "rdfs:range",
+            "xsd:nonNegativeInteger"
+        ],
+        [
+            "BO:hasDataRestriction_length",
+            "rdfs:subPropertyOf",
+            "BO:hasDataRestriction"
+        ],
+        [
+            "BO:hasThingProperty",
+            "rdfs:domain",
+            "BO:Thing"
+        ],
+        [
+            "BO:exposesFunction",
+            "rdfs:domain",
+            "BO:Service"
+        ],
+        [
+            "BO:exposesCommand",
+            "rdfs:range",
+            "BO:Command"
+        ],
+        [
+            "BO:oneM2MMethod",
+            "rdfs:range",
+            "rdf:PlainLiteral"
+        ],
+        [
+            "<https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl>",
+            "rdf:type",
+            "owl:Ontology"
+        ],
+        [
+            "BO:hasInputDataPoint",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasDataRestriction_minLength",
+            "rdfs:range",
+            "xsd:nonNegativeInteger"
+        ],
+        [
+            "BO:OutputDataPoint",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:GET_InputDataPoint",
+            "rdfs:subClassOf",
+            "BO:Operation"
+        ],
+        [
+            "BO:hasDataRestriction_minLength",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:consistsOf",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasDataRestriction_maxLength",
+            "rdfs:range",
+            "xsd:nonNegativeInteger"
+        ],
+        [
+            "BO:hasDataRestriction_minExclusive",
+            "rdfs:subPropertyOf",
+            "BO:hasDataRestriction"
+        ],
+        [
+            "BO:OutputDataPoint",
+            "rdfs:subClassOf",
+            "BO:Variable"
+        ],
+        [
+            "BO:hasThingAnnotation",
+            "rdfs:domain",
+            "BO:Thing"
+        ],
+        [
+            "BO:hasDataRestriction_maxLength",
+            "rdfs:subPropertyOf",
+            "BO:hasDataRestriction"
+        ],
+        [
+            "BO:hasService",
+            "rdfs:domain",
+            "BO:Device"
+        ],
+        [
+            "BO:hasThingProperty",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:netTechnologyCommunicationProtocol",
+            "rdfs:domain",
+            "BO:AreaNetwork"
+        ],
+        [
+            "BO:InputDataPoint",
+            "rdfs:subClassOf",
+            "BO:Variable"
+        ],
+        [
+            "BO:describes",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasThingAnnotation",
+            "rdfs:range",
+            "rdfs:Literal"
+        ],
+        [
+            "BO:hasDataType",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasThingRelation",
+            "rdfs:range",
+            "BO:Thing"
+        ],
+        [
+            "BO:netTechnologyPhysicalStandard",
+            "rdfs:range",
+            "rdf:PlainLiteral"
+        ],
+        [
+            "BO:hasDataRestriction",
+            "rdfs:range",
+            "rdf:PlainLiteral"
+        ],
+        [
+            "BO:OperationInput",
+            "rdfs:subClassOf",
+            "BO:Variable"
+        ],
+        [
+            "BO:netTechnologyProfile",
+            "rdfs:domain",
+            "BO:AreaNetwork"
+        ],
+        [
+            "BO:SimpleTypeVariable",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasOutputDataPoint",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasDataType",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:isPartOf",
+            "rdfs:domain",
+            "BO:InterworkedDevice"
+        ],
+        [
+            "BO:hasService",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasDataRestriction_pattern",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:hasDataRestriction_minExclusive",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:InterworkedDevice",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasOperation",
+            "rdfs:range",
+            "BO:Operation"
+        ],
+        [
+            "BO:hasValue",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasDataRestriction_maxLength",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasDataRestriction_maxExclusive",
+            "rdfs:subPropertyOf",
+            "BO:hasDataRestriction"
+        ],
+        [
+            "BO:Function",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:ControllingFunction",
+            "rdfs:subClassOf",
+            "BO:Function"
+        ],
+        [
+            "BO:hasFunction",
+            "rdfs:domain",
+            "BO:Device"
+        ],
+        [
+            "BO:oneM2MAttribute",
+            "rdfs:range",
+            "rdf:PlainLiteral"
+        ],
+        [
+            "BO:hasInput",
+            "rdfs:range",
+            "BO:OperationInput"
+        ],
+        [
+            "BO:hasService",
+            "rdfs:range",
+            "BO:Service"
+        ],
+        [
+            "BO:ThingProperty",
+            "rdfs:subClassOf",
+            "BO:Variable"
+        ],
+        [
+            "BO:hasOutput",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:oneM2MTargetURI",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:exposesFunction",
+            "rdfs:range",
+            "BO:Function"
+        ],
+        [
+            "BO:hasConversion",
+            "rdfs:domain",
+            "BO:Variable"
+        ],
+        [
+            "BO:Device",
+            "rdfs:subClassOf",
+            "BO:Thing"
+        ],
+        [
+            "BO:hasInputDataPoint",
+            "rdfs:range",
+            "BO:InputDataPoint"
+        ],
+        [
+            "BO:hasDataRestriction_minLength",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:VariableConversion",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:resourceDescriptorLink",
+            "rdfs:domain",
+            "owl:Thing"
+        ],
+        [
+            "BO:hasValue",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:hasDataRestriction_minInclusive",
+            "rdfs:subPropertyOf",
+            "BO:hasDataRestriction"
+        ],
+        [
+            "BO:describes",
+            "rdfs:range",
+            "BO:Aspect"
+        ],
+        [
+            "BO:ControllingFunction",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:exposesFunction",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:isPartOf",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:isDataList",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:MeasuringFunction",
+            "rdfs:subClassOf",
+            "BO:Function"
+        ],
+        [
+            "BO:hasDataRestriction_maxInclusive",
+            "rdfs:subPropertyOf",
+            "BO:hasDataRestriction"
+        ],
+        [
+            "BO:convertsTo",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:Service",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasSubStructure",
+            "rdfs:domain",
+            "BO:StructuredTypeVariable"
+        ],
+        [
+            "BO:oneM2MTargetURI",
+            "rdfs:range",
+            "rdfs:Literal"
+        ],
+        [
+            "BO:SimpleTypeVariable",
+            "owl:disjointWith",
+            "BO:StructuredTypeVariable"
+        ],
+        [
+            "BO:hasDataRestriction_minInclusive",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:StructuredTypeVariable",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasFunction",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:MeasuringFunction",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:Variable",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasDataRestriction_length",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasInputDataPoint",
+            "rdfs:domain",
+            "BO:Service"
+        ],
+        [
+            "BO:hasDataRestriction_maxExclusive",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:Operation",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasOutputDataPoint",
+            "rdfs:range",
+            "BO:OutputDataPoint"
+        ],
+        [
+            "BO:hasDataRestriction_minExclusive",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:netTechnologyPhysicalStandard",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:oneM2MAttribute",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasDataRestriction_minInclusive",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasDataRestriction",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasDataRestriction_maxLength",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:hasSubService",
+            "rdfs:range",
+            "BO:Service"
+        ],
+        [
+            "BO:hasCommand",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasDataRestriction_pattern",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            "BO:hasConversion",
+            "rdfs:range",
+            "BO:VariableConversion"
+        ],
+        [
+            "BO:hasThingRelation",
+            "rdfs:domain",
+            "BO:Thing"
+        ],
+        [
+            "BO:Thing",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:consistsOf",
+            "rdfs:range",
+            "BO:Device"
+        ],
+        [
+            "BO:hasOperation",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:SimpleTypeVariable",
+            "rdfs:subClassOf",
+            "BO:Variable"
+        ],
+        [
+            "BO:describes",
+            "rdfs:domain",
+            "BO:Variable"
+        ],
+        [
+            "BO:hasThingProperty",
+            "rdfs:range",
+            "BO:ThingProperty"
+        ],
+        [
+            "BO:Aspect",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasThingRelation",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasSubService",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:netTechnologyCommunicationProtocol",
+            "rdfs:range",
+            "rdf:PlainLiteral"
+        ],
+        [
+            "BO:AreaNetwork",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:refersTo",
+            "rdfs:range",
+            "BO:Aspect"
+        ],
+        [
+            "BO:Device",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:MetaData",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:netTechnologyPhysicalStandard",
+            "rdfs:domain",
+            "BO:AreaNetwork"
+        ],
+        [
+            "BO:netTechnologyProfile",
+            "rdfs:range",
+            "rdf:PlainLiteral"
+        ],
+        [
+            "BO:hasDataRestriction",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:hasOperation",
+            "rdfs:domain",
+            "BO:Service"
+        ],
+        [
+            "BO:hasDataRestriction_maxExclusive",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ]
+    ],
+    "retrofitted_competency_questions": [
+        "[Simple] What is the value of a simple type variable?",
+        "[Simple] Can you tell me what kind of thing a ThingProperty is?",
+        "[Simple] What is the range of the hasThingAnnotation property?",
+        "[Simple] What is the domain of the hasThingProperty?",
+        "[Simple] What is the range of the oneM2MTargetURI property?",
+        "[Simple] What is the domain of the hasDataType property?",
+        "[Simple] What is the range of the hasThingRelation property?",
+        "[Simple] What is the domain of the hasValue property?",
+        "[Simple] What is the range of the hasValue property?",
+        "[Intermediate] Which things have a specific annotation?",
+        "[Intermediate] What are the properties of a particular thing?",
+        "[Intermediate] What things are related to a specific thing?",
+        "[Intermediate] What data types are associated with a simple type variable?",
+        "[Intermediate] What is the target URI for a given oneM2M entity?",
+        "[Complex] For a given thing, what are all the annotations and their values?",
+        "[Complex] If a thing has a specific property, what are the related things that also have the same property?",
+        "[Complex] How many different data types are used by all the simple type variables in the ontology?",
+        "[Simple] What is the version IRI of the base ontology?",
+        "[Simple] What type of property is hasThingRelation?",
+        "[Simple] Can you tell me what kind of thing the base ontology is?",
+        "[Simple] What is the version of the base ontology that has the IRI <https://git.onem2m.org/MAS/BaseOntology/raw/3_6_0/base_ontology.owl>?",
+        "[Simple] What kind of thing is the base ontology with the IRI <https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl>?",
+        "[Simple] What is the main type or class that a Variable belongs to in the base ontology?",
+        "[Simple] What is the maximum length allowed for a simple type variable?",
+        "[Simple] Can a simple type variable be a data list, and if so, what type of value does it hold?",
+        "[Simple] What is the minimum length that a simple type variable can have?",
+        "[Simple] What is the pattern that a simple type variable can follow?",
+        "[Simple] What is the range of values that the \"hasDataRestriction_maxInclusive\" property can take?",
+        "[Intermediate] Which properties are used to define the restrictions on the length of a simple type variable?",
+        "[Intermediate] How can you determine if a simple type variable is a data list or not?",
+        "[Intermediate] What are the different types of data restrictions that can be applied to a simple type variable?",
+        "[Intermediate] Are there any sub-properties of \"hasDataRestriction\" that apply specifically to simple type variables?",
+        "[Complex] If a simple type variable has a specific pattern, what other data restrictions must it also satisfy to be valid?",
+        "[Complex] How do the \"hasDataRestriction_minInclusive\" and \"hasDataRestriction_maxInclusive\" properties interact to define the valid range for a simple type variable?",
+        "[Simple] What kind of values can the \"hasDataRestriction_minInclusive\" property take?",
+        "[Simple] Can you tell if a simple type variable is a data list by looking at its properties?",
+        "[Simple] What is the type of the value that the \"isDataList\" property holds for a simple type variable?",
+        "[Simple] What does the \"hasDataRestriction_maxExclusive\" property specify for a simple type variable?",
+        "[Simple] How is the \"hasDataRestriction\" property related to other data restriction properties for simple type variables?",
+        "[Simple] What is the range of values that the \"hasDataRestriction_pattern\" property can take?",
+        "[Simple] What is the relationship between a simple type variable and a variable in general?",
+        "[Simple] What type of property is \"hasDataRestriction_length\" in the context of a simple type variable?",
+        "[Simple] What kind of values can the \"hasDataRestriction_minLength\" property take?",
+        "[Simple] Can a simple type variable have both a minimum and maximum inclusive value set, and what do these properties represent?",
+        "[Simple] What does the \"hasDataRestriction_maxExclusive\" property specify for a simple type variable?",
+        "[Simple] What is the relationship between a simple type variable and a structured type variable?",
+        "[Simple] What is the type of the value that the \"isDataList\" property holds for a simple type variable?",
+        "[Simple] What is the range of values that the \"hasDataRestriction_pattern\" property can take?",
+        "[Simple] What is the type of the value that the \"hasDataRestriction_length\" property holds for a simple type variable?",
+        "[Simple] What is the relationship between a simple type variable and a variable in general?",
+        "[Simple] What is the type of the \"hasDataRestriction\" property in the context of a simple type variable?",
+        "[Simple] What kind of values can the \"hasDataRestriction_maxInclusive\" property take?",
+        "[Simple] What is the type of oneM2MMethod?",
+        "[Simple] What kind of data can a oneM2MAttribute hold?",
+        "[Simple] What is the range of resourceDescriptorLink?",
+        "[Simple] Is resourceDescriptorLink an annotation property or a datatype property?",
+        "[Simple] What is the range of isPartOf?",
+        "[Simple] What is the domain of netTechnologyProfile?",
+        "[Simple] What is the range of netTechnologyCommunicationProtocol?",
+        "[Simple] What is the domain of oneM2MAttribute?",
+        "[Simple] What is the domain of isPartOf?",
+        "[Simple] What is the range of netTechnologyPhysicalStandard?",
+        "[Simple] What is the domain of netTechnologyPhysicalStandard?",
+        "[Simple] What is the range of netTechnologyProfile?",
+        "[Intermediate] Which AreaNetworks have a specific netTechnologyProfile?",
+        "[Intermediate] What are the communication protocols used by a given AreaNetwork?",
+        "[Intermediate] What are the physical standards followed by a specific AreaNetwork?",
+        "[Intermediate] Which InterworkedDevices are part of a specific AreaNetwork?",
+        "[Intermediate] What are the attributes associated with a SimpleTypeVariable?",
+        "[Complex] For a given AreaNetwork, what are all the netTechnologyProfiles, netTechnologyCommunicationProtocols, and netTechnologyPhysicalStandards it follows?",
+        "[Complex] If an InterworkedDevice is part of multiple AreaNetworks, what are the different netTechnologyProfiles, netTechnologyCommunicationProtocols, and netTechnologyPhysicalStandards for each AreaNetwork?",
+        "[Complex] How many InterworkedDevices are part of AreaNetworks that follow a specific netTechnologyProfile and use a particular netTechnologyCommunicationProtocol?",
+        "[Simple] What is the range of oneM2MMethod?",
+        "[Simple] What type of data can netTechnologyPhysicalStandard hold?",
+        "[Simple] What kind of entity is InterworkedDevice?",
+        "[Simple] What type of data does rdf:PlainLiteral represent?",
+        "[Simple] Is isPartOf an object property or a datatype property?",
+        "[Simple] What is the domain of resourceDescriptorLink?",
+        "[Simple] What kind of entity is AreaNetwork?",
+        "[Simple] What is the domain of oneM2MMethod?",
+        "[Simple] What is the domain of netTechnologyCommunicationProtocol?",
+        "[Simple] What is the range of netTechnologyProfile?",
+        "[Simple] What is the domain of netTechnologyProfile?",
+        "[Simple] What is the range of isPartOf?",
+        "[Simple] What is the domain of netTechnologyPhysicalStandard?",
+        "[Simple] What is the range of oneM2MAttribute?",
+        "[Simple] What is the domain of oneM2MAttribute?",
+        "[Simple] What is the range of netTechnologyCommunicationProtocol?",
+        "[Simple] What is the domain of isPartOf?",
+        "[Simple] What is the range of netTechnologyPhysicalStandard?",
+        "[Simple] What kind of data can a oneM2MMethod contain?",
+        "[Simple] What type of property is resourceDescriptorLink?",
+        "[Simple] Can you tell me what kind of thing an InterworkedDevice is?",
+        "[Simple] What does the term owl:Class refer to in this context?",
+        "[Simple] What kind of data does netTechnologyPhysicalStandard hold?",
+        "[Simple] What is the purpose of the BO:SimpleTypeVariable in this system?",
+        "[Simple] What kind of value can be stored in a xsd:anyURI?",
+        "[Simple] What is the nature of the isPartOf relationship?",
+        "[Simple] What is a command in the context of this ontology?",
+        "[Simple] Can you list all the functions that a device can have?",
+        "[Simple] What kind of metadata can be associated with a device?",
+        "[Simple] What types of devices are included in the InterworkedDevice class?",
+        "[Simple] What is the relationship between a service and a function?",
+        "[Simple] What is the role of a controlling function in the ontology?",
+        "[Simple] What is the role of a measuring function in the ontology?",
+        "[Simple] What is the difference between a device and a thing in the ontology?",
+        "[Simple] What does it mean for a device to consist of another device?",
+        "[Simple] How is a command related to a function in the ontology?",
+        "[Intermediate] Which commands can be exposed by a service?",
+        "[Intermediate] What are the functions that a specific type of device, like an InterworkedDevice, can perform?",
+        "[Intermediate] Can you identify any devices that have both a controlling function and a measuring function?",
+        "[Intermediate] What kinds of commands can be associated with a measuring functionality?",
+        "[Intermediate] How many different types of functions can a single device have?",
+        "[Complex] If a device has multiple functions, how do the commands associated with each function interact with one another?",
+        "[Complex] For a given device, can you determine which commands are available for its controlling and measuring functions, and what metadata is associated with those commands?",
+        "[Complex] In the case of a device that consists of other devices, how do the commands and functions of the sub-devices relate to the overall functionality of the parent device?",
+        "[Simple] What is the purpose of the hasCommand property in this context?",
+        "[Simple] How does a service expose a function?",
+        "[Simple] Can you explain what a measuring function does in this ontology?",
+        "[Simple] What does it mean for one device to consist of another device?",
+        "[Simple] What is a command, and how is it used in this system?",
+        "[Simple] What kind of data can be stored as metadata in this ontology?",
+        "[Simple] How is metadata associated with a device in this system?",
+        "[Simple] What is the general role of a function in this ontology?",
+        "[Simple] How does the concept of a thing differ from a device in this system?",
+        "[Simple] How does a service expose a command?",
+        "[Simple] What is the purpose of the exposesFunction property in this context?",
+        "[Simple] How does a measuring function differ from other types of functions in the ontology?",
+        "[Simple] What does it mean for one device to consist of another device in terms of their functionality?",
+        "[Simple] Can you explain what a command is and how it is used in this system?",
+        "[Simple] What kind of data can be stored as metadata, and how is it relevant to devices?",
+        "[Simple] How is the hasMetaData property used to associate metadata with a device?",
+        "[Simple] What is the general role of a function in this system, and how does it relate to devices?",
+        "[Simple] How does the concept of a thing differ from a device in this system, and what are some examples of each?",
+        "[Simple] How does a service expose a command, and what does that imply for its use?",
+        "[Simple] What is an InputDataPoint?",
+        "[Simple] What is an OperationOutput?",
+        "[Simple] What is a SET_OutputDataPoint?",
+        "[Simple] What is a GET_InputDataPoint?",
+        "[Simple] What is an OutputDataPoint?",
+        "[Simple] What is an OperationInput?",
+        "[Simple] What is the relationship between hasSubStructure and Variable?",
+        "[Simple] What is the relationship between hasInput and OperationInput?",
+        "[Simple] What is the relationship between convertsTo and VariableConversion?",
+        "[Simple] What is the relationship between hasConversion and VariableConversion?",
+        "[Intermediate] Which InputDataPoints are part of a specific Operation?",
+        "[Intermediate] What are the OperationOutputs that can be converted to a specific Variable?",
+        "[Intermediate] Which SET_OutputDataPoints have a specific Operation as their substructure?",
+        "[Intermediate] What are the GET_InputDataPoints that have a specific OperationInput?",
+        "[Intermediate] Which OutputDataPoints are part of a specific Variable?",
+        "[Intermediate] What are the OperationInputs that have a specific Data Restriction?",
+        "[Complex] For a given Operation, what are all the possible InputDataPoints and their corresponding OperationInputs?",
+        "[Complex] For a given SET_OutputDataPoint, what are all the possible conversions to other Variables and their associated VariableConversions?",
+        "[Complex] For a given GET_InputDataPoint, what are all the possible OperationInputs and their associated Data Restrictions?",
+        "[Complex] For a given OutputDataPoint, what are all the possible Variables it can be part of, and what are the associated Data Restrictions?",
+        "[Simple] What is a VariableConversion?",
+        "[Simple] What does the hasDataRestriction property do?",
+        "[Simple] What is a SimpleTypeVariable?",
+        "[Simple] What is a StructuredTypeVariable?",
+        "[Simple] What does the hasDataRestriction_minExclusive property mean?",
+        "[Simple] What is the relationship between hasSubStructure and StructuredTypeVariable?",
+        "[Simple] What is the relationship between convertsTo and Variable?",
+        "[Simple] What is the relationship between hasConversion and Variable?",
+        "[Simple] What is an owl:DatatypeProperty?",
+        "[Simple] What is an owl:ObjectProperty?",
+        "[Simple] What is an owl:Class?",
+        "[Simple] What is a rdf:PlainLiteral?",
+        "[Simple] What is a VariableConversion?",
+        "[Simple] What is a Variable?",
+        "[Simple] What is a SimpleTypeVariable?",
+        "[Simple] What is a StructuredTypeVariable?",
+        "[Simple] What is a rdf:PlainLiteral?",
+        "[Simple] What does a function refer to?",
+        "[Simple] What is the output of an operation?",
+        "[Simple] What type of variable is a structured type variable?",
+        "[Simple] What kind of property is \"refersTo\"?",
+        "[Simple] What services can a device have?",
+        "[Simple] What is the range of the \"hasOperation\" property?",
+        "[Simple] What is the domain of the \"hasOutputDataPoint\" property?",
+        "[Simple] What is the range of the \"hasInputDataPoint\" property?",
+        "[Simple] What is the range of the \"describes\" property?",
+        "[Simple] What is the domain of the \"hasInputDataPoint\" property?",
+        "[Simple] What is the range of the \"hasOutputDataPoint\" property?",
+        "[Simple] What is the range of the \"hasSubService\" property?",
+        "[Simple] What is the domain of the \"hasOperation\" property?",
+        "[Simple] What is the domain of the \"describes\" property?",
+        "[Simple] What is the range of the \"refersTo\" property?",
+        "[Intermediate] Which services have input data points and output data points?",
+        "[Intermediate] What are the aspects that a variable can describe?",
+        "[Intermediate] Which services have operations and what are those operations?",
+        "[Intermediate] What are the sub-services of a given service?",
+        "[Intermediate] Which devices provide which services?",
+        "[Complex] How do the input and output data points of a service relate to its operations, and what are the specific data points for each operation?",
+        "[Complex] For a given service, what are all the aspects that its variables describe, and how do these aspects relate to the service's functionality?",
+        "[Complex] If a service has multiple sub-services, what are the operations and data points associated with each sub-service, and how do they contribute to the overall service?",
+        "[Simple] What is a VariableConversion?",
+        "[Simple] What kind of property is \"hasService\"?",
+        "[Simple] What is an OperationOutput?",
+        "[Simple] What is an InputDataPoint?",
+        "[Simple] What is an OutputDataPoint?",
+        "[Simple] What is a Variable?",
+        "[Simple] What is the domain of the \"refersTo\" property?",
+        "[Simple] What is the domain of the \"hasOutput\" property?",
+        "[Simple] What is the range of the \"hasService\" property?",
+        "[Simple] What is the range of the \"hasOperation\" property?",
+        "[Simple] What is a VariableConversion?",
+        "[Simple] Can you explain what an Aspect is in this context?",
+        "[Simple] What is the role of a Device in this system?",
+        "[Simple] What does it mean for a property to be an ObjectProperty?",
+        "[Simple] What is an OperationOutput?",
+        "[Simple] How is a StructuredTypeVariable different from other variables?",
+        "[Simple] What is an OutputDataPoint?",
+        "[Simple] What is a Variable?",
+        "[Simple] What is an InputDataPoint?",
+        "[Simple] What kind of property is \"hasService\"?",
+        "[Simple] What is an Operation?",
+        "[Simple] What is a Service?",
+        "[Simple] What is a Class in this context?",
+        "[Simple] What is a Function?",
+        "[Simple] What is the \"hasOutputDataPoint\" property used for?",
+        "[Simple] What is the \"hasOutput\" property used for?"
+    ],
+    "subgraph_chunks": [
+        {
+            "subgraph_id": 1,
+            "namespaces": [
+                {
+                    "prefix": "BO",
+                    "url": "https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                }
+            ],
+            "triples": [
+                [
+                    "BO:ThingProperty",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:hasValue",
+                    "rdfs:range",
+                    "rdfs:Literal"
+                ],
+                [
+                    "BO:hasThingAnnotation",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "<https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl>",
+                    "owl:versionIRI",
+                    "<https://git.onem2m.org/MAS/BaseOntology/raw/3_6_0/base_ontology.owl>"
+                ],
+                [
+                    "BO:hasThingProperty",
+                    "rdfs:domain",
+                    "BO:Thing"
+                ],
+                [
+                    "<https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl>",
+                    "rdf:type",
+                    "owl:Ontology"
+                ],
+                [
+                    "BO:hasThingAnnotation",
+                    "rdfs:domain",
+                    "BO:Thing"
+                ],
+                [
+                    "BO:hasThingProperty",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasThingAnnotation",
+                    "rdfs:range",
+                    "rdfs:Literal"
+                ],
+                [
+                    "BO:hasDataType",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasThingRelation",
+                    "rdfs:range",
+                    "BO:Thing"
+                ],
+                [
+                    "BO:hasDataType",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:hasValue",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:ThingProperty",
+                    "rdfs:subClassOf",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:oneM2MTargetURI",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasValue",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:oneM2MTargetURI",
+                    "rdfs:range",
+                    "rdfs:Literal"
+                ],
+                [
+                    "BO:Variable",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:hasThingRelation",
+                    "rdfs:domain",
+                    "BO:Thing"
+                ],
+                [
+                    "BO:Thing",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:hasThingProperty",
+                    "rdfs:range",
+                    "BO:ThingProperty"
+                ],
+                [
+                    "BO:hasThingRelation",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is the value of a simple type variable?",
+                "[Simple] Can you tell me what kind of thing a ThingProperty is?",
+                "[Simple] What is the range of the hasThingAnnotation property?",
+                "[Simple] What is the domain of the hasThingProperty?",
+                "[Simple] What is the range of the oneM2MTargetURI property?",
+                "[Simple] What is the domain of the hasDataType property?",
+                "[Simple] What is the range of the hasThingRelation property?",
+                "[Simple] What is the domain of the hasValue property?",
+                "[Simple] What is the range of the hasValue property?",
+                "[Intermediate] Which things have a specific annotation?",
+                "[Intermediate] What are the properties of a particular thing?",
+                "[Intermediate] What things are related to a specific thing?",
+                "[Intermediate] What data types are associated with a simple type variable?",
+                "[Intermediate] What is the target URI for a given oneM2M entity?",
+                "[Complex] For a given thing, what are all the annotations and their values?",
+                "[Complex] If a thing has a specific property, what are the related things that also have the same property?",
+                "[Complex] How many different data types are used by all the simple type variables in the ontology?",
+                "[Simple] What is the version IRI of the base ontology?",
+                "[Simple] What type of property is hasThingRelation?",
+                "[Simple] Can you tell me what kind of thing the base ontology is?",
+                "[Simple] What is the version of the base ontology that has the IRI <https://git.onem2m.org/MAS/BaseOntology/raw/3_6_0/base_ontology.owl>?",
+                "[Simple] What kind of thing is the base ontology with the IRI <https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl>?",
+                "[Simple] What is the main type or class that a Variable belongs to in the base ontology?"
+            ],
+            "qualified_questions": [
+                {
+                    "question": "[Simple] What is the value of a simple type variable?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] Can you tell me what kind of thing a ThingProperty is?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#>\n\nSELECT ?type\nWHERE {\n  BO:ThingProperty rdf:type ?type.\n}",
+                    "query_result": [
+                        "owl:Class"
+                    ]
+                },
+                {
+                    "question": "[Simple] What is the range of the hasThingAnnotation property?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#>\n\nSELECT ?range\nWHERE {\n  BO:hasThingAnnotation rdfs:range ?range\n}",
+                    "query_result": [
+                        "rdfs:Literal"
+                    ]
+                },
+                {
+                    "question": "[Simple] What is the domain of the hasThingProperty?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#>\n\nSELECT ?domain\nWHERE {\n  BO:hasThingProperty rdfs:domain ?domain .\n}",
+                    "query_result": [
+                        "BO:Thing"
+                    ]
+                },
+                {
+                    "question": "[Simple] What is the range of the oneM2MTargetURI property?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#>\n\nSELECT ?range\nWHERE {\n  BO:oneM2MTargetURI rdfs:range ?range .\n}",
+                    "query_result": [
+                        "rdfs:Literal"
+                    ]
+                },
+                {
+                    "question": "[Simple] What is the domain of the hasDataType property?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#>\n\nSELECT ?domain\nWHERE {\n  BO:hasDataType rdfs:domain ?domain .\n}",
+                    "query_result": [
+                        "BO:SimpleTypeVariable"
+                    ]
+                },
+                {
+                    "question": "[Simple] What is the range of the hasThingRelation property?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#>\n\nSELECT ?range\nWHERE {\n  BO:hasThingRelation rdfs:range ?range.\n}",
+                    "query_result": [
+                        "BO:Thing"
+                    ]
+                },
+                {
+                    "question": "[Simple] What is the domain of the hasValue property?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#>\n\nSELECT ?domain\nWHERE {\n  BO:hasValue rdfs:domain ?domain .\n}",
+                    "query_result": [
+                        "BO:SimpleTypeVariable"
+                    ]
+                },
+                {
+                    "question": "[Simple] What is the range of the hasValue property?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#>\n\nSELECT ?range\nWHERE {\n  BO:hasValue rdfs:range ?range.\n}",
+                    "query_result": [
+                        "rdfs:Literal"
+                    ]
+                },
+                {
+                    "question": "[Intermediate] Which things have a specific annotation?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] What are the properties of a particular thing?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] What things are related to a specific thing?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] What data types are associated with a simple type variable?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#>\n\nSELECT ?dataType\nWHERE {\n  ?property rdf:type owl:DatatypeProperty ;\n           rdfs:domain BO:SimpleTypeVariable ;\n           rdfs:range ?dataType .\n}",
+                    "query_result": [
+                        "rdfs:Literal"
+                    ]
+                },
+                {
+                    "question": "[Intermediate] What is the target URI for a given oneM2M entity?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] For a given thing, what are all the annotations and their values?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] If a thing has a specific property, what are the related things that also have the same property?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] How many different data types are used by all the simple type variables in the ontology?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#>\n\nSELECT (COUNT(DISTINCT ?dataType) AS ?count)\nWHERE {\n  ?simpleTypeVariable rdf:type BO:SimpleTypeVariable .\n  ?property rdf:type owl:DatatypeProperty ;\n            rdfs:domain BO:SimpleTypeVariable ;\n            rdfs:range ?dataType .\n  ?simpleTypeVariable ?property ?value .\n  FILTER(?dataType != rdfs:Literal)\n}",
+                    "query_result": [
+                        "\"0\"^^xsd:integer"
+                    ]
+                },
+                {
+                    "question": "[Simple] What is the version IRI of the base ontology?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What type of property is hasThingRelation?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#>\n\nSELECT ?propertyType\nWHERE {\n  BO:hasThingRelation rdf:type ?propertyType .\n}",
+                    "query_result": [
+                        "owl:ObjectProperty"
+                    ]
+                },
+                {
+                    "question": "[Simple] Can you tell me what kind of thing the base ontology is?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                }
+            ],
+            "uncovered_entities": [
+                "<https://git.onem2m.org/MAS/BaseOntology/raw/3_6_0/base_ontology.owl>",
+                "owl:Ontology",
+                "<https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl>",
+                "BO:Variable"
+            ]
+        },
+        {
+            "subgraph_id": 2,
+            "namespaces": [
+                {
+                    "prefix": "BO",
+                    "url": "https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "xsd",
+                    "url": "http://www.w3.org/2001/XMLSchema#"
+                }
+            ],
+            "triples": [
+                [
+                    "BO:hasDataRestriction_pattern",
+                    "rdfs:subPropertyOf",
+                    "BO:hasDataRestriction"
+                ],
+                [
+                    "BO:hasDataRestriction_length",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:isDataList",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:hasDataRestriction_maxInclusive",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:hasDataRestriction_pattern",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:isDataList",
+                    "rdfs:range",
+                    "xsd:boolean"
+                ],
+                [
+                    "BO:hasDataRestriction_maxInclusive",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasDataRestriction_minLength",
+                    "rdfs:subPropertyOf",
+                    "BO:hasDataRestriction"
+                ],
+                [
+                    "BO:hasDataRestriction_length",
+                    "rdfs:range",
+                    "xsd:nonNegativeInteger"
+                ],
+                [
+                    "BO:hasDataRestriction_length",
+                    "rdfs:subPropertyOf",
+                    "BO:hasDataRestriction"
+                ],
+                [
+                    "BO:hasDataRestriction_minLength",
+                    "rdfs:range",
+                    "xsd:nonNegativeInteger"
+                ],
+                [
+                    "BO:hasDataRestriction_minLength",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasDataRestriction_maxLength",
+                    "rdfs:range",
+                    "xsd:nonNegativeInteger"
+                ],
+                [
+                    "BO:hasDataRestriction_maxLength",
+                    "rdfs:subPropertyOf",
+                    "BO:hasDataRestriction"
+                ],
+                [
+                    "BO:SimpleTypeVariable",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:hasDataRestriction_pattern",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:hasDataRestriction_maxLength",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasDataRestriction_maxExclusive",
+                    "rdfs:subPropertyOf",
+                    "BO:hasDataRestriction"
+                ],
+                [
+                    "BO:hasDataRestriction_minLength",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:hasDataRestriction_minInclusive",
+                    "rdfs:subPropertyOf",
+                    "BO:hasDataRestriction"
+                ],
+                [
+                    "BO:isDataList",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasDataRestriction_maxInclusive",
+                    "rdfs:subPropertyOf",
+                    "BO:hasDataRestriction"
+                ],
+                [
+                    "BO:SimpleTypeVariable",
+                    "owl:disjointWith",
+                    "BO:StructuredTypeVariable"
+                ],
+                [
+                    "BO:hasDataRestriction_minInclusive",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:hasDataRestriction_length",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasDataRestriction_maxExclusive",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:hasDataRestriction_minInclusive",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasDataRestriction_maxLength",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:hasDataRestriction_pattern",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    "BO:SimpleTypeVariable",
+                    "rdfs:subClassOf",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:hasDataRestriction_maxExclusive",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is the maximum length allowed for a simple type variable?",
+                "[Simple] Can a simple type variable be a data list, and if so, what type of value does it hold?",
+                "[Simple] What is the minimum length that a simple type variable can have?",
+                "[Simple] What is the pattern that a simple type variable can follow?",
+                "[Simple] What is the range of values that the \"hasDataRestriction_maxInclusive\" property can take?",
+                "[Intermediate] Which properties are used to define the restrictions on the length of a simple type variable?",
+                "[Intermediate] How can you determine if a simple type variable is a data list or not?",
+                "[Intermediate] What are the different types of data restrictions that can be applied to a simple type variable?",
+                "[Intermediate] Are there any sub-properties of \"hasDataRestriction\" that apply specifically to simple type variables?",
+                "[Complex] If a simple type variable has a specific pattern, what other data restrictions must it also satisfy to be valid?",
+                "[Complex] How do the \"hasDataRestriction_minInclusive\" and \"hasDataRestriction_maxInclusive\" properties interact to define the valid range for a simple type variable?",
+                "[Simple] What kind of values can the \"hasDataRestriction_minInclusive\" property take?",
+                "[Simple] Can you tell if a simple type variable is a data list by looking at its properties?",
+                "[Simple] What is the type of the value that the \"isDataList\" property holds for a simple type variable?",
+                "[Simple] What does the \"hasDataRestriction_maxExclusive\" property specify for a simple type variable?",
+                "[Simple] How is the \"hasDataRestriction\" property related to other data restriction properties for simple type variables?",
+                "[Simple] What is the range of values that the \"hasDataRestriction_pattern\" property can take?",
+                "[Simple] What is the relationship between a simple type variable and a variable in general?",
+                "[Simple] What type of property is \"hasDataRestriction_length\" in the context of a simple type variable?",
+                "[Simple] What kind of values can the \"hasDataRestriction_minLength\" property take?",
+                "[Simple] Can a simple type variable have both a minimum and maximum inclusive value set, and what do these properties represent?",
+                "[Simple] What does the \"hasDataRestriction_maxExclusive\" property specify for a simple type variable?",
+                "[Simple] What is the relationship between a simple type variable and a structured type variable?",
+                "[Simple] What is the type of the value that the \"isDataList\" property holds for a simple type variable?",
+                "[Simple] What is the range of values that the \"hasDataRestriction_pattern\" property can take?",
+                "[Simple] What is the type of the value that the \"hasDataRestriction_length\" property holds for a simple type variable?",
+                "[Simple] What is the relationship between a simple type variable and a variable in general?",
+                "[Simple] What is the type of the \"hasDataRestriction\" property in the context of a simple type variable?",
+                "[Simple] What kind of values can the \"hasDataRestriction_maxInclusive\" property take?"
+            ],
+            "qualified_questions": [
+                {
+                    "question": "[Simple] What is the maximum length allowed for a simple type variable?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] Can a simple type variable be a data list, and if so, what type of value does it hold?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the minimum length that a simple type variable can have?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the pattern that a simple type variable can follow?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the range of values that the \"hasDataRestriction_maxInclusive\" property can take?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] Which properties are used to define the restrictions on the length of a simple type variable?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] How can you determine if a simple type variable is a data list or not?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] What are the different types of data restrictions that can be applied to a simple type variable?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] Are there any sub-properties of \"hasDataRestriction\" that apply specifically to simple type variables?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] If a simple type variable has a specific pattern, what other data restrictions must it also satisfy to be valid?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] How do the \"hasDataRestriction_minInclusive\" and \"hasDataRestriction_maxInclusive\" properties interact to define the valid range for a simple type variable?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What kind of values can the \"hasDataRestriction_minInclusive\" property take?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] Can you tell if a simple type variable is a data list by looking at its properties?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the type of the value that the \"isDataList\" property holds for a simple type variable?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What does the \"hasDataRestriction_maxExclusive\" property specify for a simple type variable?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] How is the \"hasDataRestriction\" property related to other data restriction properties for simple type variables?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the range of values that the \"hasDataRestriction_pattern\" property can take?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the relationship between a simple type variable and a variable in general?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What type of property is \"hasDataRestriction_length\" in the context of a simple type variable?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                }
+            ],
+            "uncovered_entities": [
+                "xsd:nonNegativeInteger",
+                "BO:isDataList",
+                "BO:hasDataRestriction",
+                "BO:hasDataRestriction_minLength",
+                "BO:hasDataRestriction_pattern",
+                "xsd:boolean",
+                "BO:hasDataRestriction_maxInclusive",
+                "BO:Variable",
+                "BO:hasDataRestriction_length",
+                "xsd:string",
+                "BO:hasDataRestriction_minInclusive",
+                "owl:Class",
+                "BO:hasDataRestriction_maxExclusive",
+                "BO:SimpleTypeVariable",
+                "BO:hasDataRestriction_maxLength",
+                "BO:StructuredTypeVariable",
+                "owl:DatatypeProperty"
+            ]
+        },
+        {
+            "subgraph_id": 3,
+            "namespaces": [
+                {
+                    "prefix": "BO",
+                    "url": "https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "xsd",
+                    "url": "http://www.w3.org/2001/XMLSchema#"
+                }
+            ],
+            "triples": [
+                [
+                    "BO:oneM2MMethod",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:oneM2MAttribute",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:resourceDescriptorLink",
+                    "rdfs:range",
+                    "xsd:anyURI"
+                ],
+                [
+                    "BO:resourceDescriptorLink",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ],
+                [
+                    "BO:isPartOf",
+                    "rdfs:range",
+                    "BO:AreaNetwork"
+                ],
+                [
+                    "BO:netTechnologyProfile",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:netTechnologyCommunicationProtocol",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:oneM2MMethod",
+                    "rdfs:range",
+                    "rdf:PlainLiteral"
+                ],
+                [
+                    "BO:netTechnologyCommunicationProtocol",
+                    "rdfs:domain",
+                    "BO:AreaNetwork"
+                ],
+                [
+                    "BO:netTechnologyPhysicalStandard",
+                    "rdfs:range",
+                    "rdf:PlainLiteral"
+                ],
+                [
+                    "BO:netTechnologyProfile",
+                    "rdfs:domain",
+                    "BO:AreaNetwork"
+                ],
+                [
+                    "BO:isPartOf",
+                    "rdfs:domain",
+                    "BO:InterworkedDevice"
+                ],
+                [
+                    "BO:oneM2MAttribute",
+                    "rdfs:range",
+                    "rdf:PlainLiteral"
+                ],
+                [
+                    "BO:resourceDescriptorLink",
+                    "rdfs:domain",
+                    "owl:Thing"
+                ],
+                [
+                    "BO:isPartOf",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:netTechnologyPhysicalStandard",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:oneM2MAttribute",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:netTechnologyCommunicationProtocol",
+                    "rdfs:range",
+                    "rdf:PlainLiteral"
+                ],
+                [
+                    "BO:AreaNetwork",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:netTechnologyPhysicalStandard",
+                    "rdfs:domain",
+                    "BO:AreaNetwork"
+                ],
+                [
+                    "BO:netTechnologyProfile",
+                    "rdfs:range",
+                    "rdf:PlainLiteral"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is the type of oneM2MMethod?",
+                "[Simple] What kind of data can a oneM2MAttribute hold?",
+                "[Simple] What is the range of resourceDescriptorLink?",
+                "[Simple] Is resourceDescriptorLink an annotation property or a datatype property?",
+                "[Simple] What is the range of isPartOf?",
+                "[Simple] What is the domain of netTechnologyProfile?",
+                "[Simple] What is the range of netTechnologyCommunicationProtocol?",
+                "[Simple] What is the domain of oneM2MAttribute?",
+                "[Simple] What is the domain of isPartOf?",
+                "[Simple] What is the range of netTechnologyPhysicalStandard?",
+                "[Simple] What is the domain of netTechnologyPhysicalStandard?",
+                "[Simple] What is the range of netTechnologyProfile?",
+                "[Intermediate] Which AreaNetworks have a specific netTechnologyProfile?",
+                "[Intermediate] What are the communication protocols used by a given AreaNetwork?",
+                "[Intermediate] What are the physical standards followed by a specific AreaNetwork?",
+                "[Intermediate] Which InterworkedDevices are part of a specific AreaNetwork?",
+                "[Intermediate] What are the attributes associated with a SimpleTypeVariable?",
+                "[Complex] For a given AreaNetwork, what are all the netTechnologyProfiles, netTechnologyCommunicationProtocols, and netTechnologyPhysicalStandards it follows?",
+                "[Complex] If an InterworkedDevice is part of multiple AreaNetworks, what are the different netTechnologyProfiles, netTechnologyCommunicationProtocols, and netTechnologyPhysicalStandards for each AreaNetwork?",
+                "[Complex] How many InterworkedDevices are part of AreaNetworks that follow a specific netTechnologyProfile and use a particular netTechnologyCommunicationProtocol?",
+                "[Simple] What is the range of oneM2MMethod?",
+                "[Simple] What type of data can netTechnologyPhysicalStandard hold?",
+                "[Simple] What kind of entity is InterworkedDevice?",
+                "[Simple] What type of data does rdf:PlainLiteral represent?",
+                "[Simple] Is isPartOf an object property or a datatype property?",
+                "[Simple] What is the domain of resourceDescriptorLink?",
+                "[Simple] What kind of entity is AreaNetwork?",
+                "[Simple] What is the domain of oneM2MMethod?",
+                "[Simple] What is the domain of netTechnologyCommunicationProtocol?",
+                "[Simple] What is the range of netTechnologyProfile?",
+                "[Simple] What is the domain of netTechnologyProfile?",
+                "[Simple] What is the range of isPartOf?",
+                "[Simple] What is the domain of netTechnologyPhysicalStandard?",
+                "[Simple] What is the range of oneM2MAttribute?",
+                "[Simple] What is the domain of oneM2MAttribute?",
+                "[Simple] What is the range of netTechnologyCommunicationProtocol?",
+                "[Simple] What is the domain of isPartOf?",
+                "[Simple] What is the range of netTechnologyPhysicalStandard?",
+                "[Simple] What kind of data can a oneM2MMethod contain?",
+                "[Simple] What type of property is resourceDescriptorLink?",
+                "[Simple] Can you tell me what kind of thing an InterworkedDevice is?",
+                "[Simple] What does the term owl:Class refer to in this context?",
+                "[Simple] What kind of data does netTechnologyPhysicalStandard hold?",
+                "[Simple] What is the purpose of the BO:SimpleTypeVariable in this system?",
+                "[Simple] What kind of value can be stored in a xsd:anyURI?",
+                "[Simple] What is the nature of the isPartOf relationship?"
+            ],
+            "qualified_questions": [
+                {
+                    "question": "[Simple] What is the type of oneM2MMethod?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What kind of data can a oneM2MAttribute hold?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the range of resourceDescriptorLink?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] Is resourceDescriptorLink an annotation property or a datatype property?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the range of isPartOf?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the domain of netTechnologyProfile?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the range of netTechnologyCommunicationProtocol?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the domain of oneM2MAttribute?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the domain of isPartOf?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the range of netTechnologyPhysicalStandard?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the domain of netTechnologyPhysicalStandard?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the range of netTechnologyProfile?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] Which AreaNetworks have a specific netTechnologyProfile?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] What are the communication protocols used by a given AreaNetwork?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] What are the physical standards followed by a specific AreaNetwork?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] Which InterworkedDevices are part of a specific AreaNetwork?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] What are the attributes associated with a SimpleTypeVariable?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] For a given AreaNetwork, what are all the netTechnologyProfiles, netTechnologyCommunicationProtocols, and netTechnologyPhysicalStandards it follows?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] If an InterworkedDevice is part of multiple AreaNetworks, what are the different netTechnologyProfiles, netTechnologyCommunicationProtocols, and netTechnologyPhysicalStandards for each AreaNetwork?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] How many InterworkedDevices are part of AreaNetworks that follow a specific netTechnologyProfile and use a particular netTechnologyCommunicationProtocol?",
+                    "sparql_query": "PREFIX BO: <http://example.org/BO#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT (COUNT(?interworkedDevice) AS ?count)\nWHERE {\n  ?interworkedDevice BO:isPartOf ?areaNetwork .\n  ?areaNetwork BO:netTechnologyProfile ?specificNetTechnologyProfile ;\n               BO:netTechnologyCommunicationProtocol ?particularNetTechnologyCommunicationProtocol .\n  FILTER(?specificNetTechnologyProfile = \"specificProfile\"^^xsd:string && ?particularNetTechnologyCommunicationProtocol = \"particularProtocol\"^^xsd:string)\n}",
+                    "query_result": [
+                        "\"0\"^^xsd:integer"
+                    ]
+                },
+                {
+                    "question": "[Simple] What is the range of oneM2MMethod?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What type of data can netTechnologyPhysicalStandard hold?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What kind of entity is InterworkedDevice?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What type of data does rdf:PlainLiteral represent?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?dataType\nWHERE {\n  ?property rdfs:range rdf:PlainLiteral .\n  BIND(rdf:PlainLiteral AS ?dataType)\n}",
+                    "query_result": [
+                        "rdf:PlainLiteral",
+                        "rdf:PlainLiteral",
+                        "rdf:PlainLiteral",
+                        "rdf:PlainLiteral",
+                        "rdf:PlainLiteral"
+                    ]
+                },
+                {
+                    "question": "[Simple] Is isPartOf an object property or a datatype property?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the domain of resourceDescriptorLink?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What kind of entity is AreaNetwork?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the domain of oneM2MMethod?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the domain of netTechnologyCommunicationProtocol?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the range of oneM2MAttribute?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What kind of data can a oneM2MMethod contain?",
+                    "sparql_query": "SELECT ?range\nWHERE {\n  BO:oneM2MMethod rdfs:range ?range.\n}",
+                    "query_result": [
+                        "rdf:PlainLiteral"
+                    ]
+                },
+                {
+                    "question": "[Simple] What type of property is resourceDescriptorLink?",
+                    "sparql_query": "SELECT ?type\nWHERE {\n  BO:resourceDescriptorLink rdf:type ?type.\n}",
+                    "query_result": [
+                        "owl:AnnotationProperty"
+                    ]
+                },
+                {
+                    "question": "[Simple] Can you tell me what kind of thing an InterworkedDevice is?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What does the term owl:Class refer to in this context?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?class\nWHERE {\n  ?class rdf:type owl:Class\n}",
+                    "query_result": [
+                        "BO:AreaNetwork"
+                    ]
+                },
+                {
+                    "question": "[Simple] What kind of data does netTechnologyPhysicalStandard hold?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the purpose of the BO:SimpleTypeVariable in this system?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What kind of value can be stored in a xsd:anyURI?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the nature of the isPartOf relationship?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                }
+            ],
+            "uncovered_entities": [
+                "owl:Thing",
+                "BO:oneM2MAttribute",
+                "BO:netTechnologyPhysicalStandard",
+                "BO:InterworkedDevice",
+                "owl:ObjectProperty",
+                "BO:SimpleTypeVariable",
+                "xsd:anyURI",
+                "owl:DatatypeProperty"
+            ]
+        },
+        {
+            "subgraph_id": 4,
+            "namespaces": [
+                {
+                    "prefix": "BO",
+                    "url": "https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                }
+            ],
+            "triples": [
+                [
+                    "BO:Command",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:exposesCommand",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasCommand",
+                    "rdfs:domain",
+                    "BO:Function"
+                ],
+                [
+                    "BO:hasFunction",
+                    "rdfs:range",
+                    "BO:Function"
+                ],
+                [
+                    "BO:InterworkedDevice",
+                    "rdfs:subClassOf",
+                    "BO:Device"
+                ],
+                [
+                    "BO:hasMetaData",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasCommand",
+                    "rdfs:range",
+                    "BO:Command"
+                ],
+                [
+                    "BO:hasMetaData",
+                    "rdfs:range",
+                    "BO:MetaData"
+                ],
+                [
+                    "BO:consistsOf",
+                    "rdfs:domain",
+                    "BO:Device"
+                ],
+                [
+                    "BO:exposesFunction",
+                    "rdfs:domain",
+                    "BO:Service"
+                ],
+                [
+                    "BO:exposesCommand",
+                    "rdfs:range",
+                    "BO:Command"
+                ],
+                [
+                    "BO:consistsOf",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:InterworkedDevice",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:Function",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:ControllingFunction",
+                    "rdfs:subClassOf",
+                    "BO:Function"
+                ],
+                [
+                    "BO:hasFunction",
+                    "rdfs:domain",
+                    "BO:Device"
+                ],
+                [
+                    "BO:exposesFunction",
+                    "rdfs:range",
+                    "BO:Function"
+                ],
+                [
+                    "BO:Device",
+                    "rdfs:subClassOf",
+                    "BO:Thing"
+                ],
+                [
+                    "BO:ControllingFunction",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:exposesFunction",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:MeasuringFunction",
+                    "rdfs:subClassOf",
+                    "BO:Function"
+                ],
+                [
+                    "BO:hasFunction",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:MeasuringFunction",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:hasCommand",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:consistsOf",
+                    "rdfs:range",
+                    "BO:Device"
+                ],
+                [
+                    "BO:Device",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:MetaData",
+                    "rdf:type",
+                    "owl:Class"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is a command in the context of this ontology?",
+                "[Simple] Can you list all the functions that a device can have?",
+                "[Simple] What kind of metadata can be associated with a device?",
+                "[Simple] What types of devices are included in the InterworkedDevice class?",
+                "[Simple] What is the relationship between a service and a function?",
+                "[Simple] What is the role of a controlling function in the ontology?",
+                "[Simple] What is the role of a measuring function in the ontology?",
+                "[Simple] What is the difference between a device and a thing in the ontology?",
+                "[Simple] What does it mean for a device to consist of another device?",
+                "[Simple] How is a command related to a function in the ontology?",
+                "[Intermediate] Which commands can be exposed by a service?",
+                "[Intermediate] What are the functions that a specific type of device, like an InterworkedDevice, can perform?",
+                "[Intermediate] Can you identify any devices that have both a controlling function and a measuring function?",
+                "[Intermediate] What kinds of commands can be associated with a measuring functionality?",
+                "[Intermediate] How many different types of functions can a single device have?",
+                "[Complex] If a device has multiple functions, how do the commands associated with each function interact with one another?",
+                "[Complex] For a given device, can you determine which commands are available for its controlling and measuring functions, and what metadata is associated with those commands?",
+                "[Complex] In the case of a device that consists of other devices, how do the commands and functions of the sub-devices relate to the overall functionality of the parent device?",
+                "[Simple] What is the purpose of the hasCommand property in this context?",
+                "[Simple] How does a service expose a function?",
+                "[Simple] Can you explain what a measuring function does in this ontology?",
+                "[Simple] What does it mean for one device to consist of another device?",
+                "[Simple] What is a command, and how is it used in this system?",
+                "[Simple] What kind of data can be stored as metadata in this ontology?",
+                "[Simple] How is metadata associated with a device in this system?",
+                "[Simple] What is the general role of a function in this ontology?",
+                "[Simple] How does the concept of a thing differ from a device in this system?",
+                "[Simple] How does a service expose a command?",
+                "[Simple] What is the purpose of the exposesFunction property in this context?",
+                "[Simple] How does a measuring function differ from other types of functions in the ontology?",
+                "[Simple] What does it mean for one device to consist of another device in terms of their functionality?",
+                "[Simple] Can you explain what a command is and how it is used in this system?",
+                "[Simple] What kind of data can be stored as metadata, and how is it relevant to devices?",
+                "[Simple] How is the hasMetaData property used to associate metadata with a device?",
+                "[Simple] What is the general role of a function in this system, and how does it relate to devices?",
+                "[Simple] How does the concept of a thing differ from a device in this system, and what are some examples of each?",
+                "[Simple] How does a service expose a command, and what does that imply for its use?"
+            ],
+            "qualified_questions": [
+                {
+                    "question": "[Simple] What is a command in the context of this ontology?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] Can you list all the functions that a device can have?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What kind of metadata can be associated with a device?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What types of devices are included in the InterworkedDevice class?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BuildingOntology#>\n\nSELECT ?deviceType\nWHERE {\n  ?deviceType rdfs:subClassOf* BO:InterworkedDevice .\n}",
+                    "query_result": [
+                        "<http://example.org/BuildingOntology#InterworkedDevice>"
+                    ]
+                },
+                {
+                    "question": "[Simple] What is the relationship between a service and a function?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the role of a controlling function in the ontology?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?role\nWHERE {\n  BO:ControllingFunction rdfs:subClassOf* ?role .\n  FILTER(?role != owl:Thing)\n}",
+                    "query_result": [
+                        "<http://example.org/BO#ControllingFunction>"
+                    ]
+                },
+                {
+                    "question": "[Simple] What is the role of a measuring function in the ontology?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the difference between a device and a thing in the ontology?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What does it mean for a device to consist of another device?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] How is a command related to a function in the ontology?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] Which commands can be exposed by a service?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] What are the functions that a specific type of device, like an InterworkedDevice, can perform?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] Can you identify any devices that have both a controlling function and a measuring function?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] What kinds of commands can be associated with a measuring functionality?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] How many different types of functions can a single device have?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT (COUNT(DISTINCT ?function) AS ?numberOfFunctions)\nWHERE {\n  ?device rdf:type BO:Device .\n  ?device BO:hasFunction ?function .\n}",
+                    "query_result": [
+                        "\"0\"^^xsd:integer"
+                    ]
+                },
+                {
+                    "question": "[Complex] If a device has multiple functions, how do the commands associated with each function interact with one another?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] For a given device, can you determine which commands are available for its controlling and measuring functions, and what metadata is associated with those commands?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] In the case of a device that consists of other devices, how do the commands and functions of the sub-devices relate to the overall functionality of the parent device?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the purpose of the hasCommand property in this context?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] How does a service expose a function?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] Can you explain what a measuring function does in this ontology?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What does it mean for one device to consist of another device?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is a command, and how is it used in this system?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What kind of data can be stored as metadata in this ontology?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] How is metadata associated with a device in this system?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the general role of a function in this ontology?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] How does the concept of a thing differ from a device in this system?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] How does a service expose a command?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the purpose of the exposesFunction property in this context?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] How does a measuring function differ from other types of functions in the ontology?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/ontology/BO#>\n\nSELECT ?measuringFunctionDifference\nWHERE {\n  {\n    SELECT (GROUP_CONCAT(DISTINCT ?measuringFunctionProperty; separator=\", \") AS ?measuringFunctionDifference)\n    WHERE {\n      BO:MeasuringFunction rdfs:subClassOf* ?superClass .\n      ?superClass rdfs:subClassOf [ \n        a owl:Restriction ;\n        owl:onProperty ?property ;\n        owl:someValuesFrom ?value\n      ] .\n      FILTER(?superClass != owl:Thing)\n    }\n  }\n  UNION\n  {\n    SELECT (GROUP_CONCAT(DISTINCT ?otherFunctionProperty; separator=\", \") AS ?measuringFunctionDifference)\n    WHERE {\n      ?otherFunction rdfs:subClassOf* BO:Function ;\n                     rdfs:subClassOf [ \n                       a owl:Restriction ;\n                       owl:onProperty ?property ;\n                       owl:someValuesFrom ?value\n                     ] .\n      FILTER(?otherFunction != BO:MeasuringFunction && ?otherFunction != owl:Thing)\n    }\n  }\n}",
+                    "query_result": [
+                        "\"\"",
+                        "\"\""
+                    ]
+                },
+                {
+                    "question": "[Simple] What does it mean for one device to consist of another device in terms of their functionality?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] Can you explain what a command is and how it is used in this system?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What kind of data can be stored as metadata, and how is it relevant to devices?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] How is the hasMetaData property used to associate metadata with a device?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the general role of a function in this system, and how does it relate to devices?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] How does the concept of a thing differ from a device in this system, and what are some examples of each?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] How does a service expose a command, and what does that imply for its use?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                }
+            ],
+            "uncovered_entities": [
+                "BO:hasCommand",
+                "BO:exposesFunction",
+                "BO:consistsOf",
+                "BO:Command",
+                "owl:Class",
+                "owl:ObjectProperty",
+                "BO:Service",
+                "BO:MetaData",
+                "BO:hasMetaData",
+                "BO:Thing",
+                "BO:exposesCommand"
+            ]
+        },
+        {
+            "subgraph_id": 5,
+            "namespaces": [
+                {
+                    "prefix": "BO",
+                    "url": "https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                }
+            ],
+            "triples": [
+                [
+                    "BO:InputDataPoint",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:hasSubStructure",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasInput",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:convertsTo",
+                    "rdfs:range",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:hasConversion",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:OperationOutput",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:SET_OutputDataPoint",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:OperationOutput",
+                    "rdfs:subClassOf",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:OperationInput",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:convertsTo",
+                    "rdfs:domain",
+                    "BO:VariableConversion"
+                ],
+                [
+                    "BO:hasSubStructure",
+                    "rdfs:range",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:SET_OutputDataPoint",
+                    "rdfs:subClassOf",
+                    "BO:Operation"
+                ],
+                [
+                    "BO:GET_InputDataPoint",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:OutputDataPoint",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:GET_InputDataPoint",
+                    "rdfs:subClassOf",
+                    "BO:Operation"
+                ],
+                [
+                    "BO:hasDataRestriction_minExclusive",
+                    "rdfs:subPropertyOf",
+                    "BO:hasDataRestriction"
+                ],
+                [
+                    "BO:OutputDataPoint",
+                    "rdfs:subClassOf",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:InputDataPoint",
+                    "rdfs:subClassOf",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:hasDataRestriction",
+                    "rdfs:range",
+                    "rdf:PlainLiteral"
+                ],
+                [
+                    "BO:OperationInput",
+                    "rdfs:subClassOf",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:hasDataRestriction_minExclusive",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasInput",
+                    "rdfs:range",
+                    "BO:OperationInput"
+                ],
+                [
+                    "BO:hasConversion",
+                    "rdfs:domain",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:convertsTo",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasSubStructure",
+                    "rdfs:domain",
+                    "BO:StructuredTypeVariable"
+                ],
+                [
+                    "BO:Operation",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:hasDataRestriction_minExclusive",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:hasDataRestriction",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasConversion",
+                    "rdfs:range",
+                    "BO:VariableConversion"
+                ],
+                [
+                    "BO:hasDataRestriction",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is an InputDataPoint?",
+                "[Simple] What is an OperationOutput?",
+                "[Simple] What is a SET_OutputDataPoint?",
+                "[Simple] What is a GET_InputDataPoint?",
+                "[Simple] What is an OutputDataPoint?",
+                "[Simple] What is an OperationInput?",
+                "[Simple] What is the relationship between hasSubStructure and Variable?",
+                "[Simple] What is the relationship between hasInput and OperationInput?",
+                "[Simple] What is the relationship between convertsTo and VariableConversion?",
+                "[Simple] What is the relationship between hasConversion and VariableConversion?",
+                "[Intermediate] Which InputDataPoints are part of a specific Operation?",
+                "[Intermediate] What are the OperationOutputs that can be converted to a specific Variable?",
+                "[Intermediate] Which SET_OutputDataPoints have a specific Operation as their substructure?",
+                "[Intermediate] What are the GET_InputDataPoints that have a specific OperationInput?",
+                "[Intermediate] Which OutputDataPoints are part of a specific Variable?",
+                "[Intermediate] What are the OperationInputs that have a specific Data Restriction?",
+                "[Complex] For a given Operation, what are all the possible InputDataPoints and their corresponding OperationInputs?",
+                "[Complex] For a given SET_OutputDataPoint, what are all the possible conversions to other Variables and their associated VariableConversions?",
+                "[Complex] For a given GET_InputDataPoint, what are all the possible OperationInputs and their associated Data Restrictions?",
+                "[Complex] For a given OutputDataPoint, what are all the possible Variables it can be part of, and what are the associated Data Restrictions?",
+                "[Simple] What is a VariableConversion?",
+                "[Simple] What does the hasDataRestriction property do?",
+                "[Simple] What is a SimpleTypeVariable?",
+                "[Simple] What is a StructuredTypeVariable?",
+                "[Simple] What does the hasDataRestriction_minExclusive property mean?",
+                "[Simple] What is the relationship between hasSubStructure and StructuredTypeVariable?",
+                "[Simple] What is the relationship between convertsTo and Variable?",
+                "[Simple] What is the relationship between hasConversion and Variable?",
+                "[Simple] What is an owl:DatatypeProperty?",
+                "[Simple] What is an owl:ObjectProperty?",
+                "[Simple] What is an owl:Class?",
+                "[Simple] What is a rdf:PlainLiteral?",
+                "[Simple] What is a VariableConversion?",
+                "[Simple] What is a Variable?",
+                "[Simple] What is a SimpleTypeVariable?",
+                "[Simple] What is a StructuredTypeVariable?",
+                "[Simple] What is a rdf:PlainLiteral?"
+            ],
+            "qualified_questions": [
+                {
+                    "question": "[Simple] What is an InputDataPoint?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is an OperationOutput?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is a SET_OutputDataPoint?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is a GET_InputDataPoint?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is an OutputDataPoint?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is an OperationInput?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the relationship between hasSubStructure and Variable?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the relationship between hasInput and OperationInput?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the relationship between convertsTo and VariableConversion?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the relationship between hasConversion and VariableConversion?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] Which InputDataPoints are part of a specific Operation?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] What are the OperationOutputs that can be converted to a specific Variable?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] Which SET_OutputDataPoints have a specific Operation as their substructure?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] What are the GET_InputDataPoints that have a specific OperationInput?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] Which OutputDataPoints are part of a specific Variable?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] What are the OperationInputs that have a specific Data Restriction?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] For a given Operation, what are all the possible InputDataPoints and their corresponding OperationInputs?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] For a given SET_OutputDataPoint, what are all the possible conversions to other Variables and their associated VariableConversions?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] For a given GET_InputDataPoint, what are all the possible OperationInputs and their associated Data Restrictions?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] For a given OutputDataPoint, what are all the possible Variables it can be part of, and what are the associated Data Restrictions?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is a VariableConversion?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What does the hasDataRestriction property do?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is a SimpleTypeVariable?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is a StructuredTypeVariable?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What does the hasDataRestriction_minExclusive property mean?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the relationship between hasSubStructure and StructuredTypeVariable?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the relationship between convertsTo and Variable?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the relationship between hasConversion and Variable?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is an owl:DatatypeProperty?",
+                    "sparql_query": "SELECT ?property\nWHERE {\n  ?property rdf:type owl:DatatypeProperty\n}",
+                    "query_result": [
+                        "BO:hasDataRestriction_minExclusive",
+                        "BO:hasDataRestriction"
+                    ]
+                },
+                {
+                    "question": "[Simple] What is an owl:ObjectProperty?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT ?property\nWHERE {\n  ?property rdf:type owl:ObjectProperty\n}",
+                    "query_result": [
+                        "BO:hasSubStructure",
+                        "BO:hasInput",
+                        "BO:hasConversion",
+                        "BO:convertsTo"
+                    ]
+                },
+                {
+                    "question": "[Simple] What is an owl:Class?",
+                    "sparql_query": "SELECT ?class\nWHERE {\n    ?class rdf:type owl:Class\n}",
+                    "query_result": [
+                        "BO:InputDataPoint",
+                        "BO:OperationOutput",
+                        "BO:SET_OutputDataPoint",
+                        "BO:OperationInput",
+                        "BO:GET_InputDataPoint",
+                        "BO:OutputDataPoint",
+                        "BO:Operation"
+                    ]
+                },
+                {
+                    "question": "[Simple] What is a rdf:PlainLiteral?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                }
+            ],
+            "uncovered_entities": [
+                "BO:VariableConversion",
+                "BO:Variable",
+                "BO:SimpleTypeVariable",
+                "BO:StructuredTypeVariable",
+                "rdf:PlainLiteral"
+            ]
+        },
+        {
+            "subgraph_id": 6,
+            "namespaces": [
+                {
+                    "prefix": "BO",
+                    "url": "https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                }
+            ],
+            "triples": [
+                [
+                    "BO:refersTo",
+                    "rdfs:domain",
+                    "BO:Function"
+                ],
+                [
+                    "BO:hasOutputDataPoint",
+                    "rdfs:domain",
+                    "BO:Service"
+                ],
+                [
+                    "BO:hasOutput",
+                    "rdfs:range",
+                    "BO:OperationOutput"
+                ],
+                [
+                    "BO:StructuredTypeVariable",
+                    "rdfs:subClassOf",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:refersTo",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasSubService",
+                    "rdfs:domain",
+                    "BO:Service"
+                ],
+                [
+                    "BO:hasInputDataPoint",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasService",
+                    "rdfs:domain",
+                    "BO:Device"
+                ],
+                [
+                    "BO:describes",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasOutputDataPoint",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasService",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasOperation",
+                    "rdfs:range",
+                    "BO:Operation"
+                ],
+                [
+                    "BO:hasService",
+                    "rdfs:range",
+                    "BO:Service"
+                ],
+                [
+                    "BO:hasOutput",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasInputDataPoint",
+                    "rdfs:range",
+                    "BO:InputDataPoint"
+                ],
+                [
+                    "BO:VariableConversion",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:describes",
+                    "rdfs:range",
+                    "BO:Aspect"
+                ],
+                [
+                    "BO:Service",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:StructuredTypeVariable",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:hasInputDataPoint",
+                    "rdfs:domain",
+                    "BO:Service"
+                ],
+                [
+                    "BO:hasOutputDataPoint",
+                    "rdfs:range",
+                    "BO:OutputDataPoint"
+                ],
+                [
+                    "BO:hasSubService",
+                    "rdfs:range",
+                    "BO:Service"
+                ],
+                [
+                    "BO:hasOperation",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:describes",
+                    "rdfs:domain",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:Aspect",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:hasSubService",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:refersTo",
+                    "rdfs:range",
+                    "BO:Aspect"
+                ],
+                [
+                    "BO:hasOperation",
+                    "rdfs:domain",
+                    "BO:Service"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What does a function refer to?",
+                "[Simple] What is the output of an operation?",
+                "[Simple] What type of variable is a structured type variable?",
+                "[Simple] What kind of property is \"refersTo\"?",
+                "[Simple] What services can a device have?",
+                "[Simple] What is the range of the \"hasOperation\" property?",
+                "[Simple] What is the domain of the \"hasOutputDataPoint\" property?",
+                "[Simple] What is the range of the \"hasInputDataPoint\" property?",
+                "[Simple] What is the range of the \"describes\" property?",
+                "[Simple] What is the domain of the \"hasInputDataPoint\" property?",
+                "[Simple] What is the range of the \"hasOutputDataPoint\" property?",
+                "[Simple] What is the range of the \"hasSubService\" property?",
+                "[Simple] What is the domain of the \"hasOperation\" property?",
+                "[Simple] What is the domain of the \"describes\" property?",
+                "[Simple] What is the range of the \"refersTo\" property?",
+                "[Intermediate] Which services have input data points and output data points?",
+                "[Intermediate] What are the aspects that a variable can describe?",
+                "[Intermediate] Which services have operations and what are those operations?",
+                "[Intermediate] What are the sub-services of a given service?",
+                "[Intermediate] Which devices provide which services?",
+                "[Complex] How do the input and output data points of a service relate to its operations, and what are the specific data points for each operation?",
+                "[Complex] For a given service, what are all the aspects that its variables describe, and how do these aspects relate to the service's functionality?",
+                "[Complex] If a service has multiple sub-services, what are the operations and data points associated with each sub-service, and how do they contribute to the overall service?",
+                "[Simple] What is a VariableConversion?",
+                "[Simple] What kind of property is \"hasService\"?",
+                "[Simple] What is an OperationOutput?",
+                "[Simple] What is an InputDataPoint?",
+                "[Simple] What is an OutputDataPoint?",
+                "[Simple] What is a Variable?",
+                "[Simple] What is the domain of the \"refersTo\" property?",
+                "[Simple] What is the domain of the \"hasOutput\" property?",
+                "[Simple] What is the range of the \"hasService\" property?",
+                "[Simple] What is the range of the \"hasOperation\" property?",
+                "[Simple] What is a VariableConversion?",
+                "[Simple] Can you explain what an Aspect is in this context?",
+                "[Simple] What is the role of a Device in this system?",
+                "[Simple] What does it mean for a property to be an ObjectProperty?",
+                "[Simple] What is an OperationOutput?",
+                "[Simple] How is a StructuredTypeVariable different from other variables?",
+                "[Simple] What is an OutputDataPoint?",
+                "[Simple] What is a Variable?",
+                "[Simple] What is an InputDataPoint?",
+                "[Simple] What kind of property is \"hasService\"?",
+                "[Simple] What is an Operation?",
+                "[Simple] What is a Service?",
+                "[Simple] What is a Class in this context?",
+                "[Simple] What is a Function?",
+                "[Simple] What is the \"hasOutputDataPoint\" property used for?",
+                "[Simple] What is the \"hasOutput\" property used for?"
+            ],
+            "qualified_questions": [
+                {
+                    "question": "[Simple] What does a function refer to?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the output of an operation?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What type of variable is a structured type variable?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What kind of property is \"refersTo\"?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What services can a device have?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the range of the \"hasOperation\" property?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the domain of the \"hasOutputDataPoint\" property?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the range of the \"hasInputDataPoint\" property?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the range of the \"describes\" property?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the domain of the \"hasInputDataPoint\" property?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the range of the \"hasOutputDataPoint\" property?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the range of the \"hasSubService\" property?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the domain of the \"hasOperation\" property?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the domain of the \"describes\" property?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the range of the \"refersTo\" property?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] Which services have input data points and output data points?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] What are the aspects that a variable can describe?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] Which services have operations and what are those operations?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] What are the sub-services of a given service?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Intermediate] Which devices provide which services?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] How do the input and output data points of a service relate to its operations, and what are the specific data points for each operation?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] For a given service, what are all the aspects that its variables describe, and how do these aspects relate to the service's functionality?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] If a service has multiple sub-services, what are the operations and data points associated with each sub-service, and how do they contribute to the overall service?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is a VariableConversion?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What kind of property is \"hasService\"?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is an OperationOutput?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is an InputDataPoint?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is an OutputDataPoint?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is a Variable?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the domain of the \"refersTo\" property?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the domain of the \"hasOutput\" property?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the range of the \"hasService\" property?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] Can you explain what an Aspect is in this context?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the role of a Device in this system?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What does it mean for a property to be an ObjectProperty?",
+                    "sparql_query": "SELECT ?property\nWHERE {\n  ?property rdf:type owl:ObjectProperty\n}",
+                    "query_result": [
+                        "BO:refersTo",
+                        "BO:hasInputDataPoint",
+                        "BO:describes",
+                        "BO:hasOutputDataPoint",
+                        "BO:hasService",
+                        "BO:hasOutput",
+                        "BO:hasOperation",
+                        "BO:hasSubService"
+                    ]
+                },
+                {
+                    "question": "[Simple] How is a StructuredTypeVariable different from other variables?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is an Operation?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is a Service?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is a Class in this context?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?class\nWHERE {\n  ?class rdf:type owl:Class\n}",
+                    "query_result": [
+                        "BO:VariableConversion",
+                        "BO:Service",
+                        "BO:StructuredTypeVariable",
+                        "BO:Aspect"
+                    ]
+                },
+                {
+                    "question": "[Simple] What is a Function?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the \"hasOutputDataPoint\" property used for?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the \"hasOutput\" property used for?",
+                    "sparql_query": "Y",
+                    "query_result": []
+                }
+            ],
+            "uncovered_entities": [
+                "BO:Variable",
+                "BO:InputDataPoint",
+                "BO:Operation",
+                "BO:Device",
+                "BO:OutputDataPoint",
+                "BO:OperationOutput",
+                "BO:Function"
+            ]
+        }
+    ]
+}

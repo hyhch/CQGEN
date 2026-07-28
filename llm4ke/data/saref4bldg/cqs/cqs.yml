@@ -1,0 +1,199 @@
+ontology:
+  name: saref4bldg
+  cqs:
+  - ID: saref4bldg_470
+    question: What is a building?
+  - ID: saref4bldg_471
+    question: A building can contain devices
+  - ID: saref4bldg_472
+    question: What is a shading device?
+  - ID: saref4bldg_473
+    question: Which properties has a shading device?
+  - ID: saref4bldg_474
+    question: What is an actuator?
+  - ID: saref4bldg_475
+    question: What is an alarm?
+  - ID: saref4bldg_476
+    question: What is a controller?
+  - ID: saref4bldg_477
+    question: What is a flow instrument?
+  - ID: saref4bldg_478
+    question: What is a sensor?
+  - ID: saref4bldg_479
+    question: What is a unitary control element?
+  - ID: saref4bldg_480
+    question: Which properties has an actuator?
+  - ID: saref4bldg_481
+    question: What is a protective device tripping unit?
+  - ID: saref4bldg_482
+    question: What is an audio visual appliance?
+  - ID: saref4bldg_483
+    question: What is a communication appliance?
+  - ID: saref4bldg_484
+    question: What is an electric appliance?
+  - ID: saref4bldg_485
+    question: What is an electric flow storage device?
+  - ID: saref4bldg_486
+    question: What is an electric generator?
+  - ID: saref4bldg_487
+    question: What is an electric motor?
+  - ID: saref4bldg_488
+    question: What is an electric time control?
+  - ID: saref4bldg_489
+    question: What is a lamp?
+  - ID: saref4bldg_490
+    question: What is an outlet?
+  - ID: saref4bldg_491
+    question: What is a protective device?
+  - ID: saref4bldg_492
+    question: What is a solar device?
+  - ID: saref4bldg_493
+    question: What is a switching device?
+  - ID: saref4bldg_494
+    question: What is a transformer?
+  - ID: saref4bldg_495
+    question: Which properties has a protective device tripping unit?
+  - ID: saref4bldg_496
+    question: Which properties has an audio visual appliance?
+  - ID: saref4bldg_497
+    question: Which properties has an electric flow storage device?
+  - ID: saref4bldg_498
+    question: Which properties has an electric generator?
+  - ID: saref4bldg_499
+    question: Which properties has an electric motor?
+  - ID: saref4bldg_500
+    question: Which properties has a lamp?
+  - ID: saref4bldg_501
+    question: Which properties has an outlet?
+  - ID: saref4bldg_502
+    question: Which properties has a switching device?
+  - ID: saref4bldg_503
+    question: Which properties has a transformer?
+  - ID: saref4bldg_504
+    question: What is an air to air heat recovery?
+  - ID: saref4bldg_505
+    question: What is a burner?
+  - ID: saref4bldg_506
+    question: What is a chiller?
+  - ID: saref4bldg_507
+    question: What is a boiler?
+  - ID: saref4bldg_508
+    question: What is a coil?
+  - ID: saref4bldg_509
+    question: What is a compressor?
+  - ID: saref4bldg_510
+    question: What is a condenser?
+  - ID: saref4bldg_511
+    question: What is a cooled beam?
+  - ID: saref4bldg_512
+    question: What is a cooling tower?
+  - ID: saref4bldg_513
+    question: What is a damper?
+  - ID: saref4bldg_514
+    question: What is a duct silencer?
+  - ID: saref4bldg_515
+    question: What is an engine?
+  - ID: saref4bldg_516
+    question: What is an evaporative cooler?
+  - ID: saref4bldg_517
+    question: What is an evaporator?
+  - ID: saref4bldg_518
+    question: What is a fan?
+  - ID: saref4bldg_519
+    question: What is a filter?
+  - ID: saref4bldg_520
+    question: What is a flow meter?
+  - ID: saref4bldg_521
+    question: What is a heat exchanger?
+  - ID: saref4bldg_522
+    question: What is a humidifier?
+  - ID: saref4bldg_523
+    question: What is a medical device?
+  - ID: saref4bldg_524
+    question: What is a pump?
+  - ID: saref4bldg_525
+    question: What is a space heater?
+  - ID: saref4bldg_526
+    question: What is a tank?
+  - ID: saref4bldg_527
+    question: What is a tube bundle?
+  - ID: saref4bldg_528
+    question: What is a unitary equipment?
+  - ID: saref4bldg_529
+    question: What is a valve?
+  - ID: saref4bldg_530
+    question: What is a vibration isolator?
+  - ID: saref4bldg_531
+    question: Which properties has an air to air heat recovery?
+  - ID: saref4bldg_532
+    question: Which properties has a burner?
+  - ID: saref4bldg_533
+    question: Which properties has a chiller?
+  - ID: saref4bldg_534
+    question: Which properties has a boiler?
+  - ID: saref4bldg_535
+    question: Which properties has a coil?
+  - ID: saref4bldg_536
+    question: Which properties has a compressor?
+  - ID: saref4bldg_537
+    question: Which properties has a condenser?
+  - ID: saref4bldg_538
+    question: Which properties has a cooled beam?
+  - ID: saref4bldg_539
+    question: Which properties has a cooling tower?
+  - ID: saref4bldg_540
+    question: Which properties has a damper?
+  - ID: saref4bldg_541
+    question: Which properties has a duct silencer?
+  - ID: saref4bldg_542
+    question: Which properties has an engine?
+  - ID: saref4bldg_543
+    question: Which properties has an evaporative cooler?
+  - ID: saref4bldg_544
+    question: Which properties has an evaporator?
+  - ID: saref4bldg_545
+    question: Which properties has a fan?
+  - ID: saref4bldg_546
+    question: Which properties has a filter?
+  - ID: saref4bldg_547
+    question: Which properties has a flow meter?
+  - ID: saref4bldg_548
+    question: Which properties has a heat exchanger?
+  - ID: saref4bldg_549
+    question: Which properties has a humidifier?
+  - ID: saref4bldg_550
+    question: Which properties has a pump?
+  - ID: saref4bldg_551
+    question: Which properties has a space heater?
+  - ID: saref4bldg_552
+    question: Which properties has a tank?
+  - ID: saref4bldg_553
+    question: Which properties has a tube bundle?
+  - ID: saref4bldg_554
+    question: Which properties has a valve?
+  - ID: saref4bldg_555
+    question: Which properties has a vibration isolator?
+  - ID: saref4bldg_556
+    question: What is a fire suppression terminal?
+  - ID: saref4bldg_557
+    question: What is an interceptor?
+  - ID: saref4bldg_558
+    question: What is a sanitary terminal?
+  - ID: saref4bldg_559
+    question: Which properties has an interceptor?
+  - ID: saref4bldg_560
+    question: What is an energy conversion device?
+  - ID: saref4bldg_561
+    question: What is a flow controller?
+  - ID: saref4bldg_562
+    question: What is a flow moving device?
+  - ID: saref4bldg_563
+    question: What is a flow storage device?
+  - ID: saref4bldg_564
+    question: What is a flow terminal?
+  - ID: saref4bldg_565
+    question: What is a flow treatment device?
+  - ID: saref4bldg_566
+    question: What is a transport element?
+  - ID: saref4bldg_567
+    question: Which properties has a transport element?

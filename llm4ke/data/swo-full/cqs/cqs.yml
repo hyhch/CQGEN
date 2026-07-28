@@ -1,0 +1,187 @@
+ontology:
+  name: swo-full
+  cqs:
+  - ID: swo-full_232
+    question: Are there any modification to the clustering algorithm that Weka uses?
+  - ID: swo-full_233
+    question: Does Protege provide XML editing?
+  - ID: swo-full_234
+    question: What software works best with RDF data?
+  - ID: swo-full_235
+    question: Does SIM render a gif?
+  - ID: swo-full_236
+    question: What data from Andrew Ng is analysed with Weka, version 4.0?
+  - ID: swo-full_237
+    question: To what extent does DAVID support appropriate open standards?
+  - ID: swo-full_238
+    question: Is PostgreSQL compatible with dfp?
+  - ID: swo-full_239
+    question: Can I render gif if the software supplier goes out of business?
+  - ID: swo-full_240
+    question: Given DNA nucleotide sequence, what are the data exports for SPSS version
+      20?
+  - ID: swo-full_241
+    question: To what extent does Q support appropriate open standards?
+  - ID: swo-full_242
+    question: Is there a mailing list for Microsoft Windows?
+  - ID: swo-full_243
+    question: How can I get problems with multiscan fixed?
+  - ID: swo-full_244
+    question: Are there any active forums discussing minet use?
+  - ID: swo-full_245
+    question: Where do I get updates for MUSCLE?
+  - ID: swo-full_246
+    question: Can we collaborate with developers of MATLAB?
+  - ID: swo-full_247
+    question: Where can I buy LPE from?
+  - ID: swo-full_248
+    question: Which is the fastest software to read DNA nucleotide sequence?
+  - ID: swo-full_249
+    question: Does prada meet the ISO-4 standard?
+  - ID: swo-full_250
+    question: Do I know anyone who has used puma or processed DXF?
+  - ID: swo-full_251
+    question: How and where has IntelliJ Idea been used successfully in the past?
+  - ID: swo-full_252
+    question: What do others say about UNIX quality?
+  - ID: swo-full_253
+    question: How reliable is Kakadu?
+  - ID: swo-full_254
+    question: What software is better for clustering task given PDF as input type?
+  - ID: swo-full_255
+    question: Who are the potential users of ITALICS?
+  - ID: swo-full_256
+    question: Who else has used oligo today?
+  - ID: swo-full_257
+    question: How popular is Kakadu?
+  - ID: swo-full_258
+    question: How many settings do I need to know to rerun data annotation analysis?
+  - ID: swo-full_259
+    question: To what extent does WordStar support appropriate open standards?
+  - ID: swo-full_260
+    question: What new features are in version 4.3 of ScanArray?
+  - ID: swo-full_261
+    question: What are the differences between versions of SMAP?
+  - ID: swo-full_262
+    question: At what point did the license type of SpikeLI change?
+  - ID: swo-full_263
+    question: What is the licensing history of SLGI?
+  - ID: swo-full_264
+    question: How many license do we need to run vsn productively?
+  - ID: swo-full_265
+    question: Does cost of using XDE make sense for my project? Is XDE cost effective?
+  - ID: swo-full_266
+    question: What level of expertise is required to use ROC?
+  - ID: swo-full_267
+    question: Are there any usage examples for PSI-BLAST?
+  - ID: swo-full_268
+    question: Does R software have a tutorial?
+  - ID: swo-full_269
+    question: How well documented is AIDA for developers?
+  - ID: swo-full_270
+    question: How do I cite SPSS?
+  - ID: swo-full_271
+    question: Is ppiStats scriptable?
+  - ID: swo-full_272
+    question: How can I extend AIDA to include a new function?
+  - ID: swo-full_273
+    question: Can I use some components of ppiStats for my software?
+  - ID: swo-full_274
+    question: What hardware do I need to run ROC?
+  - ID: swo-full_275
+    question: What graphics card does LPE require?
+  - ID: swo-full_276
+    question: What platform does qvalue run on?
+  - ID: swo-full_277
+    question: Can I install Rgraphviz on a university computer?
+  - ID: swo-full_278
+    question: What compiler do I need to compile source code on Windows platform?
+  - ID: swo-full_279
+    question: Does MATLAB work on 64 bit windows?
+  - ID: swo-full_280
+    question: What is the algorithm used to process XML?
+  - ID: swo-full_281
+    question: What are the alternatives to Weka?
+  - ID: swo-full_282
+    question: What other alternatives to PostgreSQL are there?
+  - ID: swo-full_283
+    question: "Which of the named and published \xE2\x80\x9Calgorithms\xE2\x80\x9D\
+      \ does Unix use?"
+  - ID: swo-full_284
+    question: What type of software is vsn?
+  - ID: swo-full_285
+    question: What software can perform clustering task?
+  - ID: swo-full_286
+    question: Is Ringo appropriate software for data annotation?
+  - ID: swo-full_287
+    question: What are the primary inputs and outputs of XDE?
+  - ID: swo-full_288
+    question: Which visualisation software is there for TSV and what will it cost?
+  - ID: swo-full_289
+    question: Which software tool created Matrix?
+  - ID: swo-full_290
+    question: What software can I use RDF data with to support pattern discovery task?
+  - ID: swo-full_291
+    question: What are the input and output formats for Adobe Acrobat Reader?
+  - ID: swo-full_292
+    question: What software can read a .cel file?
+  - ID: swo-full_293
+    question: What are the export options for AIDA?
+  - ID: swo-full_294
+    question: What is the valid input for DROID?
+  - ID: swo-full_295
+    question: Can Eclipse export from its proprietary data format to an open format
+      such as csv, txt?
+  - ID: swo-full_296
+    question: Can Dropbox work with data that are output from vsn?
+  - ID: swo-full_297
+    question: What open source, maintained software can I use to process heat map
+      in binary format?
+  - ID: swo-full_298
+    question: Is the output format of Spotfire proprietary?
+  - ID: swo-full_299
+    question: Where can I get R software?
+  - ID: swo-full_300
+    question: How do I get help with Microsoft Excel?
+  - ID: swo-full_301
+    question: Who developed Mfuzz?
+  - ID: swo-full_302
+    question: What is the homepage of the DAVID?
+  - ID: swo-full_303
+    question: Which URL can I get UNIX from?
+  - ID: swo-full_304
+    question: How long has Jaguar been around?
+  - ID: swo-full_305
+    question: How actively developed prada is?
+  - ID: swo-full_306
+    question: Is Weka available as a web service?
+  - ID: swo-full_307
+    question: What is the version of BioJava?
+  - ID: swo-full_308
+    question: When was the 1.0 version of MUSCLE released?
+  - ID: swo-full_309
+    question: Is MFuzz open source development? Is there a community development?
+  - ID: swo-full_310
+    question: What license Jaguar has, and what is its permissiveness?
+  - ID: swo-full_311
+    question: Is PSI-BLAST open source or not?
+  - ID: swo-full_312
+    question: Who owns the copyright for SIM?
+  - ID: swo-full_313
+    question: Is Linux FOSS?
+  - ID: swo-full_314
+    question: Is LPE free or not?
+  - ID: swo-full_315
+    question: Is there any documentation for ROC and where can I find it?
+  - ID: swo-full_316
+    question: Where is the documentation of Cytoscape?
+  - ID: swo-full_317
+    question: "Where\xE2\x80\x99s the documentation of CRG TCoffee?"
+  - ID: swo-full_318
+    question: Is there a publication with rama?
+  - ID: swo-full_319
+    question: Is Rosetta Resolver extensible?
+  - ID: swo-full_320
+    question: In what language was Ringo implemented?
+  - ID: swo-full_321
+    question: Do I need a license key to use Ringo?

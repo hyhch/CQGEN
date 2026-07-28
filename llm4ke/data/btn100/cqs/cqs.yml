@@ -1,0 +1,168 @@
+ontology:
+  name: btn100
+  cqs:
+  - ID: btn100_322
+    question: Which is the height of peak x?
+  - ID: btn100_323
+    question: Which are the geometries and maximum levels of the Curvas de Nivel Maestra
+      of bathymetric type?
+  - ID: btn100_324
+    question: Which is the name and geometry of the primary interest mountain range?
+  - ID: btn100_325
+    question: Which are the rivers of tertiary interest at ground level?
+  - ID: btn100_326
+    question: Which are the names and geometry of the major canals at ground level?
+  - ID: btn100_327
+    question: Which are the permanent regime lagoons?
+  - ID: btn100_328
+    question: Which is the geometry of the wetlands of rambla type?
+  - ID: btn100_329
+    question: Which are the names of the seas that surround the Spanish territory?
+  - ID: btn100_330
+    question: Which capitals from the population center has a population density higher
+      than x?
+  - ID: btn100_331
+    question: Which are the names and geometry of the population center that has a
+      population density higher than x?
+  - ID: btn100_332
+    question: What are the name of disseminated places that are not capitals of municipality?
+  - ID: btn100_333
+    question: "What are the name of\xC2 \xC2 superficial disseminated places that\
+      \ are\xC2 \xC2 capitals of municipality?"
+  - ID: btn100_334
+    question: Which are the names of the free access motorways?
+  - ID: btn100_335
+    question: Which are the names of the national highway which belong to the european
+      highway network?
+  - ID: btn100_336
+    question: Which are the names of the national highway which do not belong to the
+      european highway network?
+  - ID: btn100_337
+    question: Which are the names and geometry of the itinerary which belong to the
+      "Camino de Santiago"?
+  - ID: btn100_338
+    question: Which are the FFCC stations that are stopping places and whcih are the
+      FFCC stations that have passenger traffic?
+  - ID: btn100_339
+    question: Which are the geometries of the cable transport?
+  - ID: btn100_340
+    question: Which are the sea ports that are not under state control?
+  - ID: btn100_341
+    question: Which are the heliport that are not under state control and do not belong
+      to the trans-European transport network?
+  - ID: btn100_342
+    question: Which are the oil pipelines at ground level?
+  - ID: btn100_343
+    question: Which are the low voltage electric lines?
+  - ID: btn100_344
+    question: Which are the nuclear power plants?
+  - ID: btn100_345
+    question: Which are the names, altitudes and longitudes of the lower order geodesic
+      vertex ?
+  - ID: btn100_346
+    question: Which roads cross a municipality ?
+  - ID: btn100_347
+    question: Which are the AVE lines that connect two towns?
+  - ID: btn100_348
+    question: which is the optimum way between two population centers?
+  - ID: btn100_349
+    question: Which are the towns though which the Camino the santiago passes?
+  - ID: btn100_350
+    question: Which are the intial point and the end point of the road x?
+  - ID: btn100_351
+    question: Which are the intial point and the end point of the railway x?
+  - ID: btn100_352
+    question: Which are the places of interest in a town ?
+  - ID: btn100_353
+    question: Which are the historic places in a town?
+  - ID: btn100_354
+    question: Which churches are placed in a town?
+  - ID: btn100_355
+    question: Which are the monuments of cultural interest in a town?
+  - ID: btn100_356
+    question: Which places of interest are in a province?
+  - ID: btn100_357
+    question: Which historic places are in a province?
+  - ID: btn100_358
+    question: Which goods of cultural interest are in a province?
+  - ID: btn100_359
+    question: Which places of interest are in a county?
+  - ID: btn100_360
+    question: Which historic places are in a county?
+  - ID: btn100_361
+    question: Which goods of cultural interest are in a county?
+  - ID: btn100_362
+    question: Which beaches are placed in the province X?
+  - ID: btn100_363
+    question: Which gas stations are placed in the municipality x?
+  - ID: btn100_364
+    question: Which electrict lines passes through a municipality?
+  - ID: btn100_365
+    question: Which municipalities are connected through the electric line x?
+  - ID: btn100_366
+    question: Which hospital attend to a particular municipality?
+  - ID: btn100_367
+    question: Which communication stations are in a particular municipality?
+  - ID: btn100_368
+    question: Which mines are in a particular province?
+  - ID: btn100_369
+    question: Which mines are within a particular distance in a particular municipality?
+  - ID: btn100_370
+    question: What geodesic vertex are in a particular municipality?
+  - ID: btn100_371
+    question: What REDNAP signals are in a municipality?
+  - ID: btn100_372
+    question: Which is the altitude of the municipality x?
+  - ID: btn100_373
+    question: Which is the altitude of the peak or mountain x?
+  - ID: btn100_374
+    question: Which are the NP placed along th river x?
+  - ID: btn100_375
+    question: Which are the cave type places of interest which are also good of cultural
+      interest?
+  - ID: btn100_376
+    question: Which are the good of cultural interest of the national park x?
+  - ID: btn100_377
+    question: Which are the railway stations of the province x?
+  - ID: btn100_378
+    question: Which are the airports of the autonomous region?
+  - ID: btn100_379
+    question: Through which villages does the road x goes through ?
+  - ID: btn100_380
+    question: Which are the National Parks?
+  - ID: btn100_381
+    question: Which are the natural places?
+  - ID: btn100_382
+    question: Which are the Special bird protection area?
+  - ID: btn100_383
+    question: Which river cross the National Park x?
+  - ID: btn100_384
+    question: Which municiaplities are located inside the PN
+  - ID: btn100_385
+    question: Which roads cross the PN?
+  - ID: btn100_386
+    question: How many and which are the surface water located inside thePN x?
+  - ID: btn100_387
+    question: Which are the protected areas in Spain?
+  - ID: btn100_388
+    question: Which are the tributaries on the right of the river x?
+  - ID: btn100_389
+    question: Where does the river X flows into?
+  - ID: btn100_390
+    question: How many rivers flow into the sea or ocean zzz?
+  - ID: btn100_391
+    question: What are the rivers which belong to municipality x?
+  - ID: btn100_392
+    question: Through which autonomous community does the river x flow into ?
+  - ID: btn100_393
+    question: Through which provinces does the river x flow into ?
+  - ID: btn100_394
+    question: Through which municipalities does the river x flow into?
+  - ID: btn100_395
+    question: Which town is adjacent to town X?
+  - ID: btn100_396
+    question: Which municipality belongs to province X?
+  - ID: btn100_397
+    question: Which municipality belongs to the autonomous community x?
+  - ID: btn100_398
+    question: What are the reservoirs of the river x?

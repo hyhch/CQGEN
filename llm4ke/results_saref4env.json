@@ -1,0 +1,20 @@
+[
+    {
+        "onto": "saref4env",
+        "llm": "qwenmax40",
+        "mode": "classes_and_properties",
+        "examples": "5",
+        "precision": 0.3793103448275862,
+        "recall": 0.27586206896551724,
+        "f1_score": 0.3194192377495463
+    },
+    {
+        "onto": "saref4env",
+        "llm": "llama402",
+        "mode": "classes_and_properties",
+        "examples": "5",
+        "precision": 0.4625,
+        "recall": 0.22413793103448276,
+        "f1_score": 0.3019460138104206
+    }
+]

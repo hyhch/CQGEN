@@ -1,0 +1,170 @@
+ontology:
+  name: SAREF
+  cqs:
+  - ID: SAREF_399
+    question: What is a device?
+  - ID: SAREF_400
+    question: A device performs one or more functions
+  - ID: SAREF_401
+    question: Examples of devices are a light switch, a temperaturesensor, an energy
+      meter, a washing machine
+  - ID: SAREF_402
+    question: A device shall have a model property
+  - ID: SAREF_403
+    question: A device shall have a manufacturer property
+  - ID: SAREF_404
+    question: "A device can optionally\xC2 \xC2 have a description"
+  - ID: SAREF_405
+    question: A building space definesthe physical spaces of the building where a
+      device is located, such as a kitchen or a living room
+  - ID: SAREF_406
+    question: A building space contains devices or building objects
+  - ID: SAREF_407
+    question: Building objectsare objects in the building that can be controlled by
+      devices, such as doors or windows
+  - ID: SAREF_408
+    question: A building object can be opened or closed by an actuator
+  - ID: SAREF_409
+    question: "A building space has also a\xC2 \xC2 property that can be used to specify\
+      \ thetype of space, for example, the living room or the bedroom"
+  - ID: SAREF_410
+    question: A building space is a geographical point characterized by acertain altitude,
+      latitude and longitude
+  - ID: SAREF_411
+    question: 'The devices can be classified into categories: FunctionRelated, EneryRelated
+      and BuildingRelated'
+  - ID: SAREF_412
+    question: 'The FunctionRelated category can be specialized into: Actuator, Applicance,
+      HVAC, Lighting, Meter, MicroRenewable, Multimedia, Network, Sensor'
+  - ID: SAREF_413
+    question: 'The EnergyRelated category can be specialized into: Load, Generator
+      and Storage'
+  - ID: SAREF_414
+    question: The devices can belong to several categories
+  - ID: SAREF_415
+    question: "A device can be used for\xC2 \xC2 the purpose of offering a commodity"
+  - ID: SAREF_416
+    question: Water or gas are examples of commodities
+  - ID: SAREF_417
+    question: "A device can be used for\xC2 \xC2 the purpose of sensing"
+  - ID: SAREF_418
+    question: A device can be used for measuring a property
+  - ID: SAREF_419
+    question: A device can be used for notifying a property
+  - ID: SAREF_420
+    question: Examples of properties are temperature, energy or smoke
+  - ID: SAREF_421
+    question: "A device can be used for\xC2 \xC2 the purpose of controlling a building\
+      \ object,such as a door or a window"
+  - ID: SAREF_422
+    question: A device may consists of other devices
+  - ID: SAREF_423
+    question: A sensor is a device
+  - ID: SAREF_424
+    question: A sensor performs a sensing function
+  - ID: SAREF_425
+    question: A temperature sensor is a device that has category sensor
+  - ID: SAREF_426
+    question: A temperature sensor consists of a sensor
+  - ID: SAREF_427
+    question: A temperature senso performs the sensing function and is used for the
+      purpose of sensing temperature
+  - ID: SAREF_428
+    question: "A washing machine is a device that has category Appliance\xC2 \xC2\
+      \ and Load"
+  - ID: SAREF_429
+    question: A washing machine accomplishes the task ofwashing
+  - ID: SAREF_430
+    question: A washing machine performs an actuating start/pause function
+  - ID: SAREF_431
+    question: A smoke sensor is a device that has category Sensor
+  - ID: SAREF_432
+    question: A smoke sensor is a device that consists of a sensor
+  - ID: SAREF_433
+    question: A smoke sensor performs asensing and event function
+  - ID: SAREF_434
+    question: "A smoke sensor\xC2 \xC2 is used for the purpose of sensing smoke"
+  - ID: SAREF_435
+    question: A switch is a device that has category Actuator
+  - ID: SAREF_436
+    question: "A door switch\xC2 \xC2 has category Actuator,"
+  - ID: SAREF_437
+    question: A door switch is a device that consists of a switch
+  - ID: SAREF_438
+    question: "A door switch\xC2 \xC2 performs theopen/close function"
+  - ID: SAREF_439
+    question: A door switch is used for the purpose of controlling doors
+  - ID: SAREF_440
+    question: A dimmer lamp is a device that has category Lighting and Actuator
+  - ID: SAREF_441
+    question: A dimmer lamp performs an actuating level control
+  - ID: SAREF_442
+    question: A dimmer lamp is used for the purpose of controlling the light
+  - ID: SAREF_443
+    question: A meter is a functionRelated device
+  - ID: SAREF_444
+    question: A meter performs a metering function
+  - ID: SAREF_445
+    question: An energy meter is a device that has category Meter
+  - ID: SAREF_446
+    question: An energy meter is a device that consists of a meter
+  - ID: SAREF_447
+    question: "An energy meter\xC2 \xC2 is used for the purpose of measuring energy"
+  - ID: SAREF_448
+    question: A function represents the functionality necessary toaccomplish the task
+      for which a device is designed
+  - ID: SAREF_449
+    question: "Examples of functions are the\xC2 \xC2 the actuating, sensing, metering\
+      \ or event functions"
+  - ID: SAREF_450
+    question: An actuating function can be specialized into on/off, open/close, start/stop
+      or level control functions
+  - ID: SAREF_451
+    question: A function can belong to a function category
+  - ID: SAREF_452
+    question: A function shall have at least one commandassociated to it
+  - ID: SAREF_453
+    question: 'The commands can be: on, off, open, toggle, close, startm pause, step
+      up, step down, set level, get and notify'
+  - ID: SAREF_454
+    question: A device can be found in a correponding state
+  - ID: SAREF_455
+    question: "A command can act upon a state\xC2 \xC2 to represent that theconsequence\
+      \ of a command can be a change of state of the device."
+  - ID: SAREF_456
+    question: A device offers a service
+  - ID: SAREF_457
+    question: A service is a representation of afunction to a network that makes this
+      function discoverable, registerable and remotely controllable by other devices
+      inthe network
+  - ID: SAREF_458
+    question: A service shall represent at least one function
+  - ID: SAREF_459
+    question: A service is offered by at least one device that wants (a certain set
+      of) its function(s) to be discoverable, registerable andremotely controllable
+      by other devices in the network
+  - ID: SAREF_460
+    question: Multiple devices can offer the same service
+  - ID: SAREF_461
+    question: A service shall specify the device that is offering the service
+  - ID: SAREF_462
+    question: A device can be characterized by a profile.
+  - ID: SAREF_463
+    question: The profile allows to describe the energy or power production and consumption
+      of a certain device.
+  - ID: SAREF_464
+    question: The profile production and consumption can be calculated over a time
+      span
+  - ID: SAREF_465
+    question: The profile production and consumption can be associated to some costs
+  - ID: SAREF_466
+    question: The power is characterized by a certain value that is measured in a
+      certain unit of measure
+  - ID: SAREF_467
+    question: The energy is characterized by a certain value that is measured in a
+      certain unit of measure
+  - ID: SAREF_468
+    question: The price is also characterized by a value using currency, which is
+      a type of unit of measure
+  - ID: SAREF_469
+    question: The time can be specified in terms of instants or intervals

@@ -1,0 +1,9 @@
+python-dotenv
+pandas
+openpyxl
+rdflib
+openai<1.0
+langchain-ollama
+sentence-transformers
+torch
+tqdm

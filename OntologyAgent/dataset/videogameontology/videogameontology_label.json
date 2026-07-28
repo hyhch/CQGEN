@@ -1,0 +1,266 @@
+[
+    {
+        "question": "What is the username of the player?",
+        "label": "Simple"
+    },
+    {
+        "question": "Who are the friends of the player?",
+        "label": "Simple"
+    },
+    {
+        "question": "Who are the friends that play other games as well with this player?",
+        "label": "Complex"
+    },
+    {
+        "question": "Who are the most active players in the game?",
+        "label": "Complex"
+    },
+    {
+        "question": "What are the achievements of my friends?",
+        "label": "Complex"
+    },
+    {
+        "question": "Who does the player play with?",
+        "label": "Complex"
+    },
+    {
+        "question": "What are the achievements your friend has received?",
+        "label": "Complex"
+    },
+    {
+        "question": "What achievements does a game have?",
+        "label": "Simple"
+    },
+    {
+        "question": "How many hours has this game been played in total?",
+        "label": "Complex"
+    },
+    {
+        "question": "What are the types of achievements in this game?",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the types of achievements a game can have?",
+        "label": "Simple"
+    },
+    {
+        "question": "What is the genre of the game?",
+        "label": "Simple"
+    },
+    {
+        "question": "What items exist in a game?",
+        "label": "Simple"
+    },
+    {
+        "question": "Who is the creator of the game?",
+        "label": "Simple"
+    },
+    {
+        "question": "What is the release date of the game?",
+        "label": "Simple"
+    },
+    {
+        "question": "What are the games similar to this one?",
+        "label": "Complex"
+    },
+    {
+        "question": "List all games of a certain Genre?",
+        "label": "Simple"
+    },
+    {
+        "question": "What type is the item of?",
+        "label": "Simple"
+    },
+    {
+        "question": "What abilities does an item have?",
+        "label": "Simple"
+    },
+    {
+        "question": "What is the fastest car in the game?",
+        "label": "Complex"
+    },
+    {
+        "question": "How much damage does a weapon deal?",
+        "label": "Simple"
+    },
+    {
+        "question": "Who has the best kill count in the game?",
+        "label": "Complex"
+    },
+    {
+        "question": "Who are the top 3 players in the game?",
+        "label": "Complex"
+    },
+    {
+        "question": "What games has the player played?",
+        "label": "Complex"
+    },
+    {
+        "question": "What items does the player have?",
+        "label": "Simple"
+    },
+    {
+        "question": "What achievements of a certain type does the player have?",
+        "label": "Simple"
+    },
+    {
+        "question": "What kind of games are owned by players that have certain achievement? ",
+        "label": "Complex"
+    },
+    {
+        "question": "What is the last game a player has played?",
+        "label": "Complex"
+    },
+    {
+        "question": "How big percentage of players have a certain item in the game?",
+        "label": "Complex"
+    },
+    {
+        "question": "What are the most common genres played by players with a certain character class in a game?",
+        "label": "Complex"
+    },
+    {
+        "question": "What is the preferred weapon of players with a certain character class?",
+        "label": "Complex"
+    },
+    {
+        "question": "What type of weapon are players using who win mostly in the game?",
+        "label": "Complex"
+    },
+    {
+        "question": "When was the last time a certain player played this game?",
+        "label": "Complex"
+    },
+    {
+        "question": "In how many games does the player have all the achievements?",
+        "label": "Complex"
+    },
+    {
+        "question": "What is the favorite map of the player in the game?",
+        "label": "Complex"
+    },
+    {
+        "question": "What is the most played map in a game?",
+        "label": "Complex"
+    },
+    {
+        "question": "What is the difficulty level the player uses in certain game genres?",
+        "label": "Complex"
+    },
+    {
+        "question": "How many times have I killed someone in a game?",
+        "label": "Complex"
+    },
+    {
+        "question": "How many goals did I score in FIFA 15?",
+        "label": "Simple"
+    },
+    {
+        "question": "What is the most common level in the game where players stop playing?",
+        "label": "Complex"
+    },
+    {
+        "question": "How big percentage of players have made a certain decision in the game?",
+        "label": "Complex"
+    },
+    {
+        "question": "How big percentage of players skip the cutscenes?",
+        "label": "Complex"
+    },
+    {
+        "question": "How many players mute the game music?",
+        "label": "Complex"
+    },
+    {
+        "question": "After gaining an item in the game, how many players use it?",
+        "label": "Complex"
+    },
+    {
+        "question": "How many times players have died in a level?",
+        "label": "Complex"
+    },
+    {
+        "question": "How big percentage of players use the item in question in other linked games?",
+        "label": "Complex"
+    },
+    {
+        "question": "How many players have moved from game to another when they have seen a linked_x000D_commercial?",
+        "label": "Complex"
+    },
+    {
+        "question": "What is the first action done by the player after an event? ",
+        "label": "Complex"
+    },
+    {
+        "question": "What is the location in map where the players die the most?",
+        "label": "Complex"
+    },
+    {
+        "question": "What equipment does a player have in a game?",
+        "label": "Simple"
+    },
+    {
+        "question": "What consumable items does a player have in game?",
+        "label": "Simple"
+    },
+    {
+        "question": "What is the most used item in the game?",
+        "label": "Complex"
+    },
+    {
+        "question": " What are the games where a player can use this item?",
+        "label": "Complex"
+    },
+    {
+        "question": "How many players have made in-app purchases?",
+        "label": "Complex"
+    },
+    {
+        "question": "How many players who have already spent money in this game, spend money again?",
+        "label": "Complex"
+    },
+    {
+        "question": "What is the likelihood that a player who has purchased in-app purchase in one game, do so in the other one?",
+        "label": "Complex"
+    },
+    {
+        "question": "If a player is given free item in the game, how likely are they to make an in-app purchase?",
+        "label": "Complex"
+    },
+    {
+        "question": "What type of items are the most traded ones in the game's marketplace?",
+        "label": "Complex"
+    },
+    {
+        "question": "How much money an average player spends in in-app purchases?",
+        "label": "Complex"
+    },
+    {
+        "question": "What time are most of the in-app purchases done?",
+        "label": "Complex"
+    },
+    {
+        "question": "Where do the most paying customers live in?",
+        "label": "Complex"
+    },
+    {
+        "question": "How long does an average player spend in the game before making first in-app purchase?",
+        "label": "Complex"
+    },
+    {
+        "question": "Where do the players live who have not made any in-app purchases?",
+        "label": "Complex"
+    },
+    {
+        "question": "Where do the players who have done the most in-app purchases live?",
+        "label": "Complex"
+    },
+    {
+        "question": "How many players clicked an ingame advertisement?",
+        "label": "Complex"
+    },
+    {
+        "question": "How many players start the other game after seeing an advertisement?",
+        "label": "Complex"
+    }
+]

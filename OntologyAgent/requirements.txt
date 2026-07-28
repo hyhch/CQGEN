@@ -1,0 +1,20 @@
+# CQGen-MAS dependencies.
+# NOTE: versions are intentionally unpinned. Before finalizing, replace this
+# file with the output of `pip freeze` from the environment you used to run the
+# experiments, so that results are bit-for-bit reproducible.
+#
+# METIS (the `metis` package) additionally requires the METIS C library to be
+# installed on the system (e.g. `apt install libmetis-dev` or build from
+# https://github.com/KarypisLab/METIS).
+
+metagpt
+gradio
+networkx
+igraph
+leidenalg
+metis
+scikit-learn
+rdflib
+sentence-transformers
+numpy
+pandas

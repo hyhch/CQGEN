@@ -1,0 +1,121 @@
+ID,Dataset,Competency Question,Match Type,Source LLM
+1,SAREF4ENV,What is the digital representation of a physical object?,matched,qwen-max
+2,OneM2M,"For a given aspect, which functions refer to it?",matched,glm-5
+3,OneM2M,How many unique properties do all the things in the ontology have combined?,unmatched,gpt-5
+4,OneM2M,What is the relationship between an interworked device and a regular device?,matched,qwen-max
+5,OneM2M,What is the range of the refersTo property?,unmatched,glm-5
+6,VGO,How do players typically unlock achievements in a video game?,matched,glm-5
+7,OneM2M,What is the physical standard of a network technology?,matched,qwen-max
+8,VGO,"What are the most common game events that lead to a 'GainEvent', and which players frequently experience them?",unmatched,gpt-5
+9,OneM2M,What is the domain of the refersTo property?,unmatched,qwen-max
+10,SAREF4ENV,What is a CommunicationInterface?,unmatched,gpt-5
+11,VGO,What percentage of players who have the curiosity achievement also have the collection achievement?,unmatched,qwen-max
+12,SAREF4ENV,How can a digital representation be accessed?,matched,glm-5
+13,VC,Which buildings contain spaces that are monitored by a specific system?,unmatched,glm-5
+14,VGO,How many events happened during a specific gaming session?,unmatched,gpt-5
+15,VC,Which Things are composed to form a ComposedThing?,unmatched,qwen-max
+16,VGO,What are the achievements that are commonly achieved by players who own a specific character?,matched,gpt-5
+17,OneM2M,What is the domain of the hasCommand property?,unmatched,glm-5
+18,VC,What is the serial number of a given sensor?,unmatched,gpt-5
+19,VC,Which class does a building belong to?,matched,gpt-5
+20,OneM2M,"Can you identify all the interworked devices that have a measuring function, and what aspects do they refer to?",unmatched,gpt-5
+21,VC,What is the operating range of a specific system?,unmatched,qwen-max
+22,VC,Which actuators are associated with a specific application and what are their descriptions?,unmatched,gpt-5
+23,VGO,Can you list all the achievements in a specific game?,matched,qwen-max
+24,OneM2M,Which class is not allowed to share members with the SimpleTypeVariable?,matched,glm-5
+25,OneM2M,What is the range of the exposesCommand property?,unmatched,qwen-max
+26,OneM2M,Are there any area networks that have a specific network technology profile and also use a certain oneM2M method?,matched,qwen-max
+27,OneM2M,To which domain does the resource descriptor link belong?,unmatched,qwen-max
+28,SAREF4ENV,What is a Light in this context?,matched,gpt-5
+29,SAREF4ENV,Can you list all the TESS devices that were manufactured by a specific company and have a version number higher than 2.0?,matched,qwen-max
+30,VC,Can you tell me more about where the GeoSPARQL ontology is defined?,unmatched,gpt-5
+31,VGO,How many events happened between two given times in a game session?,unmatched,glm-5
+32,SAREF4ENV,What is a TemporalUnit in this context?,unmatched,gpt-5
+33,SAREF4ENV,What are the units of length included in the ontology?,unmatched,gpt-5
+34,VC,What is the ID of a particular service?,matched,glm-5
+35,SAREF4ENV,What is an Actuator in the context of this ontology?,matched,qwen-max
+36,OneM2M,What is the purpose of a variable conversion?,unmatched,glm-5
+37,VGO,"Can you list the contributors and creators of all games in the ontology, and how many games each has worked on?",unmatched,glm-5
+38,VC,Which sensors and actuators are associated with a specific service?,unmatched,glm-5
+39,VGO,What does it mean when an event unlocks an achievement?,unmatched,glm-5
+40,SAREF4ENV,From what height is light projected by a device?,matched,gpt-5
+41,VC,What institution is associated with the URI <http://www.oeg-upm.net/>?,unmatched,gpt-5
+42,VGO,When did a session start?,unmatched,glm-5
+43,VC,Who are the agents involved in a specific activity?,matched,glm-5
+44,VC,How does the concept of a HumanUser relate to the more general concept of a Person?,unmatched,qwen-max
+45,OneM2M,Can you describe what an input data point is and how it's used?,matched,gpt-5
+46,SAREF4ENV,Which version of the SAREF core ontology does SAREF4ENVI import?,unmatched,glm-5
+47,VGO,How many characters are owned by players who live in a specific place?,unmatched,gpt-5
+48,SAREF4ENV,When was the last timestamp recorded for a given TESS device?,matched,gpt-5
+49,VGO,How many players have achieved the 'Veteran' status and what are the common game events they have experienced?,unmatched,gpt-5
+50,OneM2M,What is the version of the base ontology?,unmatched,gpt-5
+51,VC,What is a BatteryLifetime?,unmatched,gpt-5
+52,VC,What is the definition of an AdministrativeArea in this context?,unmatched,glm-5
+53,OneM2M,Which variables are used as both input and output data points in the same operation?,matched,glm-5
+54,OneM2M,"For a given operation, can you list all the inputs and their types?",unmatched,gpt-5
+55,VGO,What is the username of a player?,matched,gpt-5
+56,VGO,In which games do players unlock the most achievements?,matched,gpt-5
+57,VGO,Which players have completed all the tutorial achievements and also have a veteran status?,unmatched,glm-5
+58,SAREF4ENV,"Which other ontology is imported by the SAREF4ENVI ontology, and what is its IRI?",unmatched,qwen-max
+59,VGO,How many different characters does a player own that are involved in a specific session?,unmatched,qwen-max
+60,VGO,What are the most common features among the items that are used in the most popular events in a game?,matched,qwen-max
+61,VC,What is the relationship between the number of creators and the term status of the resources in the ontology?,unmatched,gpt-5
+62,SAREF4ENV,"Which devices are accessible through a specific communication interface, and what are their properties?",unmatched,gpt-5
+63,SAREF4ENV,How is the period used as a property in the ontology?,unmatched,glm-5
+64,OneM2M,What is the specific version of the Base Ontology that has the IRI <https://git.onem2m.org/MAS/BaseOntology/raw/3_6_0/base_ontology.owl>?,unmatched,glm-5
+65,VGO,What are the common items owned by characters that trigger the same event?,unmatched,gpt-5
+66,VC,Who are the partners of a particular organization?,matched,gpt-5
+67,VGO,How many different types of Instantaneous Events occur in a typical game session?,unmatched,glm-5
+68,SAREF4ENV,Which length unit is used to measure centimeters?,unmatched,gpt-5
+69,OneM2M,Can you list all the types of variables in the ontology?,unmatched,qwen-max
+70,SAREF4ENV,Could you describe what irradiance means as a light property?,unmatched,qwen-max
+71,SAREF4ENV,Which TESS devices have a projection angle less than 30 degrees and were created in the last year?,matched,glm-5
+72,VC,"What is an AdministrativeArea, and how does it relate to other areas like cities or countries?",unmatched,qwen-max
+73,OneM2M,What are the different types of variables in the ontology?,unmatched,glm-5
+74,VGO,Which players who have experienced the most 'LoseEvents' also have the 'SpecialPlayStyle' achievement?,matched,glm-5
+75,VGO,In which games is a specific character found?,unmatched,gpt-5
+76,VGO,In which sessions has a particular achievement been achieved?,unmatched,glm-5
+77,SAREF4ENV,What is a lamppost classified as?,matched,glm-5
+78,OneM2M,What is the range of the hasMetaData property?,unmatched,qwen-max
+79,VC,What is an OperatingProperty?,unmatched,gpt-5
+80,OneM2M,"Which variables can be converted to another type, and what are their possible conversions?",unmatched,qwen-max
+81,SAREF4ENV,What is a LightPoint?,unmatched,glm-5
+82,VC,Are there any organizations that have partnerships exclusively within their own country?,matched,glm-5
+83,VGO,In which game is a particular session taking place?,unmatched,qwen-max
+84,OneM2M,What kind of annotations can be added to a thing?,unmatched,gpt-5
+85,SAREF4ENV,What is a CompassDirection?,unmatched,gpt-5
+86,VC,What is the name given to a certain service?,matched,gpt-5
+87,VC,Who is the owner of a specific service in the context of the system?,matched,glm-5
+88,OneM2M,What are the metadata associated with a specific operation?,unmatched,glm-5
+89,SAREF4ENV,Which sensors make measurements that are related to a specific property and are encapsulated within a certain type of device?,matched,glm-5
+90,SAREF4ENV,How is the reciprocal second-time unit used to measure frequency in the ontology?,unmatched,qwen-max
+91,VGO,Which sessions involve a specific character and a specific player?,unmatched,glm-5
+92,VC,"How many neighbourhoods does a given agent belong to, and who are the other agents in those neighbourhoods?",unmatched,qwen-max
+93,SAREF4ENV,What is the definition of a frequency unit in this context?,unmatched,qwen-max
+94,VC,Can you tell me the name of a particular virtual thing?,unmatched,qwen-max
+95,SAREF4ENV,What is a PeriodMeasurement?,unmatched,gpt-5
+96,VGO,"What is the curiosity achievement, and how can players earn it?",unmatched,qwen-max
+97,SAREF4ENV,"How do compass directions, colors, and lights differ from each other in the ontology?",unmatched,glm-5
+98,VC,What is the geometry of a specific location?,unmatched,gpt-5
+99,SAREF4ENV,Where can I find more information about the SAREF4ENVI ontology?,unmatched,qwen-max
+100,OneM2M,What does a structured type variable have that other variables might not?,matched,gpt-5
+101,VC,What organization is identified by the URI <http://www.w3.org/ns/org#>?,unmatched,gpt-5
+102,OneM2M,"What is an output data point, and how is it associated with a service?",matched,glm-5
+103,VC,Can you identify which buildings have more than one building space?,matched,qwen-max
+104,SAREF4ENV,What types of units of measure are defined in the ontology?,unmatched,glm-5
+105,OneM2M,"How can a service be a part of another service, and what does that mean?",matched,qwen-max
+106,SAREF4ENV,"Where can I find the source information for the SAREF4ENVI ontology, as indicated by <https://saref.etsi.org/sources/saref4envi/>?",unmatched,qwen-max
+107,VC,Could you tell me what systems are part of the SSN system class?,unmatched,glm-5
+108,VGO,Which characters does a player own?,unmatched,gpt-5
+109,VC,Which components are part of a particular system?,unmatched,glm-5
+110,VGO,What is the tutorial achievement about?,unmatched,qwen-max
+111,VGO,Which playing areas are used in a particular game?,matched,glm-5
+112,OneM2M,What is the specific version IRI for the Base Ontology?,unmatched,glm-5
+113,VC,Which Buildings contain a specific Building Space?,matched,glm-5
+114,VGO,Which players participated in the most events during a specific session?,matched,glm-5
+115,SAREF4ENV,What defines a wgs84:Point?,unmatched,glm-5
+116,OneM2M,What is the minimum exclusive value for a variable?,unmatched,qwen-max
+117,OneM2M,What type of class is Command?,unmatched,glm-5
+118,SAREF4ENV,Where can I find the details of the license for the SAREF4ENVI ontology?,unmatched,glm-5
+119,VC,What is the definition of a feature in this ontology?,matched,qwen-max
+120,VGO,What kind of achievements are included in the Collection category?,matched,gpt-5

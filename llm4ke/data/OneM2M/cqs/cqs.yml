@@ -1,0 +1,151 @@
+ontology:
+  name: OneM2M
+  cqs:
+  - ID: OneM2M_626
+    question: A thing is an entity that can be identified in the oneM2M System.
+  - ID: OneM2M_627
+    question: A thing may have properties
+  - ID: OneM2M_628
+    question: A thing can have relations to other things
+  - ID: OneM2M_629
+    question: An aspect could be a (physical or non-physical) entity or it could be
+      a quality
+  - ID: OneM2M_630
+    question: An aspect can have metadata
+  - ID: OneM2M_631
+    question: "Metadata contain data (like units, precision-ranges \xE2\x80\xA6) about\
+      \ a variable or about an aspect"
+  - ID: OneM2M_632
+    question: A device is a thing that is able to interact electronically with its
+      environment via a network
+  - ID: OneM2M_633
+    question: A device may be a physical or non-physical entity
+  - ID: OneM2M_634
+    question: A device performs one or more functionalities in order to accomplish
+      a particular task
+  - ID: OneM2M_635
+    question: A device has one or more services that expose in the network its functionalities
+  - ID: OneM2M_636
+    question: A device can be composed of several (sub-)devices
+  - ID: OneM2M_637
+    question: An interworked device is a device that does not support oneM2M interfaces
+      and can only be accessed from the oneM2M System by communicating with a "proxied"
+      (virtual) device that has been created by an interworking proxy entity
+  - ID: OneM2M_638
+    question: An interworked device is part of an area network
+  - ID: OneM2M_639
+    question: An area network is a network that provides data transport services between
+      an interworked device and the oneM2M System
+  - ID: OneM2M_640
+    question: An area network follows an standard that defines its physical properties
+  - ID: OneM2M_641
+    question: An area network follows a communication protocol
+  - ID: OneM2M_642
+    question: An area network follows a profile
+  - ID: OneM2M_643
+    question: A service is an electronic representation of a functionality in a network
+  - ID: OneM2M_644
+    question: A service can expose one or more functionalities
+  - ID: OneM2M_645
+    question: A service can be composed of independent (sub-)services
+  - ID: OneM2M_646
+    question: A service has an operation
+  - ID: OneM2M_647
+    question: A service has an input data point
+  - ID: OneM2M_648
+    question: A service has an output data point
+  - ID: OneM2M_649
+    question: A functionality represents the functionality necessary to accomplish
+      the task for which a device is designed
+  - ID: OneM2M_650
+    question: A functionality refers to (e.g. observes or influences) some real-world
+      aspect(s)
+  - ID: OneM2M_651
+    question: A functionality has commands that allow human users to influence/observe
+      such functionality
+  - ID: OneM2M_652
+    question: A controlling functionality represents a functionality that has impacts
+      on the real world, but does not gather data
+  - ID: OneM2M_653
+    question: A measuring functionality represents a functionality that has no impacts
+      on the real world, but only gathers data
+  - ID: OneM2M_654
+    question: An operation is the means of a service to communicate in a procedure-type
+      manner over the network (i.e. transmit data to/from other devices)
+  - ID: OneM2M_655
+    question: An operation is the -machine interpretable- exposure of a -human understandable-
+      command to a network
+  - ID: OneM2M_656
+    question: An operation may receive input data from input data points (persistent
+      entities)
+  - ID: OneM2M_657
+    question: An operation may receive data from operation inputs (transient entities
+      that are deleted when the operation finishes)
+  - ID: OneM2M_658
+    question: An operation may produce output data into output data points (persistent
+      entities)
+  - ID: OneM2M_659
+    question: An operation may produce data into operation outputs (transient entities
+      that are deleted when the operation finishes)
+  - ID: OneM2M_660
+    question: An operation has an operation state that allows a oneM2M entity to get
+      informed on the progress of that operation
+  - ID: OneM2M_661
+    question: An operation has a method
+  - ID: OneM2M_662
+    question: An operation has a target URI
+  - ID: OneM2M_663
+    question: A command represents an action that can be performed to support a functionality
+  - ID: OneM2M_664
+    question: A command has as input one or more operation inputs
+  - ID: OneM2M_665
+    question: A command has as output one or more operation outputs
+  - ID: OneM2M_666
+    question: An operation input describes an input of an operation and also describes
+      the input of a command
+  - ID: OneM2M_667
+    question: An operation output describes an output of an operation and also describes
+      the output of a command
+  - ID: OneM2M_668
+    question: An operation state describes the current state of an operation
+  - ID: OneM2M_669
+    question: An operation state is a simple type variable
+  - ID: OneM2M_670
+    question: An operation state has exactly one data restriction pattern
+  - ID: OneM2M_671
+    question: An input data point is a variable of a service that is accessed by a
+      RESTful device in its environment and that the device reads out autonomously
+      (e.g. at periodic times)
+  - ID: OneM2M_672
+    question: An output data point is a variable of a service that is set by a RESTful
+      device in its environment and that the device updates autonomously (e.g. at
+      periodic times)
+  - ID: OneM2M_673
+    question: A variable describes an entity that stores some data (e.g. integers,
+      text, etc., or structured data) that can change over time
+  - ID: OneM2M_674
+    question: A variable describes a real-world aspect
+  - ID: OneM2M_675
+    question: A variable can have metadata
+  - ID: OneM2M_676
+    question: A variable can be structured using other variables
+  - ID: OneM2M_677
+    question: A variable may have a value (useful for values that are relatively static)
+  - ID: OneM2M_678
+    question: A variable has a CRUD method through which the instantiation of the
+      variable value can be manipulated
+  - ID: OneM2M_679
+    question: A variable has a URI of a resource through which the instantiation of
+      the value of the variable can be manipulated
+  - ID: OneM2M_680
+    question: A simple type variable is a variable that only consists of variables
+      of simple XML types like xsd:integer, xsd:string, etc., potentially including
+      restrictions
+  - ID: OneM2M_681
+    question: A simple type variable contains the name of the attribute of the resource
+      that is referenced with the target URI and that stores the value of the simple
+      type variable
+  - ID: OneM2M_682
+    question: A simple type variable has exactly one datatype
+  - ID: OneM2M_683
+    question: A simple type variable has a data restriction

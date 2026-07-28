@@ -1,0 +1,2620 @@
+{
+    "file_name": "onem2m.owl",
+    "description": "Ontologies and their OWL representations are used in oneM2M to provide syntactic and semantic interoperability between oneM2M and external systems. The oneM2M Base Ontology is described in TS-0012.",
+    "competency_questions": [
+        "A thing is an entity that can be identified in the oneM2M System.",
+        "A thing may have properties",
+        "A thing can have relations to other things",
+        "An aspect could be a (physical or non-physical) entity or it could be a quality",
+        "An aspect can have metadata",
+        "Metadata contain data (like units, precision-ranges â¦) about a variable or about an aspect",
+        "A device is a thing that is able to interact electronically with its environment via a network",
+        "A device may be a physical or non-physical entity",
+        "A device performs one or more functionalities in order to accomplish a particular task",
+        "A device has one or more services that expose in the network its functionalities",
+        "A device can be composed of several (sub-)devices",
+        "An interworked device is a device that does not support oneM2M interfaces and can only be accessed from the oneM2M System by communicating with a \"proxied\" (virtual) device that has been created by an interworking proxy entity",
+        "An interworked device is part of an area network",
+        "An area network is a network that provides data transport services between an interworked device and the oneM2M System",
+        "An area network follows an standard that defines its physical properties",
+        "An area network follows a communication protocol",
+        "An area network follows a profile",
+        "A service is an electronic representation of a functionality in a network",
+        "A service can expose one or more functionalities",
+        "A service can be composed of independent (sub-)services",
+        "A service has an operation",
+        "A service has an input data point",
+        "A service has an output data point",
+        "A functionality represents the functionality necessary to accomplish the task for which a device is designed",
+        "A functionality refers to (e.g. observes or influences) some real-world aspect(s)",
+        "A functionality has commands that allow human users to influence/observe such functionality",
+        "A controlling functionality represents a functionality that has impacts on the real world, but does not gather data",
+        "A measuring functionality represents a functionality that has no impacts on the real world, but only gathers data",
+        "An operation is the means of a service to communicate in a procedure-type manner over the network (i.e. transmit data to/from other devices)",
+        "An operation is the -machine interpretable- exposure of a -human understandable- command to a network",
+        "An operation may receive input data from input data points (persistent entities)",
+        "An operation may receive data from operation inputs (transient entities that are deleted when the operation finishes)",
+        "An operation may produce output data into output data points (persistent entities)",
+        "An operation may produce data into operation outputs (transient entities that are deleted when the operation finishes)",
+        "An operation has an operation state that allows a oneM2M entity to get informed on the progress of that operation",
+        "An operation has a method",
+        "An operation has a target URI",
+        "A command represents an action that can be performed to support a functionality",
+        "A command has as input one or more operation inputs",
+        "A command has as output one or more operation outputs",
+        "An operation input describes an input of an operation and also describes the input of a command",
+        "An operation output describes an output of an operation and also describes the output of a command",
+        "An operation state describes the current state of an operation",
+        "An operation state is a simple type variable",
+        "An operation state has exactly one data restriction pattern",
+        "An input data point is a variable of a service that is accessed by a RESTful device in its environment and that the device reads out autonomously (e.g. at periodic times)",
+        "An output data point is a variable of a service that is set by a RESTful device in its environment and that the device updates autonomously (e.g. at periodic times)",
+        "A variable describes an entity that stores some data (e.g. integers, text, etc., or structured data) that can change over time",
+        "A variable describes a real-world aspect",
+        "A variable can have metadata",
+        "A variable can be structured using other variables",
+        "A variable may have a value (useful for values that are relatively static)",
+        "A variable has a CRUD method through which the instantiation of the variable value can be manipulated",
+        "A variable has a URI of a resource through which the instantiation of the value of the variable can be manipulated",
+        "A simple type variable is a variable that only consists of variables of simple XML types like xsd:integer, xsd:string, etc., potentially including restrictions",
+        "A simple type variable contains the name of the attribute of the resource that is referenced with the target URI and that stores the value of the simple type variable",
+        "A simple type variable has exactly one datatype",
+        "A simple type variable has a data restriction"
+    ],
+    "namespaces": [
+        {
+            "prefix": "brick",
+            "url": "https://brickschema.org/schema/Brick#"
+        },
+        {
+            "prefix": "csvw",
+            "url": "http://www.w3.org/ns/csvw#"
+        },
+        {
+            "prefix": "dc",
+            "url": "http://purl.org/dc/elements/1.1/"
+        },
+        {
+            "prefix": "dcat",
+            "url": "http://www.w3.org/ns/dcat#"
+        },
+        {
+            "prefix": "dcmitype",
+            "url": "http://purl.org/dc/dcmitype/"
+        },
+        {
+            "prefix": "dcterms",
+            "url": "http://purl.org/dc/terms/"
+        },
+        {
+            "prefix": "dcam",
+            "url": "http://purl.org/dc/dcam/"
+        },
+        {
+            "prefix": "doap",
+            "url": "http://usefulinc.com/ns/doap#"
+        },
+        {
+            "prefix": "foaf",
+            "url": "http://xmlns.com/foaf/0.1/"
+        },
+        {
+            "prefix": "geo",
+            "url": "http://www.opengis.net/ont/geosparql#"
+        },
+        {
+            "prefix": "odrl",
+            "url": "http://www.w3.org/ns/odrl/2/"
+        },
+        {
+            "prefix": "org",
+            "url": "http://www.w3.org/ns/org#"
+        },
+        {
+            "prefix": "prof",
+            "url": "http://www.w3.org/ns/dx/prof/"
+        },
+        {
+            "prefix": "prov",
+            "url": "http://www.w3.org/ns/prov#"
+        },
+        {
+            "prefix": "qb",
+            "url": "http://purl.org/linked-data/cube#"
+        },
+        {
+            "prefix": "schema",
+            "url": "https://schema.org/"
+        },
+        {
+            "prefix": "sh",
+            "url": "http://www.w3.org/ns/shacl#"
+        },
+        {
+            "prefix": "skos",
+            "url": "http://www.w3.org/2004/02/skos/core#"
+        },
+        {
+            "prefix": "sosa",
+            "url": "http://www.w3.org/ns/sosa/"
+        },
+        {
+            "prefix": "ssn",
+            "url": "http://www.w3.org/ns/ssn/"
+        },
+        {
+            "prefix": "time",
+            "url": "http://www.w3.org/2006/time#"
+        },
+        {
+            "prefix": "vann",
+            "url": "http://purl.org/vocab/vann/"
+        },
+        {
+            "prefix": "void",
+            "url": "http://rdfs.org/ns/void#"
+        },
+        {
+            "prefix": "wgs",
+            "url": "https://www.w3.org/2003/01/geo/wgs84_pos#"
+        },
+        {
+            "prefix": "owl",
+            "url": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+            "prefix": "rdf",
+            "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+            "prefix": "rdfs",
+            "url": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+            "prefix": "xsd",
+            "url": "http://www.w3.org/2001/XMLSchema#"
+        },
+        {
+            "prefix": "xml",
+            "url": "http://www.w3.org/XML/1998/namespace"
+        },
+        {
+            "prefix": "BO",
+            "url": "https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#"
+        }
+    ],
+    "triples": [
+        [
+            "BO:isPartOf",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:Service",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:Device",
+            "rdfs:subClassOf",
+            "BO:Thing"
+        ],
+        [
+            "BO:InterworkedDevice",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:OperationInput",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:ThingProperty",
+            "rdfs:subClassOf",
+            "BO:Variable"
+        ],
+        [
+            "BO:oneM2MAttribute",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:MeasuringFunction",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasInput",
+            "rdfs:range",
+            "BO:OperationInput"
+        ],
+        [
+            "BO:hasDataRestriction_length",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasThingAnnotation",
+            "rdfs:range",
+            "rdfs:Literal"
+        ],
+        [
+            "BO:netTechnologyProfile",
+            "rdfs:domain",
+            "BO:AreaNetwork"
+        ],
+        [
+            "BO:hasFunction",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasSubStructure",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasCommand",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:netTechnologyProfile",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasSubStructure",
+            "rdfs:range",
+            "BO:Variable"
+        ],
+        [
+            "BO:hasDataRestriction_minInclusive",
+            "rdfs:subPropertyOf",
+            "BO:hasDataRestriction"
+        ],
+        [
+            "BO:OperationOutput",
+            "rdfs:subClassOf",
+            "BO:Variable"
+        ],
+        [
+            "BO:hasDataRestriction_minInclusive",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:resourceDescriptorLink",
+            "rdf:type",
+            "owl:AnnotationProperty"
+        ],
+        [
+            "BO:hasDataRestriction_minLength",
+            "rdfs:subPropertyOf",
+            "BO:hasDataRestriction"
+        ],
+        [
+            "BO:hasDataRestriction_maxInclusive",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:netTechnologyProfile",
+            "rdfs:range",
+            "rdf:PlainLiteral"
+        ],
+        [
+            "BO:Thing",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasDataRestriction_pattern",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:Device",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:resourceDescriptorLink",
+            "rdfs:domain",
+            "owl:Thing"
+        ],
+        [
+            "BO:InputDataPoint",
+            "rdfs:subClassOf",
+            "BO:Variable"
+        ],
+        [
+            "BO:hasDataRestriction_pattern",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasConversion",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasService",
+            "rdfs:domain",
+            "BO:Device"
+        ],
+        [
+            "BO:hasThingProperty",
+            "rdfs:range",
+            "BO:ThingProperty"
+        ],
+        [
+            "BO:netTechnologyCommunicationProtocol",
+            "rdfs:domain",
+            "BO:AreaNetwork"
+        ],
+        [
+            "BO:SET_OutputDataPoint",
+            "rdfs:subClassOf",
+            "BO:Operation"
+        ],
+        [
+            "BO:hasThingProperty",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasValue",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:OutputDataPoint",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasDataRestriction",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasValue",
+            "rdfs:range",
+            "rdfs:Literal"
+        ],
+        [
+            "BO:netTechnologyPhysicalStandard",
+            "rdfs:domain",
+            "BO:AreaNetwork"
+        ],
+        [
+            "BO:hasDataRestriction_minExclusive",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:hasDataType",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:Function",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:StructuredTypeVariable",
+            "rdfs:subClassOf",
+            "BO:Variable"
+        ],
+        [
+            "BO:hasDataRestriction_minLength",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:ControllingFunction",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasOperation",
+            "rdfs:range",
+            "BO:Operation"
+        ],
+        [
+            "BO:convertsTo",
+            "rdfs:domain",
+            "BO:VariableConversion"
+        ],
+        [
+            "BO:isDataList",
+            "rdfs:range",
+            "xsd:boolean"
+        ],
+        [
+            "BO:hasDataRestriction",
+            "rdfs:range",
+            "rdf:PlainLiteral"
+        ],
+        [
+            "BO:hasOutput",
+            "rdfs:range",
+            "BO:OperationOutput"
+        ],
+        [
+            "BO:describes",
+            "rdfs:range",
+            "BO:Aspect"
+        ],
+        [
+            "BO:InterworkedDevice",
+            "rdfs:subClassOf",
+            "BO:Device"
+        ],
+        [
+            "BO:netTechnologyPhysicalStandard",
+            "rdfs:range",
+            "rdf:PlainLiteral"
+        ],
+        [
+            "BO:hasDataRestriction_minLength",
+            "rdfs:range",
+            "xsd:nonNegativeInteger"
+        ],
+        [
+            "BO:hasSubService",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasInputDataPoint",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:convertsTo",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasOperation",
+            "rdfs:domain",
+            "BO:Service"
+        ],
+        [
+            "BO:OutputDataPoint",
+            "rdfs:subClassOf",
+            "BO:Variable"
+        ],
+        [
+            "BO:convertsTo",
+            "rdfs:range",
+            "BO:Variable"
+        ],
+        [
+            "BO:hasDataRestriction_maxExclusive",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "<https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl>",
+            "rdf:type",
+            "owl:Ontology"
+        ],
+        [
+            "BO:hasConversion",
+            "rdfs:domain",
+            "BO:Variable"
+        ],
+        [
+            "BO:hasThingRelation",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:netTechnologyPhysicalStandard",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasThingAnnotation",
+            "rdfs:domain",
+            "BO:Thing"
+        ],
+        [
+            "BO:hasOutputDataPoint",
+            "rdfs:range",
+            "BO:OutputDataPoint"
+        ],
+        [
+            "BO:hasService",
+            "rdfs:range",
+            "BO:Service"
+        ],
+        [
+            "BO:GET_InputDataPoint",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:ThingProperty",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:exposesFunction",
+            "rdfs:range",
+            "BO:Function"
+        ],
+        [
+            "BO:oneM2MAttribute",
+            "rdfs:range",
+            "rdf:PlainLiteral"
+        ],
+        [
+            "BO:MetaData",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasThingAnnotation",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasDataRestriction_maxLength",
+            "rdfs:subPropertyOf",
+            "BO:hasDataRestriction"
+        ],
+        [
+            "BO:hasFunction",
+            "rdfs:domain",
+            "BO:Device"
+        ],
+        [
+            "BO:consistsOf",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasValue",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:OperationInput",
+            "rdfs:subClassOf",
+            "BO:Variable"
+        ],
+        [
+            "BO:OperationOutput",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasMetaData",
+            "rdfs:range",
+            "BO:MetaData"
+        ],
+        [
+            "BO:ControllingFunction",
+            "rdfs:subClassOf",
+            "BO:Function"
+        ],
+        [
+            "BO:oneM2MTargetURI",
+            "rdfs:range",
+            "rdfs:Literal"
+        ],
+        [
+            "BO:hasDataRestriction_length",
+            "rdfs:subPropertyOf",
+            "BO:hasDataRestriction"
+        ],
+        [
+            "BO:exposesCommand",
+            "rdfs:range",
+            "BO:Command"
+        ],
+        [
+            "BO:consistsOf",
+            "rdfs:range",
+            "BO:Device"
+        ],
+        [
+            "BO:hasOutputDataPoint",
+            "rdfs:domain",
+            "BO:Service"
+        ],
+        [
+            "BO:resourceDescriptorLink",
+            "rdfs:range",
+            "xsd:anyURI"
+        ],
+        [
+            "BO:InputDataPoint",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:isDataList",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:oneM2MMethod",
+            "rdfs:range",
+            "rdf:PlainLiteral"
+        ],
+        [
+            "BO:SimpleTypeVariable",
+            "rdfs:subClassOf",
+            "BO:Variable"
+        ],
+        [
+            "BO:hasDataRestriction_maxLength",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:hasMetaData",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasCommand",
+            "rdfs:domain",
+            "BO:Function"
+        ],
+        [
+            "BO:describes",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:exposesCommand",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasCommand",
+            "rdfs:range",
+            "BO:Command"
+        ],
+        [
+            "BO:hasDataRestriction_minExclusive",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasDataRestriction_minInclusive",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasOutputDataPoint",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasDataRestriction_minLength",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:oneM2MAttribute",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:refersTo",
+            "rdfs:range",
+            "BO:Aspect"
+        ],
+        [
+            "BO:oneM2MMethod",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasDataRestriction_maxInclusive",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasDataType",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasSubService",
+            "rdfs:range",
+            "BO:Service"
+        ],
+        [
+            "BO:hasDataRestriction_pattern",
+            "rdfs:subPropertyOf",
+            "BO:hasDataRestriction"
+        ],
+        [
+            "BO:hasDataRestriction_length",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:hasDataRestriction_maxLength",
+            "rdfs:range",
+            "xsd:nonNegativeInteger"
+        ],
+        [
+            "BO:hasOperation",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:refersTo",
+            "rdfs:domain",
+            "BO:Function"
+        ],
+        [
+            "BO:describes",
+            "rdfs:domain",
+            "BO:Variable"
+        ],
+        [
+            "BO:hasDataRestriction",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:netTechnologyCommunicationProtocol",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:Aspect",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasDataRestriction_minExclusive",
+            "rdfs:subPropertyOf",
+            "BO:hasDataRestriction"
+        ],
+        [
+            "BO:Operation",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasDataRestriction_length",
+            "rdfs:range",
+            "xsd:nonNegativeInteger"
+        ],
+        [
+            "BO:GET_InputDataPoint",
+            "rdfs:subClassOf",
+            "BO:Operation"
+        ],
+        [
+            "BO:hasFunction",
+            "rdfs:range",
+            "BO:Function"
+        ],
+        [
+            "BO:AreaNetwork",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasDataRestriction_maxInclusive",
+            "rdfs:subPropertyOf",
+            "BO:hasDataRestriction"
+        ],
+        [
+            "BO:VariableConversion",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasSubStructure",
+            "rdfs:domain",
+            "BO:StructuredTypeVariable"
+        ],
+        [
+            "BO:exposesFunction",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:netTechnologyCommunicationProtocol",
+            "rdfs:range",
+            "rdf:PlainLiteral"
+        ],
+        [
+            "BO:oneM2MTargetURI",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:StructuredTypeVariable",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasOutput",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasThingRelation",
+            "rdfs:range",
+            "BO:Thing"
+        ],
+        [
+            "BO:MeasuringFunction",
+            "rdfs:subClassOf",
+            "BO:Function"
+        ],
+        [
+            "BO:isPartOf",
+            "rdfs:range",
+            "BO:AreaNetwork"
+        ],
+        [
+            "<https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl>",
+            "owl:versionIRI",
+            "<https://git.onem2m.org/MAS/BaseOntology/raw/3_6_0/base_ontology.owl>"
+        ],
+        [
+            "BO:exposesFunction",
+            "rdfs:domain",
+            "BO:Service"
+        ],
+        [
+            "BO:isPartOf",
+            "rdfs:domain",
+            "BO:InterworkedDevice"
+        ],
+        [
+            "BO:hasDataRestriction_maxExclusive",
+            "rdfs:subPropertyOf",
+            "BO:hasDataRestriction"
+        ],
+        [
+            "BO:Variable",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:Command",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:consistsOf",
+            "rdfs:domain",
+            "BO:Device"
+        ],
+        [
+            "BO:hasThingRelation",
+            "rdfs:domain",
+            "BO:Thing"
+        ],
+        [
+            "BO:hasInputDataPoint",
+            "rdfs:range",
+            "BO:InputDataPoint"
+        ],
+        [
+            "BO:hasSubService",
+            "rdfs:domain",
+            "BO:Service"
+        ],
+        [
+            "BO:hasInputDataPoint",
+            "rdfs:domain",
+            "BO:Service"
+        ],
+        [
+            "BO:hasDataRestriction_pattern",
+            "rdfs:range",
+            "xsd:string"
+        ],
+        [
+            "BO:SET_OutputDataPoint",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:hasInput",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasConversion",
+            "rdfs:range",
+            "BO:VariableConversion"
+        ],
+        [
+            "BO:hasThingProperty",
+            "rdfs:domain",
+            "BO:Thing"
+        ],
+        [
+            "BO:SimpleTypeVariable",
+            "owl:disjointWith",
+            "BO:StructuredTypeVariable"
+        ],
+        [
+            "BO:SimpleTypeVariable",
+            "rdf:type",
+            "owl:Class"
+        ],
+        [
+            "BO:refersTo",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasService",
+            "rdf:type",
+            "owl:ObjectProperty"
+        ],
+        [
+            "BO:hasDataRestriction_maxExclusive",
+            "rdfs:domain",
+            "BO:SimpleTypeVariable"
+        ],
+        [
+            "BO:isDataList",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ],
+        [
+            "BO:hasDataRestriction_maxLength",
+            "rdf:type",
+            "owl:DatatypeProperty"
+        ]
+    ],
+    "retrofitted_competency_questions": [
+        "[Simple] What is the network technology profile of an area network?",
+        "[Simple] What communication protocols are used in an area network?",
+        "[Simple] What physical standards are associated with an area network?",
+        "[Simple] What oneM2M methods are defined in the ontology?",
+        "[Complex] Which area networks use a specific communication protocol and also have a particular network technology profile?",
+        "[Complex] Can you list all the area networks that use a specific physical standard and also support a given oneM2M method?",
+        "[Complex] How many area networks use a particular communication protocol and also have a specific network technology profile?",
+        "[Complex] Are there any area networks that use multiple communication protocols and also have more than one physical standard?",
+        "[Complex] For area networks that use a specific communication protocol, what are the different network technology profiles they can have?",
+        "[Simple] What are the types of operation inputs?",
+        "[Simple] What is the range of the hasInput property?",
+        "[Simple] Can you list all the variables that have a substructure?",
+        "[Simple] What is the relationship between OperationOutput and Variable?",
+        "[Simple] What does the hasConversion property do?",
+        "[Simple] What is the domain of the convertsTo property?",
+        "[Simple] What is the range of the hasOutput property?",
+        "[Simple] What is the type of the VariableConversion class?",
+        "[Complex] Which variables can be converted to other variables through the VariableConversion class?",
+        "[Complex] For a given Operation, what are all the possible inputs and outputs?",
+        "[Complex] If a variable has a substructure, what kind of structured type variable is it?",
+        "[Complex] How many conversions are there for a specific variable?",
+        "[Complex] What are the possible outputs of an operation that has a specific input?",
+        "[Complex] Which variables can be both inputs and outputs in different operations?",
+        "[Complex] For a given operation, which variables with substructures can be used as inputs?",
+        "[Complex] Can you find all the variables that can be converted to a specific type of variable?",
+        "[Simple] What is a service in the context of this ontology?",
+        "[Simple] Can you list all the devices that are part of an area network?",
+        "[Simple] What properties does a thing have in this ontology?",
+        "[Simple] What is the relationship between a device and a function?",
+        "[Simple] What types of operations can be performed on input data points?",
+        "[Simple] What are the different types of functions available in this ontology?",
+        "[Complex] Which services are provided by devices that have a controlling function?",
+        "[Complex] What are the commands exposed by the measuring functions of interworked devices?",
+        "[Complex] How many devices are part of each area network, and what are their services?",
+        "[Complex] For a given service, which devices have both an input data point and an output data point associated with it?",
+        "[Complex] Which devices have a specific thing property and also expose a certain command?",
+        "[Complex] What are the aspects described by the variables that have a specific metadata?",
+        "[Complex] How many services does each device provide, and what are the operations associated with these services?",
+        "[Complex] Which devices have a function that refers to a particular aspect and also have a specific thing relation?",
+        "[Complex] Can you identify the devices that have a sub-service which in turn has a specific operation?",
+        "[Simple] What are the different types of thing properties in this ontology?",
+        "[Simple] Can you list all the metadata associated with a specific device?",
+        "[Simple] What is an example of a SET output data point in this context?",
+        "[Simple] What are the commands that can be exposed by a function in this system?",
+        "[Simple] Can you describe what an aspect represents in this ontology?",
+        "[Simple] What is the role of a GET input data point in this system?",
+        "[Simple] How is a thing defined within this ontology, and what are its key characteristics?",
+        "[Simple] What is the minimum length that a simple type variable can have?",
+        "[Simple] What is the data type of a simple type variable?",
+        "[Simple] What is the target URI for a oneM2M attribute?",
+        "[Simple] What is the maximum inclusive value for a simple type variable?",
+        "[Complex] Which simple type variables have a data restriction pattern and a minimum length greater than 5?",
+        "[Complex] For a given simple type variable, what are the different data restrictions that apply to it, such as minimum and maximum values, and patterns?",
+        "[Complex] Are there any simple type variables that have both a minimum exclusive value and a maximum exclusive value defined?",
+        "[Complex] How many simple type variables have a data restriction pattern that includes a specific substring?",
+        "[Complex] What are the annotations associated with a particular thing in the ontology?",
+        "[Simple] What is the value of a simple type variable?",
+        "[Simple] How long can a simple type variable be in terms of characters?",
+        "[Simple] What is the length of a data restriction for a simple type variable?",
+        "[Simple] What is the type of a structured type variable?",
+        "[Simple] What is the type of the resourceDescriptorLink?",
+        "[Complex] Can you find all the instances that have a resourceDescriptorLink pointing to a specific URI?",
+        "[Simple] What is the version of the oneM2M Base Ontology?",
+        "[Complex] How has the oneM2M Base Ontology evolved from its previous version to the current version?"
+    ],
+    "subgraph_chunks": [
+        {
+            "subgraph_id": 1,
+            "namespaces": [
+                {
+                    "prefix": "BO",
+                    "url": "https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                }
+            ],
+            "triples": [
+                [
+                    "BO:netTechnologyProfile",
+                    "rdfs:domain",
+                    "BO:AreaNetwork"
+                ],
+                [
+                    "BO:netTechnologyProfile",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:netTechnologyProfile",
+                    "rdfs:range",
+                    "rdf:PlainLiteral"
+                ],
+                [
+                    "BO:netTechnologyCommunicationProtocol",
+                    "rdfs:domain",
+                    "BO:AreaNetwork"
+                ],
+                [
+                    "BO:netTechnologyPhysicalStandard",
+                    "rdfs:domain",
+                    "BO:AreaNetwork"
+                ],
+                [
+                    "BO:netTechnologyPhysicalStandard",
+                    "rdfs:range",
+                    "rdf:PlainLiteral"
+                ],
+                [
+                    "BO:netTechnologyPhysicalStandard",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:oneM2MMethod",
+                    "rdfs:range",
+                    "rdf:PlainLiteral"
+                ],
+                [
+                    "BO:oneM2MMethod",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:netTechnologyCommunicationProtocol",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:AreaNetwork",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:netTechnologyCommunicationProtocol",
+                    "rdfs:range",
+                    "rdf:PlainLiteral"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is the network technology profile of an area network?",
+                "[Simple] What communication protocols are used in an area network?",
+                "[Simple] What physical standards are associated with an area network?",
+                "[Simple] What oneM2M methods are defined in the ontology?",
+                "[Complex] Which area networks use a specific communication protocol and also have a particular network technology profile?",
+                "[Complex] Can you list all the area networks that use a specific physical standard and also support a given oneM2M method?",
+                "[Complex] How many area networks use a particular communication protocol and also have a specific network technology profile?",
+                "[Complex] Are there any area networks that use multiple communication protocols and also have more than one physical standard?",
+                "[Complex] For area networks that use a specific communication protocol, what are the different network technology profiles they can have?"
+            ],
+            "qualified_questions": [
+                {
+                    "question": "[Simple] What is the network technology profile of an area network?",
+                    "sparql_query": "PREFIX BO: <http://example.org/ontology/BO#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT ?areaNetwork ?netTechnologyProfile\nWHERE {\n  ?areaNetwork rdf:type BO:AreaNetwork ;\n               BO:netTechnologyProfile ?netTechnologyProfile .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What communication protocols are used in an area network?",
+                    "sparql_query": "PREFIX BO: <http://example.org/ontology/BO#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n\nSELECT ?communicationProtocol\nWHERE {\n  ?areaNetwork rdf:type BO:AreaNetwork .\n  ?areaNetwork BO:netTechnologyCommunicationProtocol ?communicationProtocol .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What physical standards are associated with an area network?",
+                    "sparql_query": "PREFIX BO: <http://example.org/ontology/BO#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT ?physicalStandard\nWHERE {\n  ?areaNetwork rdf:type BO:AreaNetwork .\n  ?areaNetwork BO:netTechnologyPhysicalStandard ?physicalStandard .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What oneM2M methods are defined in the ontology?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?oneM2MMethod\nWHERE {\n  ?oneM2MMethod rdf:type BO:oneM2MMethod .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] Which area networks use a specific communication protocol and also have a particular network technology profile?",
+                    "sparql_query": "PREFIX BO: <http://example.org/BuildingOntology#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT ?areaNetwork\nWHERE {\n  ?areaNetwork rdf:type BO:AreaNetwork .\n  ?areaNetwork BO:netTechnologyCommunicationProtocol ?communicationProtocol .\n  ?areaNetwork BO:netTechnologyProfile ?technologyProfile .\n  FILTER(?communicationProtocol = \"specific_communication_protocol\" && ?technologyProfile = \"particular_network_technology_profile\")\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] Can you list all the area networks that use a specific physical standard and also support a given oneM2M method?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/ontology/BO#>\n\nSELECT ?areaNetwork\nWHERE {\n  ?areaNetwork rdf:type BO:AreaNetwork ;\n               BO:netTechnologyPhysicalStandard ?physicalStandard ;\n               BO:oneM2MMethod ?oneM2MMethod .\n  FILTER(?physicalStandard = \"specific_physical_standard\" && ?oneM2MMethod = \"given_oneM2M_method\")\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] How many area networks use a particular communication protocol and also have a specific network technology profile?",
+                    "sparql_query": "PREFIX BO: <http://example.org/ontology#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT (COUNT(?areaNetwork) AS ?count)\nWHERE {\n  ?areaNetwork rdf:type BO:AreaNetwork ;\n               BO:netTechnologyProfile ?profile ;\n               BO:netTechnologyCommunicationProtocol ?protocol .\n  FILTER (?profile = \"specific_network_technology_profile\" && ?protocol = \"particular_communication_protocol\")\n}",
+                    "query_result": [
+                        "\"0\"^^xsd:integer"
+                    ]
+                },
+                {
+                    "question": "[Complex] Are there any area networks that use multiple communication protocols and also have more than one physical standard?",
+                    "sparql_query": "PREFIX BO: <http://example.org/BO#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?areaNetwork\nWHERE {\n  ?areaNetwork rdf:type BO:AreaNetwork .\n  ?areaNetwork BO:netTechnologyCommunicationProtocol ?protocol1 .\n  ?areaNetwork BO:netTechnologyCommunicationProtocol ?protocol2 .\n  FILTER(?protocol1 != ?protocol2)\n  ?areaNetwork BO:netTechnologyPhysicalStandard ?standard1 .\n  ?areaNetwork BO:netTechnologyPhysicalStandard ?standard2 .\n  FILTER(?standard1 != ?standard2)\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] For area networks that use a specific communication protocol, what are the different network technology profiles they can have?",
+                    "sparql_query": "PREFIX BO: <http://example.org/ontology/BO#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT DISTINCT ?netTechnologyProfile\nWHERE {\n  ?areaNetwork rdf:type BO:AreaNetwork ;\n               BO:netTechnologyCommunicationProtocol ?communicationProtocol ;\n               BO:netTechnologyProfile ?netTechnologyProfile .\n}",
+                    "query_result": []
+                }
+            ],
+            "uncovered_entities": [],
+            "coverage_stats": {
+                "total_entities": 5,
+                "covered_entities": 5,
+                "uncovered_entities_count": 0,
+                "coverage_rate": 100.0
+            }
+        },
+        {
+            "subgraph_id": 2,
+            "namespaces": [
+                {
+                    "prefix": "BO",
+                    "url": "https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                }
+            ],
+            "triples": [
+                [
+                    "BO:OperationInput",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:hasInput",
+                    "rdfs:range",
+                    "BO:OperationInput"
+                ],
+                [
+                    "BO:hasSubStructure",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasSubStructure",
+                    "rdfs:range",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:OperationOutput",
+                    "rdfs:subClassOf",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:hasConversion",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:StructuredTypeVariable",
+                    "rdfs:subClassOf",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:convertsTo",
+                    "rdfs:domain",
+                    "BO:VariableConversion"
+                ],
+                [
+                    "BO:hasOutput",
+                    "rdfs:range",
+                    "BO:OperationOutput"
+                ],
+                [
+                    "BO:convertsTo",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:convertsTo",
+                    "rdfs:range",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:hasConversion",
+                    "rdfs:domain",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:OperationInput",
+                    "rdfs:subClassOf",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:OperationOutput",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:VariableConversion",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:hasSubStructure",
+                    "rdfs:domain",
+                    "BO:StructuredTypeVariable"
+                ],
+                [
+                    "BO:StructuredTypeVariable",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:hasOutput",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:Variable",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:hasInput",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasConversion",
+                    "rdfs:range",
+                    "BO:VariableConversion"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What are the types of operation inputs?",
+                "[Simple] What is the range of the hasInput property?",
+                "[Simple] Can you list all the variables that have a substructure?",
+                "[Simple] What is the relationship between OperationOutput and Variable?",
+                "[Simple] What does the hasConversion property do?",
+                "[Simple] What is the domain of the convertsTo property?",
+                "[Simple] What is the range of the hasOutput property?",
+                "[Simple] What is the type of the VariableConversion class?",
+                "[Complex] Which variables can be converted to other variables through the VariableConversion class?",
+                "[Complex] For a given Operation, what are all the possible inputs and outputs?",
+                "[Complex] If a variable has a substructure, what kind of structured type variable is it?",
+                "[Complex] How many conversions are there for a specific variable?",
+                "[Complex] What are the possible outputs of an operation that has a specific input?",
+                "[Complex] Which variables can be both inputs and outputs in different operations?",
+                "[Complex] For a given operation, which variables with substructures can be used as inputs?",
+                "[Complex] Can you find all the variables that can be converted to a specific type of variable?"
+            ],
+            "qualified_questions": [
+                {
+                    "question": "[Simple] What are the types of operation inputs?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?operationInputType\nWHERE {\n  ?operationInputType rdfs:subClassOf* BO:OperationInput .\n}",
+                    "query_result": [
+                        "<http://example.org/BO#OperationInput>"
+                    ]
+                },
+                {
+                    "question": "[Simple] What is the range of the hasInput property?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?range\nWHERE {\n  BO:hasInput rdfs:range ?range.\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] Can you list all the variables that have a substructure?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?variable\nWHERE {\n  ?variable rdf:type BO:StructuredTypeVariable ;\n            BO:hasSubStructure ?substructure .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the relationship between OperationOutput and Variable?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?relationship\nWHERE {\n  BO:OperationOutput rdfs:subClassOf* ?relationship .\n  ?relationship rdf:type owl:Class ;\n                rdfs:subClassOf* BO:Variable .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What does the hasConversion property do?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?variable ?conversion\nWHERE {\n  ?variable BO:hasConversion ?conversion .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the domain of the convertsTo property?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?domain\nWHERE {\n  BO:convertsTo rdfs:domain ?domain .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the range of the hasOutput property?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?range\nWHERE {\n  BO:hasOutput rdfs:range ?range\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the type of the VariableConversion class?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?type\nWHERE {\n  BO:VariableConversion rdf:type ?type\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] Which variables can be converted to other variables through the VariableConversion class?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?variable ?convertedVariable\nWHERE {\n  ?variableConversion rdf:type BO:VariableConversion .\n  ?variableConversion BO:convertsTo ?convertedVariable .\n  ?variable BO:hasConversion ?variableConversion .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] For a given Operation, what are all the possible inputs and outputs?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?operation ?input ?output\nWHERE {\n  ?operation BO:hasInput ?input .\n  ?operation BO:hasOutput ?output .\n  ?input rdf:type BO:OperationInput .\n  ?output rdf:type BO:OperationOutput .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] If a variable has a substructure, what kind of structured type variable is it?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?variable\nWHERE {\n  ?variable a BO:StructuredTypeVariable ;\n            BO:hasSubStructure ?substructure .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] How many conversions are there for a specific variable?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT (COUNT(?conversion) AS ?numberOfConversions)\nWHERE {\n  ?variable rdf:type BO:Variable .\n  ?variable BO:hasConversion ?conversion .\n}",
+                    "query_result": [
+                        "\"0\"^^xsd:integer"
+                    ]
+                },
+                {
+                    "question": "[Complex] What are the possible outputs of an operation that has a specific input?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?operation ?output\nWHERE {\n  ?operation BO:hasInput ?input .\n  ?operation BO:hasOutput ?output .\n  ?input rdf:type BO:OperationInput .\n  ?output rdf:type BO:OperationOutput .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] Which variables can be both inputs and outputs in different operations?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?variable\nWHERE {\n  ?variable a BO:Variable .\n  {\n    ?operation BO:hasInput ?variable .\n  }\n  UNION\n  {\n    ?operation BO:hasOutput ?variable .\n  }\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] For a given operation, which variables with substructures can be used as inputs?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?variable\nWHERE {\n  ?operation BO:hasInput ?input .\n  ?input rdf:type BO:OperationInput .\n  ?variable BO:hasSubStructure ?substructure .\n  ?variable rdf:type BO:StructuredTypeVariable .\n  ?input rdf:type ?variable .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] Can you find all the variables that can be converted to a specific type of variable?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?variable\nWHERE {\n  ?variable BO:hasConversion ?conversion .\n  ?conversion BO:convertsTo ?targetVariable .\n  FILTER(?targetVariable = <http://example.org/BO#SpecificTypeVariable>)\n}",
+                    "query_result": []
+                }
+            ],
+            "uncovered_entities": [],
+            "coverage_stats": {
+                "total_entities": 10,
+                "covered_entities": 10,
+                "uncovered_entities_count": 0,
+                "coverage_rate": 100.0
+            }
+        },
+        {
+            "subgraph_id": 3,
+            "namespaces": [
+                {
+                    "prefix": "BO",
+                    "url": "https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                }
+            ],
+            "triples": [
+                [
+                    "BO:isPartOf",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:Service",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:Device",
+                    "rdfs:subClassOf",
+                    "BO:Thing"
+                ],
+                [
+                    "BO:InterworkedDevice",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:ThingProperty",
+                    "rdfs:subClassOf",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:MeasuringFunction",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:hasFunction",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasCommand",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:Thing",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:Device",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:InputDataPoint",
+                    "rdfs:subClassOf",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:hasService",
+                    "rdfs:domain",
+                    "BO:Device"
+                ],
+                [
+                    "BO:hasThingProperty",
+                    "rdfs:range",
+                    "BO:ThingProperty"
+                ],
+                [
+                    "BO:SET_OutputDataPoint",
+                    "rdfs:subClassOf",
+                    "BO:Operation"
+                ],
+                [
+                    "BO:hasThingProperty",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:OutputDataPoint",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:Function",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:ControllingFunction",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:hasOperation",
+                    "rdfs:range",
+                    "BO:Operation"
+                ],
+                [
+                    "BO:describes",
+                    "rdfs:range",
+                    "BO:Aspect"
+                ],
+                [
+                    "BO:InterworkedDevice",
+                    "rdfs:subClassOf",
+                    "BO:Device"
+                ],
+                [
+                    "BO:hasSubService",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasInputDataPoint",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasOperation",
+                    "rdfs:domain",
+                    "BO:Service"
+                ],
+                [
+                    "BO:OutputDataPoint",
+                    "rdfs:subClassOf",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:hasThingRelation",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasOutputDataPoint",
+                    "rdfs:range",
+                    "BO:OutputDataPoint"
+                ],
+                [
+                    "BO:hasService",
+                    "rdfs:range",
+                    "BO:Service"
+                ],
+                [
+                    "BO:GET_InputDataPoint",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:ThingProperty",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:exposesFunction",
+                    "rdfs:range",
+                    "BO:Function"
+                ],
+                [
+                    "BO:MetaData",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:hasFunction",
+                    "rdfs:domain",
+                    "BO:Device"
+                ],
+                [
+                    "BO:consistsOf",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasMetaData",
+                    "rdfs:range",
+                    "BO:MetaData"
+                ],
+                [
+                    "BO:ControllingFunction",
+                    "rdfs:subClassOf",
+                    "BO:Function"
+                ],
+                [
+                    "BO:exposesCommand",
+                    "rdfs:range",
+                    "BO:Command"
+                ],
+                [
+                    "BO:consistsOf",
+                    "rdfs:range",
+                    "BO:Device"
+                ],
+                [
+                    "BO:hasOutputDataPoint",
+                    "rdfs:domain",
+                    "BO:Service"
+                ],
+                [
+                    "BO:InputDataPoint",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:hasMetaData",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasCommand",
+                    "rdfs:domain",
+                    "BO:Function"
+                ],
+                [
+                    "BO:describes",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:exposesCommand",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasCommand",
+                    "rdfs:range",
+                    "BO:Command"
+                ],
+                [
+                    "BO:hasOutputDataPoint",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:refersTo",
+                    "rdfs:range",
+                    "BO:Aspect"
+                ],
+                [
+                    "BO:hasSubService",
+                    "rdfs:range",
+                    "BO:Service"
+                ],
+                [
+                    "BO:hasOperation",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:refersTo",
+                    "rdfs:domain",
+                    "BO:Function"
+                ],
+                [
+                    "BO:describes",
+                    "rdfs:domain",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:Aspect",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:Operation",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:GET_InputDataPoint",
+                    "rdfs:subClassOf",
+                    "BO:Operation"
+                ],
+                [
+                    "BO:hasFunction",
+                    "rdfs:range",
+                    "BO:Function"
+                ],
+                [
+                    "BO:exposesFunction",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasThingRelation",
+                    "rdfs:range",
+                    "BO:Thing"
+                ],
+                [
+                    "BO:MeasuringFunction",
+                    "rdfs:subClassOf",
+                    "BO:Function"
+                ],
+                [
+                    "BO:isPartOf",
+                    "rdfs:range",
+                    "BO:AreaNetwork"
+                ],
+                [
+                    "BO:exposesFunction",
+                    "rdfs:domain",
+                    "BO:Service"
+                ],
+                [
+                    "BO:isPartOf",
+                    "rdfs:domain",
+                    "BO:InterworkedDevice"
+                ],
+                [
+                    "BO:Command",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:consistsOf",
+                    "rdfs:domain",
+                    "BO:Device"
+                ],
+                [
+                    "BO:hasThingRelation",
+                    "rdfs:domain",
+                    "BO:Thing"
+                ],
+                [
+                    "BO:hasInputDataPoint",
+                    "rdfs:range",
+                    "BO:InputDataPoint"
+                ],
+                [
+                    "BO:hasSubService",
+                    "rdfs:domain",
+                    "BO:Service"
+                ],
+                [
+                    "BO:hasInputDataPoint",
+                    "rdfs:domain",
+                    "BO:Service"
+                ],
+                [
+                    "BO:SET_OutputDataPoint",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:hasThingProperty",
+                    "rdfs:domain",
+                    "BO:Thing"
+                ],
+                [
+                    "BO:refersTo",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ],
+                [
+                    "BO:hasService",
+                    "rdf:type",
+                    "owl:ObjectProperty"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is a service in the context of this ontology?",
+                "[Simple] Can you list all the devices that are part of an area network?",
+                "[Simple] What properties does a thing have in this ontology?",
+                "[Simple] What is the relationship between a device and a function?",
+                "[Simple] What types of operations can be performed on input data points?",
+                "[Simple] What are the different types of functions available in this ontology?",
+                "[Complex] Which services are provided by devices that have a controlling function?",
+                "[Complex] What are the commands exposed by the measuring functions of interworked devices?",
+                "[Complex] How many devices are part of each area network, and what are their services?",
+                "[Complex] For a given service, which devices have both an input data point and an output data point associated with it?",
+                "[Complex] Which devices have a specific thing property and also expose a certain command?",
+                "[Complex] What are the aspects described by the variables that have a specific metadata?",
+                "[Complex] How many services does each device provide, and what are the operations associated with these services?",
+                "[Complex] Which devices have a function that refers to a particular aspect and also have a specific thing relation?",
+                "[Complex] Can you identify the devices that have a sub-service which in turn has a specific operation?",
+                "[Simple] What are the different types of thing properties in this ontology?",
+                "[Simple] Can you list all the metadata associated with a specific device?",
+                "[Simple] What is an example of a SET output data point in this context?",
+                "[Simple] What are the commands that can be exposed by a function in this system?",
+                "[Simple] Can you describe what an aspect represents in this ontology?",
+                "[Simple] What is the role of a GET input data point in this system?",
+                "[Simple] How is a thing defined within this ontology, and what are its key characteristics?"
+            ],
+            "qualified_questions": [
+                {
+                    "question": "[Simple] What is a service in the context of this ontology?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.org/ontology/BO#>\n\nSELECT ?definition\nWHERE {\n  BO:Service rdfs:subClassOf ?superClass .\n  OPTIONAL { ?superClass rdfs:comment ?definition }\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] Can you list all the devices that are part of an area network?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.org/BuildingOntology#>\n\nSELECT ?device\nWHERE {\n  ?device rdf:type BO:Device .\n  ?device BO:isPartOf ?areaNetwork .\n  ?areaNetwork rdf:type BO:AreaNetwork .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What properties does a thing have in this ontology?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?property\nWHERE {\n  ?property rdf:type owl:ObjectProperty .\n  FILTER(?property IN (BO:hasThingProperty, BO:hasFunction, BO:hasCommand, BO:hasOperation, BO:hasService, BO:hasSubService, BO:hasInputDataPoint, BO:hasOutputDataPoint, BO:hasMetaData, BO:exposesFunction, BO:exposesCommand, BO:isPartOf, BO:consistsOf, BO:refersTo, BO:describes, BO:hasThingRelation))\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the relationship between a device and a function?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/ontology/BO#>\n\nSELECT ?device ?function\nWHERE {\n  ?device rdf:type BO:Device ;\n          BO:hasFunction ?function .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What types of operations can be performed on input data points?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BuildingOntology#>\n\nSELECT ?operation\nWHERE {\n  ?operation rdfs:subClassOf* BO:Operation .\n  ?service BO:hasOperation ?operation .\n  ?service BO:hasInputDataPoint ?inputDataPoint .\n  ?inputDataPoint rdf:type BO:InputDataPoint .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What are the different types of functions available in this ontology?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.org/ontology/BO#>\n\nSELECT DISTINCT ?functionType\nWHERE {\n  ?functionType rdfs:subClassOf* BO:Function .\n}",
+                    "query_result": [
+                        "<http://example.org/ontology/BO#Function>"
+                    ]
+                },
+                {
+                    "question": "[Complex] Which services are provided by devices that have a controlling function?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?service\nWHERE {\n  ?device rdf:type BO:Device .\n  ?device BO:hasFunction ?function .\n  ?function rdf:type BO:ControllingFunction .\n  ?device BO:hasService ?service .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] What are the commands exposed by the measuring functions of interworked devices?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/ontology/BO#>\n\nSELECT ?command\nWHERE {\n  ?interworkedDevice rdf:type BO:InterworkedDevice .\n  ?interworkedDevice BO:hasFunction ?measuringFunction .\n  ?measuringFunction rdf:type BO:MeasuringFunction .\n  ?measuringFunction BO:hasCommand ?command .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] How many devices are part of each area network, and what are their services?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/ontology/>\n\nSELECT ?areaNetwork (COUNT(?device) AS ?deviceCount) ?service\nWHERE {\n  ?device BO:isPartOf ?areaNetwork .\n  ?device rdf:type BO:Device .\n  ?device BO:hasService ?service .\n}\nGROUP BY ?areaNetwork ?service",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] For a given service, which devices have both an input data point and an output data point associated with it?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.org/ontology/>\n\nSELECT ?device\nWHERE {\n  ?service rdf:type BO:Service .\n  ?device BO:hasService ?service .\n  ?service BO:hasInputDataPoint ?inputDataPoint .\n  ?service BO:hasOutputDataPoint ?outputDataPoint .\n  ?inputDataPoint rdf:type BO:InputDataPoint .\n  ?outputDataPoint rdf:type BO:OutputDataPoint .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] Which devices have a specific thing property and also expose a certain command?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.org/ontology/BO#>\n\nSELECT ?device\nWHERE {\n  ?device rdf:type BO:Device .\n  ?device BO:hasThingProperty ?thingProperty .\n  ?device BO:hasFunction ?function .\n  ?function BO:exposesCommand ?command .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] What are the aspects described by the variables that have a specific metadata?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?variable ?aspect\nWHERE {\n  ?variable rdf:type BO:Variable .\n  ?variable BO:hasMetaData ?metadata .\n  ?variable BO:describes ?aspect .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] How many services does each device provide, and what are the operations associated with these services?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/ontology/BO#>\n\nSELECT ?device (COUNT(DISTINCT ?service) AS ?serviceCount) ?operation\nWHERE {\n  ?device rdf:type BO:Device .\n  ?device BO:hasService ?service .\n  ?service BO:hasOperation ?operation .\n}\nGROUP BY ?device ?operation\nORDER BY ?device",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] Which devices have a function that refers to a particular aspect and also have a specific thing relation?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?device\nWHERE {\n  ?device rdf:type BO:Device .\n  ?device BO:hasFunction ?function .\n  ?function BO:refersTo ?aspect .\n  ?device BO:hasThingRelation ?thing .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] Can you identify the devices that have a sub-service which in turn has a specific operation?",
+                    "sparql_query": "PREFIX BO: <http://example.org/ontology#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT ?device ?subService ?operation\nWHERE {\n  ?device rdf:type BO:Device ;\n          BO:hasService ?service .\n  ?service BO:hasSubService ?subService .\n  ?subService BO:hasOperation ?operation .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What are the different types of thing properties in this ontology?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT DISTINCT ?property\nWHERE {\n  ?property rdf:type owl:ObjectProperty .\n  ?property rdfs:range BO:ThingProperty .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] Can you list all the metadata associated with a specific device?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/ontology/building#>\n\nSELECT ?device ?metadata\nWHERE {\n  ?device rdf:type BO:Device .\n  ?device BO:hasMetaData ?metadata .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is an example of a SET output data point in this context?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/ontology/BO#>\n\nSELECT ?outputDataPoint\nWHERE {\n  ?outputDataPoint rdf:type BO:SET_OutputDataPoint .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What are the commands that can be exposed by a function in this system?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.org/ontology/BO#>\n\nSELECT ?command\nWHERE {\n  ?function BO:hasCommand ?command .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] Can you describe what an aspect represents in this ontology?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.org/ontology/BO#>\n\nSELECT ?description\nWHERE {\n  BO:Aspect rdfs:comment ?description\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the role of a GET input data point in this system?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/ontology/BO#>\n\nSELECT ?role\nWHERE {\n  BO:GET_InputDataPoint rdfs:subClassOf* ?superClass .\n  ?superClass rdfs:comment ?role\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] How is a thing defined within this ontology, and what are its key characteristics?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.org/ontology/BO#>\n\nSELECT ?thing ?characteristic\nWHERE {\n  ?thing rdf:type BO:Thing .\n  OPTIONAL {\n    ?thing BO:hasThingProperty ?property .\n    ?property rdf:type BO:ThingProperty .\n    BIND(?property AS ?characteristic)\n  }\n  OPTIONAL {\n    ?thing BO:hasFunction ?function .\n    ?function rdf:type BO:Function .\n    BIND(?function AS ?characteristic)\n  }\n  OPTIONAL {\n    ?thing BO:hasOperation ?operation .\n    ?operation rdf:type BO:Operation .\n    BIND(?operation AS ?characteristic)\n  }\n  OPTIONAL {\n    ?thing BO:hasCommand ?command .\n    ?command rdf:type BO:Command .\n    BIND(?command AS ?characteristic)\n  }\n  OPTIONAL {\n    ?thing BO:hasMetaData ?metaData .\n    ?metaData rdf:type BO:MetaData .\n    BIND(?metaData AS ?characteristic)\n  }\n  OPTIONAL {\n    ?thing BO:hasThingRelation ?relatedThing .\n    ?relatedThing rdf:type BO:Thing .\n    BIND(?relatedThing AS ?characteristic)\n  }\n}",
+                    "query_result": []
+                }
+            ],
+            "uncovered_entities": [],
+            "coverage_stats": {
+                "total_entities": 34,
+                "covered_entities": 34,
+                "uncovered_entities_count": 0,
+                "coverage_rate": 100.0
+            }
+        },
+        {
+            "subgraph_id": 4,
+            "namespaces": [
+                {
+                    "prefix": "BO",
+                    "url": "https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "xsd",
+                    "url": "http://www.w3.org/2001/XMLSchema#"
+                }
+            ],
+            "triples": [
+                [
+                    "BO:oneM2MAttribute",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasDataRestriction_length",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasThingAnnotation",
+                    "rdfs:range",
+                    "rdfs:Literal"
+                ],
+                [
+                    "BO:hasDataRestriction_minInclusive",
+                    "rdfs:subPropertyOf",
+                    "BO:hasDataRestriction"
+                ],
+                [
+                    "BO:hasDataRestriction_minInclusive",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:hasDataRestriction_minLength",
+                    "rdfs:subPropertyOf",
+                    "BO:hasDataRestriction"
+                ],
+                [
+                    "BO:hasDataRestriction_maxInclusive",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:hasDataRestriction_pattern",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:hasDataRestriction_pattern",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasValue",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:hasDataRestriction",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasValue",
+                    "rdfs:range",
+                    "rdfs:Literal"
+                ],
+                [
+                    "BO:hasDataRestriction_minExclusive",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:hasDataType",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:hasDataRestriction_minLength",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:isDataList",
+                    "rdfs:range",
+                    "xsd:boolean"
+                ],
+                [
+                    "BO:hasDataRestriction",
+                    "rdfs:range",
+                    "rdf:PlainLiteral"
+                ],
+                [
+                    "BO:hasDataRestriction_minLength",
+                    "rdfs:range",
+                    "xsd:nonNegativeInteger"
+                ],
+                [
+                    "BO:hasDataRestriction_maxExclusive",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasThingAnnotation",
+                    "rdfs:domain",
+                    "BO:Thing"
+                ],
+                [
+                    "BO:oneM2MAttribute",
+                    "rdfs:range",
+                    "rdf:PlainLiteral"
+                ],
+                [
+                    "BO:hasThingAnnotation",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasDataRestriction_maxLength",
+                    "rdfs:subPropertyOf",
+                    "BO:hasDataRestriction"
+                ],
+                [
+                    "BO:hasValue",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:oneM2MTargetURI",
+                    "rdfs:range",
+                    "rdfs:Literal"
+                ],
+                [
+                    "BO:hasDataRestriction_length",
+                    "rdfs:subPropertyOf",
+                    "BO:hasDataRestriction"
+                ],
+                [
+                    "BO:isDataList",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:SimpleTypeVariable",
+                    "rdfs:subClassOf",
+                    "BO:Variable"
+                ],
+                [
+                    "BO:hasDataRestriction_maxLength",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:hasDataRestriction_minExclusive",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasDataRestriction_minInclusive",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasDataRestriction_minLength",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:oneM2MAttribute",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:hasDataRestriction_maxInclusive",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasDataType",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasDataRestriction_pattern",
+                    "rdfs:subPropertyOf",
+                    "BO:hasDataRestriction"
+                ],
+                [
+                    "BO:hasDataRestriction_length",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:hasDataRestriction_maxLength",
+                    "rdfs:range",
+                    "xsd:nonNegativeInteger"
+                ],
+                [
+                    "BO:hasDataRestriction",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:hasDataRestriction_minExclusive",
+                    "rdfs:subPropertyOf",
+                    "BO:hasDataRestriction"
+                ],
+                [
+                    "BO:hasDataRestriction_length",
+                    "rdfs:range",
+                    "xsd:nonNegativeInteger"
+                ],
+                [
+                    "BO:hasDataRestriction_maxInclusive",
+                    "rdfs:subPropertyOf",
+                    "BO:hasDataRestriction"
+                ],
+                [
+                    "BO:oneM2MTargetURI",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasDataRestriction_maxExclusive",
+                    "rdfs:subPropertyOf",
+                    "BO:hasDataRestriction"
+                ],
+                [
+                    "BO:hasDataRestriction_pattern",
+                    "rdfs:range",
+                    "xsd:string"
+                ],
+                [
+                    "BO:SimpleTypeVariable",
+                    "owl:disjointWith",
+                    "BO:StructuredTypeVariable"
+                ],
+                [
+                    "BO:SimpleTypeVariable",
+                    "rdf:type",
+                    "owl:Class"
+                ],
+                [
+                    "BO:hasDataRestriction_maxExclusive",
+                    "rdfs:domain",
+                    "BO:SimpleTypeVariable"
+                ],
+                [
+                    "BO:isDataList",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ],
+                [
+                    "BO:hasDataRestriction_maxLength",
+                    "rdf:type",
+                    "owl:DatatypeProperty"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is the minimum length that a simple type variable can have?",
+                "[Simple] What is the data type of a simple type variable?",
+                "[Simple] What is the target URI for a oneM2M attribute?",
+                "[Simple] What is the maximum inclusive value for a simple type variable?",
+                "[Complex] Which simple type variables have a data restriction pattern and a minimum length greater than 5?",
+                "[Complex] For a given simple type variable, what are the different data restrictions that apply to it, such as minimum and maximum values, and patterns?",
+                "[Complex] Are there any simple type variables that have both a minimum exclusive value and a maximum exclusive value defined?",
+                "[Complex] How many simple type variables have a data restriction pattern that includes a specific substring?",
+                "[Complex] What are the annotations associated with a particular thing in the ontology?",
+                "[Simple] What is the value of a simple type variable?",
+                "[Simple] How long can a simple type variable be in terms of characters?",
+                "[Simple] What is the length of a data restriction for a simple type variable?",
+                "[Simple] What is the type of a structured type variable?"
+            ],
+            "qualified_questions": [
+                {
+                    "question": "[Simple] What is the minimum length that a simple type variable can have?",
+                    "sparql_query": "PREFIX BO: <http://example.org/BO#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?minLength\nWHERE {\n  ?simpleTypeVariable rdf:type BO:SimpleTypeVariable .\n  ?simpleTypeVariable BO:hasDataRestriction_minLength ?minLength .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the data type of a simple type variable?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?dataType\nWHERE {\n  ?simpleTypeVariable rdf:type BO:SimpleTypeVariable .\n  ?simpleTypeVariable BO:hasDataType ?dataType .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the target URI for a oneM2M attribute?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?targetURI\nWHERE {\n  ?simpleTypeVariable BO:oneM2MAttribute ?attribute .\n  ?simpleTypeVariable BO:oneM2MTargetURI ?targetURI .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the maximum inclusive value for a simple type variable?",
+                    "sparql_query": "PREFIX BO: <http://example.org/BO#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?maxInclusiveValue\nWHERE {\n  ?simpleTypeVariable rdf:type BO:SimpleTypeVariable .\n  ?simpleTypeVariable BO:hasDataRestriction_maxInclusive ?maxInclusiveValue .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] Which simple type variables have a data restriction pattern and a minimum length greater than 5?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?variable\nWHERE {\n  ?variable rdf:type BO:SimpleTypeVariable .\n  ?variable BO:hasDataRestriction_pattern ?pattern .\n  ?variable BO:hasDataRestriction_minLength ?minLength .\n  FILTER (xsd:integer(?minLength) > 5)\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] For a given simple type variable, what are the different data restrictions that apply to it, such as minimum and maximum values, and patterns?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?simpleTypeVariable ?minInclusive ?maxInclusive ?minExclusive ?maxExclusive ?minLength ?maxLength ?pattern\nWHERE {\n  ?simpleTypeVariable rdf:type BO:SimpleTypeVariable .\n  OPTIONAL { ?simpleTypeVariable BO:hasDataRestriction_minInclusive ?minInclusive . }\n  OPTIONAL { ?simpleTypeVariable BO:hasDataRestriction_maxInclusive ?maxInclusive . }\n  OPTIONAL { ?simpleTypeVariable BO:hasDataRestriction_minExclusive ?minExclusive . }\n  OPTIONAL { ?simpleTypeVariable BO:hasDataRestriction_maxExclusive ?maxExclusive . }\n  OPTIONAL { ?simpleTypeVariable BO:hasDataRestriction_minLength ?minLength . }\n  OPTIONAL { ?simpleTypeVariable BO:hasDataRestriction_maxLength ?maxLength . }\n  OPTIONAL { ?simpleTypeVariable BO:hasDataRestriction_pattern ?pattern . }\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] Are there any simple type variables that have both a minimum exclusive value and a maximum exclusive value defined?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?variable\nWHERE {\n  ?variable rdf:type BO:SimpleTypeVariable .\n  ?variable BO:hasDataRestriction_minExclusive ?minExclusiveValue .\n  ?variable BO:hasDataRestriction_maxExclusive ?maxExclusiveValue .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] How many simple type variables have a data restriction pattern that includes a specific substring?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT (COUNT(?variable) AS ?count)\nWHERE {\n  ?variable rdf:type BO:SimpleTypeVariable .\n  ?variable BO:hasDataRestriction_pattern ?pattern .\n  FILTER(CONTAINS(?pattern, \"specific_substring\"))\n}",
+                    "query_result": [
+                        "\"0\"^^xsd:integer"
+                    ]
+                },
+                {
+                    "question": "[Complex] What are the annotations associated with a particular thing in the ontology?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/ontology/BO#>\n\nSELECT ?thing ?annotation\nWHERE {\n  ?thing rdf:type BO:Thing ;\n         BO:hasThingAnnotation ?annotation .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the value of a simple type variable?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?value\nWHERE {\n  ?variable rdf:type BO:SimpleTypeVariable ;\n            BO:hasValue ?value .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] How long can a simple type variable be in terms of characters?",
+                    "sparql_query": "PREFIX BO: <http://example.org/BO#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?maxLength\nWHERE {\n  ?variable rdf:type BO:SimpleTypeVariable .\n  ?variable BO:hasDataRestriction_maxLength ?maxLength .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the length of a data restriction for a simple type variable?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\nPREFIX BO: <http://example.org/BO#>\n\nSELECT ?length\nWHERE {\n  ?variable rdf:type BO:SimpleTypeVariable .\n  ?variable BO:hasDataRestriction_length ?length .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Simple] What is the type of a structured type variable?",
+                    "sparql_query": "PREFIX BO: <http://example.org/BO#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?type\nWHERE {\n  BO:StructuredTypeVariable rdfs:subClassOf ?type .\n}",
+                    "query_result": []
+                }
+            ],
+            "uncovered_entities": [
+                "BO:Variable",
+                "BO:isDataList"
+            ],
+            "coverage_stats": {
+                "total_entities": 19,
+                "covered_entities": 17,
+                "uncovered_entities_count": 2,
+                "coverage_rate": 89.47368421052632
+            }
+        },
+        {
+            "subgraph_id": 5,
+            "namespaces": [
+                {
+                    "prefix": "BO",
+                    "url": "https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl#"
+                },
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                },
+                {
+                    "prefix": "rdfs",
+                    "url": "http://www.w3.org/2000/01/rdf-schema#"
+                },
+                {
+                    "prefix": "xsd",
+                    "url": "http://www.w3.org/2001/XMLSchema#"
+                }
+            ],
+            "triples": [
+                [
+                    "BO:resourceDescriptorLink",
+                    "rdf:type",
+                    "owl:AnnotationProperty"
+                ],
+                [
+                    "BO:resourceDescriptorLink",
+                    "rdfs:domain",
+                    "owl:Thing"
+                ],
+                [
+                    "BO:resourceDescriptorLink",
+                    "rdfs:range",
+                    "xsd:anyURI"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is the type of the resourceDescriptorLink?",
+                "[Complex] Can you find all the instances that have a resourceDescriptorLink pointing to a specific URI?"
+            ],
+            "qualified_questions": [
+                {
+                    "question": "[Simple] What is the type of the resourceDescriptorLink?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX BO: <http://example.com/BO#>\n\nSELECT ?type\nWHERE {\n  BO:resourceDescriptorLink rdf:type ?type\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] Can you find all the instances that have a resourceDescriptorLink pointing to a specific URI?",
+                    "sparql_query": "PREFIX BO: <http://example.org/BO#>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?instance\nWHERE {\n  ?instance BO:resourceDescriptorLink <specific_URI> .\n}",
+                    "query_result": []
+                }
+            ],
+            "uncovered_entities": [],
+            "coverage_stats": {
+                "total_entities": 1,
+                "covered_entities": 1,
+                "uncovered_entities_count": 0,
+                "coverage_rate": 100.0
+            }
+        },
+        {
+            "subgraph_id": 6,
+            "namespaces": [
+                {
+                    "prefix": "rdf",
+                    "url": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                },
+                {
+                    "prefix": "owl",
+                    "url": "http://www.w3.org/2002/07/owl#"
+                }
+            ],
+            "triples": [
+                [
+                    "<https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl>",
+                    "rdf:type",
+                    "owl:Ontology"
+                ],
+                [
+                    "<https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl>",
+                    "owl:versionIRI",
+                    "<https://git.onem2m.org/MAS/BaseOntology/raw/3_6_0/base_ontology.owl>"
+                ]
+            ],
+            "competency_questions": [
+                "[Simple] What is the version of the oneM2M Base Ontology?",
+                "[Complex] How has the oneM2M Base Ontology evolved from its previous version to the current version?"
+            ],
+            "qualified_questions": [
+                {
+                    "question": "[Simple] What is the version of the oneM2M Base Ontology?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT ?versionIRI\nWHERE {\n  <https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl> owl:versionIRI ?versionIRI .\n}",
+                    "query_result": []
+                },
+                {
+                    "question": "[Complex] How has the oneM2M Base Ontology evolved from its previous version to the current version?",
+                    "sparql_query": "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX owl: <http://www.w3.org/2002/07/owl#>\n\nSELECT ?currentVersion ?previousVersion\nWHERE {\n  <https://git.onem2m.org/MAS/BaseOntology/raw/master/base_ontology.owl> rdf:type owl:Ontology ;\n  owl:versionIRI ?currentVersion .\n  FILTER(?previousVersion = <https://git.onem2m.org/MAS/BaseOntology/raw/3_6_0/base_ontology.owl>)\n}",
+                    "query_result": []
+                }
+            ],
+            "uncovered_entities": [],
+            "coverage_stats": {
+                "total_entities": 2,
+                "covered_entities": 2,
+                "uncovered_entities_count": 0,
+                "coverage_rate": 100.0
+            }
+        }
+    ],
+    "iteration_coverage_history": [
+        {
+            "iteration": 0,
+            "per_subgraph": [
+                {
+                    "total_entities": 5,
+                    "covered_entities": 5,
+                    "uncovered_entities_count": 0,
+                    "coverage_rate": 100.0
+                },
+                {
+                    "total_entities": 10,
+                    "covered_entities": 10,
+                    "uncovered_entities_count": 0,
+                    "coverage_rate": 100.0
+                },
+                {
+                    "total_entities": 34,
+                    "covered_entities": 27,
+                    "uncovered_entities_count": 7,
+                    "coverage_rate": 79.41176470588235
+                },
+                {
+                    "total_entities": 19,
+                    "covered_entities": 14,
+                    "uncovered_entities_count": 5,
+                    "coverage_rate": 73.68421052631578
+                },
+                {
+                    "total_entities": 1,
+                    "covered_entities": 1,
+                    "uncovered_entities_count": 0,
+                    "coverage_rate": 100.0
+                },
+                {
+                    "total_entities": 2,
+                    "covered_entities": 2,
+                    "uncovered_entities_count": 0,
+                    "coverage_rate": 100.0
+                }
+            ],
+            "avg_coverage_rate": 92.18
+        },
+        {
+            "iteration": 1,
+            "per_subgraph": [
+                {
+                    "total_entities": 5,
+                    "covered_entities": 5,
+                    "uncovered_entities_count": 0,
+                    "coverage_rate": 100.0
+                },
+                {
+                    "total_entities": 10,
+                    "covered_entities": 10,
+                    "uncovered_entities_count": 0,
+                    "coverage_rate": 100.0
+                },
+                {
+                    "total_entities": 34,
+                    "covered_entities": 34,
+                    "uncovered_entities_count": 0,
+                    "coverage_rate": 100.0
+                },
+                {
+                    "total_entities": 19,
+                    "covered_entities": 16,
+                    "uncovered_entities_count": 3,
+                    "coverage_rate": 84.21052631578947
+                },
+                {
+                    "total_entities": 1,
+                    "covered_entities": 1,
+                    "uncovered_entities_count": 0,
+                    "coverage_rate": 100.0
+                },
+                {
+                    "total_entities": 2,
+                    "covered_entities": 2,
+                    "uncovered_entities_count": 0,
+                    "coverage_rate": 100.0
+                }
+            ],
+            "avg_coverage_rate": 97.37
+        },
+        {
+            "iteration": 2,
+            "per_subgraph": [
+                {
+                    "total_entities": 5,
+                    "covered_entities": 5,
+                    "uncovered_entities_count": 0,
+                    "coverage_rate": 100.0
+                },
+                {
+                    "total_entities": 10,
+                    "covered_entities": 10,
+                    "uncovered_entities_count": 0,
+                    "coverage_rate": 100.0
+                },
+                {
+                    "total_entities": 34,
+                    "covered_entities": 34,
+                    "uncovered_entities_count": 0,
+                    "coverage_rate": 100.0
+                },
+                {
+                    "total_entities": 19,
+                    "covered_entities": 17,
+                    "uncovered_entities_count": 2,
+                    "coverage_rate": 89.47368421052632
+                },
+                {
+                    "total_entities": 1,
+                    "covered_entities": 1,
+                    "uncovered_entities_count": 0,
+                    "coverage_rate": 100.0
+                },
+                {
+                    "total_entities": 2,
+                    "covered_entities": 2,
+                    "uncovered_entities_count": 0,
+                    "coverage_rate": 100.0
+                }
+            ],
+            "avg_coverage_rate": 98.25
+        }
+    ],
+    "overall_coverage_stats": {
+        "total_subgraphs": 6,
+        "total_entities": 66,
+        "total_covered_entities": 65,
+        "total_uncovered_entities": 1,
+        "overall_coverage_rate": 98.48484848484848,
+        "subgraph_coverage_details": [
+            {
+                "subgraph_id": 0,
+                "total_entities": 5,
+                "covered_entities": 5,
+                "coverage_rate": 100.0
+            },
+            {
+                "subgraph_id": 1,
+                "total_entities": 10,
+                "covered_entities": 10,
+                "coverage_rate": 100.0
+            },
+            {
+                "subgraph_id": 2,
+                "total_entities": 34,
+                "covered_entities": 34,
+                "coverage_rate": 100.0
+            },
+            {
+                "subgraph_id": 3,
+                "total_entities": 19,
+                "covered_entities": 17,
+                "coverage_rate": 89.47368421052632
+            },
+            {
+                "subgraph_id": 4,
+                "total_entities": 1,
+                "covered_entities": 1,
+                "coverage_rate": 100.0
+            },
+            {
+                "subgraph_id": 5,
+                "total_entities": 2,
+                "covered_entities": 2,
+                "coverage_rate": 100.0
+            }
+        ]
+    }
+}
